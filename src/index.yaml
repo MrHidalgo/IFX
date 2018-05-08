@@ -1,0 +1,7 @@
+ProjectTitle: IFX
+
+PageList:
+- file: homepage.html
+  ready: 0
+- file: about.html
+  ready: 0
