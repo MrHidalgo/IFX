@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
   //////////
   // Global variables
@@ -22,7 +22,7 @@ $(document).ready(function(){
   ////////////
   // READY - triggered when PJAX DONE
   ////////////
-  function pageReady(){
+  function pageReady() {
     // legacySupport();
     // updateHeaderActiveClass();
     initHeaderScroll();
@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 
   // some plugins work best with onload triggers
-  _window.on('load', function(){
+  _window.on('load', function () {
     // your functions
   });
 
@@ -73,39 +73,37 @@ $(document).ready(function(){
 
 
   // Prevent # behavior
-	_document
-    .on('click', '[href="#"]', function(e) {
-  		e.preventDefault();
-  	})
-    .on('click', 'a[href^="#section"]', function() { // section scroll
-      var el = $(this).attr('href');
+  // ====================
+  _document
+    .on('click', '[href="#"]', function (e) {
+      e.preventDefault();
+    })
+    .on('click', 'a[href^="#section"]', function () { // section scroll
+      let el = $(this).attr('href');
+
       $('body, html').animate({
-          scrollTop: $(el).offset().top}, 1000);
+        scrollTop: $(el).offset().top
+      }, 1000);
+
       return false;
     });
 
 
   // HEADER SCROLL
-  // add .header-static for .page or body
-  // to disable sticky header
-  function initHeaderScroll(){
-    _window.on('scroll', throttle(function(e) {
-      var vScroll = _window.scrollTop();
-      var header = $('.header').not('.header--static');
-      var headerHeight = header.height();
-      var firstSection = _document.find('.page__content div:first-child()').height() - headerHeight;
-      var visibleWhen = Math.round(_document.height() / _window.height()) >  2.5
+  // ====================
+  function initHeaderScroll() {
+    _window.on('scroll load', throttle(function (e) {
+      let vScroll = _window.scrollTop();
+      let header = $('.header').not('.header--static');
+      // let headerHeight = header.height();
+      // let firstSection = _document.find('.page__content div:first-child()').height() - headerHeight;
+      let visibleWhen = Math.round(_document.height() / _window.height()) > 2.5;
 
-      if (visibleWhen){
-        if ( vScroll > headerHeight ){
+      if (visibleWhen) {
+        if (vScroll > 100) {
           header.addClass('is-fixed');
         } else {
           header.removeClass('is-fixed');
-        }
-        if ( vScroll > firstSection ){
-          header.addClass('is-fixed-visible');
-        } else {
-          header.removeClass('is-fixed-visible');
         }
       }
     }, 10));
@@ -113,10 +111,22 @@ $(document).ready(function(){
 
 
   // HAMBURGER TOGGLER
-  _document.on('click', '[js-hamburger]', function(){
+  // ====================
+
+  _document.on('click', '[js-hamburger]', function () {
     $(this).toggleClass('is-open');
+
     $('.header__mobile').toggleClass('is-active');
     $("body, html").toggleClass("is-hideScroll");
+  });
+
+
+  // LOGO: return to homepage
+  // ====================
+  _document.on('click', "[logo-js]", function (e) {
+    $('body, html').animate({
+      scrollTop: 0
+    }, 1000);
   });
 
   // function closeMobileMenu(){
@@ -399,23 +409,23 @@ $(document).ready(function(){
   //////////
   // DEVELOPMENT HELPER
   //////////
-    // function setBreakpoint(){
-    //   var wHost = window.location.host.toLowerCase()
-    //   var displayCondition = wHost.indexOf("localhost") >= 0 || wHost.indexOf("surge") >= 0
-    //   if (displayCondition){
-    //     console.log(displayCondition)
-    //     var wWidth = _window.width();
-    //
-    //     var content = "<div class='dev-bp-debug'>"+wWidth+"</div>";
-    //
-    //     $('.page').append(content);
-    //     setTimeout(function(){
-    //       $('.dev-bp-debug').fadeOut();
-    //     },1000);
-    //     setTimeout(function(){
-    //       $('.dev-bp-debug').remove();
-    //     },1500)
-    //   }
-    // }
+  // function setBreakpoint(){
+  //   var wHost = window.location.host.toLowerCase()
+  //   var displayCondition = wHost.indexOf("localhost") >= 0 || wHost.indexOf("surge") >= 0
+  //   if (displayCondition){
+  //     console.log(displayCondition)
+  //     var wWidth = _window.width();
+  //
+  //     var content = "<div class='dev-bp-debug'>"+wWidth+"</div>";
+  //
+  //     $('.page').append(content);
+  //     setTimeout(function(){
+  //       $('.dev-bp-debug').fadeOut();
+  //     },1000);
+  //     setTimeout(function(){
+  //       $('.dev-bp-debug').remove();
+  //     },1500)
+  //   }
+  // }
 
 });

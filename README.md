@@ -1,7 +1,7 @@
 # IFX
 
 ## Demo page
-www.sitename.kl.com.ua
+http://ifx.kl.com.ua/
 
 ## How to start
 * `yarn` - install npm dependencies
