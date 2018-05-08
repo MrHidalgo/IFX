@@ -34,7 +34,7 @@ $(document).ready(function(){
     // initLazyLoad();
 
     // development helper
-    _window.on('resize', debounce(setBreakpoint, 200))
+    // _window.on('resize', debounce(setBreakpoint, 200))
 
     // AVAILABLE in _components folder
     // copy paste in main.js and initialize here
@@ -114,8 +114,9 @@ $(document).ready(function(){
 
   // HAMBURGER TOGGLER
   _document.on('click', '[js-hamburger]', function(){
-    $(this).toggleClass('is-active');
-    $('.mobile-navi').toggleClass('is-active');
+    $(this).toggleClass('is-open');
+    $('.header__mobile').toggleClass('is-active');
+    $("body, html").toggleClass("is-hideScroll");
   });
 
   // function closeMobileMenu(){

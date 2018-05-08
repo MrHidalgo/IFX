@@ -1,0 +1,20 @@
+// MENU :: START
+
+//- variable start
+-
+  var menuArr = [
+    "About Us",
+    "Online Trading",
+    "Learn",
+    "Partnership",
+    "Info Centre"
+  ];
+//- variable end
+
+.menu
+  ul.menu__list
+    -for(var i = 0, len = menuArr.length; i < len; i++)
+      li.menu__item
+        a(href="#", title!="", class!="menu__link")!= menuArr[i]
+
+// MENU :: END

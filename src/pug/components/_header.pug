@@ -1,5 +1,22 @@
 // HEADER :: START
 
 header.header
-        
+  .container
+    .header__wrap
+
+      .logotype.logotype--header
+        include ../macros/_logotype
+
+      .header__mobile
+        .header__row
+          include ../macros/_menu
+
+        .header__row
+          include ../macros/_sign
+
+      .header__hamburger
+        .hamburger(js-hamburger)
+          -for(var i = 0; i < 6; i++)
+            span
+
 // HEADER :: END

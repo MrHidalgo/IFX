@@ -1,10 +1,15 @@
 include _mixins
+
 doctype html
 html(lang="en")
   head
     include _head
 
   body(class=bodyClass)
+
+    block grid
+      include ../macros/_grid
+
     // place where pjax bindings happen's
     #barba-wrapper
       block header
