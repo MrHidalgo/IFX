@@ -87,6 +87,7 @@ $(document).ready(function () {
 
       return false;
     });
+  // ====================
 
 
   // HEADER SCROLL
@@ -108,17 +109,18 @@ $(document).ready(function () {
       }
     }, 10));
   }
+  // ====================
 
 
   // HAMBURGER TOGGLER
   // ====================
-
   _document.on('click', '[js-hamburger]', function () {
     $(this).toggleClass('is-open');
 
     $('.header__mobile').toggleClass('is-active');
     $("body, html").toggleClass("is-hideScroll");
   });
+  // ====================
 
 
   // LOGO: return to homepage
@@ -128,6 +130,36 @@ $(document).ready(function () {
       scrollTop: 0
     }, 1000);
   });
+  // ====================
+
+
+  // SMOOTH SCROLL
+  // ====================
+  _document.on("click", "[anchor-js]", function (e) {
+    e.preventDefault();
+
+    let linkHref = $(this).attr('href'),
+      navHeight = $(".header").outerHeight(),
+      topHeightOffset;
+
+    if ($(window).width() >= "768") {
+      topHeightOffset = $(linkHref).offset().top - navHeight
+    } else {
+      topHeightOffset = $(id).offset().top;
+    }
+
+    $('body, html').animate({
+      scrollTop: topHeightOffset
+    }, 1000);
+  });
+  // ====================
+
+
+  // OBJECT-FIT POLYFILL
+  // ====================
+  const $someImages = $('[objectFit-js]');
+  objectFitImages($someImages);
+  // ====================
 
   // function closeMobileMenu(){
   //   $('[js-hamburger]').removeClass('is-active');
