@@ -1,11 +1,20 @@
 $sprite: (
 	arrow: (
-		offset-x: 0px,
+		offset-x: -28px,
 		offset-y: -48px,
 		width: 17px,
 		height: 11px,
 		total-width: 85px,
-		total-height: 59px,
+		total-height: 75px,
+		image: '../img/sprite.png'
+	),
+	corner: (
+		offset-x: 0px,
+		offset-y: -48px,
+		width: 18px,
+		height: 27px,
+		total-width: 85px,
+		total-height: 75px,
 		image: '../img/sprite.png'
 	),
 	logo: (
@@ -14,7 +23,7 @@ $sprite: (
 		width: 85px,
 		height: 38px,
 		total-width: 85px,
-		total-height: 59px,
+		total-height: 75px,
 		image: '../img/sprite.png'
 	),
 );
@@ -75,6 +84,9 @@ $sprite: (
 
 	.icon-arrow {
 		@include sprite(arrow)
+	}
+	.icon-corner {
+		@include sprite(corner)
 	}
 	.icon-logo {
 		@include sprite(logo)

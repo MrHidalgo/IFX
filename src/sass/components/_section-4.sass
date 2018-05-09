@@ -1,9 +1,108 @@
 // SECTION-4
 // ===============
 .section-4
+  position: relative
+  min-height: 1000px
+
+
   .container
-    //position: relative
-    //top: calc(50% - 79px)
-    //transform: translateY(-50%)
-    //+r(767)
-    //  top: calc(50% - 50px)
+    height: 100%
+    max-height: 800px
+
+
+  .section__row
+    position: relative
+    display: flex
+    height: 100%
+
+
+  .section__col
+    width: calc(100% / 3)
+    height: 100%
+
+    &:nth-child(1)
+      .section__title
+        margin-bottom: 190px
+
+    &:nth-child(2)
+      .section__col-wrap
+        display: flex
+        justify-content: flex-end
+      .section__col-cover
+        margin-top: 140px
+
+    &:nth-child(3)
+      .section__col-wrap
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+      .section__block
+        margin-bottom: 120px
+
+    &-cover
+      display: flex
+      width: 100%
+      max-width: 340px
+
+    &-left
+      width: 80px
+
+      p
+        font-size: 80px
+        font-weight: 700
+        line-height: 1
+
+    &-right
+      width: calc(100% - 50px)
+
+      p
+        &:nth-child(1)
+          margin-bottom: 10px
+          font-size: 22px
+          font-weight: 700
+        &:nth-child(2)
+          font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
+
+
+  .section__img
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    max-width: 100%
+
+
+  .section__title
+    font-size: 60px
+    font-weight: 700
+
+
+  .section__block
+    cursor: pointer
+    position: relative
+    width: 264px
+    height: 337px
+    background-color: $colorBlack
+
+    &-line
+      position: absolute
+      top: 58px
+      right: 44px
+      width: 59px
+      height: 6px
+      background-color: $colorWhite
+
+    &-text
+      position: absolute
+      bottom: 50px
+      left: 40px
+      font-size: 40px
+      font-weight: 700
+      color: $colorWhite
+
+    &-icon
+      position: absolute
+      bottom: 50px
+      right: 30px
