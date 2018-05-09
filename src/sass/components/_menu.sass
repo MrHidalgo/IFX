@@ -30,6 +30,8 @@
         transition: .3s linear
 
       &:hover
+        opacity: 0.5
+        +transition(opacity)
         &:before
           visibility: visible
           transform: scaleX(1)

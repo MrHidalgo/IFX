@@ -140,13 +140,15 @@ $(document).ready(function () {
 
     let linkHref = $(this).attr('href'),
       navHeight = $(".header").outerHeight(),
-      topHeightOffset;
+      topHeightOffset = $(linkHref).offset().top;
 
-    if ($(window).width() >= "768") {
-      topHeightOffset = $(linkHref).offset().top - navHeight
-    } else {
-      topHeightOffset = $(id).offset().top;
-    }
+    console.log(navHeight);
+
+    // if ($(window).width() >= "768") {
+    //   topHeightOffset = $(linkHref).offset().top - navHeight;
+    // } else {
+    //   topHeightOffset = $(linkHref).offset().top;
+    // }
 
     $('body, html').animate({
       scrollTop: topHeightOffset

@@ -6,7 +6,6 @@
 
 
 .section-1
-
   .container
     position: relative
     top: calc(50% - 79px)
@@ -69,3 +68,81 @@
 
     .icon
       margin-left: 24px
+
+
+.section-2
+  .container
+    height: 100%
+
+  .section__title
+    padding: 60px 0 40px
+    text-align: center
+    font-size: 60px
+    font-weight: 700
+
+  .section__row
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    height: 75%
+
+  .section__col
+    overflow: hidden
+    cursor: pointer
+    position: relative
+    width: calc(100% / 3)
+    height: calc(100% / 3)
+    min-height: 240px
+    &:hover
+      svg
+        opacity: 0.1
+        +transition(opacity)
+      .text__wrap
+        top: -30%
+        transform: translateY(-30%)
+        +transition(top, transform)
+        p
+          opacity: 1
+          +transition(opacity)
+
+    svg
+      display: block
+      position: relative
+      +transition(opacity)
+
+      path,
+      rect,
+      ellipse,
+      polyline
+        stroke-dasharray: 1000
+        stroke-dashoffset: 1000
+        animation: dash 2s ease-in-out forwards
+
+      @keyframes dash
+        from
+          stroke-dashoffset: 1000
+        to
+          stroke-dashoffset: 0
+
+    .svg__wrap
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 160px
+      margin-bottom: 30px
+
+    .text__wrap
+      position: relative
+      top: 0
+      padding: 0 30px
+      text-align: center
+      transform: translateY(0)
+      +transition(top, transform)
+
+      h3
+        margin-bottom: 15px
+        font-size: 22px
+      p
+        opacity: 0
+        font-size: 18px
+        +transition(opacity)
