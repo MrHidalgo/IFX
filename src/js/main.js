@@ -163,6 +163,28 @@ $(document).ready(function () {
   objectFitImages($someImages);
   // ====================
 
+
+  // Trade menu
+  // ====================
+  // _document.on("click", "[trade-menu-js]", (e) => {
+  //   e.preventDefault();
+  //
+  //   $("[trade-menu-js]").removeClass('is-active');
+  //   $(e.target).closest("li").addClass('is-active');
+  // });
+  // ====================
+
+
+  // Trade sub menu
+  // ====================
+  _document.on("click", "[trade-data-js]", (e) => {
+    e.preventDefault();
+
+    $("[trade-data-js]").removeClass('is-active');
+    $(e.target).closest("li").addClass('is-active');
+  });
+  // ====================
+
   // function closeMobileMenu(){
   //   $('[js-hamburger]').removeClass('is-active');
   //   $('.mobile-navi').removeClass('is-active');

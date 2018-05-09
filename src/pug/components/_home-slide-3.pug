@@ -1,6 +1,61 @@
 // SECTION 3 :: START
 
+-
+  var sectionMenuArr = [
+    "Forex",
+    "Futures",
+    "Indices",
+    "Shares",
+    "Metals",
+    "Energies"
+  ];
+  var sectionDataMenu = [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "AUDUSD"
+  ];
+
 section.section.section-3#section-3
   .container
+
+    .section__row
+
+      .section__col
+        .section__col-wrap
+          h2.section__title!= "Trade the</br>Financial Markets"
+          p.section__text!= "Trade over 72 asset classes from across the globe with instant, high speed access Forex, Metals, Commodities, Gold, Silver and CFDs through MetaTrader 4 and cTrader using our cutting edge infrastructure."
+
+          a(href="#" class="section__link" title="")
+            != "Learn more"
+            span
+
+      .section__col
+
+        .section__menu
+          ul.section__menu-list
+            -for(var i = 0, len = sectionMenuArr.length; i < len; i++)
+              li.section__menu-item(trade-menu-js, class!= (i === 0) ? "is-active" : "")
+                a(href="#" class="section__menu-link" title="")!= sectionMenuArr[i]
+
+        .section__data
+          .section__data-left
+            ul.section__submenu-list
+              -for(var i = 0, len = sectionDataMenu.length; i < len; i++)
+                li.section__submenu-item(trade-data-js, class!= (i === 0) ? "is-active" : "")
+                  a(href="#" class="section__submenu-link" title="")!= sectionDataMenu[i]
+
+          .section__data-right
+            .section__data-right--top
+              span!= "0.2"
+              span!= "pips"
+            .section__data-right--bottom
+              p
+                span!= "BID"
+                span!= "1.23957"
+              p
+                span!= "ASK"
+                span!= "1.23959"
+
 
 // SECTION 3 :: START
