@@ -15,12 +15,20 @@
     padding-top: 0
 
   &.is-fixed
-    padding-top: 10px
+    padding-top: 19px
     height: (79px - 20px)
     +transition(padding-top, height)
     +r(767)
       padding-top: 0
       height: (79px - 29px)
+
+
+  .container
+    padding-left: 45px
+    padding-right: 45px
+    +r(767)
+      padding-left: 15px
+      padding-right: 15px
 
 
   &__wrap

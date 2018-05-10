@@ -3,8 +3,7 @@
 .section-5
   .container
     height: 100%
-    padding-top: 20px
-    padding-bottom: 20px
+    padding: 20px
 
 
   .section__row
@@ -20,6 +19,7 @@
     +r(767)
       width: 100%
       min-height: 290px
+
     &:nth-child(1)
       margin-right: 10px
       background-color: $colorWhiteSmoke
@@ -37,8 +37,6 @@
         background-position-y: 120px
 
       .section__title
-        padding-top: 65px
-        padding-bottom: 40px
         font-weight: 700
         text-align: center
         +r(767)
@@ -46,8 +44,9 @@
           padding-bottom: 20px
           font-size: 26px
         +rmin(768)
-          padding: 30px
-          font-size: 40px
+          padding-top: 62px
+          padding-bottom: 33px
+          font-size: 42px
         +rmin(1200)
           font-size: 60px
 
@@ -58,7 +57,7 @@
         margin-right: auto
         padding-bottom: 30px
         text-align: center
-        line-height: 1.6
+        line-height: 1.5
         font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
         +r(767)
           max-width: 100%
@@ -81,6 +80,7 @@
       position: relative
       width: 100%
       max-width: 170px
+      letter-spacing: 1px
       font-family: "SFProDisplay", "Rajdhani", "Arial", sans-serif
       font-weight: 600
       +transition(color)
@@ -132,31 +132,32 @@
       margin-bottom: 10px
       padding-right: 30px
       background-repeat: no-repeat
-      background-position: 12px 75px
-      background-size: auto 400px
+      background-position: 12px bottom
       +rmin(992)
-        padding: 30px
-        background-image: url("../img/img-secretWeapon_bg@2x.png")
+        padding-left: 30px
+        padding-right: 30px
       +rmin(1200)
-        padding-left: 220px
+        padding-left: 290px
+        background-image: url("../img/img-secretWeapon_bg.png")
       +rmin(1366)
-        padding-left: 300px
       +rmin(1440)
-        padding-left: 390px
       +r(991)
         padding: 30px
         background-image: none
 
       img
         display: none
-        margin-bottom: 30px
-        +r(767)
+        +r(1199)
           display: block
+          margin-right: auto
+        +r(767)
           margin-left: auto
           margin-right: auto
 
 
       .section__title
+        padding-top: 27px
+        padding-bottom: 20px
         font-size: 40px
         font-weight: 700
         +r(767)
@@ -164,18 +165,20 @@
           font-size: 26px
 
       .section__text
-        padding-top: 20px
         padding-bottom: 20px
-        line-height: 1.6
+        line-height: 1.5
         font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
         +r(767)
           text-align: center
           font-size: 14px
 
+      .section__link
+        margin-bottom: 20px
+
     &:nth-child(2)
       margin-top: 10px
       padding-left: 50px
-      padding-top: 50px
+      padding-top: 60px
       background-repeat: no-repeat
       background-position: right bottom
       background-size: contain
@@ -207,8 +210,8 @@
         width: 100%
         max-width: 360px
         padding-top: 20px
-        padding-bottom: 20px
-        line-height: 1.6
+        padding-bottom: 32px
+        line-height: 1.4
         font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
         +r(767)
           max-width: 100%
