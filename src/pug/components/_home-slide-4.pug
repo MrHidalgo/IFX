@@ -5,9 +5,10 @@ section.section.section-4#section-4
   img(
     src="./img/img-slide-4_bg.png"
     srcset="./img/img-slide-4_bg@2x.png 2x"
-    class="section__img"
+    class="section__img wow wowFadeDown"
     title=""
     alt=""
+    data-animation-delay="1s"
   )
 
   .container
@@ -15,9 +16,9 @@ section.section.section-4#section-4
 
       .section__col
         .section__col-wrap
-          h1.section__title!= "Start Trading in 3</br>Easy Steps"
+          h1.section__title.wow.wowFadeUp(data-animation-delay="0.5s")!= "Start Trading in 3</br>Easy Steps"
 
-          .section__col-cover
+          .section__col-cover.wow.wowFadeLeft(data-animation-delay="0.75s")
             .section__col-left
               p!= "1"
             .section__col-right
@@ -28,7 +29,7 @@ section.section.section-4#section-4
       .section__col
         .section__col-wrap
 
-          .section__col-cover
+          .section__col-cover.wow.wowFadeUp(data-animation-delay="0.75s")
             .section__col-left
               p!= "2"
             .section__col-right
@@ -38,12 +39,12 @@ section.section.section-4#section-4
       .section__col
         .section__col-wrap
 
-          .section__block
+          .section__block.wow.wowFadeDown(data-animation-delay="0.75s")
             span.section__block-line
             p.section__block-text!= "Start</br>Trading</br>Now"
             i.icon.icon-corner.section__block-icon
 
-          .section__col-cover
+          .section__col-cover.wow.wowFadeRight(data-animation-delay="0.85s")
             .section__col-left
               p!= "3"
             .section__col-right
