@@ -12,7 +12,7 @@
   .container
     position: relative
     +rmin(992)
-      top: calc(50% - 79px)
+      top: calc(50% - 30px)
       transform: translateY(-50%)
     +r(767)
       top: calc(50% - 50px)
@@ -41,26 +41,30 @@
         max-width: 492px
         margin-bottom: 0
       +rmin(1200)
-        margin-left: 50px
+        margin-left: 45px
 
 
   .section__title
-    margin-top: 50px
-    margin-bottom: 40px
+    margin-top: 40px
     font-weight: bold
     +rmin(320)
+      margin-bottom: 20px
       font-size: 32px
     +rmin(768)
+      margin-bottom: 35px
+      font-size: 42px
+    +rmin(1200)
       font-size: 60px
 
 
   .section__text
-    margin-bottom: 46px
     line-height: 1.6
     font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
     +rmin(320)
+      margin-bottom: 20px
       font-size: 16px
     +rmin(768)
+      margin-bottom: 66px
       font-size: 18px
 
 
@@ -70,6 +74,7 @@
     max-width: 170px
     font-family: "SFProDisplay", "Rajdhani", "Arial", sans-serif
     font-weight: 600
+    letter-spacing: 1px
     +transition(color)
     +rmin(320)
       font-size: 14px
@@ -116,7 +121,7 @@
       +rmin(576)
         height: 35px
       +rmin(768)
-        margin-bottom: 50px
+        margin-bottom: 45px
 
     &-item
       width: calc(100% / 6)
@@ -162,7 +167,7 @@
     display: flex
     height: 100%
     min-height: 350px
-    max-height: 400px
+    max-height: 355px
     padding: 25px
     background: rgb(255,135,31)
     background: -moz-linear-gradient(left, rgba(255,135,31,1) 0%, rgba(227,32,44,1) 100%)

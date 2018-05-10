@@ -4,6 +4,8 @@
   .container
     height: 100%
     padding: 20px
+    +r($mobile)
+      padding: 15px
 
 
   .section__row
@@ -147,10 +149,8 @@
 
       img
         display: none
-        +r(1199)
-          display: block
-          margin-right: auto
         +r(767)
+          display: block
           margin-left: auto
           margin-right: auto
 
