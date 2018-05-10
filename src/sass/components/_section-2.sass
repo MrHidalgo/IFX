@@ -1,6 +1,10 @@
 // SECTION-2
 // ===============
 .section-2
+  +rmin(320)
+    background-color: $colorWhiteSmoke
+  +rmin(768)
+    background-color: $colorWhite
 
 
   .container
@@ -8,10 +12,14 @@
 
 
   .section__title
-    padding: 60px 0 40px
     text-align: center
-    font-size: 60px
     font-weight: 700
+    +rmin(320)
+      padding: 15px 0 15px
+      font-size: 32px
+    +rmin(768)
+      padding: 60px 0 40px
+      font-size: 60px
 
 
   .section__row
@@ -52,6 +60,16 @@
       display: block
       position: relative
       +transition(opacity)
+
+      #ico2-line3,
+      #ico2-line4,
+      #ico2-line5,
+      #svg3-use-0,
+      #svg3-use-1
+        +rmin(320)
+          fill: $colorWhiteSmoke
+        +rmin(768)
+          fill: $colorWhite
 
       path,
       rect,

@@ -27,7 +27,6 @@ $(document).ready(function () {
     // updateHeaderActiveClass();
     initHeaderScroll();
 
-    // initPopups();
     // initSliders();
     // initScrollMonitor();
     // initMasks();
@@ -50,8 +49,13 @@ $(document).ready(function () {
 
 
   // some plugins work best with onload triggers
-  _window.on('load', function () {
-    // your functions
+  _window.on('load resize', function () {
+    if(_window.width() < 768) {
+      initPopups();
+    } else {
+      $.magnificPopup.close();
+      $('[popup-js]').off('click');
+    }
   });
 
 
@@ -247,50 +251,41 @@ $(document).ready(function () {
   // MODALS
   //////////
 
-  // function initPopups(){
-  //   // Magnific Popup
-  //   var startWindowScroll = 0;
-  //   $('[js-popup]').magnificPopup({
-  //     type: 'inline',
-  //     fixedContentPos: true,
-  //     fixedBgPos: true,
-  //     overflowY: 'auto',
-  //     closeBtnInside: true,
-  //     preloader: false,
-  //     midClick: true,
-  //     removalDelay: 300,
-  //     mainClass: 'popup-buble',
-  //     callbacks: {
-  //       beforeOpen: function() {
-  //         startWindowScroll = _window.scrollTop();
-  //         // $('html').addClass('mfp-helper');
-  //       },
-  //       close: function() {
-  //         // $('html').removeClass('mfp-helper');
-  //         _window.scrollTop(startWindowScroll);
-  //       }
-  //     }
-  //   });
-  //
-  //   $('[js-popup-gallery]').magnificPopup({
-  // 		delegate: 'a',
-  // 		type: 'image',
-  // 		tLoading: 'Загрузка #%curr%...',
-  // 		mainClass: 'popup-buble',
-  // 		gallery: {
-  // 			enabled: true,
-  // 			navigateByImgClick: true,
-  // 			preload: [0,1]
-  // 		},
-  // 		image: {
-  // 			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-  // 		}
-  // 	});
-  // }
+  function initPopups(){
+    let startWindowScroll = 0;
 
-  // function closeMfp(){
-  //   $.magnificPopup.close();
-  // }
+    $('[popup-js]').magnificPopup({
+        type: 'inline',
+        fixedContentPos: true,
+        fixedBgPos: true,
+        overflowY: 'auto',
+        closeBtnInside: true,
+        preloader: false,
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'show',
+        callbacks: {
+          beforeOpen: function(e) {
+            startWindowScroll = _window.scrollTop();
+
+            const modal = $("#modal"),
+              idx = this.index,
+              elem = $(".section__col-" + idx);
+
+            let elemSvg = elem.find(".svg__wrap").html(),
+              elemTitle = elem.find("h3").html(),
+              elemText = elem.find("p").html();
+
+            modal.find(".modal__svg").html(elemSvg);
+            modal.find("h3").text(elemTitle);
+            modal.find("p").text(elemText);
+          },
+          close: function() {
+            _window.scrollTop(startWindowScroll);
+          }
+        }
+      });
+  }
 
   ////////////
   // UI

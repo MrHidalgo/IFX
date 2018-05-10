@@ -2,7 +2,10 @@
 // ===============
 .section-4
   position: relative
-  min-height: 1000px
+  +rmin(320)
+    min-height: 0
+  +rmin(768)
+    min-height: 1000px
 
 
   .container
@@ -10,7 +13,7 @@
     max-height: 800px
     +r(767)
       height: 100%
-      max-height: 0
+      max-height: auto
 
 
   .section__row

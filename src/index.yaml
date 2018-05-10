@@ -2,6 +2,6 @@ ProjectTitle: IFX
 
 PageList:
 - file: homepage.html
-  ready: 25
+  ready: 50
 - file: about.html
   ready: 0
