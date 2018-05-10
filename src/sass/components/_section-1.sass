@@ -1,49 +1,95 @@
 // SECTION-1
 // ===============
 .section-1
-
+  +rmin(320)
+    height: 100%
+  +rmin(992)
+    min-height: 800px
+    height: calc(100vh - 59px)
 
   .container
     position: relative
-    top: calc(50% - 79px)
-    transform: translateY(-50%)
+    +rmin(992)
+      top: calc(50% - 79px)
+      transform: translateY(-50%)
     +r(767)
       top: calc(50% - 50px)
 
 
   .section__row
     display: flex
+    +rmin(320)
+      flex-direction: column
+    +rmin(992)
+      flex-direction: row
 
 
   .section__col
     &:nth-child(1)
       width: 100%
-      max-width: 450px
-      padding-top: 105px
+      +rmin(320)
+        text-align: center
+      +rmin(768)
+        padding-top: 15px
+      +rmin(992)
+        max-width: 450px
+        text-align: left
+      +rmin(1200)
+        padding-top: 105px
     &:nth-child(2)
       display: flex
       justify-content: flex-end
-      width: calc(100% - 450px)
       padding-top: 32px
+      +rmin(320)
+        display: block
+        padding: 30px 0
+      +rmin(768)
+        width: 100%
+      +rmin(992)
+        width: calc(100% - 450px)
 
       img
         display: block
         max-width: 100%
-        width: 90%
         height: auto
-        object-fit: cover
+        +rmin(768)
+          width: 100%
+          object-fit: contain
+        +rmin(1366)
+          width: 90%
+          object-fit: cover
 
 
   .section__title
-    padding-bottom: 67px
-    font-size: 80px
     font-weight: 700
+    +rmin(320)
+      padding-bottom: 20px
+      font-size: 32px
+    +rmin(768)
+      padding-bottom: 67px
+      font-size: 60px
+    +rmin(992)
+      font-size: 70px
+    +rmin(1200)
+      font-size: 75px
+    +rmin(1366)
+      font-size: 80px
 
 
   .section__subtitle
-    padding-bottom: 105px
-    font-size: 32px
     font-weight: 500
+    +rmin(320)
+      padding-bottom: 20px
+      font-size: 22px
+    +rmin(768)
+      padding-bottom: 105px
+      font-size: 26px
+    +rmin(992)
+      font-size: 28px
+    +rmin(1200)
+      font-size: 30px
+    +rmin(1366)
+      font-size: 32px
 
 
   .section__btn
@@ -51,24 +97,75 @@
     align-items: center
     justify-content: center
     width: 100%
-    max-width: 450px
-    height: 120px
     background-color: $colorAlizarin
-    font-size: 26px
     font-weight: 500
     color: $colorWhite
+    +transition(background-color)
+    +rmin(320)
+      max-width: 290px
+      height: 50px
+      font-size: 18px
+    +rmin(768)
+      max-width: 390px
+      height: 90px
+      margin-left: auto
+      margin-right: auto
+      font-size: 20px
+    +rmin(992)
+      max-width: 410px
+      height: 100px
+      margin-left: 0
+      margin-right: 0
+      font-size: 22px
+    +rmin(1200)
+      max-width: 430px
+      height: 110px
+      font-size: 24px
+    +rmin(1366)
+      max-width: 450px
+      height: 120px
+      font-size: 26px
+
+    &:hover
+      background-color: $colorBlack
+
+    &--desktop
+      +r(767)
+        display: none
+    &--mobile
+      +rmin(320)
+        display: flex
+        margin-left: auto
+        margin-right: auto
+      +rmin(768)
+        display: none
 
 
   .section__link
-    display: flex
     align-items: center
+    justify-content: center
     position: absolute
-    left: 50%
-    bottom: 10px
-    height: 120px
-    transform: translateX(-50%)
-    font-size: 26px
     font-weight: 500
+    +rmin(320)
+      display: none
+    +rmin(992)
+      display: flex
+      right: 15px
+      bottom: 0
+      max-width: 410px
+      height: 100px
+      font-size: 22px
+    +rmin(1200)
+      bottom: 10px
+      max-width: 430px
+      height: 110px
+      font-size: 24px
+    +rmin(1366)
+      left: 50%
+      max-width: 450px
+      height: 120px
+      transform: translateX(-50%)
+      font-size: 26px
 
     .icon
       margin-left: 24px

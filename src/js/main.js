@@ -81,15 +81,6 @@ $(document).ready(function () {
   _document
     .on('click', '[href="#"]', function (e) {
       e.preventDefault();
-    })
-    .on('click', 'a[href^="#section"]', function () { // section scroll
-      let el = $(this).attr('href');
-
-      $('body, html').animate({
-        scrollTop: $(el).offset().top
-      }, 1000);
-
-      return false;
     });
   // ====================
 
@@ -101,7 +92,7 @@ $(document).ready(function () {
       let vScroll = _window.scrollTop();
       let header = $('.header').not('.header--static');
 
-      if (vScroll > 100) {
+      if (vScroll > 75) {
         header.addClass('is-fixed');
       } else {
         header.removeClass('is-fixed');
