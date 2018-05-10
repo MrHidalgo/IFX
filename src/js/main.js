@@ -93,17 +93,14 @@ $(document).ready(function () {
   // HEADER SCROLL
   // ====================
   function initHeaderScroll() {
-    _window.on('scroll load', throttle(function (e) {
+    _window.on('scroll load', throttle(function(e) {
       let vScroll = _window.scrollTop();
       let header = $('.header').not('.header--static');
-      let visibleWhen = Math.round(_document.height() / _window.height()) > 2.5;
 
-      if (visibleWhen) {
-        if (vScroll > 100) {
-          header.addClass('is-fixed');
-        } else {
-          header.removeClass('is-fixed');
-        }
+      if (vScroll > 100) {
+        header.addClass('is-fixed');
+      } else {
+        header.removeClass('is-fixed');
       }
     }, 10));
   }
