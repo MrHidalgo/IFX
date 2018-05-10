@@ -3,24 +3,21 @@
 .section-1
   +rmin(320)
     height: 100%
-  +rmin(992)
+  +rmin(1200)
     min-height: 800px
     height: calc(100vh - 59px)
 
   .container
     position: relative
-    +rmin(992)
-      top: calc(50% - 79px)
-      transform: translateY(-50%)
-    +r(767)
-      top: calc(50% - 50px)
+    height: 100%
 
 
   .section__row
     display: flex
+    height: 100%
     +rmin(320)
       flex-direction: column
-    +rmin(992)
+    +rmin(1200)
       flex-direction: row
 
 
@@ -30,34 +27,44 @@
       +rmin(320)
         text-align: center
       +rmin(768)
-        padding-top: 15px
-      +rmin(992)
-        max-width: 450px
         text-align: left
+        padding-top: 15px
       +rmin(1200)
-        padding-top: 105px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        max-width: 450px
+        padding-top: 0
+      .section__col-wrap
+        position: relative
+
     &:nth-child(2)
       display: flex
-      justify-content: flex-end
       padding-top: 32px
       +rmin(320)
         display: block
         padding: 30px 0
       +rmin(768)
         width: 100%
-      +rmin(992)
+      +rmin(1200)
         width: calc(100% - 450px)
+
+      .section__col-wrap
+        display: flex
+        height: 100%
+        width: 100%
+        justify-content: flex-end
+        +r(767)
+          display: block
 
       img
         display: block
-        max-width: 100%
         height: auto
+        max-width: 100%
         +rmin(768)
           width: 100%
+          height: 100%
           object-fit: contain
-        +rmin(1366)
-          width: 90%
-          object-fit: cover
 
 
   .section__title
@@ -150,21 +157,21 @@
       display: none
     +rmin(992)
       display: flex
-      right: 15px
-      bottom: 0
+      left: 410px
+      top: 0
+      width: 100%
       max-width: 410px
       height: 100px
       font-size: 22px
     +rmin(1200)
-      bottom: 10px
+      left: 430px
       max-width: 430px
       height: 110px
       font-size: 24px
     +rmin(1366)
-      left: 50%
+      left: 450px
       max-width: 450px
       height: 120px
-      transform: translateX(-50%)
       font-size: 26px
 
     .icon

@@ -8,22 +8,24 @@ section.section.section-1#section-1
         h1.section__title!= "The Future of Trading"
         p.section__subtitle!= "Trade Forex, CFD’S and Cryptocurrencies"
 
-        a(href="#" class="section__btn section__btn--desktop" title="")!= "Start Trading Now"
+        .section__col-wrap
+          a(href="#" class="section__btn section__btn--desktop" title="")!= "Start Trading Now"
+
+          a(href="#section-2" class="section__link" title="" anchor-js)
+            != "Discover more"
+            i.icon.icon-arrow
 
       .section__col
-
-        img(
-          src="./img/img-slide-1.png"
-          srcset="./img/img-slide-1@2x.png 2x"
-          title=""
-          alt=""
-          objectFit-js
-        )
+        .section__col-wrap
+          img(
+            src="./img/img-slide-1.png"
+            srcset="./img/img-slide-1@2x.png 2x"
+            title=""
+            alt=""
+            objectFit-js
+          )
 
     a(href="#" class="section__btn section__btn--mobile" title="")!= "Start Trading Now"
 
-    a(href="#section-2" class="section__link" title="" anchor-js)
-      != "Discover more"
-      i.icon.icon-arrow
 
 // SECTION 1 :: END

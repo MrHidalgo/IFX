@@ -307,42 +307,42 @@ $(document).ready(function () {
   ////////////
   // SCROLLMONITOR - WOW LIKE
   ////////////
-  // function initScrollMonitor(){
-  //   $('.wow').each(function(i, el){
-  //
-  //     var elWatcher = scrollMonitor.create( $(el) );
-  //
-  //     var delay;
-  //     if ( $(window).width() < 768 ){
-  //       delay = 0
-  //     } else {
-  //       delay = $(el).data('animation-delay');
-  //     }
-  //
-  //     var animationClass = $(el).data('animation-class') || "wowFadeUp"
-  //
-  //     var animationName = $(el).data('animation-name') || "wowFade"
-  //
-  //     elWatcher.enterViewport(throttle(function() {
-  //       $(el).addClass(animationClass);
-  //       $(el).css({
-  //         'animation-name': animationName,
-  //         'animation-delay': delay,
-  //         'visibility': 'visible'
-  //       });
-  //     }, 100, {
-  //       'leading': true
-  //     }));
-  //     elWatcher.exitViewport(throttle(function() {
-  //       $(el).removeClass(animationClass);
-  //       $(el).css({
-  //         'animation-name': 'none',
-  //         'animation-delay': 0,
-  //         'visibility': 'hidden'
-  //       });
-  //     }, 100));
-  //   });
-  // }
+  function initScrollMonitor(){
+    $('.wow').each(function(i, el){
+
+      var elWatcher = scrollMonitor.create( $(el) );
+
+      var delay;
+      if ( $(window).width() < 768 ){
+        delay = 0
+      } else {
+        delay = $(el).data('animation-delay');
+      }
+
+      var animationClass = $(el).data('animation-class') || "wowFadeUp";
+
+      var animationName = $(el).data('animation-name') || "wowFade";
+
+      elWatcher.enterViewport(throttle(function() {
+        $(el).addClass(animationClass);
+        $(el).css({
+          'animation-name': animationName,
+          'animation-delay': delay,
+          'visibility': 'visible'
+        });
+      }, 100, {
+        'leading': true
+      }));
+      elWatcher.exitViewport(throttle(function() {
+        $(el).removeClass(animationClass);
+        $(el).css({
+          'animation-name': 'none',
+          'animation-delay': 0,
+          'visibility': 'hidden'
+        });
+      }, 100));
+    });
+  }
 
 
   //////////
