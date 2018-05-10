@@ -96,8 +96,6 @@ $(document).ready(function () {
     _window.on('scroll load', throttle(function (e) {
       let vScroll = _window.scrollTop();
       let header = $('.header').not('.header--static');
-      // let headerHeight = header.height();
-      // let firstSection = _document.find('.page__content div:first-child()').height() - headerHeight;
       let visibleWhen = Math.round(_document.height() / _window.height()) > 2.5;
 
       if (visibleWhen) {
@@ -114,10 +112,10 @@ $(document).ready(function () {
 
   // HAMBURGER TOGGLER
   // ====================
-  _document.on('click', '[js-hamburger]', function () {
+  _document.on('click', '[js-hamburger]', function(e) {
     $(this).toggleClass('is-open');
 
-    $('.header__mobile').toggleClass('is-active');
+    $('.header__mobile').toggleClass('is-active fadeIn');
     $("body, html").toggleClass("is-hideScroll");
   });
   // ====================
@@ -125,7 +123,7 @@ $(document).ready(function () {
 
   // LOGO: return to homepage
   // ====================
-  _document.on('click', "[logo-js]", function (e) {
+  _document.on('click', "[logo-js]", (e) => {
     $('body, html').animate({
       scrollTop: 0
     }, 1000);
@@ -135,20 +133,12 @@ $(document).ready(function () {
 
   // SMOOTH SCROLL
   // ====================
-  _document.on("click", "[anchor-js]", function (e) {
+  _document.on("click", "[anchor-js]", function(e) {
     e.preventDefault();
 
     let linkHref = $(this).attr('href'),
       navHeight = $(".header").outerHeight(),
       topHeightOffset = $(linkHref).offset().top;
-
-    console.log(navHeight);
-
-    // if ($(window).width() >= "768") {
-    //   topHeightOffset = $(linkHref).offset().top - navHeight;
-    // } else {
-    //   topHeightOffset = $(linkHref).offset().top;
-    // }
 
     $('body, html').animate({
       scrollTop: topHeightOffset
@@ -184,6 +174,19 @@ $(document).ready(function () {
     $(e.target).closest("li").addClass('is-active');
   });
   // ====================
+
+
+  // Main menu
+  // ====================
+  _document.on("click", "[menu-js]", (e) => {
+    e.preventDefault();
+
+    $("[menu-js]").removeClass('is-active');
+    $(e.target).closest("li").addClass('is-active');
+  });
+  // ====================
+
+
 
   // function closeMobileMenu(){
   //   $('[js-hamburger]').removeClass('is-active');

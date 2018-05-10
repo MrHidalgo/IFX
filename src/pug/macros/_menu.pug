@@ -14,7 +14,7 @@
 .menu
   ul.menu__list
     -for(var i = 0, len = menuArr.length; i < len; i++)
-      li.menu__item
+      li.menu__item(menu-js, class!="")
         a(href="#", title!="", class!="menu__link")!= menuArr[i]
 
 // MENU :: END
