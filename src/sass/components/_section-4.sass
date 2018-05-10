@@ -8,49 +8,75 @@
   .container
     height: 100%
     max-height: 800px
+    +r(767)
+      height: 100%
+      max-height: 0
 
 
   .section__row
     position: relative
     display: flex
     height: 100%
+    +r(767)
+      display: block
 
 
   .section__col
     width: calc(100% / 3)
     height: 100%
+    +r(767)
+      width: 100%
 
     &:nth-child(1)
       .section__title
         margin-bottom: 190px
+        +r(767)
+          margin-bottom: 40px
 
     &:nth-child(2)
       .section__col-wrap
         display: flex
         justify-content: flex-end
+        +r(767)
+          justify-content: flex-start
       .section__col-cover
         margin-top: 140px
+        +r(767)
+          margin-top: 30px
 
     &:nth-child(3)
       .section__col-wrap
         display: flex
         flex-direction: column
         align-items: flex-end
-      .section__block
-        margin-bottom: 120px
+        +r(767)
+          align-items: flex-start
+      .section__col-cover
+        margin-top: 120px
+        +r(991)
+          margin-top: 400px
+        +r(767)
+          margin-top: 30px
 
     &-cover
       display: flex
       width: 100%
       max-width: 340px
+      +r(767)
+        max-width: 100%
 
     &-left
       width: 80px
 
       p
-        font-size: 80px
         font-weight: 700
         line-height: 1
+        +rmin(768)
+          font-size: 60px
+        +rmin(992)
+          font-size: 80px
+        +r(767)
+          font-size: 50px
 
     &-right
       width: calc(100% - 50px)
@@ -58,10 +84,17 @@
       p
         &:nth-child(1)
           margin-bottom: 10px
-          font-size: 22px
           font-weight: 700
+          +rmin(768)
+            font-size: 18px
+          +rmin(992)
+            font-size: 22px
+          +r(767)
+            font-size: 20px
         &:nth-child(2)
           font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
+          +r(767)
+            font-size: 14px
 
 
   .section__img
@@ -72,11 +105,24 @@
     margin-left: auto
     margin-right: auto
     max-width: 100%
+    +r(767)
+      display: none
 
 
   .section__title
-    font-size: 60px
     font-weight: 700
+    +rmin(768)
+      font-size: 30px
+    +rmin(992)
+      font-size: 40px
+    +rmin(1200)
+      font-size: 45px
+    +rmin(1366)
+      font-size: 50px
+    +rmin(1440)
+      font-size: 60px
+    +r(767)
+      font-size: 32px
 
 
   .section__block
@@ -85,6 +131,12 @@
     width: 264px
     height: 337px
     background-color: $colorBlack
+    +transition(background-color)
+    +r(991)
+      display: none
+    &:hover
+      background-color: $colorAlizarin
+      +transition(background-color)
 
     &-line
       position: absolute
