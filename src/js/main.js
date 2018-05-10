@@ -313,7 +313,8 @@ $(document).ready(function () {
       var elWatcher = scrollMonitor.create( $(el) );
 
       var delay;
-      if ( $(window).width() < 768 ){
+
+      if ( _window.width() < 768 ){
         delay = 0
       } else {
         delay = $(el).data('animation-delay');
