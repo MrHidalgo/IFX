@@ -23,6 +23,8 @@
 
   .section__col
     &:nth-child(1)
+      z-index: 1
+      position: relative
       width: 100%
       +rmin(320)
         text-align: center
@@ -39,7 +41,9 @@
         position: relative
 
     &:nth-child(2)
+      z-index: 0
       display: flex
+      position: relative
       padding-top: 32px
       +rmin(320)
         display: block
