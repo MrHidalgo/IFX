@@ -62,7 +62,7 @@
 
 
     svg
-      display: block
+      display: none
       position: relative
       +transition(opacity)
 
@@ -75,21 +75,6 @@
           fill: $colorWhiteSmoke
         +rmin(768)
           fill: $colorWhite
-
-      path,
-      rect,
-      ellipse,
-      polyline
-        stroke-dasharray: 1000
-        stroke-dashoffset: 1000
-        animation: dash 2s ease-in-out forwards
-
-      @keyframes dash
-        from
-          stroke-dashoffset: 1000
-        to
-          stroke-dashoffset: 0
-
 
     .svg__wrap
       display: flex
@@ -121,3 +106,23 @@
         margin-left: auto
         margin-right: auto
         +transition(opacity)
+
+
+.animation-go-js
+  svg
+    display: block !important
+
+    path,
+    rect,
+    ellipse,
+    polyline
+      stroke-dasharray: 1000
+      stroke-dashoffset: 1000
+      animation: dash 2.5s ease-in-out forwards
+      animation-delay: 0.85s
+
+  @keyframes dash
+    from
+      stroke-dashoffset: 1000
+    to
+      stroke-dashoffset: 0

@@ -329,7 +329,7 @@ $(document).ready(function () {
           'animation-name': animationName,
           'animation-delay': delay,
           'visibility': 'visible'
-        });
+        }).addClass("animation-go-js");
       }, 100, {
         'leading': true
       }));
