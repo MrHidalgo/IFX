@@ -2,7 +2,6 @@
 // ===============
 .section-1
   +rmin(320)
-    //height: 100%
   +rmin(768)
     min-height: 800px
     height: calc(100vh - 59px)
@@ -44,6 +43,10 @@
         max-width: 450px
       .section__col-wrap
         position: relative
+        animation-delay: 0.6s
+
+        .is-loader &
+          animation-delay: 3.1s
 
     &:nth-child(2)
       z-index: 0
@@ -54,7 +57,6 @@
         display: block
         padding: 30px 0
       +rmin(768)
-        //width: 100%
         width: calc(100% - 300px)
       +rmin(992)
         width: calc(100% - 370px)
@@ -68,8 +70,12 @@
         height: 100%
         width: 100%
         justify-content: flex-end
+        animation-delay: 0.4s
         +r(767)
           display: block
+
+        .is-loader &
+          animation-delay: 2.9s
 
       img
         display: block
@@ -83,6 +89,7 @@
 
   .section__title
     font-weight: 700
+    animation-delay: 0.4s
     +rmin(320)
       padding-bottom: 20px
       font-size: 32px
@@ -95,9 +102,13 @@
     +rmin(1366)
       font-size: 80px
 
+    .is-loader &
+      animation-delay: 2.9s
+
 
   .section__subtitle
     font-weight: 500
+    animation-delay: 0.5s
     +rmin(320)
       padding-bottom: 20px
       font-size: 22px
@@ -110,6 +121,9 @@
       font-size: 30px
     +rmin(1366)
       font-size: 32px
+
+    .is-loader &
+      animation-delay: 3s
 
 
   .section__btn

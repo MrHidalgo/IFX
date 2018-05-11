@@ -16,12 +16,18 @@
     +link()
     &:first-child
       margin-left: 0
+      animation-delay: 0.5s
       +r(1199)
         height: 70px
         line-height: 70px
         animation-name: wowFade !important
         visibility: visible !important
+
+      .is-loader &
+        animation-delay: 3s
+
     &:nth-child(2)
+      animation-delay: 0.4s
       +r(1199)
         height: 70px
         margin-left: 0
@@ -37,6 +43,10 @@
         margin-bottom: 10px
         background-color: rgba($colorBlack, 0.1)
         text-align: center
+
+      .is-loader &
+        animation-delay: 2.9s
+
     +rmin(1200)
       &:before
         content: ""
@@ -64,6 +74,7 @@
     padding: 11px 20px 10px
     border: 1px solid rgba($colorBlack, 0.1)
     border-radius: 3px
+    animation-delay: 0.3s
     +link()
     +transition(border-color, box-shadow, background-color, color)
     +r(1199)
@@ -88,5 +99,8 @@
       background-color: $colorAlizarin
       color: $colorWhite
       +transition(border-color, box-shadow, background-color, color)
+
+    .is-loader &
+      animation-delay: 2.8s
 
 // SIGN :: END

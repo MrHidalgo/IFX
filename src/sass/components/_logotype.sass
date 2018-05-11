@@ -1,13 +1,15 @@
 // LOGOTYPE :: START
 .logotype
   margin-right: 39px
-
+  animation-delay: 0.3s
   +transition(transform)
 
   &:hover
     transform: scale(0.97)
-
     +transition(transform)
+
+  .is-loader &
+    animation-delay: 2.8s
 
 // LOGOTYPE :: END
 // LOGOTYPE media :: START

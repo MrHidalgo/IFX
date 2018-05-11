@@ -4,7 +4,7 @@ header.header.is-fixed
   .container
     .header__wrap
 
-      .logotype.logotype--header.wow.wowFadeDown(data-animation-delay="0.3s")
+      .logotype.logotype--header.wow.wowFadeDown
         include ../macros/_logotype
 
       .header__mobile.animated
@@ -14,7 +14,7 @@ header.header.is-fixed
         .header__row
           include ../macros/_sign
 
-      .header__hamburger.wow.wowFadeDown(data-animation-delay="0.3s")
+      .header__hamburger.wow.wowFadeDown
         .hamburger(js-hamburger)
           -for(var i = 0; i < 6; i++)
             span
