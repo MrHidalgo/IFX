@@ -9,6 +9,13 @@
     "Partnership",
     "Info Centre"
   ];
+  var menuHref = [
+    "about.html",
+    "onlineTrading.html",
+    "learn.html",
+    "partnership.html",
+    "infoCentre.html"
+  ];
 //- variable end
 
 .menu
@@ -18,6 +25,6 @@
         menu-js,
         class!=""
       )
-        a(href="#", title!="", class!="menu__link")!= menuArr[i]
+        a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
 
 // MENU :: END

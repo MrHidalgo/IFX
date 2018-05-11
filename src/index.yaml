@@ -4,4 +4,12 @@ PageList:
 - file: homepage.html
   ready: 80
 - file: about.html
-  ready: 0
+  ready: 5
+- file: onlineTrading.html
+  ready: 5
+- file: learn.html
+  ready: 5
+- file: partnership.html
+  ready: 5
+- file: infoCentre.html
+  ready: 5

@@ -170,10 +170,10 @@ $(document).ready(function () {
 
 
 
-  // function closeMobileMenu(){
-  //   $('[js-hamburger]').removeClass('is-active');
-  //   $('.mobile-navi').removeClass('is-active');
-  // }
+  function closeMobileMenu(){
+    $('[js-hamburger]').removeClass('is-active');
+    $('.mobile-navi').removeClass('is-active');
+  }
 
 
   //////////
@@ -257,7 +257,7 @@ $(document).ready(function () {
   //////////
   // BARBA PJAX
   //////////
-
+  //
   // Barba.Pjax.Dom.containerClass = "page";
   //
   // var FadeTransition = Barba.BaseTransition.extend({
@@ -278,7 +278,7 @@ $(document).ready(function () {
   //       complete: function(anim){
   //         deferred.resolve();
   //       }
-  //     })
+  //     });
   //
   //     return deferred.promise
   //   },
@@ -307,7 +307,7 @@ $(document).ready(function () {
   //       easing: easingSwing, // swing
   //       duration: 300,
   //       complete: function(anim) {
-  //         triggerBody()
+  //         triggerBody();
   //         _this.done();
   //       }
   //     });
@@ -328,8 +328,8 @@ $(document).ready(function () {
   //   closeMobileMenu();
   //
   // });
-
-  // some plugins get bindings onNewPage only that way
+  //
+  // // some plugins get bindings onNewPage only that way
   // function triggerBody(){
   //   $(window).scroll();
   //   $(window).resize();
