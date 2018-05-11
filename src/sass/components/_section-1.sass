@@ -167,12 +167,16 @@
       +r(767)
         display: none
     &--mobile
+      animation-delay: 0.5s
       +rmin(320)
         display: flex
         margin-left: auto
         margin-right: auto
       +rmin(768)
         display: none
+
+      .is-loader &
+        animation-delay: 3s
 
 
   .section__link
