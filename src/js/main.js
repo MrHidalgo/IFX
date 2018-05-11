@@ -161,7 +161,7 @@ $(document).ready(function () {
   // Main menu
   // ====================
   _document.on("click", "[menu-js]", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     $("[menu-js]").removeClass('is-active');
     $(e.target).closest("li").addClass('is-active');
