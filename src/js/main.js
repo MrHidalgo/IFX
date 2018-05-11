@@ -92,11 +92,11 @@ $(document).ready(function () {
       let vScroll = _window.scrollTop();
       let header = $('.header').not('.header--static');
 
-      // if (vScroll > 75) {
-      //   header.addClass('is-fixed');
-      // } else {
-      //   header.removeClass('is-fixed');
-      // }
+      if (vScroll > 75) {
+        header.addClass('is-fixed');
+      } else {
+        header.removeClass('is-fixed');
+      }
     }, 10));
   }
   // ====================
