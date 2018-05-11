@@ -12,7 +12,7 @@ $(document).ready(function () {
   // READY - triggered when PJAX DONE
   ////////////
   function pageReady() {
-    legacySupport();
+    // legacySupport();
     initHeaderScroll();
     initScrollMonitor();
   }
@@ -53,17 +53,17 @@ $(document).ready(function () {
   // COMMON
   //////////
 
-  function legacySupport(){
-    // svg support for laggy browsers
-    svg4everybody();
-
-    // Viewport units buggyfill
-    window.viewportUnitsBuggyfill.init({
-      force: true,
-      refreshDebounceWait: 150,
-      appendToBody: true
-    });
-  }
+  // function legacySupport(){
+  //   // svg support for laggy browsers
+  //   svg4everybody();
+  //
+  //   // Viewport units buggyfill
+  //   window.viewportUnitsBuggyfill.init({
+  //     force: true,
+  //     refreshDebounceWait: 150,
+  //     appendToBody: true
+  //   });
+  // }
 
 
   // Prevent # behavior
@@ -78,7 +78,7 @@ $(document).ready(function () {
   // HEADER SCROLL
   // ====================
   function initHeaderScroll() {
-    _window.on('scroll load', throttle(function(e) {
+    _window.on('scroll load', function(e) {
       let vScroll = _window.scrollTop();
       let header = $('.header').not('.header--static');
 
@@ -87,7 +87,7 @@ $(document).ready(function () {
       } else {
         header.removeClass('is-fixed');
       }
-    }, 10));
+    });
   }
   // ====================
 
@@ -242,7 +242,13 @@ $(document).ready(function () {
       let animationClass = $(el).data('animation-class') || "wowFadeUp";
       let animationName = $(el).data('animation-name') || "wowFade";
 
-      elWatcher.enterViewport(throttle(function() {
+      // elWatcher.enterViewport(throttle(,
+      //   100,
+      //   {
+      //     'leading': true
+      //   }
+      // ));
+      elWatcher.enterViewport(function() {
         $(el).addClass(animationClass);
         $(el)
           .css(
@@ -253,12 +259,7 @@ $(document).ready(function () {
             }
           )
           .addClass("animation-go-js");
-      },
-        100,
-        {
-          'leading': true
-        }
-      ));
+      });
     });
   }
 
