@@ -166,14 +166,25 @@ $(document).ready(function () {
     $("[menu-js]").removeClass('is-active');
     $(e.target).closest("li").addClass('is-active');
   });
-  // ====================
-
-
-
   function closeMobileMenu(){
     $('[js-hamburger]').removeClass('is-active');
     $('.mobile-navi').removeClass('is-active');
   }
+  // ====================
+
+
+  // PARALLAX
+  // ====================
+  const rellax = new Rellax('.parallax-js', {
+    callback: function(positions) {
+      console.log(positions);
+    }
+  });
+  // ====================
+
+
+
+
 
 
   //////////
