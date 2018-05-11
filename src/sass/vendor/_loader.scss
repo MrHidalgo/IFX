@@ -19,18 +19,46 @@
   }
 
   &--fade {
+    z-index: 0;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(#000, 0.02);
-    animation-direction: 1s;
+    animation-duration: 1s;
     animation-fill-mode: backwards;
     animation-delay: 0.3s;
+
+    p {
+      z-index: 0;
+      position: relative;
+      display: flex;
+      letter-spacing: 0.5px;
+      color: rgba($colorBlack, 0.5);
+      font-size: 22px;
+      font-weight: 500;
+
+      span {
+        display: block;
+        animation-name: slideInUpText;
+        &:nth-child(1) {
+          margin-right: 2.5px;
+          animation-delay: 0.5s;
+        }
+        &:nth-child(2) {
+          margin-left: 2.5px;
+          animation-delay: 0.65s;
+        }
+      }
+    }
   }
 
   &--block {
+    z-index: 1;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -62,5 +90,16 @@
   to {
     height: 0;
     visibility: hidden;
+  }
+}
+@keyframes slideInUpText {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 150%, 0);
+    visibility: visible;
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }

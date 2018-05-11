@@ -19,6 +19,9 @@
       font-size: 42px
     +rmin(1440)
       font-size: 60px
+    +r(767)
+      .is-loader &
+        animation-delay: 3.1s
 
 
 
@@ -54,6 +57,15 @@
       width: calc(100% / 2)
       height: calc(100% / 2)
 
+    &-0
+      +r(767)
+        .is-loader &
+          animation-delay: 3.2s
+    &-1
+      +r(767)
+        .is-loader &
+          animation-delay: 3.3s
+
 
     svg
       display: none
@@ -80,7 +92,6 @@
 
     .text__wrap
       position: relative
-      //bottom: 0
       padding: 0 30px
       text-align: center
       transform: translateY(0)

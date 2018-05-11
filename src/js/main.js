@@ -105,11 +105,11 @@ $(document).ready(function () {
 
   // LOGO: return to homepage
   // ====================
-  _document.on('click', "[logo-js]", (e) => {
-    $('body, html').animate({
-      scrollTop: 0
-    }, 1000);
-  });
+  // _document.on('click', "[logo-js]", (e) => {
+  //   $('body, html').animate({
+  //     scrollTop: 0
+  //   }, 1000);
+  // });
   // ====================
 
 
@@ -132,7 +132,9 @@ $(document).ready(function () {
   // OBJECT-FIT POLYFILL
   // ====================
   const $someImages = $('[objectFit-js]');
-  objectFitImages($someImages);
+  if($someImages) {
+    objectFitImages($someImages);
+  }
   // ====================
 
 
@@ -175,7 +177,9 @@ $(document).ready(function () {
 
   // PARALLAX
   // ====================
-  const rellax = new Rellax('.parallax-js');
+  if($(".parallax-js").length) {
+    const rellax = new Rellax('.parallax-js');
+  }
   // ====================
 
 

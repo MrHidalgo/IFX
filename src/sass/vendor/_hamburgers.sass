@@ -5,8 +5,8 @@
   z-index: 1000
   position: relative
 
-  width: 35px
-  height: 18px
+  width: 28px
+  height: 10.5px
 
   transform: rotate(0deg)
   transition: .2s ease-in-out
@@ -15,72 +15,42 @@
 
   span
     opacity: 1
-
     position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
     display: block
-
-    height: 2px
-    width: 50%
-
-    background: $colorBlack
-
     transform: rotate(0deg)
-    transition: .2s ease-in-out
 
-    &:nth-child(even)
-      left: 50%
-      border-radius: 0 9px 9px 0
-
-    &:nth-child(odd)
+    &:before,
+    &:after
+      content: ""
+      position: absolute
       left: 0
-      border-radius: 9px 0 0 9px
+      height: 2.5px
+      width: 100%
+      background: $colorBlack
+      +transition(top, bottom, transform)
 
-    &:nth-child(1),
-    &:nth-child(2)
+    &:before
       top: 0
-
-    &:nth-child(3),
-    &:nth-child(4)
-      top: 8px
-
-    &:nth-child(5),
-    &:nth-child(6)
-      top: 16px
+    &:after
+      bottom: 0
 
   &.is-open
     z-index: 110
+
     span
-      &:nth-child(1),
-      &:nth-child(6)
-        transform: rotate(45deg)
-
-      &:nth-child(2),
-      &:nth-child(5)
+      &:before
+        top: 4px
         transform: rotate(-45deg)
+        +transition(top, transform)
 
-      &:nth-child(1)
-        left: 5px
-        top: 4px
-
-      &:nth-child(2)
-        left: calc(50% - 5px)
-        top: 4px
-
-      &:nth-child(3)
-        left: -50%
-        opacity: 0
-
-      &:nth-child(4)
-        left: 100%
-        opacity: 0
-
-      &:nth-child(5)
-        left: 5px
-        top: 12px
-
-      &:nth-child(6)
-        left: calc(50% - 5px)
-        top: 12px
+      &:after
+        bottom: 4px
+        transform: rotate(45deg)
+        +transition(bottom, transform)
 
 .header__hamburger
   z-index: 100
