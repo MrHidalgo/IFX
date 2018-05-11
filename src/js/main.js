@@ -28,7 +28,7 @@ $(document).ready(function () {
     initHeaderScroll();
 
     // initSliders();
-    // initScrollMonitor();
+    initScrollMonitor();
     // initMasks();
     // initLazyLoad();
 
