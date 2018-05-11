@@ -1,31 +1,39 @@
 // SECTION-5
 // ===============
 .section-5
+  position: relative
+  overflow: hidden
   .container
-    height: 100%
     padding: 20px
+    +rmin(768)
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
     +r($mobile)
       padding: 15px
 
 
   .section__row
-    display: flex
     height: 100%
-    +r(767)
-      flex-direction: column
+    font-size: 0
 
 
   .section__col
-    width: 50%
+    display: inline-block
+    vertical-align: top
+    width: calc(50% - 10px)
     height: 100%
     +r(767)
+      display: block
       width: 100%
       min-height: 290px
 
     &:nth-child(1)
       margin-right: 10px
       background-color: $colorWhiteSmoke
-      background-image: url("../img/img_wallStreet_bg@2x.png")
+      background-image: url("../img/img_wallStreet_bg-desktop@2x.png")
       background-repeat: no-repeat
       background-position: center bottom
       background-size: contain
@@ -33,7 +41,8 @@
         padding: 30px
         margin-right: 0
         margin-bottom: 20px
-        background-position-y: 100px
+        background-image: url("../img/img_wallStreet_bg@2x.png")
+        background-position-y: 120px
       +r(576)
         background-position-y: 140px
 
@@ -59,6 +68,7 @@
         padding-bottom: 30px
         text-align: center
         line-height: 1.5
+        font-size: 16px
         font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
         +r(767)
           max-width: 100%
@@ -70,8 +80,6 @@
         margin-right: auto
 
     &:nth-child(2)
-      display: flex
-      flex-direction: column
       margin-left: 10px
       +r(767)
         margin-left: 0
@@ -84,6 +92,7 @@
       letter-spacing: 1px
       font-family: "SFProDisplay", "Rajdhani", "Arial", sans-serif
       font-weight: 600
+      font-size: 16px
       +transition(color)
       +r(767)
         font-size: 14px
@@ -120,7 +129,7 @@
 
 
   .section__cover
-    height: 50%
+    height: calc(50% - 10px)
     background-color: $colorWhiteSmoke
     +r(767)
       height: 100%
@@ -130,7 +139,7 @@
       display: flex
       flex-direction: column
       justify-content: center
-      margin-bottom: 10px
+      margin-bottom: 20px
       padding-right: 30px
       background-repeat: no-repeat
       background-position: 12px bottom
@@ -166,6 +175,7 @@
       .section__text
         padding-bottom: 20px
         line-height: 1.5
+        font-size: 16px
         font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
         +r(767)
           text-align: center
@@ -175,7 +185,7 @@
         margin-bottom: 20px
 
     &:nth-child(2)
-      margin-top: 10px
+      //margin-top: 10px
       padding-left: 50px
       padding-top: 60px
       background-repeat: no-repeat
@@ -211,6 +221,7 @@
         padding-top: 20px
         padding-bottom: 32px
         line-height: 1.4
+        font-size: 16px
         font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
         +r(767)
           max-width: 100%

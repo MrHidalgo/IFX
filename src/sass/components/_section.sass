@@ -1,10 +1,15 @@
 // SECTION
 // ===============
 .section
-  min-height: 700px
-  height: calc(100vh - 59px)
+  min-height: calc(100vh - 59px)
   +r(767)
-    min-height: 0
+    min-height: 0 !important
     height: auto
     padding-top: 15px
     padding-bottom: 15px
+
+  .container
+    height: 100%
+    min-height: 700px
+    +r(767)
+      min-height: 0

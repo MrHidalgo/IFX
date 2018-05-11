@@ -2,24 +2,18 @@
 // ===============
 .section-3
   +rmin(320)
-    height: 100%
     padding: 30px 0
-  +rmin(992)
-    min-height: 800px
-    height: calc(100vh - 59px)
 
 
   .container
     position: relative
-    +rmin(992)
-      top: calc(50% - 30px)
-      transform: translateY(-50%)
-    +r(767)
-      top: calc(50% - 50px)
+    display: flex
+    align-items: center
 
 
   .section__row
     display: flex
+    width: 100%
     +rmin(320)
       flex-direction: column
     +rmin(992)
@@ -143,7 +137,6 @@
             font-size: 35px
           +rmin(1366)
             font-size: 40px
-          //+transition(font-size, color)
 
     &-link
       font-size: 22px
@@ -160,7 +153,6 @@
         font-size: 20px
       +rmin(1366)
         font-size: 22px
-      //+transition(font-size, color)
 
 
   .section__data
@@ -367,5 +359,3 @@
               color: rgba($colorWhite, 0.5)
             &:nth-child(2)
               color: $colorWhite
-
-
