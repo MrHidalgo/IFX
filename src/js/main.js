@@ -175,15 +175,8 @@ $(document).ready(function () {
 
   // PARALLAX
   // ====================
-  const rellax = new Rellax('.parallax-js', {
-    callback: function(positions) {
-      console.log(positions);
-    }
-  });
+  const rellax = new Rellax('.parallax-js');
   // ====================
-
-
-
 
 
 
