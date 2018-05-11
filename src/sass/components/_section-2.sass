@@ -24,7 +24,11 @@
       font-size: 32px
     +rmin(768)
       padding: 60px 0 40px
+    +rmin(1200)
+      font-size: 42px
+    +rmin(1440)
       font-size: 60px
+
 
 
   .section__row
@@ -48,9 +52,8 @@
           opacity: 0.1
           +transition(opacity)
         .text__wrap
-          top: -30%
-          transform: translateY(-30%)
-          +transition(top, transform)
+          transform: translateY(-100%)
+          +transition(transform)
           p
             opacity: 1
             +transition(opacity)
@@ -86,11 +89,11 @@
 
     .text__wrap
       position: relative
-      top: 0
+      //bottom: 0
       padding: 0 30px
       text-align: center
       transform: translateY(0)
-      +transition(top, transform)
+      +transition(transform)
       +r(768)
         padding: 0
 
@@ -121,8 +124,31 @@
       animation: dash 2.5s ease-in-out forwards
       animation-delay: 0.85s
 
+    .animated01
+      opacity: 0
+      animation-name: fadeInCustom01
+      animation-duration: 2s
+      animation-delay: 1s
+    .animated1
+      opacity: 0
+      animation-name: fadeInCustom1
+      animation-duration: 2s
+      animation-delay: 1.15s
+
   @keyframes dash
     from
       stroke-dashoffset: 1000
     to
       stroke-dashoffset: 0
+
+  @keyframes fadeInCustom01
+    from
+      opacity: 0
+    to
+      opacity: 0.1
+
+  @keyframes fadeInCustom1
+    from
+      opacity: 0
+    to
+      opacity: 1
