@@ -1,3 +1,32 @@
+// Popup control view
+// ====================
+$(window).on('load resize', function () {
+  if($(window).width() < 768) {
+    initPopups();
+  } else {
+    $.magnificPopup.close();
+    $('[popup-js]').off('click');
+  }
+});
+// ====================
+
+
+// Pre-loader
+// ====================
+$(window).on('load', function () {
+  if($(window).scrollTop() <= 10) {
+    $("body").addClass("is-loader");
+  } else {
+    $("body").removeClass("is-loader");
+  }
+
+  setTimeout((e) => {
+    $("body").removeClass("is-loader");
+  }, 5000)
+});
+// ====================
+
+
 $(document).ready(function () {
 
   // Global variables
@@ -14,35 +43,6 @@ $(document).ready(function () {
     initScrollMonitor();
   }
   pageReady();
-  // ====================
-
-
-  // Popup control view
-  // ====================
-  _window.on('load resize', function () {
-    if(_window.width() < 768) {
-      initPopups();
-    } else {
-      $.magnificPopup.close();
-      $('[popup-js]').off('click');
-    }
-  });
-  // ====================
-
-
-  // Pre-loader
-  // ====================
-  _window.on('load', function () {
-    if(_window.scrollTop() <= 10) {
-      $("body").addClass("is-loader");
-    } else {
-      $("body").removeClass("is-loader");
-    }
-
-    setTimeout((e) => {
-      $("body").removeClass("is-loader");
-    }, 5000)
-  });
   // ====================
 
 
