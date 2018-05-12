@@ -30,6 +30,24 @@
     true
   ];
 
+mixin platformsBlock(iconName, title, text, boolBtn)
+  .platforms__block
+
+    .platforms__block-left
+      .platforms__block-icon
+        i.icon(class!= iconName)
+
+    .platforms__block-right
+      p.platforms__block-title!= title
+      p.platforms__block-text!= text
+
+      if(!boolBtn)
+        a(href="#" class="platforms__block-link link__more" title="")
+          != "Read more"
+          span
+      else
+        a.platforms__block-btn(href="#" title="")!= "Download"
+
 
 .platforms
   .container
@@ -38,22 +56,12 @@
     p.platforms__subtitle.subtitle!= "We support excellence, the power is in your hands"
 
     .platforms__row
-      -for(var i = 0, len = platformsIconNameArr.length; i < len; i++)
-        .platforms__block
-
-          .platforms__block-left
-            .platforms__block-icon
-              i.icon(class!= platformsIconNameArr[i])
-
-          .platforms__block-right
-            p.platforms__block-title!= platformsTitleArr[i]
-            p.platforms__block-text!= platformsTextArr[i]
-
-            if(!platformsBtnBoolArr[i])
-              a(href="#" class="platforms__block-link link__more" title="")
-                != "Read more"
-                span
-            else
-              a.platforms__block-btn(href="#" title="")!= "Download"
+      .platforms__col
+        +platformsBlock(platformsIconNameArr[0], platformsTitleArr[0], platformsTextArr[0], platformsBtnBoolArr[0])
+        +platformsBlock(platformsIconNameArr[2], platformsTitleArr[2], platformsTextArr[2], platformsBtnBoolArr[2])
+        +platformsBlock(platformsIconNameArr[4], platformsTitleArr[4], platformsTextArr[4], platformsBtnBoolArr[4])
+      .platforms__col
+        +platformsBlock(platformsIconNameArr[1], platformsTitleArr[1], platformsTextArr[1], platformsBtnBoolArr[1])
+        +platformsBlock(platformsIconNameArr[3], platformsTitleArr[3], platformsTextArr[3], platformsBtnBoolArr[3])
 
 // OUR PLATFORMS :: END
