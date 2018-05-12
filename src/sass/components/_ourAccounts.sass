@@ -1,0 +1,154 @@
+// ACCOUNTS
+// ===============
+.accounts
+  position: relative
+  padding-top: 130px
+  padding-bottom: 75px
+
+  // CONTAINER
+  .container
+    z-index: 1
+    position: relative
+  // end CONTAINER
+
+
+  // BG
+  &__bg
+    z-index: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 70%
+    background-color: $colorWhiteSmoke
+  // end BG
+
+
+  // TITLE WRAP
+  &__title
+    padding-right: 202px
+
+    &-wrap
+      display: flex
+      padding-bottom: 100px
+  // end TITLE WRAP
+
+
+  // end TITLE WRAP
+  &__text
+    width: 100%
+    max-width: 500px
+    padding-right: 15px
+    padding-top: 30px
+    text-align: left
+  // end TITLE WRAP
+
+
+  // ROW
+  &__row
+    display: flex
+  // end ROW
+
+
+  // COL
+  &__col
+    width: 50%
+  // end COL
+
+
+  // BLOCK
+  &__block
+    position: relative
+    width: 100%
+    margin-bottom: 60px
+    font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
+
+    &-0,
+    &-2
+      padding-right: 30px
+
+      .accounts__block-wrap
+        right: 0
+
+    &-1,
+    &-3
+      padding-left: 30px
+
+      .accounts__block-wrap
+        right: -30px
+
+    &-0
+      .accounts__block-wrap
+        box-shadow: 0 10px 15px 0 rgba($colorBlack, 0.1)
+        background: rgb(163,163,172)
+        background: -moz-linear-gradient(left, rgba(163,163,172,1) 0%, rgba(130,130,146,1) 100%)
+        background: -webkit-linear-gradient(left, rgba(163,163,172,1) 0%,rgba(130,130,146,1) 100%)
+        background: linear-gradient(to right, rgba(163,163,172,1) 0%,rgba(130,130,146,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a3a3ac', endColorstr='#828292',GradientType=1 )
+    &-1
+      .accounts__block-wrap
+        box-shadow: 0 10px 15px 0 rgba($colorBlack, 0.1)
+        background: rgb(48,48,77)
+        background: -moz-linear-gradient(left, rgba(48,48,77,1) 0%, rgba(86,86,124,1) 100%)
+        background: -webkit-linear-gradient(left, rgba(48,48,77,1) 0%,rgba(86,86,124,1) 100%)
+        background: linear-gradient(to right, rgba(48,48,77,1) 0%,rgba(86,86,124,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30304d', endColorstr='#56567c',GradientType=1 )
+    &-2
+      .accounts__block-wrap
+        box-shadow: 0 10px 15px 0 rgba(#F49708, 0.1)
+        background: rgb(255,170,31)
+        background: -moz-linear-gradient(left, rgba(255,170,31,1) 0%, rgba(227,188,32,1) 100%)
+        background: -webkit-linear-gradient(left, rgba(255,170,31,1) 0%,rgba(227,188,32,1) 100%)
+        background: linear-gradient(to right, rgba(255,170,31,1) 0%,rgba(227,188,32,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaa1f', endColorstr='#e3bc20',GradientType=1 )
+
+    &-3
+      .accounts__block-wrap
+        box-shadow: 0 10px 15px 0 rgba(#F40830, 0.1)
+        background: rgb(244,8,48)
+        background: -moz-linear-gradient(left, rgba(244,8,48,1) 0%, rgba(255,135,31,1) 100%)
+        background: -webkit-linear-gradient(left, rgba(244,8,48,1) 0%,rgba(255,135,31,1) 100%)
+        background: linear-gradient(to right, rgba(244,8,48,1) 0%,rgba(255,135,31,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f40830', endColorstr='#ff871f',GradientType=1 )
+
+
+    &-cover
+      width: 100%
+      padding: 40px 40px 60px
+      box-shadow: 0 5px 20px 0 rgba($colorBlack, 0.1)
+      background-color: $colorWhite
+
+    &-title
+      padding-bottom: 25px
+      font-size: 22px
+      font-weight: bold
+
+    &-subtitle
+      padding-bottom: 50px
+      line-height: 1.5
+      color: rgba($colorBlack, 0.5)
+
+    &-text
+      line-height: 1.5
+      font-size: 18px
+
+    &-wrap
+      position: absolute
+      top: 40px
+      width: 200px
+      height: 100px
+      padding: 20px 30px 0
+
+    &-price,
+    &-priceInfo
+      color: $colorWhite
+
+    &-price
+      text-align: right
+      font-weight: bold
+      font-size: 32px
+
+    &-priceInfo
+      font-size: 14px
+  // end BLOCK
+// ===============

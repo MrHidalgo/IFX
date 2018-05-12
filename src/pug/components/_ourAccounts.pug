@@ -1,0 +1,66 @@
+// OUR ACCOUNTS :: START
+
+
+-
+  var accountsTitle = [
+    "IFX LITE",
+    "IFX SILVER",
+    "IFX GOLD",
+    "IFX VIP PLATINUM"
+  ];
+  var accountsSubTitle = [
+    "The world of trading starts with </br>IFX Lite",
+    "Passionate about trading? </br>IFX Silver is for you",
+    "Go for gold! The Pro standard",
+    "Premium choice for Institutional </br>Traders and Wealthy Individuals"
+  ];
+  var accountsText = [
+    "Open a trading account with as little as US$100 and qualify for access to the IFX Academy.",
+    "Passionate about trading? This account is the retailer’s first choice because it requires an opening deposit of only US$500 with extremely flexible position sizing and it gives you access to the IFX Academy.",
+    "Your minimum deposit gives you access to pure ECN RAW spreads from our top tier 1 liquidity providers. Of course, you have full access to the IFX Academy. This is an excellent package for scalpers, high volume traders and EA gurus.",
+    "Our premium trading package, the IFX VIP Platinum account is designed especially for trading high rollers who want RAW, pure ECN spreads from our top tier 1 liquidity providers. Your minimum deposit of US$20,000 secures your own personal account manager."
+  ];
+  var accountsPrice = [
+    "$100",
+    "$500",
+    "$5000",
+    "$20000"
+  ];
+  var accountsPriceInfo = [
+    "Min opening deposit",
+    "Min opening deposit",
+    "Min opening deposit",
+    "Min opening deposit"
+  ];
+
+
+mixin accountsBlock(className, title, subtitle, text, price, priceInfo)
+  .accounts__block(class!="accounts__block-" + className)
+    .accounts__block-cover
+      p.accounts__block-title!= title
+      p.accounts__block-subtitle!= subtitle
+      p.accounts__block-text!= text
+
+      .accounts__block-wrap
+        p.accounts__block-price!= price
+        p.accounts__block-priceInfo!= priceInfo
+
+
+.accounts
+  .accounts__bg
+
+  .container
+
+    .accounts__title-wrap
+      h2.accounts__title.title!= "Our Accounts"
+      p.accounts__text.text!= "Whether you’re a newbie or a seasoned professional, there’s an account especially designed for you."
+
+    .accounts__row
+      .accounts__col
+        +accountsBlock("0", accountsTitle[0], accountsSubTitle[0], accountsText[0], accountsPrice[0], accountsPriceInfo[0])
+        +accountsBlock("2", accountsTitle[2], accountsSubTitle[2], accountsText[2], accountsPrice[2], accountsPriceInfo[2])
+      .accounts__col
+        +accountsBlock("1", accountsTitle[1], accountsSubTitle[1], accountsText[1], accountsPrice[1], accountsPriceInfo[1])
+        +accountsBlock("3", accountsTitle[3], accountsSubTitle[3], accountsText[3], accountsPrice[3], accountsPriceInfo[3])
+
+// OUR ACCOUNTS :: END
