@@ -1,0 +1,27 @@
+// OUR SERVERS :: START
+
+
+mixin serversBlock(num, title, text)
+  .servers__block
+    p.servers__block-num!= num
+    p.servers__block-title!= title
+    p.servers__block-text!= text
+
+
+.servers
+  .container
+
+    h2.servers__title.title!= "Our Servers"
+    p.servers__subtitle!= "Our servers. Your advantage."
+    p.servers__text!= "Our live trading servers, hosted by Equinix, are based in the major financial hubs of London and link to Wall Street in New York, Sydney, Tokyo – in fact, anywhere in the world."
+
+    .servers__row
+      .servers__row-wrap
+        +serversBlock("99%", "Stability", "99.9% MT4 Uptime")
+      .servers__row-wrap
+        +serversBlock("500,000", "Executed Traders", "Up to 500 000 trades executed per m.sec")
+        +serversBlock("2.5", "Execution Speed", "2.5 milliseconds")
+        +serversBlock("150", "Process Ability", "99.9% MT4 Uptime")
+
+
+// OUR SERVERS :: END

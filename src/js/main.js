@@ -33,7 +33,6 @@ $(document).ready(function () {
   // Pre-loader
   // ====================
   _window.on('load', function () {
-
     if(_window.scrollTop() <= 10) {
       $("body").addClass("is-loader");
     } else {
