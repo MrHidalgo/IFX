@@ -1,38 +1,47 @@
 $sprite: (
 	android: (
-		offset-x: -95px,
-		offset-y: -36px,
+		offset-x: -212px,
+		offset-y: -78px,
 		width: 22px,
 		height: 26px,
-		total-width: 127px,
-		total-height: 117px,
+		total-width: 244px,
+		total-height: 169px,
 		image: '../img/sprite.png'
 	),
 	apple: (
-		offset-x: -28px,
-		offset-y: -90px,
+		offset-x: -150px,
+		offset-y: -95px,
 		width: 20px,
 		height: 24px,
-		total-width: 127px,
-		total-height: 117px,
+		total-width: 244px,
+		total-height: 169px,
 		image: '../img/sprite.png'
 	),
 	arrow: (
-		offset-x: -58px,
-		offset-y: -90px,
+		offset-x: -212px,
+		offset-y: -151px,
 		width: 17px,
 		height: 11px,
-		total-width: 127px,
-		total-height: 117px,
+		total-width: 244px,
+		total-height: 169px,
+		image: '../img/sprite.png'
+	),
+	bitcoin: (
+		offset-x: -95px,
+		offset-y: 0px,
+		width: 107px,
+		height: 24px,
+		total-width: 244px,
+		total-height: 169px,
 		image: '../img/sprite.png'
 	),
 	corner: (
-		offset-x: 0px,
-		offset-y: -90px,
+		offset-x: -212px,
+		offset-y: -114px,
 		width: 18px,
 		height: 27px,
-		total-width: 127px,
-		total-height: 117px,
+		total-width: 244px,
+		total-height: 169px,
 		image: '../img/sprite.png'
 	),
 	logo: (
@@ -40,35 +49,89 @@ $sprite: (
 		offset-y: 0px,
 		width: 85px,
 		height: 38px,
-		total-width: 127px,
-		total-height: 117px,
+		total-width: 244px,
+		total-height: 169px,
+		image: '../img/sprite.png'
+	),
+	mc: (
+		offset-x: 0px,
+		offset-y: -95px,
+		width: 53px,
+		height: 41px,
+		total-width: 244px,
+		total-height: 169px,
+		image: '../img/sprite.png'
+	),
+	payFast: (
+		offset-x: -91px,
+		offset-y: -146px,
+		width: 80px,
+		height: 23px,
+		total-width: 244px,
+		total-height: 169px,
+		image: '../img/sprite.png'
+	),
+	paypal: (
+		offset-x: 0px,
+		offset-y: -146px,
+		width: 81px,
+		height: 23px,
+		total-width: 244px,
+		total-height: 169px,
+		image: '../img/sprite.png'
+	),
+	skrill: (
+		offset-x: 0px,
+		offset-y: -48px,
+		width: 70px,
+		height: 37px,
+		total-width: 244px,
+		total-height: 169px,
 		image: '../img/sprite.png'
 	),
 	streamlining: (
-		offset-x: -95px,
-		offset-y: 0px,
+		offset-x: -212px,
+		offset-y: -42px,
 		width: 32px,
 		height: 26px,
-		total-width: 127px,
-		total-height: 117px,
+		total-width: 244px,
+		total-height: 169px,
+		image: '../img/sprite.png'
+	),
+	visa: (
+		offset-x: -63px,
+		offset-y: -95px,
+		width: 77px,
+		height: 25px,
+		total-width: 244px,
+		total-height: 169px,
 		image: '../img/sprite.png'
 	),
 	web: (
-		offset-x: 0px,
-		offset-y: -48px,
+		offset-x: -212px,
+		offset-y: 0px,
 		width: 32px,
 		height: 32px,
-		total-width: 127px,
-		total-height: 117px,
+		total-width: 244px,
+		total-height: 169px,
 		image: '../img/sprite.png'
 	),
 	wide: (
-		offset-x: -42px,
+		offset-x: -163px,
 		offset-y: -48px,
 		width: 34px,
 		height: 27px,
-		total-width: 127px,
-		total-height: 117px,
+		total-width: 244px,
+		total-height: 169px,
+		image: '../img/sprite.png'
+	),
+	wire: (
+		offset-x: -80px,
+		offset-y: -48px,
+		width: 73px,
+		height: 27px,
+		total-width: 244px,
+		total-height: 169px,
 		image: '../img/sprite.png'
 	),
 );
@@ -136,18 +199,39 @@ $sprite: (
 	.icon-arrow {
 		@include sprite(arrow)
 	}
+	.icon-bitcoin {
+		@include sprite(bitcoin)
+	}
 	.icon-corner {
 		@include sprite(corner)
 	}
 	.icon-logo {
 		@include sprite(logo)
 	}
+	.icon-mc {
+		@include sprite(mc)
+	}
+	.icon-payFast {
+		@include sprite(payFast)
+	}
+	.icon-paypal {
+		@include sprite(paypal)
+	}
+	.icon-skrill {
+		@include sprite(skrill)
+	}
 	.icon-streamlining {
 		@include sprite(streamlining)
+	}
+	.icon-visa {
+		@include sprite(visa)
 	}
 	.icon-web {
 		@include sprite(web)
 	}
 	.icon-wide {
 		@include sprite(wide)
+	}
+	.icon-wire {
+		@include sprite(wire)
 	}

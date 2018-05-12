@@ -1,0 +1,23 @@
+// PAYMENT :: START
+
+-
+  var paymentNameArr = [
+    "icon-payFast",
+    "icon-paypal",
+    "icon-skrill",
+    "icon-bitcoin",
+    "icon-visa",
+    "icon-mc",
+    "icon-wire"
+  ];
+
+.payment
+  .container
+
+    .payment__row
+      ul.payment__list
+        -for(var i = 0, len = paymentNameArr.length; i < len; i++)
+          li.payment__item
+            i.icon(class!= paymentNameArr[i])
+
+// PAYMENT :: END
