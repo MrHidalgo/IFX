@@ -1,0 +1,41 @@
+// MAIN ABOUT :: START
+
+-
+  var mainMenuArr = [
+    "Who we are",
+    "Our team",
+    "Our Accounts",
+    "Our Platforms"
+  ];
+
+.main
+  .container
+
+    h1.main__title!= "About Us"
+
+  .main__menu
+    .container
+      ul.main__menu-list
+        -for(var i = 0, len = mainMenuArr.length; i < len; i++)
+          li.main__menu-item(
+            class!= (i === 0) ? "is-active" : ""
+            mainAbout-js
+          )
+            a.main__menu-link(
+              href="#"
+              title=""
+            )!= mainMenuArr[i]
+
+  .container
+    p.main__about!= "We facilitate a one stop trading and investing experience for private and institutional clients, providing access to global markets and a broad range of asset classes and tradeable instruments."
+    p.main__motivate!= "Motivated by service excellence, a diverse range of investment offerings, state-of-the-art technology and competitive spreads, we offer a world class online trading experience."
+
+    .main__row
+      .main__row-wrap
+        p!= "Our Vision"
+        p!= "We aim to be the premium global choice in online trading because we know that we are the Future of Trading."
+        p!= "The latest technology meets old fashioned values.  We deliver pioneering technological trading resources and nurture long-term relationships based on mutual trust and respect with our clients and partners."
+
+    p.main__slogan!= "All unified on our supersonic </br>trading platforms powered </br>by Equinix."
+
+// MAIN ABOUT :: START

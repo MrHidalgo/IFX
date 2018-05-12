@@ -34,7 +34,7 @@ $(document).ready(function () {
   // ====================
   _window.on('load', function () {
 
-    if(_window.scrollTop() === 0) {
+    if(_window.scrollTop() <= 10) {
       $("body").addClass("is-loader");
     } else {
       $("body").removeClass("is-loader");
@@ -140,6 +140,17 @@ $(document).ready(function () {
   if($(".parallax-js").length) {
     const rellax = new Rellax('.parallax-js');
   }
+  // ====================
+
+
+  // MAIN ABOUT MENU
+  // ====================
+  _document.on("click", "[mainAbout-js]", (e) => {
+    e.preventDefault();
+
+    $("[mainAbout-js]").removeClass('is-active');
+    $(e.target).closest("li").addClass('is-active');
+  });
   // ====================
 
 
