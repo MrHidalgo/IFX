@@ -1,0 +1,59 @@
+// OUR PLATFORMS :: START
+
+-
+  var platformsIconNameArr = [
+    "icon-streamlining",
+    "icon-android",
+    "icon-web",
+    "icon-apple",
+    "icon-wide"
+  ];
+  var platformsTitleArr = [
+    "Streamlining successful trading",
+    "IFX META TRADER 4 for Android",
+    "IFX WEB TRADER",
+    "IFX META TRADER 4 for iPhone & iPad",
+    "IFX META TRADER 4"
+  ];
+  var platformsTextArr = [
+    "Our live trading servers, hosted by Equinix, are based in the major financial hubs of London and link to Wall Street in New York, Sydney, Tokyo – in fact, anywhere in the world.",
+    "The IFX Meta Trader 4 Android OS app provides a comprehensive trading platform for Android devices. You have access to everything you need for successful forex trading, including a complete set of orders, trading history, interactive charts and technical analyses.",
+    "This web platform allows you to trade easily and efficiently from any browser or operating system including Windows, Mac and Linux without any additional software. All you need is an internet connection to start trading.",
+    "Our live trading servers, hosted by Equinix, are based in the major financial hubs of London and link to Wall Street in New Your, Sydney, Tokyo – in fact, anywhere in the world.",
+    "Our revolutionary technology allows you trade with absolute accuracy, free from slippage and re-quotes."
+  ];
+  var platformsBtnBoolArr = [
+    false,
+    true,
+    false,
+    true,
+    true
+  ];
+
+
+.platforms
+  .container
+
+    h2.platforms__title.title!= "Our Partners"
+    p.platforms__subtitle.subtitle!= "We support excellence, the power is in your hands"
+
+    .platforms__row
+      -for(var i = 0, len = platformsIconNameArr.length; i < len; i++)
+        .platforms__block
+
+          .platforms__block-left
+            .platforms__block-icon
+              i.icon(class!= platformsIconNameArr[i])
+
+          .platforms__block-right
+            p.platforms__block-title!= platformsTitleArr[i]
+            p.platforms__block-text!= platformsTextArr[i]
+
+            if(!platformsBtnBoolArr[i])
+              a(href="#" class="platforms__block-link link__more" title="")
+                != "Read more"
+                span
+            else
+              a.platforms__block-btn(href="#" title="")!= "Download"
+
+// OUR PLATFORMS :: END

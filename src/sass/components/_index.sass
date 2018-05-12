@@ -15,3 +15,46 @@
   line-height: 1.5
   font-size: 18px
   font-family: "SFUIText", "Arial", sans-serif
+
+.link__more
+  display: block
+  position: relative
+  width: 100%
+  max-width: 170px
+  letter-spacing: 1px
+  font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
+  font-weight: 600
+  font-size: 16px
+  +transition(color)
+  +r(767)
+    font-size: 14px
+    margin-left: auto
+    margin-right: auto
+  &:hover
+    color: $colorAlizarin
+    +transition(color)
+
+    span
+      &:before
+        width: 100%
+        background-color: $colorAlizarin
+        +transition(width, background-color)
+
+  span
+    position: absolute
+    top: 50%
+    right: 0
+    width: 60px
+    height: 2px
+    transform: translateY(-50%)
+    background-color: rgba($colorBlack, 0.1)
+
+    &:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 0
+      width: 50%
+      height: 100%
+      background-color: $colorBlack
+      +transition(width, background-color)

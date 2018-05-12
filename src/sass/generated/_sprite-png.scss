@@ -1,20 +1,38 @@
 $sprite: (
-	arrow: (
+	android: (
+		offset-x: -95px,
+		offset-y: -36px,
+		width: 22px,
+		height: 26px,
+		total-width: 127px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	apple: (
 		offset-x: -28px,
-		offset-y: -48px,
+		offset-y: -90px,
+		width: 20px,
+		height: 24px,
+		total-width: 127px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	arrow: (
+		offset-x: -58px,
+		offset-y: -90px,
 		width: 17px,
 		height: 11px,
-		total-width: 85px,
-		total-height: 75px,
+		total-width: 127px,
+		total-height: 117px,
 		image: '../img/sprite.png'
 	),
 	corner: (
 		offset-x: 0px,
-		offset-y: -48px,
+		offset-y: -90px,
 		width: 18px,
 		height: 27px,
-		total-width: 85px,
-		total-height: 75px,
+		total-width: 127px,
+		total-height: 117px,
 		image: '../img/sprite.png'
 	),
 	logo: (
@@ -22,8 +40,35 @@ $sprite: (
 		offset-y: 0px,
 		width: 85px,
 		height: 38px,
-		total-width: 85px,
-		total-height: 75px,
+		total-width: 127px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	streamlining: (
+		offset-x: -95px,
+		offset-y: 0px,
+		width: 32px,
+		height: 26px,
+		total-width: 127px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	web: (
+		offset-x: 0px,
+		offset-y: -48px,
+		width: 32px,
+		height: 32px,
+		total-width: 127px,
+		total-height: 117px,
+		image: '../img/sprite.png'
+	),
+	wide: (
+		offset-x: -42px,
+		offset-y: -48px,
+		width: 34px,
+		height: 27px,
+		total-width: 127px,
+		total-height: 117px,
 		image: '../img/sprite.png'
 	),
 );
@@ -82,6 +127,12 @@ $sprite: (
 
 
 
+	.icon-android {
+		@include sprite(android)
+	}
+	.icon-apple {
+		@include sprite(apple)
+	}
 	.icon-arrow {
 		@include sprite(arrow)
 	}
@@ -90,4 +141,13 @@ $sprite: (
 	}
 	.icon-logo {
 		@include sprite(logo)
+	}
+	.icon-streamlining {
+		@include sprite(streamlining)
+	}
+	.icon-web {
+		@include sprite(web)
+	}
+	.icon-wide {
+		@include sprite(wide)
 	}

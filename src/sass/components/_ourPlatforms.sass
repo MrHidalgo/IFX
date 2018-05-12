@@ -1,0 +1,88 @@
+// PARTNERS
+// ===============
+.platforms
+  padding-top: 75px
+  padding-bottom: 50px
+
+  // TITLE
+  &__title
+    padding-bottom: 20px
+  // end TITLE
+
+
+  // SUBTITLE
+  &__subtitle
+    padding-bottom: 60px
+  // end SUBTITLE
+
+
+  // ROW
+  &__row
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+  // end ROW
+
+
+  // BLOCK
+  &__block
+    display: flex
+    width: 50%
+    padding-bottom: 60px
+
+    &-left
+      width: 100px
+
+    &-right
+      width: calc(100% - 100px)
+      padding-top: 22px
+      padding-right: 100px
+
+    &-icon
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 70px
+      height: 70px
+      border-radius: 100%
+      background-color: $colorAlizarin
+      +transition(box-shadow)
+
+      &:hover
+        box-shadow: 0 0 15px 0 rgba($colorBlack, 0.15)
+        +transition(box-shadow)
+
+    &-title,
+    &-text
+      font-size: 18px
+      font-family: "SFUIText", "Arial", sans-serif
+
+    &-title
+      padding-bottom: 20px
+      font-weight: 600
+
+    &-text
+      padding-bottom: 20px
+      line-height: 1.5
+
+    &-btn
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 119px
+      height: 40px
+      border-radius: 3px
+      border: 1px solid rgba($colorGrey, 0.1)
+      background-color: transparent
+      font-family: "SFUIText", "Arial", sans-serif
+      font-weight: 600
+      +transition(color, border-color, background-color)
+
+      &:hover
+        color: $colorWhite
+        border-color: $colorAlizarin
+        background-color: $colorAlizarin
+        +transition(color, border-color, background-color)
+// end BLOCK
+// ===============
