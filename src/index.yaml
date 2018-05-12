@@ -4,7 +4,7 @@ PageList:
 - file: homepage.html
   ready: 80
 - file: about.html
-  ready: 5
+  ready: 15
 - file: onlineTrading.html
   ready: 5
 - file: learn.html

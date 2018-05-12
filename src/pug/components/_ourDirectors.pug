@@ -1,0 +1,68 @@
+// OUR DIRECTORS :: START
+
+-
+  var directorsName = [
+    "Pieter de Necker",
+    "Thula Ntumba",
+    "Hannele Viljoen",
+    "Jamie Vertue",
+    "Kevin Millien",
+    "Ian Lane"
+  ];
+  var directorsPosition = [
+    "CEO",
+    "Chairman",
+    "DIRECTOR",
+    "DIRECTOR",
+    "BUSINESS DEVELOPMENT",
+    "REGULATORY AFFAIRS"
+  ];
+
+mixin directorsBlock(imgName, name, position, icon)
+  .directors__block
+    .directors__block-image
+      img(
+        src="./img/" + imgName + ".png"
+        srcset="./img/" + imgName + "@2x.png 2x"
+        class="directors__block-img"
+        title="" alt=""
+      )
+    .directors__block-info
+      p.directors__block-name!= name
+      p.directors__block-position!= position
+      i.icon(class!= icon)
+
+
+.directors
+  .container
+
+    h2.directors__title.title!= "Our Directors"
+
+    .directors__row.directors__row-0
+      .directors__col
+        p.directors__text.text!= "With numerous degrees and diplomas, the IFX directors have decades of practical experience and knowledge garnered from senior positions in international concerns. They constantly evaluate the evolution and expansion of IFX Brokers."
+
+      .directors__col
+        +directorsBlock("img-ava-0_directors", directorsName[0], directorsPosition[0], "icon-plus")
+        +directorsBlock("img-ava-1_directors", directorsName[1], directorsPosition[1], "icon-plus")
+
+    .directors__row.directors__row-1
+      .directors__col
+        +directorsBlock("img-ava-2_directors", directorsName[2], directorsPosition[2], "icon-plus")
+        +directorsBlock("img-ava-3_directors", directorsName[3], directorsPosition[3], "icon-plus")
+        +directorsBlock("img-ava-4_directors", directorsName[4], directorsPosition[4], "icon-plus")
+        +directorsBlock("img-ava-5_directors", directorsName[5], directorsPosition[5], "icon-plus")
+
+      .directors__col
+        p.directors__subtitle.title!= "Our people. </br>Our blue-chip asset."
+
+    .directors__row.directors__row-2
+      .directors__col
+        p.directors__slogan!= "Our account executives – </br>The A-Team"
+        p.directors__text.text!= "State-of-the-art automated systems ensure that our account executives are able to dedicate themselves to you. Whatever your concerns or queries, our A-team loves the challenge of making a plan come together. Whether it concerns funding your account, making withdrawals or just chatting about how to get the most from your account, you won’t find a more dedicated bunch anywhere!"
+
+      .directors__col
+        p.directors__slogan!= "Our sales executives"
+        p.directors__text.text!= "Although the lion’s share of our business comes from client referrals, our expert sales team provides the personal touch. The team shares detailed information with you, so you make an informed, confident decision"
+
+// OUR DIRECTORS :: END

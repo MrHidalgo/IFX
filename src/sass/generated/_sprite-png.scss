@@ -80,6 +80,15 @@ $sprite: (
 		total-height: 169px,
 		image: '../img/sprite.png'
 	),
+	plus: (
+		offset-x: -180px,
+		offset-y: -95px,
+		width: 19px,
+		height: 19px,
+		total-width: 244px,
+		total-height: 169px,
+		image: '../img/sprite.png'
+	),
 	skrill: (
 		offset-x: 0px,
 		offset-y: -48px,
@@ -216,6 +225,9 @@ $sprite: (
 	}
 	.icon-paypal {
 		@include sprite(paypal)
+	}
+	.icon-plus {
+		@include sprite(plus)
 	}
 	.icon-skrill {
 		@include sprite(skrill)

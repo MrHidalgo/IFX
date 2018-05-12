@@ -1,0 +1,101 @@
+// DIRECTORS
+// ===============
+.directors
+  // TITLE
+  &__title
+    text-align: left
+    padding-bottom: 53px
+  // end TITLE
+
+
+  // ROW
+  &__row
+    display: flex
+
+    &-0
+      .directors__col
+        &:nth-child(2)
+          display: flex
+
+    &-1
+      align-items: center
+      padding-bottom: 170px
+
+      .directors__col
+        &:nth-child(1)
+          display: flex
+          flex-wrap: wrap
+
+      .directors__block
+        &:nth-child(1),
+        &:nth-child(2)
+          margin-bottom: 51px
+
+    &-2
+      padding-bottom: 200px
+
+      .directors__col
+        padding-left: 133px
+  // end ROW
+
+
+  // COL
+  &__col
+    width: 50%
+  // end COL
+
+
+  // SUBTITLE
+  &__subtitle
+    color: $colorAlizarin
+    text-align: left
+    font-weight: bold
+  // end SUBTITLE
+
+
+  // TEXT
+  &__text
+    width: 100%
+    max-width: 500px
+    padding-right: 15px
+    text-align: left
+  // end TEXT
+
+
+  // SLOGAN
+  &__slogan
+    padding-bottom: 24px
+    font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
+    font-weight: bold
+    font-size: 32px
+  // end SLOGAN
+
+
+  // BLOCK
+  &__block
+    cursor: pointer
+    position: relative
+    width: 50%
+    height: 192px
+
+    &-info
+      position: absolute
+      top: 103px
+      left: 53px
+      height: 60px
+      padding-top: 16px
+      padding-left: 20px
+      background-color: $colorWhite
+      font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
+
+    &-name
+      font-weight: bold
+      font-size: 22px
+
+    &-position
+      padding-bottom: 10px
+      font-weight: 500
+      font-size: 12px
+      color: rgba($colorGrey, 0.7)
+  // end BLOCK
+// ===============
