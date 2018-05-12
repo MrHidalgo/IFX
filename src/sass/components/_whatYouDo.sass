@@ -1,0 +1,86 @@
+// WHAT
+// ===============
+.what
+  position: relative
+  margin-top: 80px
+
+
+  // ROW
+  &__bg
+    position: absolute
+    top: 60px
+    left: 0
+    width: 100%
+    height: calc(100% - 45px)
+    background-color: $colorWhiteSmoke
+  // end ROW
+
+
+  // ROW
+  &__row
+    display: flex
+  // ROW
+
+
+  // COL
+  &__col
+    position: relative
+    width: 50%
+    &:nth-child(1)
+      padding-top: 180px
+      padding-right: 130px
+    &:nth-child(2)
+      position: relative
+      &:before
+        content: ""
+        z-index: 0
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: calc(100% + 15px)
+        background-color: $colorWhite
+  // end COL
+  
+  
+  // TITLE
+  &__title
+    padding-bottom: 120px
+    text-transform: uppercase
+    text-align: left
+
+    span
+      color: $colorAlizarin
+  // end TITLE
+
+
+  // BTN
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    max-width: 450px
+    height: 120px
+    background-color: $colorAlizarin
+    color: $colorWhite
+    font-size: 26px
+    font-weight: bold
+    +transition(background-color)
+
+    &:hover
+      background-color: $colorBlack
+      +transition(background-color)
+  // end BTN
+
+
+  // IMG
+  &__img
+    z-index: 1
+    position: relative
+    display: block
+    max-width: 100%
+    height: auto
+    object-fit: cover
+  // end IMG
+// ===============

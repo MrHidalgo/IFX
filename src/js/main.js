@@ -102,7 +102,7 @@ $(document).ready(function () {
   // OBJECT-FIT POLYFILL
   // ====================
   const $someImages = $('[objectFit-js]');
-  if($someImages) {
+  if($someImages.length) {
     objectFitImages($someImages);
   }
   // ====================
