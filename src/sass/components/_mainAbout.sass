@@ -18,7 +18,7 @@
     // end TITLE
 
 
-    // MAIN TITLE
+    // MAIN MENU
     &__menu
       height: 40px
       margin-bottom: 50px
@@ -32,16 +32,6 @@
         &:last-child
           margin-right: 0
 
-        &.is-active
-          .main__menu-link
-            color: $colorAlizarin
-            +transition(color)
-
-            &:after
-              height: 2px
-              background-color: $colorAlizarin
-              +transition(background-color)
-
       &-link
         position: relative
         display: flex
@@ -52,6 +42,15 @@
         font-size: 16px
         +transition(color)
 
+        &.is-active
+          color: $colorAlizarin
+          +transition(color)
+
+          &:after
+            height: 2px
+            background-color: $colorAlizarin
+            +transition(background-color)
+
         &:after
           content: ""
           position: absolute
@@ -61,7 +60,7 @@
           height: 1px
           background-color: transparent
           +transition(background-color)
-    // end MAIN TITLE
+    // end MAIN MENU
 
 
     // TEXT ABOUT

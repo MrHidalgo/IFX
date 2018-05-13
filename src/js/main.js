@@ -90,7 +90,7 @@ $(document).ready(function () {
 
     let linkHref = $(this).attr('href'),
       navHeight = $(".header").outerHeight(),
-      topHeightOffset = $(linkHref).offset().top;
+      topHeightOffset = $(linkHref).offset().top - navHeight;
 
     $('body, html').animate({
       scrollTop: topHeightOffset
@@ -148,7 +148,7 @@ $(document).ready(function () {
     e.preventDefault();
 
     $("[mainAbout-js]").removeClass('is-active');
-    $(e.target).closest("li").addClass('is-active');
+    $(e.currentTarget).addClass('is-active');
   });
   // ====================
 
