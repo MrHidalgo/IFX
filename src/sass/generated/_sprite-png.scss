@@ -1,11 +1,11 @@
 $sprite: (
 	android: (
-		offset-x: -212px,
-		offset-y: -78px,
+		offset-x: -163px,
+		offset-y: -48px,
 		width: 22px,
 		height: 26px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	apple: (
@@ -13,17 +13,17 @@ $sprite: (
 		offset-y: -95px,
 		width: 20px,
 		height: 24px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	arrow: (
-		offset-x: -212px,
-		offset-y: -151px,
+		offset-x: -181px,
+		offset-y: -146px,
 		width: 17px,
 		height: 11px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	bitcoin: (
@@ -31,17 +31,26 @@ $sprite: (
 		offset-y: 0px,
 		width: 107px,
 		height: 24px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
+		image: '../img/sprite.png'
+	),
+	blockquote: (
+		offset-x: -212px,
+		offset-y: 0px,
+		width: 42px,
+		height: 37px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	corner: (
-		offset-x: -212px,
-		offset-y: -114px,
+		offset-x: 0px,
+		offset-y: -179px,
 		width: 18px,
 		height: 27px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	logo: (
@@ -49,8 +58,8 @@ $sprite: (
 		offset-y: 0px,
 		width: 85px,
 		height: 38px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	mc: (
@@ -58,8 +67,8 @@ $sprite: (
 		offset-y: -95px,
 		width: 53px,
 		height: 41px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	payFast: (
@@ -67,8 +76,8 @@ $sprite: (
 		offset-y: -146px,
 		width: 80px,
 		height: 23px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	paypal: (
@@ -76,8 +85,8 @@ $sprite: (
 		offset-y: -146px,
 		width: 81px,
 		height: 23px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	plus: (
@@ -85,8 +94,8 @@ $sprite: (
 		offset-y: -95px,
 		width: 19px,
 		height: 19px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	skrill: (
@@ -94,17 +103,17 @@ $sprite: (
 		offset-y: -48px,
 		width: 70px,
 		height: 37px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	streamlining: (
 		offset-x: -212px,
-		offset-y: -42px,
+		offset-y: -126px,
 		width: 32px,
 		height: 26px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	visa: (
@@ -112,26 +121,26 @@ $sprite: (
 		offset-y: -95px,
 		width: 77px,
 		height: 25px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	web: (
 		offset-x: -212px,
-		offset-y: 0px,
+		offset-y: -47px,
 		width: 32px,
 		height: 32px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	wide: (
-		offset-x: -163px,
-		offset-y: -48px,
+		offset-x: -212px,
+		offset-y: -89px,
 		width: 34px,
 		height: 27px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 	wire: (
@@ -139,8 +148,8 @@ $sprite: (
 		offset-y: -48px,
 		width: 73px,
 		height: 27px,
-		total-width: 244px,
-		total-height: 169px,
+		total-width: 254px,
+		total-height: 206px,
 		image: '../img/sprite.png'
 	),
 );
@@ -210,6 +219,9 @@ $sprite: (
 	}
 	.icon-bitcoin {
 		@include sprite(bitcoin)
+	}
+	.icon-blockquote {
+		@include sprite(blockquote)
 	}
 	.icon-corner {
 		@include sprite(corner)
