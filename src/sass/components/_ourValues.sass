@@ -3,5 +3,84 @@
 .values
   padding-top: 120px
   padding-bottom: 100px
+  
+  
+  // CONTAINER
+  .container
+    position: relative
+  // end CONTAINER
 
+
+  // TITLE
+  &__title
+    text-align: left
+  // end TITLE
+
+
+  // SUBTITLE
+  &__subtitle
+    padding-top: 410px
+    color: $colorAlizarin
+    text-align: left
+    text-transform: uppercase
+  // end SUBTITLE
+
+
+  // BLOCK
+  &__block
+    position: absolute
+    display: flex
+    width: 100%
+
+    &-0
+      top: 171px
+      left: 60px
+      max-width: 408px
+
+      .values__block-text
+        width: 100%
+        max-width: 260px
+
+    &-1
+      top: 33px
+      left: 603px
+      max-width: 370px
+
+    &-2
+      top: 205px
+      right: 104px
+      max-width: 344px
+
+    &-3
+      top: 396px
+      right: 303px
+      max-width: 495px
+
+    &-4
+      bottom: 2px
+      right: 100px
+      max-width: 484px
+
+    &-left
+      width: 100px
+      padding-left: 20px
+
+    &-right
+      width: calc(100% - 100px)
+
+    &-num
+      font-size: 80px
+      font-weight: bold
+
+    &-title
+      padding-top: 10px
+      padding-bottom: 10px
+      font-size: 22px
+      font-weight: bold
+
+    &-text
+      line-height: 1.5
+      color: rgba($colorBlack, 0.7)
+      font-family: "SFUIText", "Arial", sans-serif
+// end BLOCK
 // ===============
