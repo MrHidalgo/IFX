@@ -1,0 +1,133 @@
+// MAIN
+// ===============
+.depositsWithdrawals
+  .main
+    padding-top: 201px
+    padding-bottom: 15px
+    background-color: $colorWhiteSmoke
+
+
+    // CONTAINER
+    .container
+      &--small
+        max-width: 790px
+    // end CONTAINER
+
+
+    // MAIN TITLE
+    .main__title
+      line-height: normal
+    // end MAIN TITLE
+
+
+    // TITLE
+    &__title
+      padding-bottom: 60px
+      font-size: 120px
+    // end TITLE
+
+
+    // SUBTITLE
+    &__subtitle
+      padding-bottom: 60px
+      text-align: left
+    // end SUBTITLE
+
+
+    // TEXT
+    &__text
+      text-align: left
+
+      &--p
+        padding-top: 30px
+        padding-bottom: 60px
+    // end TEXT
+
+
+    // ROW
+    &__row
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+    // end ROW
+
+
+    // BLOCK
+    &__block
+      z-index: 10000
+      cursor: pointer
+      overflow: hidden
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      width: 395px
+      height: 347px
+      margin-bottom: 70px
+      padding: 40px 50px
+      background-color: $colorWhite
+      font-family: "SFUIText", "Arial", sans-serif
+
+      &:hover
+        .main__block-btn
+          transform: translateY(0)
+          +transition(transform)
+
+      &-img
+        margin-right: 15px
+
+        &-wrap
+          display: flex
+          align-items: center
+          padding-bottom: 15px
+
+      &-name
+        padding-bottom: 45px
+        text-transform: uppercase
+        color: $colorGrey
+        font-weight: 600
+        font-size: 13px
+
+      &-currency
+        padding-bottom: 10px
+        text-transform: uppercase
+        color: $colorGrey
+        font-weight: 600
+        font-size: 13px
+
+      &-list
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 56px
+
+      &-item
+        width: 55px
+        padding-bottom: 5px
+        font-size: 18px
+        font-weight: bold
+
+      &-process
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        color: $colorGrey
+        font-size: 14px
+
+        .icon
+          margin-right: 10px
+
+      &-btn
+        position: absolute
+        display: flex
+        align-items: center
+        justify-content: center
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 60px
+        background-color: $colorBlack
+        color: $colorWhite
+        transform: translateY(60px)
+        +transition(transform)
+    // end BLOCK
+// ===============

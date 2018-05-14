@@ -9,23 +9,25 @@
   height: 79px
   padding-top: 38px
   background-color: $colorWhite
-  +transition(padding-top, height)
+  +transition(background-color, padding-top, height)
   +r(767)
     height: 50px
     padding-top: 0
 
-  .onlineTrading &
+  .onlineTrading &,
+  .depositsWithdrawals &
     background-color: transparent
 
   &.is-fixed
     padding-top: 9px
     height: (79px - 20px)
-    +transition(padding-top, height)
+    +transition(background-color, padding-top, height)
     +r(767)
       padding-top: 0
       height: (79px - 29px)
 
-    .onlineTrading &
+    .onlineTrading &,
+    .depositsWithdrawals &
       background-color: $colorWhite
 
 
@@ -38,7 +40,8 @@
 
     .about &,
     .onlineTrading &,
-    .gettingDownBusiness &
+    .gettingDownBusiness &,
+    .depositsWithdrawals &
       max-width: 100%
 
 

@@ -9,6 +9,8 @@ PageList:
   ready: 25
 - file: gettingDownBusiness.html
   ready: 30
+- file: depositsWithdrawals.html
+  ready: 30
 - file: learn.html
   ready: 5
 - file: partnership.html
