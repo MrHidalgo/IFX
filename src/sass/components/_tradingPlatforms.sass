@@ -1,0 +1,145 @@
+// TRADING PLATFORMS
+// ===============
+.tradingPlatforms
+  padding-top: 60px
+  padding-bottom: 159px
+
+
+  // CONTAINER-FLUID
+  .container-fluid
+    position: relative
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      height: 100%
+
+    &:before
+      left: 0
+      width: 58%
+      background-image: url("../img/img-tradingPlatforms_bg@2x.png")
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+
+    &:after
+      right: 0
+      width: 42%
+  // end CONTAINER-FLUID
+
+
+  // WRAP
+  &__wrap
+    display: flex
+  // end WRAP
+
+
+  // COL
+  &__col
+    width: 50%
+    &:nth-child(2)
+      display: flex
+      justify-content: center
+      padding-left: 100px
+  // end COL
+
+
+  // BOX
+  &__box
+    width: 100%
+    max-width: 530px
+    padding-top: 183px
+    padding-bottom: 230px
+
+    &-title
+      padding-bottom: 20px
+      font-size: 44px
+      font-weight: bold
+
+    &-subtitle
+      padding-bottom: 40px
+      font-size: 32px
+      font-weight: 500
+      color: $colorAlizarin
+
+    &-text
+      line-height: 1.5
+      font-size: 18px
+      font-family: "SFUIText", "Arial", sans-serif
+      &:last-child
+        padding-top: 30px
+  // end BOX
+
+
+  // ROW
+  &__row
+    display: flex
+    flex-wrap: wrap
+  // end ROW
+
+
+  // BLOCK
+  &__block
+    display: flex
+    width: 50%
+    padding-bottom: 60px
+
+    &-left
+      width: 100px
+
+    &-right
+      width: calc(100% - 100px)
+      padding-top: 22px
+      padding-right: 100px
+
+    &-icon
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 70px
+      height: 70px
+      border-radius: 100%
+      background-color: $colorAlizarin
+      +transition(box-shadow)
+
+      &:hover
+        box-shadow: 0 0 15px 0 rgba($colorBlack, 0.15)
+        +transition(box-shadow)
+
+    &-title,
+    &-text
+      font-size: 18px
+      font-family: "SFUIText", "Arial", sans-serif
+
+    &-title
+      padding-bottom: 20px
+      font-weight: 600
+
+    &-text
+      padding-bottom: 20px
+      line-height: 1.5
+
+    &-btn
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 119px
+      height: 40px
+      border-radius: 3px
+      border: 1px solid rgba($colorGrey, 0.1)
+      background-color: transparent
+      font-size: 16px
+      font-family: "SFUIText", "Arial", sans-serif
+      font-weight: 600
+      +transition(color, border-color, background-color)
+
+      &:hover
+        color: $colorWhite
+        border-color: $colorAlizarin
+        background-color: $colorAlizarin
+        +transition(color, border-color, background-color)
+  // end BLOCK
+// ===============

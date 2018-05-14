@@ -1,0 +1,74 @@
+// TRADING PLATFORM :: START
+
+-
+  var tradingPlatformsIconNameArr = [
+    "icon-android",
+    "icon-web",
+    "icon-apple",
+    "icon-wide"
+  ];
+  var tradingPlatformsTitleArr = [
+    "IFX META TRADER 4 for Android",
+    "IFX WEB TRADER",
+    "IFX META TRADER 4 for iPhone & iPad",
+    "IFX META TRADER 4"
+  ];
+  var tradingPlatformsTextArr = [
+    "The IFX Meta Trader 4 Android OS app provides a comprehensive trading platform for Android devices. You have access to everything you need for successful forex trading, including a complete set of orders, trading history, interactive charts and technical analyses.",
+    "This web platform allows you to trade easily and efficiently from any browser or operating system including Windows, Mac and Linux without any additional software. All you need is an internet connection to start trading.",
+    "Our live trading servers, hosted by Equinix, are based in the major financial hubs of London and link to Wall Street in New Your, Sydney, Tokyo – in fact, anywhere in the world.",
+    "Our revolutionary technology allows you trade with absolute accuracy, free from slippage and re-quotes."
+  ];
+  var tradingPlatformsBtnBoolArr = [
+    true,
+    false,
+    true,
+    true
+  ];
+
+
+mixin tradingPlatformsBlock(iconName, title, text, boolBtn)
+  .tradingPlatforms__block
+
+    .tradingPlatforms__block-left
+      .tradingPlatforms__block-icon
+        i.icon(class!= iconName)
+
+    .tradingPlatforms__block-right
+      p.tradingPlatforms__block-title!= title
+      p.tradingPlatforms__block-text!= text
+
+      if(!boolBtn)
+        a(href="#" class="tradingPlatforms__block-link link__more" title="")
+          != "Read more"
+          span
+      else
+        a.tradingPlatforms__block-btn(href="#" title="")!= "Download"
+
+
+.tradingPlatforms
+  .container
+    h2.tradingPlatforms__title.title!= "Trading Platforms"
+
+
+  .container-fluid
+    .container
+      .tradingPlatforms__wrap
+        .tradingPlatforms__col
+        .tradingPlatforms__col
+          .tradingPlatforms__box
+            p.tradingPlatforms__box-title!= "IFX Meta Trader 4"
+            p.tradingPlatforms__box-subtitle!= "#1 Multi Asset trading </br>platform across the glob"
+            p.tradingPlatforms__box-text!= "Reliable and completely secure, you can access 85 pre-installed indicators at the click of a button."
+            p.tradingPlatforms__box-text!= "IFX Meta Trader 4 provides enhanced charting functionality and highly sophisticated order management tools. It also has a multilingual interface, provides a comprehensive analysis and allows for multiple chart set ups."
+
+
+  .container
+    .tradingPlatforms__row
+        +tradingPlatformsBlock(tradingPlatformsIconNameArr[1], tradingPlatformsTitleArr[1], tradingPlatformsTextArr[1], tradingPlatformsBtnBoolArr[1])
+        +tradingPlatformsBlock(tradingPlatformsIconNameArr[3], tradingPlatformsTitleArr[3], tradingPlatformsTextArr[3], tradingPlatformsBtnBoolArr[3])
+        +tradingPlatformsBlock(tradingPlatformsIconNameArr[0], tradingPlatformsTitleArr[0], tradingPlatformsTextArr[0], tradingPlatformsBtnBoolArr[0])
+        +tradingPlatformsBlock(tradingPlatformsIconNameArr[2], tradingPlatformsTitleArr[2], tradingPlatformsTextArr[2], tradingPlatformsBtnBoolArr[2])
+
+
+// TRADING PLATFORM :: END
