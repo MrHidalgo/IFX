@@ -1,0 +1,91 @@
+// MAIN
+// ===============
+.tradingHours
+  .main
+    position: relative
+    padding-bottom: 50px
+
+
+    // BG
+    &__bg
+      z-index: 0
+      position: absolute
+      top: (40px + 79px)
+      left: 60px
+      right: 60px
+      width: calc(100% - 120px)
+      height: 100%
+      max-height: calc(900px - (40px + 79px))
+      background-color: $colorWhiteSmoke
+      background-image: url("../img/img-tradingHours_bg@2x.png")
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+    // end BG
+
+
+    // CONTAINER
+    .container
+      z-index: 1
+      position: relative
+      &--small
+        max-width: 1024px
+    // end CONTAINER
+
+
+    // MAIN TITLE
+    .main__title
+      line-height: normal
+      text-align: center
+    // end MAIN TITLE
+
+
+    // TITLE
+    &__title
+      padding-top: 279px
+      padding-bottom: 40px
+      font-size: 120px
+    // end TITLE
+
+
+    // SUBTITLE
+    &__subtitle
+      padding-bottom: 55px
+    // end SUBTITLE
+
+
+    // TABLE
+    &__table
+      padding: 50px 30px
+      background-color: $colorWhite
+      font-family: "SFUIText", "Arial", sans-serif
+
+      &-title
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 14px
+        color: $colorGrey
+
+      &-subtitle
+        padding-left: 0 !important
+        border-left: none !important
+        border-right: none !important
+        text-align: left !important
+        font-size: 22px
+        font-weight: bold
+        font-family: "Rajdhani", Arial, sans-serif
+
+      table
+        width: 100%
+        table-layout: fixed
+
+      th,
+      td
+        width: calc(100% / 4)
+        padding: 20px
+        text-align: center
+
+      td
+        border: 1px solid rgba($colorGrey, 0.1)
+    // end TABLE
+// ===============

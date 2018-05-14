@@ -11,6 +11,8 @@ PageList:
   ready: 30
 - file: depositsWithdrawals.html
   ready: 30
+- file: tradingHours.html
+  ready: 30
 - file: learn.html
   ready: 5
 - file: partnership.html
