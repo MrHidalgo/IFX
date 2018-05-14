@@ -55,6 +55,7 @@ $(document).ready(function () {
     svg4everybody();
     initHeaderScroll();
     initScrollMonitor();
+    initFixedBlock("[scroll-container-js]", "[gettingDown-submenu-js]");
   }
   pageReady();
   // ====================
@@ -83,6 +84,32 @@ $(document).ready(function () {
       }
     });
   }
+  const initFixedBlock = (elemParent, elemChild) => {
+    _window.on('scroll load', () => {
+
+      let yTopElem = $(elemParent).offset().top;
+      let xLeftElem = $(elemParent).find(elemChild).offset().left;
+      let headerHeight = $('.header')[0].offsetHeight;
+      let vScroll = _window.scrollTop();
+
+      if(vScroll >= (yTopElem - headerHeight)) {
+        $(elemParent)
+          .addClass("is-fixed")
+          .find(elemChild)
+          .css(
+            {
+              "top" : headerHeight,
+              "left" : xLeftElem
+            }
+          );
+      } else {
+        $(elemParent)
+          .removeClass("is-fixed")
+          .find(elemChild)
+          .removeAttr("style");
+      }
+    })
+  };
   // ====================
 
 
@@ -165,6 +192,17 @@ $(document).ready(function () {
     e.preventDefault();
 
     $("[mainAbout-js]").removeClass('is-active');
+    $(e.currentTarget).addClass('is-active');
+  });
+  // ====================
+
+
+  // GETTING DOWN BUSINESS MENU
+  // ====================
+  _document.on("click", ".main__subMenu-link", (e) => {
+    e.preventDefault();
+
+    $(".main__subMenu-link").removeClass('is-active');
     $(e.currentTarget).addClass('is-active');
   });
   // ====================
