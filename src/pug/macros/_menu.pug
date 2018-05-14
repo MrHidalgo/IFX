@@ -18,13 +18,21 @@
   ];
 //- variable end
 
+mixin menuItem(count)
+  li.menu__item.wow.wowFadeDown(
+    menu-js,
+    class!= (i === count) ?"is-active": ""
+  )
+    a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+
 .menu
   ul.menu__list
     -for(var i = 0, len = menuArr.length; i < len; i++)
-      li.menu__item.wow.wowFadeDown(
-        menu-js,
-        class!=""
-      )
-        a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+      if(bodyClass === "about" && i === 0)
+        +menuItem(0)
+      else if (bodyClass === "onlineTrading" && i === 1)
+        +menuItem(1)
+      else
+        +menuItem("")
 
 // MENU :: END

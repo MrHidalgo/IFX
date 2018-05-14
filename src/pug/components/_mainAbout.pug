@@ -23,9 +23,7 @@
     .container
       ul.main__menu-list
         -for(var i = 0, len = mainMenuItem.length; i < len; i++)
-          li.main__menu-item(
-            class!= (i === 0) ? "is-active" : ""
-          )
+          li.main__menu-item
             a.main__menu-link(
               href= mainMenuHref[i]
               title=""

@@ -23,7 +23,7 @@ p, h1, h2, h3, h4, h5, h6
   padding: 0
 
 html
-  -ms-overflow-style: scrollbar
+  //-ms-overflow-style: scrollbar
   -webkit-tap-highlight-color: transparent
 
 body
@@ -42,7 +42,8 @@ html
   max-width: 100%
   margin: 0
   overflow-x: hidden
-  overflow-y: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
   &.is-hideScroll
     overflow: hidden
@@ -56,7 +57,6 @@ html
     flex: 1 0 auto
     display: flex
     flex-direction: column
-    padding-top: 59px
 
 .container
   width: 100%
@@ -85,7 +85,8 @@ html
   +rmin(2560)
     max-width: 100%
 
-  .about &
+  .about &,
+  .onlineTrading &
     max-width: 1440px
 
 +r($mobile)

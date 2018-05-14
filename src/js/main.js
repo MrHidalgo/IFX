@@ -1,32 +1,3 @@
-// Popup control view
-// ====================
-$(window).on('load resize', function () {
-  if($(window).width() < 768) {
-    initPopups();
-  } else {
-    $.magnificPopup.close();
-    $('[popup-js]').off('click');
-  }
-});
-// ====================
-
-
-// Pre-loader
-// ====================
-$(window).on('load', function () {
-  if($(window).scrollTop() <= 10) {
-    $("body").addClass("is-loader");
-  } else {
-    $("body").removeClass("is-loader");
-  }
-
-  setTimeout((e) => {
-    $("body").removeClass("is-loader");
-  }, 5000)
-});
-// ====================
-
-
 $(document).ready(function () {
 
   // Global variables
@@ -36,11 +7,40 @@ $(document).ready(function () {
   // ====================
 
 
+  // Popup control view
+  // ====================
+    $(window).on('load resize', function () {
+      if($(window).width() < 768) {
+        initPopups();
+      } else {
+        $.magnificPopup.close();
+        $('[popup-js]').off('click');
+      }
+    });
+  // ====================
+
+
+  // Pre-loader
+  // ====================
+    $(window).on('load', function () {
+      if($(window).scrollTop() <= 10) {
+        $("body").addClass("is-loader");
+      } else {
+        $("body").removeClass("is-loader");
+      }
+
+      setTimeout((e) => {
+        $("body").removeClass("is-loader");
+      }, 5000)
+    });
+  // ====================
+
+
   // READY - triggered when PJAX DONE
   // ====================
   function pageReady() {
     initHeaderScroll();
-    initScrollMonitor();
+    // initScrollMonitor();
   }
   pageReady();
   // ====================
@@ -62,7 +62,7 @@ $(document).ready(function () {
       let vScroll = _window.scrollTop();
       let header = $('.header').not('.header--static');
 
-      if (vScroll > 75) {
+      if (vScroll > 15) {
         header.addClass('is-fixed');
       } else {
         header.removeClass('is-fixed');

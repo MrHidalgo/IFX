@@ -17,6 +17,15 @@ $sprite: (
 		total-height: 206px,
 		image: '../img/sprite.png'
 	),
+	approve: (
+		offset-x: -50px,
+		offset-y: -179px,
+		width: 13px,
+		height: 8px,
+		total-width: 254px,
+		total-height: 206px,
+		image: '../img/sprite.png'
+	),
 	arrow: (
 		offset-x: -181px,
 		offset-y: -146px,
@@ -49,6 +58,15 @@ $sprite: (
 		offset-y: -179px,
 		width: 18px,
 		height: 27px,
+		total-width: 254px,
+		total-height: 206px,
+		image: '../img/sprite.png'
+	),
+	decline: (
+		offset-x: -28px,
+		offset-y: -179px,
+		width: 12px,
+		height: 12px,
 		total-width: 254px,
 		total-height: 206px,
 		image: '../img/sprite.png'
@@ -214,6 +232,9 @@ $sprite: (
 	.icon-apple {
 		@include sprite(apple)
 	}
+	.icon-approve {
+		@include sprite(approve)
+	}
 	.icon-arrow {
 		@include sprite(arrow)
 	}
@@ -225,6 +246,9 @@ $sprite: (
 	}
 	.icon-corner {
 		@include sprite(corner)
+	}
+	.icon-decline {
+		@include sprite(decline)
 	}
 	.icon-logo {
 		@include sprite(logo)
