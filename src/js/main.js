@@ -40,7 +40,7 @@ $(document).ready(function () {
   // ====================
   function pageReady() {
     initHeaderScroll();
-    // initScrollMonitor();
+    initScrollMonitor();
   }
   pageReady();
   // ====================

@@ -2,11 +2,11 @@ ProjectTitle: IFX
 
 PageList:
 - file: homepage.html
-  ready: 90
+  ready: 75
 - file: about.html
-  ready: 40
+  ready: 25
 - file: onlineTrading.html
-  ready: 5
+  ready: 25
 - file: learn.html
   ready: 5
 - file: partnership.html
