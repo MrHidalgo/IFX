@@ -1,11 +1,11 @@
 include _mixins
 
 doctype html
-html(lang="en")
+html.is-hideScroll(lang="en")
   head
     include _head
 
-  body.animated(class=bodyClass)
+  body.animated.is-hideScroll(class=bodyClass)
 
   block loader
     include ../macros/_loader

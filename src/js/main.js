@@ -9,7 +9,9 @@ $(document).ready(function () {
 
   // Popup control view
   // ====================
-    $(window).on('load resize', function () {
+    $(window).on('resize', function () {
+      console.log("win resize");
+
       if($(window).width() < 768) {
         initPopups();
       } else {
@@ -23,15 +25,30 @@ $(document).ready(function () {
   // Pre-loader
   // ====================
     $(window).on('load', function () {
+      console.log("win load");
+
+      if($(window).width() < 768) {
+        initPopups();
+      } else {
+        $.magnificPopup.close();
+        $('[popup-js]').off('click');
+      }
+
       if($(window).scrollTop() <= 10) {
         $("body").addClass("is-loader");
       } else {
         $("body").removeClass("is-loader");
+        $("body, html").removeClass("is-hideScroll");
       }
 
       setTimeout((e) => {
         $("body").removeClass("is-loader");
-      }, 5000)
+      }, 5000);
+
+      setTimeout((e) => {
+        $("body, html").removeClass("is-hideScroll");
+        // $("body").removeClass("is-loader");
+      }, 2250);
     });
   // ====================
 
@@ -39,6 +56,7 @@ $(document).ready(function () {
   // READY - triggered when PJAX DONE
   // ====================
   function pageReady() {
+    svg4everybody();
     initHeaderScroll();
     initScrollMonitor();
   }
@@ -88,9 +106,15 @@ $(document).ready(function () {
   _document.on("click", "[anchor-js]", function(e) {
     e.preventDefault();
 
-    let linkHref = $(this).attr('href'),
-      navHeight = $(".header").outerHeight(),
+    // console.log($(e.currentTarget));
+
+    let linkHref = $(e.currentTarget).attr('href'),
+      navHeight = $(".header").outerHeight() || 0,
       topHeightOffset = $(linkHref).offset().top - navHeight;
+
+    // console.log("linkHref: ", linkHref);
+    // console.log("navHeight: ", navHeight);
+    // console.log("topHeightOffset: ", topHeightOffset);
 
     $('body, html').animate({
       scrollTop: topHeightOffset
@@ -136,8 +160,9 @@ $(document).ready(function () {
 
   // PARALLAX
   // ====================
-  if($(".parallax-js").length) {
-    const rellax = new Rellax('.parallax-js');
+  if($("[parallax-js]").length) {
+
+    $(window).stellar();
   }
   // ====================
 
