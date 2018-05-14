@@ -161,8 +161,11 @@ $(document).ready(function () {
   // PARALLAX
   // ====================
   if($("[parallax-js]").length) {
-
-    $(window).stellar();
+    $(window).stellar({
+      scrollProperty: 'scroll',
+      positionProperty: 'transform',
+      hideDistantElements: false
+    });
   }
   // ====================
 
