@@ -7,17 +7,20 @@ $(document).ready(function () {
   // ====================
 
 
+  const popUpLogic = () => {
+    if($(window).width() < 768) {
+      initPopups();
+    } else {
+      $.magnificPopup.close();
+      $('[popup-js]').off('click');
+    }
+  };
+
+
   // Popup control view
   // ====================
     $(window).on('resize', function () {
-      console.log("win resize");
-
-      if($(window).width() < 768) {
-        initPopups();
-      } else {
-        $.magnificPopup.close();
-        $('[popup-js]').off('click');
-      }
+      popUpLogic();
     });
   // ====================
 
@@ -25,14 +28,7 @@ $(document).ready(function () {
   // Pre-loader
   // ====================
     $(window).on('load', function () {
-      console.log("win load");
-
-      if($(window).width() < 768) {
-        initPopups();
-      } else {
-        $.magnificPopup.close();
-        $('[popup-js]').off('click');
-      }
+      popUpLogic();
 
       if($(window).scrollTop() <= 10) {
         $("body").addClass("is-loader");
@@ -106,15 +102,9 @@ $(document).ready(function () {
   _document.on("click", "[anchor-js]", function(e) {
     e.preventDefault();
 
-    // console.log($(e.currentTarget));
-
     let linkHref = $(e.currentTarget).attr('href'),
       navHeight = $(".header").outerHeight() || 0,
       topHeightOffset = $(linkHref).offset().top - navHeight;
-
-    // console.log("linkHref: ", linkHref);
-    // console.log("navHeight: ", navHeight);
-    // console.log("topHeightOffset: ", topHeightOffset);
 
     $('body, html').animate({
       scrollTop: topHeightOffset
@@ -162,7 +152,6 @@ $(document).ready(function () {
   // ====================
   if($("[parallax-js]").length) {
     $(window).stellar({
-      scrollProperty: 'scroll',
       positionProperty: 'transform',
       hideDistantElements: false
     });
