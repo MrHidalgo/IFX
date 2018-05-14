@@ -5,6 +5,7 @@ var changed     = require('gulp-changed');
 var gulpif      = require('gulp-if');
 var frontMatter = require('gulp-front-matter');
 var config      = require('../config');
+var changedInPlace    =   require('gulp-changed-in-place');
 
 function renderHtml(onlyChanged) {
   return gulp
@@ -15,6 +16,11 @@ function renderHtml(onlyChanged) {
     .pipe(pug({
       pretty: true
     }))
+    .pipe(
+      changedInPlace({
+        firstPass : true,
+      })
+    )
     .pipe(gulp.dest(config.dest.html));
 }
 

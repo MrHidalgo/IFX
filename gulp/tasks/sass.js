@@ -16,6 +16,7 @@ var easings      = require('postcss-easings');
 var cssnano      = require('cssnano');
 var plumber      = require('gulp-plumber');
 var config       = require('../config');
+var changedInPlace    =   require('gulp-changed-in-place');
 
 // PostCSS Processors
 // short - shorthands -- https://github.com/jonathantneal/postcss-short
@@ -53,7 +54,7 @@ var cssNanoParams = {
   discardUnused: {
     keyframes: false
   }
-}
+};
 
 // Sass task
 gulp.task('sass', function() {
@@ -70,6 +71,11 @@ gulp.task('sass', function() {
     }))
     .on('error', config.errorHandler)
     .pipe(postcss(processors))
+    .pipe(
+      changedInPlace({
+        firstPass : true,
+      })
+    )
     .pipe(config.production ? util.noop() : sourcemaps.write('.'))
     .pipe(config.production ? postcss([cssnano(cssNanoParams)]) : util.noop())
     .pipe(gulp.dest(config.dest.css))

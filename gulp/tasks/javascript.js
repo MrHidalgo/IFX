@@ -6,6 +6,7 @@ var concat      = require('gulp-concat');
 var uglifyJs    = require('gulp-uglify');
 var babel       = require('gulp-babel');
 var config      = require('../config');
+var changedInPlace    =   require('gulp-changed-in-place');
 
 gulp.task('javascript:vendor', function() {
   return gulp.src([
@@ -26,6 +27,11 @@ gulp.task('javascript:vendor', function() {
      ])
     .pipe(plumber({ errorHandler: config.errorHandler }))
     .pipe(concat('vendor.js'))
+    .pipe(
+      changedInPlace({
+        firstPass : true,
+      })
+    )
     .pipe(config.production ? uglifyJs() : util.noop())
     .pipe(gulp.dest(config.dest.js));
 });
@@ -39,6 +45,11 @@ gulp.task('javascript:app', function() {
     .pipe(babel({
       "presets": ["env"]
     }))
+    .pipe(
+      changedInPlace({
+        firstPass : true,
+      })
+    )
     .pipe(config.production ? uglifyJs() : util.noop())
     .pipe(gulp.dest(config.dest.js));
 });

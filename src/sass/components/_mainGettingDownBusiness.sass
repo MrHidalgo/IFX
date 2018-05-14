@@ -1,0 +1,78 @@
+// MAIN
+// ===============
+.gettingDownBusiness
+  .main
+    padding-top: 201px
+    padding-bottom: 60px
+
+
+    // CONTAINER
+    .container
+      &:nth-child(2)
+        position: relative
+    // end CONTAINER
+
+
+    // TITLE
+    &__title
+      padding-bottom: 60px
+      font-size: 120px
+    // end TITLE
+
+
+    // SUBTITLE
+    &__subtitle
+      padding-bottom: 60px
+      color: $colorAlizarin
+      text-align: left
+    // end SUBTITLE
+
+
+    // TEXT
+    &__text
+      padding-bottom: 60px
+      text-align: left
+    // end TEXT
+
+
+    // SUBMENU
+    &__subMenu
+      position: absolute
+      top: 0
+      left: -(60px + 160px + 105px)
+
+      width: 100%
+      max-width: 160px
+
+      &-list
+        display: flex
+        flex-direction: column
+
+      &-link
+        display: block
+        padding-top: 10px
+        padding-bottom: 10px
+        color: $colorGrey
+        font-size: 18px
+        font-weight: bold
+
+        &.is-active
+          color: $colorBlack
+    // end SUBMENU
+
+
+    // BLOCK
+    &__block
+      padding-bottom: 50px
+
+      .main__subtitle
+        padding-bottom: 20px
+        color: $colorBlack
+        font-weight: bold
+
+      .main__text
+        padding-bottom: 0
+        &--p
+          padding-top: 30px
+    // end BLOCK
+// ===============
