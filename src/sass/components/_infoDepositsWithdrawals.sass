@@ -2,8 +2,12 @@
 // ===============
 .depositsWithdrawals
   .info
-    padding-top: 80px
-    padding-bottom: 184px
+    +rmin(320)
+      padding-top: 40px
+      padding-bottom: 84px
+    +rmin(768)
+      padding-top: 80px
+      padding-bottom: 184px
 
     // CONTAINER
     .container
@@ -14,8 +18,11 @@
 
     // TITLE
     &__title
-      padding-bottom: 60px
       text-align: left
+      +rmin(320)
+        padding-bottom: 30px
+      +rmin(768)
+        padding-bottom: 60px
     // end TITLE
 
 
