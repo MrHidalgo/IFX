@@ -1,8 +1,12 @@
 // PARTNERS
 // ===============
 .platforms
-  padding-top: 75px
-  padding-bottom: 50px
+  +rmin(320)
+    padding-top: 35px
+    padding-bottom: 30px
+  +rmin(768)
+    padding-top: 75px
+    padding-bottom: 50px
 
   // TITLE
   &__title
@@ -12,20 +16,32 @@
 
   // SUBTITLE
   &__subtitle
-    padding-bottom: 60px
+    +rmin(320)
+      padding-bottom: 30px
+    +rmin(768)
+      padding-bottom: 60px
   // end SUBTITLE
 
 
   // ROW
   &__row
     display: flex
+    +rmin(320)
+      flex-direction: column
+    +rmin(992)
+      flex-direction: row
   // end ROW
 
 
   // BLOCK
   &__block
     display: flex
-    padding-bottom: 60px
+    +rmin(320)
+      //width: 100%
+      padding-bottom: 30px
+    +rmin(992)
+      //width: 50%
+      padding-bottom: 60px
 
     &-left
       width: 100px
@@ -33,7 +49,10 @@
     &-right
       width: calc(100% - 100px)
       padding-top: 22px
-      padding-right: 100px
+      +rmin(320)
+        padding-right: 0
+      +rmin(768)
+        padding-right: 100px
 
     &-icon
       cursor: pointer
@@ -52,8 +71,13 @@
 
     &-title,
     &-text
-      font-size: 18px
       font-family: "SFUIText", "Arial", sans-serif
+      +rmin(320)
+        font-size: 14px
+      +rmin(768)
+        font-size: 16px
+      +rmin(992)
+        font-size: 18px
 
     &-title
       padding-bottom: 20px
@@ -72,10 +96,13 @@
       border-radius: 3px
       border: 1px solid rgba($colorGrey, 0.1)
       background-color: transparent
-      font-size: 16px
       font-family: "SFUIText", "Arial", sans-serif
       font-weight: 600
       +transition(color, border-color, background-color)
+      +rmin(320)
+        font-size: 14px
+      +rmin(1200)
+        font-size: 16px
 
       &:hover
         color: $colorWhite

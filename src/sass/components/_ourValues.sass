@@ -1,9 +1,16 @@
 // VALUES
 // ===============
 .values
-  padding-top: 120px
-  padding-bottom: 100px
-  
+  +rmin(320)
+    padding-top: 20px
+    padding-bottom: 30px
+  +rmin(576)
+    padding-top: 60px
+    padding-bottom: 50px
+  +rmin(768)
+    padding-top: 120px
+    padding-bottom: 100px
+
   
   // CONTAINER
   .container
@@ -19,18 +26,35 @@
 
   // SUBTITLE
   &__subtitle
-    padding-top: 410px
     color: $colorAlizarin
     text-align: left
     text-transform: uppercase
+    +rmin(320)
+      padding-top: 30px
+    +rmin(992)
+      padding-top: 450px
+    +rmin(1200)
+      padding-top: 410px
   // end SUBTITLE
 
 
   // BLOCK
   &__block
-    position: absolute
     display: flex
     width: 100%
+    +rmin(320)
+      position: static
+      padding-top: 15px
+      padding-bottom: 15px
+    +rmin(768)
+      padding-top: 30px
+      padding-bottom: 30px
+    +rmin(992)
+      position: absolute
+      padding-top: 0
+      padding-bottom: 0
+    +r(991)
+      max-width: 100% !important
 
     &-0
       top: 171px
@@ -39,7 +63,10 @@
 
       .values__block-text
         width: 100%
-        max-width: 260px
+        +rmin(320)
+          max-width: 100%
+        +rmin(992)
+          max-width: 260px
 
     &-1
       top: 33px
@@ -62,15 +89,29 @@
       max-width: 484px
 
     &-left
-      width: 100px
       padding-left: 20px
+      +rmin(320)
+        width: 65px
+      +rmin(576)
+        width: 100px
 
     &-right
-      width: calc(100% - 100px)
+      +rmin(320)
+        width: calc(100% - 65px)
+      +rmin(576)
+        width: calc(100% - 100px)
 
     &-num
-      font-size: 80px
       font-weight: bold
+      +rmin(320)
+        font-size: 32px
+      +rmin(768)
+        font-size: 40px
+      +rmin(992)
+        font-size: 60px
+      +rmin(1440)
+        font-size: 80px
+
 
     &-title
       padding-top: 10px

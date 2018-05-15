@@ -2,17 +2,33 @@
 // ===============
 .about
   .main
-    margin-top: (141px + 79px)
     background-image: url("../img/img-mainAbout_bg.png")
     background-repeat: no-repeat
     background-position: left bottom
     background-size: contain
+    +rmin(320)
+      margin-top: (71px + 50px)
+    +rmin(768)
+      margin-top: (141px + 79px)
 
 
     // TITLE
     &__title
       padding-bottom: 40px
-      font-size: 180px
+      +rmin(320)
+        font-size: 32px
+      +rmin(576)
+        font-size: 54px
+      +rmin(780)
+        font-size: 72px
+      +rmin(992)
+        font-size: 93px
+      +rmin(1200)
+        font-size: 113px
+      +rmin(1440)
+        font-size: 135px
+      +rmin(1920)
+        font-size: 180px
     // end TITLE
 
 
@@ -28,7 +44,12 @@
         display: flex
 
       &-item
-        margin-right: 40px
+        +rmin(320)
+          margin-right: 10px
+        +rmin(576)
+          margin-right: 20px
+        +rmin(768)
+          margin-right: 40px
         &:last-child
           margin-right: 0
 
@@ -39,8 +60,13 @@
         height: 40px
         font-family: "SFUIText", "Arial", sans-serif
         font-weight: normal
-        font-size: 16px
         +transition(color)
+        +rmin(320)
+          font-size: 12px
+        +rmin(576)
+          font-size: 14px
+        +rmin(768)
+          font-size: 16px
 
         &.is-active
           color: $colorAlizarin
@@ -66,34 +92,56 @@
     // TEXT ABOUT
     &__about
       width: 100%
-      max-width: 70%
-      padding-bottom: 70px
       line-height: 1.5
       font-weight: 500
-      font-size: 32px
+      +rmin(320)
+        max-width: 100%
+        padding-bottom: 35px
+        font-size: 22px
+      +rmin(768)
+        max-width: 85%
+        padding-bottom: 70px
+        font-size: 32px
+      +rmin(992)
+        max-width: 70%
     // end TEXT ABOUT
 
 
     // MOTIVATE
     &__motivate
       width: 100%
-      max-width: 30%
       padding-bottom: 25px
       color: rgba($colorBlack, 0.5)
       text-align: left
+      +rmin(320)
+        max-width: 100%
+      +rmin(768)
+        max-width: 60%
+      +rmin(992)
+        max-width: 30%
     // end MOTIVATE
 
 
     // VISION
     &__row
       display: flex
-      justify-content: flex-end
+      +rmin(320)
+        justify-content: flex-start
+      +rmin(576)
+        justify-content: flex-end
 
       &-wrap
         width: 100%
-        max-width: 500px
         padding-right: 15px
-        padding-bottom: 128px
+        +rmin(320)
+          max-width: 100%
+          padding-bottom: 48px
+        +rmin(576)
+          max-width: 500px
+        +rmin(768)
+          padding-bottom: 88px
+        +rmin(992)
+          padding-bottom: 128px
 
         p
           &:nth-child(1)
@@ -108,10 +156,18 @@
 
     // SLOGAN
     &__slogan
-      padding-bottom: 130px
       color: $colorAlizarin
       text-transform: uppercase
-      font-size: 60px
       font-weight: bold
+      +rmin(320)
+        padding-bottom: 50px
+        font-size: 32px
+      +rmin(768)
+        padding-bottom: 90px
+      +rmin(992)
+        padding-bottom: 130px
+        font-size: 42px
+      +rmin(1440)
+        font-size: 60px
     // end SLOGAN
 // ===============

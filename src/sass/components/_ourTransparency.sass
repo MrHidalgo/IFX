@@ -1,21 +1,45 @@
 // TRANSPARENCY
 // ===============
 .transparency
-  padding-top: 222px
-  padding-bottom: 222px
+  +rmin(320)
+    padding-top: 42px
+    padding-bottom: 42px
+  +rmin(576)
+    padding-top: 82px
+    padding-bottom: 82px
+  +rmin(768)
+    padding-top: 122px
+    padding-bottom: 122px
+  +rmin(992)
+    padding-top: 222px
+    padding-bottom: 222px
 
 
   // ROW
   &__row
     display: flex
-    padding-left: 133px
+    +rmin(320)
+      flex-direction: column
+      padding-left: 0
+    +rmin(768)
+      flex-direction: row
+    +rmin(1200)
+      padding-left: 63px
+    +rmin(1366)
+      padding-left: 133px
 
     &-left
-      width: 314px
+      +rmin(320)
+        width: 100%
+      +rmin(768)
+        width: 314px
 
     &-right
-      width: calc(100% - 314px)
       padding-top: 15px
+      +rmin(320)
+        width: 100%
+      +rmin(768)
+        width: calc(100% - 314px)
   // end ROW
 
 
@@ -24,27 +48,50 @@
     display: flex
     align-items: center
     justify-content: center
-    width: 254px
-    height: 254px
     border-radius: 100%
     background-color: $colorAlizarin
+    +rmin(320)
+      width: 104px
+      height: 104px
+    +rmin(576)
+      width: 154px
+      height: 154px
+    +rmin(768)
+      width: 204px
+      height: 204px
+    +rmin(992)
+      width: 224px
+      height: 224px
+    +rmin(1200)
+      width: 254px
+      height: 254px
   // end CIRCLE
 
 
-  // end CIRCLE
+  // TITLE
   &__title
     padding-bottom: 20px
     color: $colorAlizarin
     text-transform: uppercase
-    font-size: 18px
     font-weight: bold
-  // end CIRCLE
+    +rmin(320)
+      font-size: 14px
+    +rmin(576)
+      font-size: 16px
+    +rmin(728)
+      font-size: 18px
+  // end TITLE
 
 
-  // end CIRCLE
+  // TEXT
   &__text
-    font-size: 32px
     font-weight: 500
     font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
-  // end CIRCLE
+    +rmin(320)
+      font-size: 16px
+    +rmin(576)
+      font-size: 22px
+    +rmin(992)
+      font-size: 32px
+  // end TEXT
 // ===============

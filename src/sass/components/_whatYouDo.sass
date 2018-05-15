@@ -2,36 +2,61 @@
 // ===============
 .what
   position: relative
-  margin-top: 80px
-  margin-bottom: 15px
+  +rmin(320)
+    padding-top: 40px
+    padding-bottom: 40px
+  +rmin(768)
+    padding-top: 0
+    padding-bottom: 0
+    margin-top: 80px
+    margin-bottom: 15px
 
 
   // ROW
   &__bg
     position: absolute
-    top: 60px
     left: 0
     width: 100%
-    height: calc(100% - 45px)
     background-color: $colorWhiteSmoke
+    +rmin(320)
+      top: 0
+      height: 100%
+    +rmin(768)
+      top: 60px
+      height: calc(100% - 45px)
   // end ROW
 
 
   // ROW
   &__row
     display: flex
+    +rmin(320)
+      flex-direction: column
+    +rmin(768)
+      flex-direction: row
   // ROW
 
 
   // COL
   &__col
     position: relative
-    width: 50%
+    +rmin(320)
+      width: 100%
+    +rmin(768)
+      width: 50%
     &:nth-child(1)
-      padding-top: 180px
-      padding-right: 130px
+      +rmin(768)
+        padding-top: 130px
+        padding-right: 80px
+      +rmin(992)
+        padding-top: 180px
+        padding-right: 130px
     &:nth-child(2)
       position: relative
+      +rmin(320)
+        display: none
+      +rmin(768)
+        display: block
       &:before
         content: ""
         z-index: 0
@@ -46,9 +71,12 @@
   
   // TITLE
   &__title
-    padding-bottom: 120px
     text-transform: uppercase
     text-align: left
+    +rmin(320)
+      padding-bottom: 60px
+    +rmin(768)
+      padding-bottom: 120px
 
     span
       color: $colorAlizarin
@@ -62,12 +90,19 @@
     justify-content: center
     width: 100%
     max-width: 450px
-    height: 120px
     background-color: $colorAlizarin
     color: $colorWhite
-    font-size: 26px
     font-weight: bold
     +transition(background-color)
+    +rmin(320)
+      height: 80px
+      font-size: 18px
+    +rmin(576)
+      height: 100px
+      font-size: 22px
+    +rmin(768)
+      height: 120px
+      font-size: 26px
 
     &:hover
       background-color: $colorBlack
@@ -78,10 +113,11 @@
   // IMG
   &__img
     z-index: 1
-    position: relative
-    display: block
-    max-width: 100%
-    height: auto
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
     object-fit: cover
   // end IMG
 // ===============

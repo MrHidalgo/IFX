@@ -4,22 +4,40 @@
   // TITLE
   &__title
     text-align: left
-    padding-bottom: 53px
+    +rmin(320)
+      padding-bottom: 33px
+    +rmin(768)
+      padding-bottom: 53px
   // end TITLE
 
 
   // ROW
   &__row
     display: flex
+    +rmin(320)
+      flex-direction: column
+    +rmin(768)
+      flex-direction: row
 
     &-0
+      +rmin(768)
+        padding-bottom: 15px
+      +rmin(992)
+        padding-bottom: 0
       .directors__col
         &:nth-child(2)
           display: flex
 
     &-1
       align-items: center
-      padding-bottom: 170px
+      +rmin(320)
+        padding-bottom: 50px
+      +rmin(576)
+        padding-bottom: 90px
+      +rmin(768)
+        padding-bottom: 130px
+      +rmin(992)
+        padding-bottom: 170px
 
       .directors__col
         &:nth-child(1)
@@ -32,16 +50,35 @@
           margin-bottom: 51px
 
     &-2
-      padding-bottom: 200px
+      +rmin(320)
+        padding-bottom: 80px
+      +rmin(576)
+        padding-bottom: 120px
+      +rmin(768)
+        padding-bottom: 160px
+      +rmin(992)
+        padding-bottom: 200px
 
       .directors__col
-        padding-left: 133px
+        +rmin(320)
+          padding-top: 15px
+          padding-bottom: 15px
+        +rmin(768)
+          padding: 30px
+        +rmin(992)
+          padding: 0
+          padding-left: 133px
   // end ROW
 
 
   // COL
   &__col
-    width: 50%
+    +rmin(320)
+      width: 100%
+      padding-bottom: 20px
+    +rmin(768)
+      width: 50%
+      padding-bottom: 0
   // end COL
 
 
@@ -67,7 +104,12 @@
     padding-bottom: 24px
     font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
     font-weight: bold
-    font-size: 32px
+    +rmin(320)
+      font-size: 16px
+    +rmin(576)
+      font-size: 22px
+    +rmin(992)
+      font-size: 32px
   // end SLOGAN
 
 
@@ -83,14 +125,25 @@
       top: 103px
       left: 53px
       height: 60px
-      padding-top: 16px
-      padding-left: 20px
       background-color: $colorWhite
       font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
+      +rmin(320)
+        padding-top: 5px
+        padding-left: 5px
+      +rmin(768)
+        padding-top: 16px
+        padding-left: 20px
 
     &-name
       font-weight: bold
-      font-size: 22px
+      +rmin(320)
+        font-size: 14px
+      +rmin(576)
+        font-size: 16px
+      +rmin(768)
+        font-size: 19px
+      +rmin(992)
+        font-size: 22px
 
     &-position
       padding-bottom: 10px
