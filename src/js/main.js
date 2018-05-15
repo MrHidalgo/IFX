@@ -53,9 +53,7 @@ $(document).ready(function () {
   // ====================
   function pageReady() {
     svg4everybody();
-    initHeaderScroll();
     initScrollMonitor();
-    initFixedBlock("[scroll-container-js]", "[gettingDown-submenu-js]");
   }
   pageReady();
   // ====================
@@ -84,22 +82,24 @@ $(document).ready(function () {
       }
     });
   }
-  const initFixedBlock = (elemParent, elemChild) => {
+  initHeaderScroll();
+
+  function initFixedBlock(elemParent, elemChild) {
     _window.on('scroll load', () => {
 
+      let vScroll = _window.scrollTop();
       let yTopElem = $(elemParent).offset().top;
       let xLeftElem = $(elemParent).find(elemChild).offset().left;
       let headerHeight = $('.header')[0].offsetHeight;
-      let vScroll = _window.scrollTop();
 
-      if(vScroll >= (yTopElem - headerHeight)) {
+      if (vScroll >= (yTopElem - headerHeight)) {
         $(elemParent)
           .addClass("is-fixed")
           .find(elemChild)
           .css(
             {
-              "top" : headerHeight,
-              "left" : xLeftElem
+              "top": headerHeight,
+              "left": xLeftElem
             }
           );
       } else {
@@ -109,7 +109,8 @@ $(document).ready(function () {
           .removeAttr("style");
       }
     })
-  };
+  }
+  initFixedBlock("[scroll-container-js]", "[gettingDown-submenu-js]");
   // ====================
 
 

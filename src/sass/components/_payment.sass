@@ -13,17 +13,27 @@
   &__list
     display: flex
     align-items: center
-    justify-content: center
+    +rmin(320)
+      flex-wrap: wrap
+      justify-content: space-between
+    +rmin(768)
+      justify-content: center
+    +rmin(992)
+      flex-wrap: nowrap
+
   // end ROW
 
 
   // ITEM
   &__item
-    margin-left: 25px
-    margin-right: 25px
-    &:first-child
-      margin-left: 0
-    &:last-child
-      margin-right: 0
+    +rmin(320)
+      margin: 15px 25px
+    +rmin(992)
+      margin-top: 0
+      margin-bottom: 0
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
   // end ITEM
 // ===============
