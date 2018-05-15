@@ -1,8 +1,12 @@
 // TRADING PLATFORMS
 // ===============
 .tradingPlatforms
-  padding-top: 60px
-  padding-bottom: 159px
+  +rmin(320)
+    padding-top: 30px
+    padding-bottom: 59px
+  +rmin(768)
+    padding-top: 60px
+    padding-bottom: 159px
 
 
   // CONTAINER-FLUID
@@ -15,6 +19,10 @@
       position: absolute
       top: 0
       height: 100%
+      +rmin(320)
+        display: none
+      +rmin(768)
+        display: block
 
     &:before
       left: 0
@@ -33,43 +41,89 @@
   // WRAP
   &__wrap
     display: flex
+    +rmin(320)
+      flex-direction: column
+    +rmin(768)
+      flex-direction: row
   // end WRAP
 
 
   // COL
   &__col
-    width: 50%
-    &:nth-child(2)
+    +rmin(320)
+      width: 100%
+    +rmin(768)
+      width: 50%
+
+    &:last-child
       display: flex
-      justify-content: center
-      padding-left: 100px
+      +rmin(320)
+        justify-content: flex-start
+        padding-left: 0
+      +rmin(768)
+        justify-content: center
+        padding-left: 100px
+
+
   // end COL
 
 
   // BOX
   &__box
     width: 100%
-    max-width: 530px
-    padding-top: 183px
-    padding-bottom: 230px
+    +rmin(320)
+      max-width: 100%
+      padding-top: 33px
+      padding-bottom: 70px
+    +rmin(768)
+      max-width: 530px
+      padding-top: 83px
+      padding-bottom: 130px
+    +rmin(1200)
+      padding-top: 183px
+      padding-bottom: 230px
 
     &-title
       padding-bottom: 20px
-      font-size: 44px
       font-weight: bold
+      +rmin(320)
+        font-size: 32px
+      +rmin(768)
+        font-size: 38px
+      +rmin(992)
+        font-size: 44px
 
     &-subtitle
       padding-bottom: 40px
-      font-size: 32px
       font-weight: 500
       color: $colorAlizarin
+      +rmin(320)
+        font-size: 22px
+      +rmin(768)
+        font-size: 27px
+      +rmin(992)
+        font-size: 32px
 
     &-text
       line-height: 1.5
-      font-size: 18px
       font-family: "SFUIText", "Arial", sans-serif
       &:last-child
         padding-top: 30px
+
+      +rmin(320)
+        font-size: 14px
+      +rmin(768)
+        font-size: 16px
+      +rmin(992)
+        font-size: 18px
+
+    &-img
+      +rmin(320)
+        display: block
+        max-width: 100%
+        margin: 30px auto 0
+      +rmin(768)
+        display: none
   // end BOX
 
 
@@ -83,8 +137,12 @@
   // BLOCK
   &__block
     display: flex
-    width: 50%
-    padding-bottom: 60px
+    +rmin(320)
+      width: 100%
+      padding-bottom: 30px
+    +rmin(768)
+      width: 50%
+      padding-bottom: 60px
 
     &-left
       width: 100px
@@ -92,7 +150,10 @@
     &-right
       width: calc(100% - 100px)
       padding-top: 22px
-      padding-right: 100px
+      +rmin(320)
+        padding-right: 0
+      +rmin(768)
+        padding-right: 100px
 
     &-icon
       cursor: pointer
@@ -111,8 +172,13 @@
 
     &-title,
     &-text
-      font-size: 18px
       font-family: "SFUIText", "Arial", sans-serif
+      +rmin(320)
+        font-size: 14px
+      +rmin(768)
+        font-size: 16px
+      +rmin(992)
+        font-size: 18px
 
     &-title
       padding-bottom: 20px
@@ -131,10 +197,13 @@
       border-radius: 3px
       border: 1px solid rgba($colorGrey, 0.1)
       background-color: transparent
-      font-size: 16px
       font-family: "SFUIText", "Arial", sans-serif
       font-weight: 600
       +transition(color, border-color, background-color)
+      +rmin(320)
+        font-size: 14px
+      +rmin(1200)
+          font-size: 16px
 
       &:hover
         color: $colorWhite
