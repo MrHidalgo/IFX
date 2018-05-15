@@ -2,8 +2,12 @@
 // ===============
 .gettingDownBusiness
   .main
-    padding-top: 201px
-    padding-bottom: 60px
+    +rmin(320)
+      padding-top: 101px
+      padding-bottom: 30px
+    +rmin(768)
+      padding-top: 201px
+      padding-bottom: 60px
 
 
     // CONTAINER
@@ -25,23 +29,43 @@
 
     // TITLE
     &__title
-      padding-bottom: 60px
-      font-size: 120px
+      +rmin(320)
+        padding-bottom: 30px
+        font-size: 32px
+      +rmin(576)
+        font-size: 36px
+      +rmin(768)
+        padding-bottom: 60px
+        font-size: 48px
+      +rmin(992)
+        font-size: 62px
+      +rmin(1200)
+        font-size: 75px
+      +rmin(1440)
+        font-size: 90px
+      +rmin(1920)
+        font-size: 120px
     // end TITLE
 
 
     // SUBTITLE
     &__subtitle
-      padding-bottom: 60px
       color: $colorAlizarin
       text-align: left
+      +rmin(320)
+        padding-bottom: 30px
+      +rmin(768)
+        padding-bottom: 60px
     // end SUBTITLE
 
 
     // TEXT
     &__text
-      padding-bottom: 60px
       text-align: left
+      +rmin(320)
+        padding-bottom: 30px
+      +rmin(768)
+        padding-bottom: 60px
     // end TEXT
 
 
@@ -49,9 +73,15 @@
     &__subMenu
       position: absolute
       top: 0
-      left: -(160px + 105px)
       width: 100%
       max-width: 160px
+      +rmin(320)
+        display: none
+      +rmin(1024)
+        display: block
+        left: -(100px)
+      +rmin(1366)
+        left: -(160px + 105px)
 
       &-list
         display: flex
