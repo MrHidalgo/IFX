@@ -3,17 +3,16 @@
 .tradingHours
   .main
     position: relative
-    padding-bottom: 50px
+    +rmin(320)
+      padding-bottom: 30px
+    +rmin(768)
+      padding-bottom: 50px
 
 
     // BG
     &__bg
       z-index: 0
       position: absolute
-      top: (40px + 79px)
-      left: 60px
-      right: 60px
-      width: calc(100% - 120px)
       height: 100%
       max-height: calc(900px - (40px + 79px))
       background-color: $colorWhiteSmoke
@@ -21,6 +20,16 @@
       background-position: center
       background-repeat: no-repeat
       background-size: cover
+      +rmin(320)
+        top: 50px
+        left: 15px
+        right: 15px
+        width: calc(100% - 30px)
+      +rmin(768)
+        top: (40px + 79px)
+        left: 60px
+        right: 60px
+        width: calc(100% - 120px)
     // end BG
 
 
@@ -30,60 +39,102 @@
       position: relative
       &--small
         max-width: 1024px
+        +rmin(320)
+        +rmin(768)
+          padding-left: 30px
+          padding-right: 30px
+        +rmin(992)
+          padding-left: 60px
+          padding-right: 60px
     // end CONTAINER
 
 
     // MAIN TITLE
     .main__title
+      padding-bottom: 40px
       line-height: normal
       text-align: center
+      +rmin(320)
+        padding-top: 79px
+        font-size: 32px
+      +rmin(576)
+        padding-top: 179px
+        font-size: 36px
+      +rmin(768)
+        padding-top: 279px
+        font-size: 48px
+      +rmin(992)
+        font-size: 62px
+      +rmin(1200)
+        font-size: 75px
+      +rmin(1440)
+        font-size: 90px
+      +rmin(1920)
+        font-size: 120px
     // end MAIN TITLE
-
-
-    // TITLE
-    &__title
-      padding-top: 279px
-      padding-bottom: 40px
-      font-size: 120px
-    // end TITLE
 
 
     // SUBTITLE
     &__subtitle
-      padding-bottom: 55px
+      +rmin(320)
+        padding-bottom: 40px
+      +rmin(768)
+        padding-bottom: 55px
     // end SUBTITLE
 
 
     // TABLE
     &__table
-      padding: 50px 30px
       background-color: $colorWhite
       font-family: "SFUIText", "Arial", sans-serif
+      +rmin(320)
+        padding: 30px 15px
+        overflow-x: auto
+      +rmin(768)
+        padding: 50px 30px
+        overflow: hidden
 
       &-title
         text-transform: uppercase
         font-weight: bold
-        font-size: 14px
         color: $colorGrey
+        +rmin(320)
+          font-size: 12px !important
+        +rmin(768)
+          font-size: 14px !important
 
       &-subtitle
         padding-left: 0 !important
         border-left: none !important
         border-right: none !important
         text-align: left !important
-        font-size: 22px
         font-weight: bold
         font-family: "Rajdhani", Arial, sans-serif
+        +rmin(320)
+          font-size: 16px !important
+        +rmin(768)
+          font-size: 20px !important
+        +rmin(929)
+          font-size: 22px !important
 
       table
         width: 100%
         table-layout: fixed
+        +rmin(320)
+          min-width: 576px
+        +rmin(576)
+          min-width: 0
 
       th,
       td
         width: calc(100% / 4)
-        padding: 20px
         text-align: center
+        +rmin(320)
+          padding: 10px
+          font-size: 14px
+        +rmin(768)
+          padding: 20px
+          font-size: 16px
 
       td
         border: 1px solid rgba($colorGrey, 0.1)

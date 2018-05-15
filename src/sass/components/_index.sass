@@ -6,22 +6,37 @@
 // TITLE
 // ===============
 .title
-  font-size: 60px
   font-weight: bold
   text-align: center
+  +rmin(320)
+    font-size: 32px
+  +rmin(992)
+    font-size: 42px
+  +rmin(1440)
+    font-size: 60px
 // SUBTITLE
 // ===============
 .subtitle
   text-align: center
-  font-size: 32px
   font-weight: 500
+  +rmin(320)
+    font-size: 16px
+  +rmin(576)
+    font-size: 22px
+  +rmin(992)
+    font-size: 32px
 // TEXT
 // ===============
 .text
   text-align: center
   line-height: 1.5
-  font-size: 18px
   font-family: "SFUIText", "Arial", sans-serif
+  +rmin(320)
+    font-size: 14px
+  +rmin(576)
+    font-size: 16px
+  +rmin(728)
+    font-size: 18px
 // LINK MORE
 // ===============
 .link__more
