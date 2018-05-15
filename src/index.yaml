@@ -6,13 +6,13 @@ PageList:
 - file: about.html
   ready: 25
 - file: onlineTrading.html
-  ready: 25
+  ready: 75
 - file: gettingDownBusiness.html
-  ready: 30
+  ready: 75
 - file: depositsWithdrawals.html
-  ready: 30
+  ready: 75
 - file: tradingHours.html
-  ready: 30
+  ready: 75
 - file: learn.html
   ready: 5
 - file: partnership.html
