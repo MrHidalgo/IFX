@@ -1,0 +1,103 @@
+// MAIN
+// ===============
+.learn
+  .main
+    position: relative
+    +rmin(320)
+      padding-bottom: 30px
+    +rmin(768)
+      padding-bottom: 50px
+
+
+    // BG
+    &__bg
+      z-index: 0
+      position: absolute
+      height: 100%
+      max-height: calc(900px - (40px + 79px))
+      background-color: $colorWhiteSmoke
+      background-image: url("../img/img-bg_learn@2x.png")
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      +rmin(320)
+        top: 50px
+        left: 15px
+        right: 15px
+        width: calc(100% - 30px)
+      +rmin(768)
+        top: (40px + 79px)
+        left: 60px
+        right: 60px
+        width: calc(100% - 120px)
+    // end BG
+
+
+    // CONTAINER
+    .container
+      z-index: 1
+      position: relative
+      &--small
+        max-width: 1440px
+        +rmin(320)
+        +rmin(768)
+          padding-left: 30px
+          padding-right: 30px
+        +rmin(992)
+          padding-left: 60px
+          padding-right: 60px
+
+    // end CONTAINER
+
+
+    // MAIN TITLE
+    .main__title
+      padding-bottom: 50px
+      line-height: normal
+      +rmin(320)
+        padding-top: 69px
+        font-size: 32px
+      +rmin(576)
+        font-size: 36px
+      +rmin(768)
+        padding-top: 200px
+        font-size: 48px
+      +rmin(992)
+        font-size: 62px
+      +rmin(1200)
+        font-size: 75px
+      +rmin(1440)
+        font-size: 90px
+      +rmin(1920)
+        font-size: 120px
+    // end MAIN TITLE
+
+
+    // SUBTITLE
+    &__subtitle
+      padding-bottom: 50px
+      color: $colorAlizarin
+      text-align: left
+    // \ SUBTITLE
+
+
+    // BTN
+    &__btn
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      max-width: 266px
+      height: 60px
+      margin-bottom: 93px
+      background-color: $colorAlizarin
+      color: $colorWhite
+      font-size: 22px
+      font-weight: bold
+      +transition(background-color)
+
+      &:hover
+        background-color: $colorBlack
+        +transition(background-color)
+    // \ BTN
+// ===============
