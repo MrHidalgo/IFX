@@ -65,13 +65,16 @@
       margin-right: 40px
 
   &__dropdown
-    display: none
     position: absolute
     top: 28px
     left: calc(50% - 20px)
     transform: translateX(-50%)
     min-width: 310px
     padding-top: 20px
+    +r(1199)
+      display: none !important
+    +rmin(1200)
+      display: none
 
     &-arrow
       z-index: 0
