@@ -1,5 +1,6 @@
 // GRID :: START
 .grid
+  opacity: 0
   z-index: 1000
   position: fixed
   display: flex
@@ -14,13 +15,17 @@
   padding-right: 60px
   margin-left: auto
   margin-right: auto
-  animation-delay: 0.3s
   +r($mobile)
     padding-left: 15px
     padding-right: 15px
 
   .is-loader &
-    animation-delay: 2.8s
+    animation-name: fadeIn !important
+    animation-delay: 2.25s !important
+
+  .is-visible &
+    animation-name: fadeIn
+    animation-delay: 0.4s
 
   .home &
     width: 100%
