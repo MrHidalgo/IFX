@@ -3,10 +3,10 @@
 .platforms
   +rmin(320)
     padding-top: 35px
-    padding-bottom: 30px
+    //padding-bottom: 30px
   +rmin(768)
     padding-top: 75px
-    padding-bottom: 50px
+    //padding-bottom: 50px
 
   // TITLE
   &__title
@@ -19,7 +19,7 @@
     +rmin(320)
       padding-bottom: 30px
     +rmin(768)
-      padding-bottom: 60px
+      padding-bottom: 68px
   // end SUBTITLE
 
 
@@ -33,6 +33,13 @@
   // end ROW
 
 
+  // COL
+  &__col
+    &:nth-child(2)
+      padding-left: 110px
+  // end ROW
+
+
   // BLOCK
   &__block
     display: flex
@@ -41,18 +48,18 @@
       padding-bottom: 30px
     +rmin(992)
       //width: 50%
-      padding-bottom: 60px
+      padding-bottom: 61px
 
     &-left
-      width: 100px
+      width: 104px
 
     &-right
-      width: calc(100% - 100px)
+      width: calc(100% - 104px)
       padding-top: 22px
       +rmin(320)
         padding-right: 0
       +rmin(768)
-        padding-right: 100px
+        //padding-right: 30px
 
     &-icon
       cursor: pointer
@@ -80,12 +87,14 @@
         font-size: 18px
 
     &-title
-      padding-bottom: 20px
+      padding-top: 3px
+      padding-bottom: 24px
+      letter-spacing: 0.3px
       font-weight: 600
 
     &-text
       padding-bottom: 20px
-      line-height: 1.5
+      line-height: 1.6
 
     &-btn
       display: flex

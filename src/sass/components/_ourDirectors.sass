@@ -23,7 +23,7 @@
       +rmin(768)
         padding-bottom: 15px
       +rmin(992)
-        padding-bottom: 0
+        padding-bottom: 10px
       .directors__col
         &:nth-child(2)
           display: flex
@@ -87,6 +87,10 @@
     color: $colorAlizarin
     text-align: left
     font-weight: bold
+    +rmin(320)
+      padding-left: 0
+    +rmin(992)
+      padding-left: 130px
   // end SUBTITLE
 
 
@@ -101,7 +105,9 @@
 
   // SLOGAN
   &__slogan
-    padding-bottom: 24px
+    padding-bottom: 26px
+    letter-spacing: 1px
+    line-height: 1.3
     font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
     font-weight: bold
     +rmin(320)
