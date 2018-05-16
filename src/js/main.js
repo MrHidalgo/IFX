@@ -257,7 +257,7 @@ $(document).ready(function () {
         closeBtnInside: true,
         preloader: false,
         midClick: true,
-        removalDelay: 300,
+        removalDelay: 400,
         mainClass: 'show',
         callbacks: {
           beforeOpen: function(e) {
@@ -274,6 +274,11 @@ $(document).ready(function () {
             modal.find(".modal__svg").html(elemSvg);
             modal.find("h3").text(elemTitle);
             modal.find("p").text(elemText);
+
+            this.st.mainClass = this.st.el.attr('data-effect');
+          },
+          beforeClose : function() {
+
           },
           close: function() {
             _window.scrollTop(startWindowScroll);
