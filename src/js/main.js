@@ -28,22 +28,27 @@ $(document).ready(function () {
   // Pre-loader
   // ====================
     _window.on('load', function () {
+      const _body = $("body");
+
       popUpLogic();
 
       if($(window).scrollTop() <= 10) {
-        $("body").addClass("is-loader");
+        _body.removeClass("is-hidden").addClass("is-loader");
       } else {
-        $("body").removeClass("is-loader");
+        _body.removeClass("is-loader is-hidden");
+        _body.addClass("is-visible");
         $("body, html").removeClass("is-hideScroll");
       }
 
+      // animation runtime
       setTimeout((e) => {
-        $("body").removeClass("is-loader");
+        _body.removeClass("is-loader is-hidden").addClass("is-visible");
       }, 5000);
 
+      // animation runtime
       setTimeout((e) => {
         $("body, html").removeClass("is-hideScroll");
-        // $("body").removeClass("is-loader");
+        _body.removeClass("is-hidden").addClass("is-visible");
       }, 2250);
     });
   // ====================

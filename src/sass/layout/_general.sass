@@ -38,8 +38,15 @@ html
   -webkit-tap-highlight-color: transparent
 
 body
-  animation-name: fadeIn
-  animation-delay: 0.5s
+  &.is-visible
+    #barba-wrapper
+      animation-name: fadeIn
+      animation-delay: 0.5s
+
+
+  &.is-hidden
+    #barba-wrapper
+      opacity: 0
 
 body,
 html
@@ -93,8 +100,6 @@ html
   +rmin(1440)
     max-width: 100%
   +rmin(1920)
-    max-width: 100%
-  +rmin(2560)
     max-width: 100%
 
   .about &,
