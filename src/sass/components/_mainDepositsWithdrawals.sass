@@ -3,7 +3,11 @@
 .depositsWithdrawals
   .main
     padding-bottom: 15px
-    background-color: $colorWhiteSmoke
+    background: rgb(255,255,255)
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 1%, rgba(244,244,244,1) 100%)
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 1%,rgba(244,244,244,1) 100%)
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 1%,rgba(244,244,244,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 )
     +rmin(320)
       padding-top: 101px
     +rmin(768)
@@ -86,11 +90,10 @@
       font-family: "SFUIText", "Arial", sans-serif
       +rmin(320)
         max-width: 100%
-        padding: 30px
+        padding: 15px 15px 80px
         margin-bottom: 30px
       +rmin(576)
         max-width: 265px
-        padding: 30px
       +rmin(768)
         max-width: 315px
         padding: 30px
@@ -167,7 +170,11 @@
         height: 60px
         background-color: $colorBlack
         color: $colorWhite
-        transform: translateY(60px)
+
         +transition(transform)
+        +rmin(320)
+          transform: translateY(0)
+        +rmin(768)
+          transform: translateY(60px)
     // end BLOCK
 // ===============

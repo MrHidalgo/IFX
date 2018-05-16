@@ -277,9 +277,6 @@ $(document).ready(function () {
 
             this.st.mainClass = this.st.el.attr('data-effect');
           },
-          beforeClose : function() {
-
-          },
           close: function() {
             _window.scrollTop(startWindowScroll);
           }
