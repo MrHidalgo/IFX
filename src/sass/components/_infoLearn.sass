@@ -1,0 +1,113 @@
+// INFO
+// ===============
+.learn
+  .info
+    +rmin(320)
+      padding-top: 40px
+      padding-bottom: 84px
+    +rmin(768)
+      padding-top: 80px
+      padding-bottom: 184px
+
+    // CONTAINER
+    .container
+      &--small
+        max-width: (790px + 120px)
+    // end CONTAINER
+
+
+    // TITLE
+    &__title
+      text-align: left
+      +rmin(320)
+        padding-top: 30px
+        padding-bottom: 30px
+      +rmin(768)
+        padding-top: 60px
+        padding-bottom: 30px
+
+      &--center
+        text-align: center
+    // end TITLE
+
+
+    // SUBTITLE
+    &__subtitle
+      padding-top: 30px
+      padding-bottom: 30px
+      text-align: left
+      &--center
+        text-align: center
+      &--color
+        color: $colorAlizarin
+    // \ SUBTITLE
+
+
+    // TEXT
+    &__text
+      text-align: left
+
+      &--p
+        padding-top: 30px
+      &--center
+        text-align: center
+    // end TEXT
+
+
+    // IMG
+    &__img
+      margin-top: 30px
+      display: block
+      max-width: 100%
+      height: auto
+    // \ IMG
+
+
+    // BTN
+    &__btn
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      max-width: 266px
+      height: 60px
+      margin-left: auto
+      margin-right: auto
+      background-color: $colorAlizarin
+      color: $colorWhite
+      font-size: 22px
+      font-weight: bold
+      +transition(background-color)
+
+      &:hover
+        background-color: $colorBlack
+        +transition(background-color)
+    // \ BTN
+
+
+    // ROW
+    &__row
+      padding-top: 50px
+      padding-bottom: 50px
+    // \ ROW
+
+
+    // BLOCK
+    &__block
+      display: flex
+      margin-bottom: 50px
+
+      &-left
+        width: 304px
+
+      &-right
+        width: calc(100% - 304px)
+
+      &-text
+        font-size: 18px
+        font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
+        padding-bottom: 30px
+        span
+          font-weight: bold
+// \ BLOCK
+// ===============
