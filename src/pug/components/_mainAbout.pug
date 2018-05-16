@@ -1,42 +1,16 @@
 // MAIN ABOUT :: START
 
--
-  var mainMenuItem = [
-    "Who we are",
-    "Our team",
-    "Our Accounts",
-    "Our Platforms"
-  ];
-  var mainMenuHref = [
-    "#whoweare",
-    "#directors",
-    "#accounts",
-    "#platforms"
-  ];
-
 .main
   .container
 
     h1.main__title!= "About us"
-
-  .main__menu
-    .container
-      ul.main__menu-list
-        -for(var i = 0, len = mainMenuItem.length; i < len; i++)
-          li.main__menu-item
-            a.main__menu-link(
-              href= mainMenuHref[i]
-              title=""
-              mainAbout-js
-              anchor-js
-            )!= mainMenuItem[i]
 
   .container#whoweare
     p.main__about!= "We facilitate a one stop trading and investing experience for private and institutional clients, providing access to global markets and a broad range of asset classes and tradeable instruments."
     p.main__motivate.text!= "Motivated by service excellence, a diverse range of investment offerings, state-of-the-art technology and competitive spreads, we offer a world class online trading experience."
 
     .main__row
-      .main__row-wrap
+      .main__row-wrap#ourvision
         p.title!= "Our Vision"
         p.text!= "We aim to be the premium global choice in online trading because we know that we are the Future of Trading."
         p.text!= "The latest technology meets old fashioned values.  We deliver pioneering technological trading resources and nurture long-term relationships based on mutual trust and respect with our clients and partners."
