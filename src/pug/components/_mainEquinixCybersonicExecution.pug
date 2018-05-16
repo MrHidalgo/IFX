@@ -1,0 +1,38 @@
+// EQUINIX - CYBERSONIC EXECUTION :: START
+
+mixin mainBlock(className, iconName, title, text)
+  .main__block(class!= className)
+    .main__block-left
+      .main__block-icon
+        i.icon(class!= iconName)
+
+    .main__block-right
+      p.main__block-title!= title
+      p.main__block-text!= text
+
+.main
+
+  .container
+
+    .main__row
+      .main__col
+        h1.main__title.title!= "Equinix - Cybersonic Execution"
+
+      .main__col
+
+        .main__box
+          p.main__box-text!= "The Future of Forex is Now"
+
+    p.main__text.text!= "In an increasingly competitive and volatile global trading atmosphere, online trading systems and strategies are entirely reliant on their execution infrastructure. Making or losing money is no longer determined by minutes but milliseconds."
+    p.main__text.main__text--p.text!= "We are proud to be associated with Equinix, a NASDAQ listed concern, based in New York and London."
+
+
+    .main__wrap
+      +mainBlock("main__block-0", "icon-web", "Stability", "99.9% MT4 Uptime")
+      +mainBlock("main__block-1", "icon-web", "Process Ability", "150 Unique price feeds at speed")
+
+    .main__wrap
+      +mainBlock("main__block-2", "icon-web", "Execution Speed", "2.5 millisecond")
+      +mainBlock("main__block-3", "icon-web", "Executed Trades", "Up to 500000 trades executed per msec")
+
+// EQUINIX - CYBERSONIC EXECUTION :: END

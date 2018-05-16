@@ -1,0 +1,153 @@
+// MAIN
+// ===============
+.equinixCybersonicExecution
+  .main
+    background-color: $colorWhiteSmoke
+    +rmin(320)
+      padding-top: 101px
+      padding-bottom: 64px
+    +rmin(768)
+      padding-top: 201px
+      padding-bottom: 124px
+
+
+    // ROW
+    &__row
+      display: flex
+      +rmin(320)
+        flex-direction: column
+        padding-bottom: 30px
+      +rmin(768)
+        flex-direction: row
+        padding-bottom: 70px
+    // \ ROW
+
+
+    // COL
+    &__col
+      width: 50%
+      &:nth-child(2)
+        display: flex
+        align-items: flex-end
+        justify-content: flex-end
+    // \ COL
+
+
+    // TITLE
+    .main__title
+      line-height: normal
+      text-align: left
+      +rmin(320)
+        font-size: 32px
+      +rmin(576)
+        font-size: 36px
+      +rmin(768)
+        font-size: 48px
+      +rmin(992)
+        font-size: 62px
+      +rmin(1200)
+        font-size: 75px
+      +rmin(1440)
+        font-size: 90px
+      +rmin(1920)
+        font-size: 120px
+    // \ TITLE
+
+
+    // TEXT
+    &__text
+      width: 100%
+      max-width: 790px
+      text-align: left
+      &--p
+        padding-top: 30px
+        padding-bottom: 110px
+    // \ TEXT
+
+
+    // BOX
+    &__box
+      width: 100%
+      max-width: 521px
+      height: 264px
+      padding: 62px 73px
+      background-color: $colorAlizarin
+
+      &-text
+        color: $colorWhite
+        font-size: 60px
+        font-weight: bold
+        text-transform: uppercase
+    // \ BOX
+
+
+    // WRAP
+    &__wrap
+      display: flex
+      +rmin(320)
+        flex-direction: column
+      +rmin(768)
+        flex-direction: row
+    // \ WRAP
+
+
+    // BLOCK
+    &__block
+      display: flex
+      +rmin(320)
+        padding-bottom: 30px
+      +rmin(992)
+        padding-bottom: 61px
+
+      &-0
+        padding-right: 263px
+      &-2
+        padding-left: 263px
+        padding-right: 211px
+
+      &-left
+        width: 104px
+
+      &-right
+        width: calc(100% - 104px)
+
+      &-icon
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 70px
+        height: 70px
+        border-radius: 100%
+        background-color: $colorAlizarin
+        +transition(box-shadow)
+
+        &:hover
+          box-shadow: 0 0 15px 0 rgba($colorBlack, 0.15)
+          +transition(box-shadow)
+
+      &-title,
+      &-text
+        font-family: "SFUIText", "Arial", sans-serif
+
+      &-title
+        padding-bottom: 10px
+        letter-spacing: 0.3px
+        font-weight: 600
+        +rmin(320)
+          font-size: 16px
+        +rmin(576)
+          font-size: 22px
+        +rmin(992)
+          font-size: 32px
+
+      &-text
+        line-height: 1.6
+        +rmin(320)
+          font-size: 14px
+        +rmin(768)
+          font-size: 16px
+        +rmin(992)
+          font-size: 18px
+    // \ BLOCK
+// ===============
