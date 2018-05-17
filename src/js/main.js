@@ -209,17 +209,6 @@ $(document).ready(function () {
   // ====================
 
 
-  // GETTING DOWN BUSINESS MENU
-  // ====================
-  _document.on("click", ".main__subMenu-link", (e) => {
-    e.preventDefault();
-
-    // $(".main__subMenu-link").removeClass('is-active');
-    // $(e.currentTarget).addClass('is-active');
-  });
-  // ====================
-
-
   // SCROLL SPY
   // ====================
   {
