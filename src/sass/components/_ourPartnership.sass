@@ -1,0 +1,119 @@
+// SUCCESS
+// ===============
+.success
+  +rmin(320)
+    padding-top: 20px
+    padding-bottom: 30px
+  +rmin(576)
+    padding-top: 60px
+    padding-bottom: 50px
+  +rmin(768)
+    padding-top: 116px
+    padding-bottom: 95px
+
+  
+  // CONTAINER
+  .container
+    z-index: 1
+    position: relative
+    height: 100%
+    &--small
+      max-width: 1440px
+      +rmin(768)
+        padding-left: 30px
+        padding-right: 30px
+      +rmin(992)
+        padding-left: 60px
+        padding-right: 60px
+  // end CONTAINER
+
+
+  // TITLE
+  &__title
+    text-align: left
+  // end TITLE
+
+
+  // BLOCK
+  &__block
+    display: flex
+    width: 100%
+    max-width: 420px
+    +rmin(320)
+      position: static
+      padding-top: 15px
+      padding-bottom: 15px
+    +rmin(768)
+      padding-top: 30px
+      padding-bottom: 30px
+    +rmin(992)
+      padding-top: 0
+      padding-bottom: 0
+    +r(991)
+      max-width: 100% !important
+
+    &-0
+      padding-top: 97px
+      padding-bottom: 234px
+
+    &-4
+      padding-bottom: 65px
+
+    &-1,
+    &-2,
+    &-3,
+    &-5
+      position: absolute
+
+    &-1
+      top: 66px
+      left: 638px
+
+    &-2
+      top: 235px
+      right: 0
+
+    &-3
+      top: 426px
+      left: 578px
+
+    &-5
+      bottom: 0
+      right: 120px
+
+    &-left
+      padding-left: 20px
+      +rmin(320)
+        width: 65px
+      +rmin(576)
+        width: 100px
+
+    &-right
+      +rmin(320)
+        width: calc(100% - 65px)
+      +rmin(576)
+        width: calc(100% - 100px)
+
+    &-num
+      font-weight: bold
+      +rmin(320)
+        font-size: 32px
+      +rmin(768)
+        font-size: 40px
+      +rmin(992)
+        font-size: 60px
+      +rmin(1440)
+        font-size: 80px
+
+    &-title
+      padding-top: 10px
+      padding-bottom: 10px
+      font-size: 22px
+      font-weight: bold
+
+    &-text
+      line-height: 1.5
+      color: rgba($colorBlack, 0.7)
+      font-family: "SFUIText", "Arial", sans-serif
+  // end BLOCK
+// ===============
