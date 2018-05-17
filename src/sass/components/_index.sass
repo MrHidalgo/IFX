@@ -134,10 +134,14 @@
       font-size: 18px
 
     .is-focus &
-      color: $colorAlizarin
+      color: $colorWhite
       font-size: 12px
       transform: translateY(-20px)
       +transition(color, font-size, transform)
+
+    .has-error &
+      color: $colorAlizarin !important
+
 
   &__line
     position: absolute
@@ -153,12 +157,15 @@
       position: absolute
       width: 0
       height: 2px
-      background-color: $colorAlizarin
+      background-color: $colorWhite
       +transition(width)
 
       .is-focus &
         width: 50%
         +transition(width)
+
+      .has-error &
+        background-color: $colorAlizarin !important
 
     &:before
       left: 50%
@@ -176,6 +183,7 @@
     margin-top: 30px
     margin-left: auto
     margin-right: auto
+    padding: 0
     border: none
     background-color: $colorAlizarin
     color: $colorWhite

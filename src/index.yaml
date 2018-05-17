@@ -18,6 +18,6 @@ PageList:
 - file: learn.html
   ready: 65
 - file: partnership.html
-  ready: 40
+  ready: 65
 - file: infoCentre.html
   ready: 5
