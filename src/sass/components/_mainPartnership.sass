@@ -1,0 +1,94 @@
+// MAIN
+// ===============
+.partnership
+  .main
+    position: relative
+    +rmin(320)
+      padding-bottom: 30px
+    +rmin(768)
+      padding-bottom: 50px
+
+
+    // BG
+    &__bg
+      z-index: 0
+      position: absolute
+      height: 100%
+      max-height: calc(100% - (40px + 79px))
+      background-color: $colorWhiteSmoke
+      background-image: url("../img/img-main-bg_partnership@2x.jpg")
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      +rmin(320)
+        top: (20px + 50px)
+        left: 15px
+        right: 15px
+        width: calc(100% - 30px)
+      +rmin(768)
+        top: (40px + 79px)
+        left: 60px
+        right: 60px
+        width: calc(100% - 120px)
+    // end BG
+
+
+    // CONTAINER
+    .container
+      z-index: 1
+      position: relative
+      height: 100%
+      &--small
+        max-width: 1440px
+        +rmin(320)
+        +rmin(768)
+          padding-left: 30px
+          padding-right: 30px
+        +rmin(992)
+          padding-left: 60px
+          padding-right: 60px
+
+    // end CONTAINER
+
+
+    // MAIN TITLE
+    .main__title
+      line-height: normal
+      +rmin(320)
+        padding-top: 120px
+        padding-bottom: 30px
+        font-size: 32px
+      +rmin(576)
+        font-size: 36px
+      +rmin(768)
+        padding-top: 200px
+        padding-bottom: 70px
+        font-size: 48px
+      +rmin(992)
+        font-size: 62px
+      +rmin(1200)
+        font-size: 75px
+      +rmin(1440)
+        font-size: 90px
+      +rmin(1920)
+        font-size: 120px
+    // end MAIN TITLE
+
+
+    // SUBTITLE
+    &__subtitle
+      padding-bottom: 70px
+      color: $colorAlizarin
+      text-align: left
+      text-transform: uppercase
+    // \ SUBTITLE
+
+
+    // TEXT
+    &__text
+      width: 100%
+      max-width: 790px
+      padding-bottom: 195px
+      text-align: left
+    // \ TEXT
+// ===============
