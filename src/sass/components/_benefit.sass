@@ -24,14 +24,25 @@
     font-family: "SFUIText", "Arial", sans-serif
 
     &-left
-      width: 130px
+      +rmin(320)
+        width: 100px
+      +rmin(768)
+        width: 130px
 
     &-right
-      width: calc(100% - 130px)
+      +rmin(320)
+        width: calc(100% - 100px)
+      +rmin(768)
+        width: calc(100% - 130px)
 
     &-title,
     &-text
-      font-size: 18px
+      +rmin(320)
+        font-size: 14px
+      +rmin(576)
+        font-size: 16px
+      +rmin(728)
+        font-size: 18px
 
     &-title
       padding-bottom: 10px

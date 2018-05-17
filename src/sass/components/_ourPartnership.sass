@@ -25,18 +25,28 @@
   // end TITLE
 
 
+  // ROW
+  &__row
+    +r(1199)
+      display: flex
+      flex-wrap: wrap
+  // \ ROW
+
+
   // BLOCK
   &__block
     display: flex
     width: 100%
     max-width: 420px
     +rmin(320)
-      position: static
       padding-top: 15px
       padding-bottom: 15px
     +rmin(768)
+      width: 50%
       padding-top: 30px
       padding-bottom: 30px
+      margin-top: 30px
+      margin-bottom: 30px
     +rmin(992)
       padding-top: 0
       padding-bottom: 0
@@ -44,17 +54,22 @@
       max-width: 100% !important
 
     &-0
-      padding-top: 97px
-      padding-bottom: 234px
+      +rmin(1200)
+        padding-top: 97px
+        padding-bottom: 234px
+        margin-top: 0
+        margin-bottom: 0
 
     &-4
-      padding-bottom: 65px
+      +rmin(1200)
+        padding-bottom: 65px
 
     &-1,
     &-2,
     &-3,
     &-5
-      position: absolute
+      +rmin(1200)
+        position: absolute
 
     &-1
       top: 66px

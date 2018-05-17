@@ -14,6 +14,8 @@
     left: 0
     width: 100%
     height: 100%
+    +r(767)
+      display: none
 
     &-left,
     &-right
@@ -38,18 +40,29 @@
   // ROW
   &__row
     display: flex
+    +r(767)
+      flex-direction: column
 
     &-left,
     &-right
       width: 50%
+      +r(767)
+        width: 100%
   // ROW
 
 
   // TITLE
   &__title
-    padding-top: 170px
     padding-bottom: 50px
     text-align: left
+    +rmin(320)
+      padding-top: 70px
+    +rmin(768)
+      padding-top: 100px
+    +rmin(1024)
+      padding-top: 140px
+    +rmin(1440)
+      padding-top: 170px
   // \ TITLE
 
 
@@ -72,15 +85,22 @@
     max-width: 266px
     height: 60px
     margin-top: 40px
-    margin-bottom: 187px
     background-color: $colorAlizarin
     color: $colorWhite
     font-weight: bold
     +transition(background-color)
     +rmin(320)
+      margin-bottom: 47px
       font-size: 18px
     +rmin(576)
+      margin-bottom: 77px
       font-size: 22px
+    +rmin(768)
+      margin-bottom: 117px
+    +rmin(1200)
+      margin-bottom: 147px
+    +rmin(1400)
+      margin-bottom: 187px
 
     &:hover
       background-color: $colorBlack

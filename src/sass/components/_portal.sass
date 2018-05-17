@@ -23,12 +23,23 @@
   // ROW
   &__row
     display: flex
+    +rmin(320)
+      flex-wrap: wrap
+    +rmin(992)
+      flex-wrap: nowrap
   // \ ROW
 
 
   // COL
   &__col
-    width: calc(100% / 4)
+    +rmin(320)
+      width: 100%
+      margin-bottom: 30px
+    +rmin(576)
+      width: calc(100% / 2)
+    +rmin(992)
+      width: calc(100% / 4)
+      margin-bottom: 0
   // \ COL
 
 
@@ -37,8 +48,13 @@
     display: flex
     align-items: center
     margin-bottom: 30px
-    font-size: 22px
     font-weight: 600
+    +rmin(320)
+      font-size: 16px
+    +rmin(576)
+      font-size: 20px
+    +rmin(992)
+      font-size: 22px
 
     .icon
       margin-right: 10px
