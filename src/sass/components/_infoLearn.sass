@@ -75,9 +75,12 @@
       margin-right: auto
       background-color: $colorAlizarin
       color: $colorWhite
-      font-size: 22px
       font-weight: bold
       +transition(background-color)
+      +rmin(320)
+        font-size: 18px
+      +rmin(576)
+        font-size: 22px
 
       &:hover
         background-color: $colorBlack
@@ -96,17 +99,41 @@
     &__block
       display: flex
       margin-bottom: 50px
+      +rmin(320)
+        flex-direction: column
+      +rmin(576)
+        flex-direction: row
+
+      &:last-child
+        margin-bottom: 0
 
       &-left
-        width: 304px
+        +rmin(320)
+          width: 100%
+          padding-bottom: 30px
+          text-align: center
+        +rmin(576)
+          width: 250px
+          padding-bottom: 0
+        +rmin(768)
+          width: 304px
 
       &-right
-        width: calc(100% - 304px)
+        +rmin(320)
+          width: 100%
+        +rmin(576)
+          width: calc(100% - 250px)
+        +rmin(768)
+          width: calc(100% - 304px)
 
       &-text
-        font-size: 18px
         font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
         padding-bottom: 30px
+        +rmin(320)
+          font-size: 16px
+        +rmin(576)
+          font-size: 18px
+
         span
           font-weight: bold
 // \ BLOCK

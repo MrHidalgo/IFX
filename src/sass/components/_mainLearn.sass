@@ -14,14 +14,14 @@
       z-index: 0
       position: absolute
       height: 100%
-      max-height: calc(900px - (40px + 79px))
+      max-height: calc(100% - (40px + 79px))
       background-color: $colorWhiteSmoke
       background-image: url("../img/img-bg_learn@2x.png")
       background-position: center
       background-repeat: no-repeat
       background-size: cover
       +rmin(320)
-        top: 50px
+        top: (20px + 50px)
         left: 15px
         right: 15px
         width: calc(100% - 30px)
@@ -37,6 +37,7 @@
     .container
       z-index: 1
       position: relative
+      height: 100%
       &--small
         max-width: 1440px
         +rmin(320)
@@ -55,7 +56,7 @@
       padding-bottom: 50px
       line-height: normal
       +rmin(320)
-        padding-top: 69px
+        padding-top: 120px
         font-size: 32px
       +rmin(576)
         font-size: 36px
@@ -92,9 +93,12 @@
       margin-bottom: 93px
       background-color: $colorAlizarin
       color: $colorWhite
-      font-size: 22px
       font-weight: bold
       +transition(background-color)
+      +rmin(320)
+        font-size: 18px
+      +rmin(576)
+        font-size: 22px
 
       &:hover
         background-color: $colorBlack
