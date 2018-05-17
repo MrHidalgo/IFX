@@ -93,6 +93,12 @@
       +rmin(768)
         padding: 50px 30px
         overflow: hidden
+      +r(991)
+        width: 844px
+
+      &-cover
+        +r(991)
+          overflow-x: auto
 
       &-wrap
         margin-bottom: 10px
@@ -193,9 +199,14 @@
       &-title
         justify-content: flex-start
         padding-left: 30px
-        font-size: 22px
         font-weight: bold
         font-family: "Rajdhani", Arial, sans-serif
+        +rmin(320)
+          font-size: 16px
+        +rmin(576)
+          font-size: 18px
+        +rmin(768)
+          font-size: 22px
 
       &-subtitle
         opacity: 0
