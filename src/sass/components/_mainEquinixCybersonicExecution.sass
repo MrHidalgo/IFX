@@ -25,7 +25,10 @@
 
     // COL
     &__col
-      width: 50%
+      +rmin(320)
+        width: 100%
+      +rmin(576)
+        width: 50%
       &:nth-child(2)
         display: flex
         align-items: flex-end
@@ -38,10 +41,12 @@
       line-height: normal
       text-align: left
       +rmin(320)
+        padding-bottom: 30px
         font-size: 32px
       +rmin(576)
         font-size: 36px
       +rmin(768)
+        padding-bottom: 0
         font-size: 48px
       +rmin(992)
         font-size: 62px
@@ -61,23 +66,47 @@
       text-align: left
       &--p
         padding-top: 30px
-        padding-bottom: 110px
+        +rmin(320)
+          padding-bottom: 50px
+        +rmin(768)
+          padding-bottom: 80px
+        +rmin(1299)
+          padding-bottom: 110px
     // \ TEXT
 
 
     // BOX
     &__box
+      display: flex
+      align-items: center
+      justify-content: center
       width: 100%
-      max-width: 521px
-      height: 264px
-      padding: 62px 73px
       background-color: $colorAlizarin
+      +rmin(320)
+        padding: 30px
+      +rmin(768)
+        padding: 32px 43px
+      +rmin(992)
+        max-width: 361px
+        height: 234px
+        padding: 42px 53px
+      +rmin(1400)
+        max-width: 521px
+        height: 264px
+        padding: 62px 73px
 
       &-text
         color: $colorWhite
-        font-size: 60px
         font-weight: bold
         text-transform: uppercase
+        +rmin(320)
+          font-size: 22px
+        +rmin(768)
+          font-size: 32px
+        +rmin(992)
+          font-size: 42px
+        +rmin(1440)
+          font-size: 60px
     // \ BOX
 
 
@@ -96,14 +125,20 @@
       display: flex
       +rmin(320)
         padding-bottom: 30px
+      +rmin(768)
+        width: 50%
       +rmin(992)
         padding-bottom: 61px
+      +rmin(1200)
+        width: auto
 
       &-0
-        padding-right: 263px
+        +rmin(1200)
+          padding-right: 263px
       &-2
-        padding-left: 263px
-        padding-right: 211px
+        +rmin(1200)
+          padding-left: 263px
+          padding-right: 211px
 
       &-left
         width: 104px

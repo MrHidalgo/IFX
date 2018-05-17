@@ -14,7 +14,7 @@ PageList:
 - file: tradingHours.html
   ready: 65
 - file: equinixCybersonicExecution.html
-  ready: 50
+  ready: 65
 - file: learn.html
   ready: 50
 - file: partnership.html
