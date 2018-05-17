@@ -252,13 +252,32 @@ $(document).ready(function () {
   // ====================
 
 
-  //
+  // ACCORDION
   // ====================
   $("[accordion-js]").on("click", (e) => {
-    var curElem = $(e.target);
+    let curElem = $(e.target);
 
     curElem.closest(".main__accordion-wrap").toggleClass("is-active");
     curElem.closest(".main__accordion-header").siblings(".main__accordion-body").slideToggle();
+  });
+  // ====================
+
+
+  // INPUT FORM - label animation
+  // ====================
+  const inputElem = $("[input-js]");
+  inputElem.on("focus", (e) => {
+    let curElem = $(e.target);
+
+    curElem.closest(".form__field").addClass("is-focus");
+  });
+  inputElem.on("blur", (e) => {
+    let curElem = $(e.target),
+      curElemVal = curElem.val().trim();
+
+    if(curElemVal === "") {
+      curElem.closest(".form__field").removeClass("is-focus");
+    }
   });
   // ====================
 
