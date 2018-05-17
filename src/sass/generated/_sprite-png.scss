@@ -1,4 +1,13 @@
 $sprite: (
+	accordion-arrow: (
+		offset-x: -78px,
+		offset-y: -179px,
+		width: 10px,
+		height: 8px,
+		total-width: 254px,
+		total-height: 228px,
+		image: '../img/sprite.png'
+	),
 	android: (
 		offset-x: -163px,
 		offset-y: -48px,
@@ -235,6 +244,9 @@ $sprite: (
 
 
 
+	.icon-accordion-arrow {
+		@include sprite(accordion-arrow)
+	}
 	.icon-android {
 		@include sprite(android)
 	}

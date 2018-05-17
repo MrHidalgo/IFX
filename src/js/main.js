@@ -253,12 +253,23 @@ $(document).ready(function () {
   // ====================
 
 
-  //
+  // DROPDOWN MENU
   // ====================
   $('.menu [menu-js]').hover(function() {
     $(this).find('.menu__dropdown').stop(true, false).delay(0).fadeIn(250);
   }, function() {
     $(this).find('.menu__dropdown').stop(true, false).delay(0).fadeOut(250);
+  });
+  // ====================
+
+
+  //
+  // ====================
+  $("[accordion-js]").on("click", (e) => {
+    var curElem = $(e.target);
+
+    curElem.closest(".main__accordion-wrap").toggleClass("is-active");
+    curElem.closest(".main__accordion-header").siblings(".main__accordion-body").slideToggle();
   });
   // ====================
 
