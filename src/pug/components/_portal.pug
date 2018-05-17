@@ -1,0 +1,54 @@
+// PORTAL :: START
+
+-
+  var portalBlock0 = [
+    "Banners",
+    "Brochures",
+    "Videos",
+    "Screenshots"
+  ];
+  var portalBlock1 = [
+    "Roll-up Banners",
+    "Email Templates",
+    "Wallpapers",
+    "Presentations"
+  ];
+  var portalBlock2 = [
+    "Corporate Presentations",
+    "Logos",
+    "Print Ads",
+    "Business Cards"
+  ];
+  var portalBlock3 = [
+    "Instant Message Templates",
+    "Tutorials and Guides"
+  ];
+
+
+mixin portalBlock(dataArr)
+  ul.portal__list
+    -for(var i = 0, len = dataArr.length; i < len; i++)
+      li.portal__item
+        i.icon.icon-approve
+        span!= dataArr[i]
+
+.portal
+
+  .container
+
+    h2.portal__title.title!= "The IFX Marketing Portal"
+    p.portal__text.text!= "Our Partners have easy access to a wealth of business information from the IFX Marketing Portal. It gives practical support through a diverse range of tried-and-tested marketing tools designed to attract new clients. In addition, it includes all the resources to set up attention-grabbing marketing material. More value for your clients - a higher conversion rate and higher commission for you."
+
+  .container
+
+    .portal__row
+      .portal__col
+        +portalBlock(portalBlock0)
+      .portal__col
+        +portalBlock(portalBlock1)
+      .portal__col
+        +portalBlock(portalBlock2)
+      .portal__col
+        +portalBlock(portalBlock3)
+
+// PORTAL :: END
