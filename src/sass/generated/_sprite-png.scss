@@ -170,6 +170,15 @@ $sprite: (
 		total-height: 317px,
 		image: '../img/sprite.png'
 	),
+	email: (
+		offset-x: -250px,
+		offset-y: -280px,
+		width: 20px,
+		height: 14px,
+		total-width: 380px,
+		total-height: 317px,
+		image: '../img/sprite.png'
+	),
 	info-center-0: (
 		offset-x: -327px,
 		offset-y: -177px,
@@ -426,6 +435,9 @@ $sprite: (
 	}
 	.icon-decline {
 		@include sprite(decline)
+	}
+	.icon-email {
+		@include sprite(email)
 	}
 	.icon-info-center-0 {
 		@include sprite(info-center-0)

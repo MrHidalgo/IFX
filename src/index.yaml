@@ -22,4 +22,4 @@ PageList:
 - file: infoCentre.html
   ready: 50
 - file: contacts.html
-  ready: 5
+  ready: 50

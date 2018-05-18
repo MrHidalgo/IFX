@@ -1,0 +1,28 @@
+// ENQUIRIES :: START
+
+mixin enquiriesBlock(className, title, text, mail)
+  .enquiries__block(class="enquiries__block-" + className)
+    p.enquiries__block-title!= title
+    p.enquiries__block-text!= text
+
+    a(href="mailto:" + mail  title="" class="")
+      .enquiries__block-email-wrap
+        i.icon.icon-email
+        span.enquiries__block-email!= mail
+
+.enquiries
+  .container
+
+    h2.enquiries__title.title!= "For your specific enquiries, email us at:"
+    p.enquiries__text.text!= "The Equinix high performance data centre comprises a state-of-the-art network of execution venues, bank trading servers and buy/sell side firms. We are linked to Equinix via the Equinix Financial eXchange, giving us access to the most extensive selection of low-latency networks. In turn, we can directly exchange data with our strategic partners and customers."
+
+    .enquiries__row
+      +enquiriesBlock("0", "Customer Support", "24 hours (Monday-Friday)", "support@ifxbrokers.com")
+      +enquiriesBlock("1", "Backoffice", "24 hours (Monday-Friday)", "backoffice@ifxbrokers.com")
+      +enquiriesBlock("2", "Education", "08:00-16:00 GMT  (Monday-Friday)", "info@ifxacademy.com")
+      +enquiriesBlock("3", "Withdrawals", "08:00-16:00 GMT (Monday-Friday)", "withdrawals@ifxbrokers.com")
+      +enquiriesBlock("4", "Compliance & Regulatory Affairs", "08:00-16:00 GMT (Monday-Friday)", "compliance@ifxbrokers.com")
+      +enquiriesBlock("5", "Partners", "08:00-16:00 GMT (Monday-Friday)", "partners@ifxbrokers.com")
+      +enquiriesBlock("6", "Complaints", "08:00-16:00 GMT (Monday-Friday)", "complaints@ifxbrokers.com")
+      +enquiriesBlock("7", "Marketing and Sales", "08:00-16:00 GMT (Monday-Friday)", "marketing@ifxbrokers.com")
+// ENQUIRIES :: END
