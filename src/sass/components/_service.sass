@@ -1,0 +1,35 @@
+// SERVICE
+// ===============
+.service
+  +rmin(320)
+    padding-top: 55px
+    padding-bottom: 95px
+  +rmin(768)
+    padding-top: 111px
+    padding-bottom: 195px
+
+
+  // COVER
+  &__cover
+    +rmin(768)
+      padding-left: 40px
+
+    &-title
+      padding-bottom: 25px
+      font-size: 24px
+      font-weight: bold
+
+    &-phone
+      display: inline-block
+      color: $colorAlizarin
+      +r(767)
+        display: block
+        text-align: left
+
+      &:last-child
+        +rmin(320)
+          margin-left: 0
+        +rmin(768)
+          margin-left: 125px
+  // \ COVER
+// ===============

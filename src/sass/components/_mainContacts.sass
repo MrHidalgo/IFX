@@ -2,16 +2,23 @@
 // ===============
 .contacts
   .main
-    padding-bottom: 15px
-    background: rgb(255,255,255)
-    background: -moz-linear-gradient(top, rgba(255,255,255,1) 1%, rgba(244,244,244,1) 100%)
-    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 1%,rgba(244,244,244,1) 100%)
-    background: linear-gradient(to bottom, rgba(255,255,255,1) 1%,rgba(244,244,244,1) 100%)
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 )
+    background: $colorWhiteSmokeLight
+    background-image: url("../img/img-main-bg_contacts@2x.png")
+    background-position: top right
+    background-size: contain
+    background-repeat: no-repeat
     +rmin(320)
       padding-top: 101px
     +rmin(768)
       padding-top: 201px
+
+
+    // TITLE
+    .container
+      position: relative
+      height: 100%
+      padding-bottom: 161px
+    // TITLE
 
 
     // TITLE
@@ -52,10 +59,8 @@
       display: flex
       +rmin(320)
         flex-direction: column
-        padding-bottom: 60px
       +rmin(768)
         flex-direction: row
-        padding-bottom: 114px
     // \ ROW
 
 
@@ -96,30 +101,27 @@
     // \ COL
 
 
-    // COVER
-    &__cover
-      +rmin(320)
-        padding-bottom: 64px
-      +rmin(576)
-        padding-bottom: 124px
-      +rmin(768)
-        padding-bottom: 204px
+    // CIRCLE
+    &__circle
+      cursor: pointer
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+      left: 60px
+      bottom: -64px
+      width: 128px
+      height: 128px
+      border-radius: 100%
+      background-color: $colorAlizarin
+      +transition(box-shadow)
 
-      &-title
-        padding-bottom: 25px
-        font-size: 24px
-        font-weight: bold
+      &:hover
+        box-shadow: 0 0 25px 0 rgba($colorBlack, 0.25)
+        +transition(box-shadow)
 
-      &-phone
-        color: $colorAlizarin
-        +r(767)
-          display: block
-          text-align: left
-
-        &:last-child
-          +rmin(320)
-            margin-left: 0
-          +rmin(768)
-            margin-left: 125px
-    // \ COVER
+        .icon
+          animation-name: tada
+          animation-iteration-count: infinite
+    // \ CIRCLE
 // ===============
