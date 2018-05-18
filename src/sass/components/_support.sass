@@ -11,8 +11,14 @@
   // ROW
   &__row
     display: flex
-    padding-top: 50px
-    padding-bottom: 50px
+    +rmin(320)
+      flex-direction: column
+      padding-top: 30px
+      padding-bottom: 30px
+    +rmin(992)
+      flex-direction: row
+      padding-top: 50px
+      padding-bottom: 50px
   // \ ROW
 
 
@@ -21,15 +27,34 @@
     width: 100%
 
     &-0
-      max-width: calc(100% - 526px)
-      padding-right: 120px
-      padding-top: 185px
+      +rmin(320)
+        padding-top: 30px
+        margin-bottom: 30px
+      +rmin(768)
+        padding-top: 50px
+        margin-bottom: 50px
+      +rmin(992)
+        max-width: calc(100% - 480px)
+        padding-right: 60px
+        padding-top: 150px
+        margin-bottom: 0
+      +rmin(1200)
+        max-width: calc(100% - 526px)
+        padding-right: 120px
+        padding-top: 185px
 
     &-1
       position: relative
-      max-width: 526px
-      padding: 42px 65px
       background-color: $colorWhite
+      +rmin(320)
+        padding: 30px
+      +rmin(576)
+        padding: 42px 65px
+      +rmin(992)
+        max-width: 480px
+      +rmin(1200)
+        max-width: 526px
+
 
     &-title
       text-align: left

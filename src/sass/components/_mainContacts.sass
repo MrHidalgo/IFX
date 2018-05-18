@@ -17,7 +17,10 @@
     .container
       position: relative
       height: 100%
-      padding-bottom: 161px
+      +rmin(320)
+        padding-bottom: 101px
+      +rmin(768)
+        padding-bottom: 161px
     // TITLE
 
 
@@ -108,13 +111,19 @@
       display: flex
       align-items: center
       justify-content: center
-      left: 60px
-      bottom: -64px
-      width: 128px
-      height: 128px
       border-radius: 100%
       background-color: $colorAlizarin
       +transition(box-shadow)
+      +rmin(320)
+        left: 15px
+        bottom: -45px
+        width: 90px
+        height: 90px
+      +rmin(768)
+        left: 60px
+        bottom: -64px
+        width: 128px
+        height: 128px
 
       &:hover
         box-shadow: 0 0 25px 0 rgba($colorBlack, 0.25)

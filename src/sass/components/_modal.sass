@@ -60,7 +60,10 @@
 #modalthoughts
   &.modal
     max-width: 526px
-    padding: 60px 65px
+    +rmin(320)
+      padding: 30px 35px
+    +rmin(768)
+      padding: 60px 65px
 
     .modal__title
       padding-bottom: 30px
@@ -68,10 +71,14 @@
       font-weight: bold
 
     .mfp-close
-      top: 30px
-      right: 30px
       font-size: 0
       @include sprite(close)
+      +rmin(320)
+        top: 10px
+        right: 10px
+      +rmin(768)
+        top: 30px
+        right: 30px
 
 
 .show.mfp-bg

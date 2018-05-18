@@ -23,6 +23,10 @@
     max-width: 751px
     margin-left: auto
     margin-right: auto
+    +rmin(320)
+      flex-direction: column
+    +rmin(768)
+      flex-direction: row
   // \ ROW
 
 
@@ -33,17 +37,21 @@
     align-items: center
     justify-content: center
     width: 100%
-
     min-height: 100px
     background-color: $colorWhiteSmoke
     +transition(box-shadow)
     +rmin(320)
       max-width: 100%
     +rmin(768)
-      max-width: 326px
+      max-width: 306px
     +rmin(992)
       max-width: 356px
 
+    &-0
+      +rmin(320)
+        margin-bottom: 30px
+      +rmin(768)
+        margin-bottom: 0
 
     &:hover
       box-shadow: 0 0 5px 0 rgba($colorBlack, 0.15)
@@ -53,7 +61,12 @@
       margin-right: 10px
 
     span
-      font-size: 22px
       font-weight: bold
+      +rmin(320)
+        font-size: 18px
+      +rmin(576)
+        font-size: 20px
+      +rmin(768)
+        font-size: 22px
   // \ BLOCK
 // ===============
