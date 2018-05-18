@@ -1,0 +1,118 @@
+// MAIN
+// ===============
+.infoCentre
+  .main
+    padding-bottom: 15px
+    background: rgb(255,255,255)
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 1%, rgba(244,244,244,1) 100%)
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 1%,rgba(244,244,244,1) 100%)
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 1%,rgba(244,244,244,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 )
+    +rmin(320)
+      padding-top: 101px
+    +rmin(768)
+      padding-top: 201px
+
+
+    // TITLE
+    &__title
+      line-height: normal
+      +rmin(320)
+        font-size: 32px
+      +rmin(576)
+        font-size: 36px
+      +rmin(768)
+        font-size: 48px
+      +rmin(992)
+        font-size: 62px
+      +rmin(1200)
+        font-size: 75px
+      +rmin(1440)
+        font-size: 90px
+      +rmin(1920)
+        font-size: 120px
+    // end TITLE
+
+
+    // SUBTITLE
+    &__subtitle
+      color: $colorAlizarin
+      text-align: left
+      text-transform: uppercase
+      font-weight: bold
+      +rmin(320)
+        padding-bottom: 40px
+      +rmin(768)
+        padding-bottom: 92px
+    // end SUBTITLE
+
+
+    // ROW
+    &__row
+      display: flex
+      justify-content: space-between
+
+      &:nth-child(1)
+        margin-bottom: 61px
+      &:nth-child(2)
+        margin-bottom: 100px
+    // \ ROW
+
+
+    // BLOCK
+    &__block
+      width: 395px
+      min-height: 100px
+      padding: 50px
+      background-color: $colorWhite
+
+      &-0
+        display: flex
+        width: 857px
+        padding: 0
+
+        .main__block-circle,
+        .main__block-title
+          margin-bottom: 20px
+
+      &-left,
+      &-right
+       width: 50%
+       padding: 50px
+
+      &-header
+        display: flex
+        align-items: center
+        min-height: 130px
+        padding-bottom: 40px
+
+        &--left
+          width: 80px
+
+        &--right
+          width: calc(100% - 80px)
+
+      &-circle
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 60px
+        height: 60px
+        border-radius: 100%
+        background-color: $colorAlizarin
+
+      &-title
+        font-size: 22px
+        font-weight: bold
+
+      &-text
+        line-height: 1.5
+        font-family: "SFUIText", "Arial", sans-serif
+        +rmin(320)
+          font-size: 14px
+        +rmin(576)
+          font-size: 16px
+        +rmin(728)
+          font-size: 18px
+    // \ BLOCK
+// ===============

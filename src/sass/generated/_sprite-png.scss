@@ -9,8 +9,8 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	android: (
-		offset-x: -327px,
-		offset-y: -213px,
+		offset-x: -268px,
+		offset-y: -156px,
 		width: 22px,
 		height: 26px,
 		total-width: 380px,
@@ -18,8 +18,8 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	apple: (
-		offset-x: -359px,
-		offset-y: -213px,
+		offset-x: -296px,
+		offset-y: -192px,
 		width: 20px,
 		height: 24px,
 		total-width: 380px,
@@ -27,8 +27,8 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	approve: (
-		offset-x: -290px,
-		offset-y: -80px,
+		offset-x: -367px,
+		offset-y: -199px,
 		width: 13px,
 		height: 8px,
 		total-width: 380px,
@@ -36,8 +36,8 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	arrow: (
-		offset-x: -355px,
-		offset-y: -286px,
+		offset-x: -300px,
+		offset-y: -156px,
 		width: 17px,
 		height: 11px,
 		total-width: 380px,
@@ -144,8 +144,8 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	clock: (
-		offset-x: -327px,
-		offset-y: -286px,
+		offset-x: -240px,
+		offset-y: -169px,
 		width: 18px,
 		height: 18px,
 		total-width: 380px,
@@ -153,8 +153,8 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	corner: (
-		offset-x: -327px,
-		offset-y: -249px,
+		offset-x: -268px,
+		offset-y: -192px,
 		width: 18px,
 		height: 27px,
 		total-width: 380px,
@@ -162,10 +162,55 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	decline: (
-		offset-x: -268px,
-		offset-y: -80px,
+		offset-x: -367px,
+		offset-y: -177px,
 		width: 12px,
 		height: 12px,
+		total-width: 380px,
+		total-height: 317px,
+		image: '../img/sprite.png'
+	),
+	info-center-0: (
+		offset-x: -327px,
+		offset-y: -177px,
+		width: 30px,
+		height: 30px,
+		total-width: 380px,
+		total-height: 317px,
+		image: '../img/sprite.png'
+	),
+	info-center-1: (
+		offset-x: -327px,
+		offset-y: -296px,
+		width: 32px,
+		height: 19px,
+		total-width: 380px,
+		total-height: 317px,
+		image: '../img/sprite.png'
+	),
+	info-center-2: (
+		offset-x: -268px,
+		offset-y: -116px,
+		width: 26px,
+		height: 30px,
+		total-width: 380px,
+		total-height: 317px,
+		image: '../img/sprite.png'
+	),
+	info-center-3: (
+		offset-x: -327px,
+		offset-y: -217px,
+		width: 30px,
+		height: 30px,
+		total-width: 380px,
+		total-height: 317px,
+		image: '../img/sprite.png'
+	),
+	info-center-4: (
+		offset-x: -327px,
+		offset-y: -257px,
+		width: 29px,
+		height: 29px,
 		total-width: 380px,
 		total-height: 317px,
 		image: '../img/sprite.png'
@@ -207,8 +252,8 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	plus: (
-		offset-x: -355px,
-		offset-y: -249px,
+		offset-x: -298px,
+		offset-y: -246px,
 		width: 19px,
 		height: 19px,
 		total-width: 380px,
@@ -225,8 +270,8 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	streamlining: (
-		offset-x: -327px,
-		offset-y: -177px,
+		offset-x: -268px,
+		offset-y: -80px,
 		width: 32px,
 		height: 26px,
 		total-width: 380px,
@@ -381,6 +426,21 @@ $sprite: (
 	}
 	.icon-decline {
 		@include sprite(decline)
+	}
+	.icon-info-center-0 {
+		@include sprite(info-center-0)
+	}
+	.icon-info-center-1 {
+		@include sprite(info-center-1)
+	}
+	.icon-info-center-2 {
+		@include sprite(info-center-2)
+	}
+	.icon-info-center-3 {
+		@include sprite(info-center-3)
+	}
+	.icon-info-center-4 {
+		@include sprite(info-center-4)
 	}
 	.icon-logo {
 		@include sprite(logo)

@@ -21,3 +21,5 @@ PageList:
   ready: 75
 - file: infoCentre.html
   ready: 5
+- file: contacts.html
+  ready: 0
