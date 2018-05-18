@@ -1,8 +1,8 @@
 // BENEFIT :: START
 
 
-mixin benefitBlock(className, iconName, title, text)
-  .benefit__block(class!= "benefit__block-" + className)
+mixin benefitBlock(className, iconName, delayT, title, text)
+  .benefit__block.wow.wowFadeUp(data-animation-delay!= delayT + "s", class!= "benefit__block-" + className)
     .benefit__block-left
       i.icon(class!= "icon-" + iconName)
     .benefit__block-right
@@ -13,16 +13,16 @@ mixin benefitBlock(className, iconName, title, text)
 .benefit#yourclientsbenefittoo
   .container
 
-    h2.benefit__title.title!= "Your Clients Benefit Too"
+    h2.benefit__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Your Clients Benefit Too"
       
-    +benefitBlock("0", "benefit-0", "Over 200 Currency Pairs", "You’re able to trade more than 200 pairs. Majors, minors and exotics – whatever the choice, you have access to free real-time quotes and charts from our trading platform, on whichever device you choose.")
-    +benefitBlock("1", "benefit-1", "Tight Spreads. No Commissions!", "We give our clients convenient trading conditions through competitive and nominal spreads for each trading instrument.")
-    +benefitBlock("2", "benefit-2", "Trading Leverage", "When trading large positions, use leverage to ensure a nominal capital outlay. You are able to select leverage to a maximum of 1:500, depending on your risk management strategy.")
-    +benefitBlock("3", "benefit-3", "Free State-Of-The-Art Charting Tools", "You have access to an advanced, highly intuitive trading platform that includes professional charting tools for desktop, mobile and tablet.")
-    +benefitBlock("4", "benefit-4", "Trading Support 24/5", "You can access trading support 24 hours a day, Monday to Friday.")
-    +benefitBlock("5", "benefit-5", "Trade Now!", "Our account signup is ridiculously easy and our payment methods are fast and secure.")
-    +benefitBlock("6", "benefit-6", "Knowledge Is Power", "Upscale your trading skills through the IFX Academy. After all, things change in a heartbeat and an intelligent trader knows that no one knows everything! IFX Academy keeps you up-to-date with the latest strategies and trading tools. Whether a novice or an experienced trader, you will learn a great deal from the IFX Trading videos and tutorials.")
-    +benefitBlock("7", "benefit-7", "We Are the Champions", "Our trading platforms and apps have garnered recognition and awards from industry leaders around the globe. Our smartphone and tablet apps are jam-packed with tools to help your clients with market analyses.")
-    +benefitBlock("8", "benefit-8", "Exceptional Liquidity", "Your clients benefit from exceptional liquidity, price transparency and supersonic execution across our full range of global markets.")
+    +benefitBlock("0", "benefit-0", "0.4", "Over 200 Currency Pairs", "You’re able to trade more than 200 pairs. Majors, minors and exotics – whatever the choice, you have access to free real-time quotes and charts from our trading platform, on whichever device you choose.")
+    +benefitBlock("1", "benefit-1", "0.5", "Tight Spreads. No Commissions!", "We give our clients convenient trading conditions through competitive and nominal spreads for each trading instrument.")
+    +benefitBlock("2", "benefit-2", "0.6", "Trading Leverage", "When trading large positions, use leverage to ensure a nominal capital outlay. You are able to select leverage to a maximum of 1:500, depending on your risk management strategy.")
+    +benefitBlock("3", "benefit-3", "0.7", "Free State-Of-The-Art Charting Tools", "You have access to an advanced, highly intuitive trading platform that includes professional charting tools for desktop, mobile and tablet.")
+    +benefitBlock("4", "benefit-4", "0.8", "Trading Support 24/5", "You can access trading support 24 hours a day, Monday to Friday.")
+    +benefitBlock("5", "benefit-5", "0.9", "Trade Now!", "Our account signup is ridiculously easy and our payment methods are fast and secure.")
+    +benefitBlock("6", "benefit-6", "0.95", "Knowledge Is Power", "Upscale your trading skills through the IFX Academy. After all, things change in a heartbeat and an intelligent trader knows that no one knows everything! IFX Academy keeps you up-to-date with the latest strategies and trading tools. Whether a novice or an experienced trader, you will learn a great deal from the IFX Trading videos and tutorials.")
+    +benefitBlock("7", "benefit-7", "1", "We Are the Champions", "Our trading platforms and apps have garnered recognition and awards from industry leaders around the globe. Our smartphone and tablet apps are jam-packed with tools to help your clients with market analyses.")
+    +benefitBlock("8", "benefit-8", "1.05", "Exceptional Liquidity", "Your clients benefit from exceptional liquidity, price transparency and supersonic execution across our full range of global markets.")
 
 // BENEFIT :: END

@@ -3,43 +3,43 @@
 .getStarted#getstarted
   .container
 
-    h2.getStarted__title.title!= "Get Started!"
-    p.getStarted__text.text!= "It is simple and easy to get started. You don’t need an upfront investment or complex integration. Hundreds of partners have already joined IFX this way. What are you waiting for – go on, do it!"
-    p.getStarted__subtitle.subtitle!= "Like to know more about the IFX Partner programs? </br>Please complete the form below."
+    h2.getStarted__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Get Started!"
+    p.getStarted__text.text.wow.wowFadeUp(data-animation-delay="0.4s")!= "It is simple and easy to get started. You don’t need an upfront investment or complex integration. Hundreds of partners have already joined IFX this way. What are you waiting for – go on, do it!"
+    p.getStarted__subtitle.subtitle.wow.wowFadeUp(data-animation-delay="0.5s")!= "Like to know more about the IFX Partner programs? </br>Please complete the form below."
 
   .container
     // .has-error - class change color placeholder and background-color line - add to .form__field
     form.form(action="" method="")
-      .form__field
+      .form__field.wow.wowFadeUp(data-animation-delay="0.6s")
         input(type="text" name="" id="input-0" class="form__input" input-js)
         label(class="form__label" for="input-0")
           span(class="form__label-content")!= "Name"
         .form__line
 
-      .form__field
+      .form__field.wow.wowFadeUp(data-animation-delay="0.7s")
         input(type="text" name="" id="input-1" class="form__input" input-js)
         label(class="form__label" for="input-1")
           span(class="form__label-content")!= "Surname"
         .form__line
 
-      .form__field
+      .form__field.wow.wowFadeUp(data-animation-delay="0.8s")
         input(type="text" name="" id="input-2" class="form__input" input-js)
         label(class="form__label" for="input-2")
           span(class="form__label-content")!= "Email Address"
         .form__line
 
-      .form__field
+      .form__field.wow.wowFadeUp(data-animation-delay="0.9s")
         input(type="text" name="" id="input-3" class="form__input" input-js)
         label(class="form__label" for="input-3")
           span(class="form__label-content")!= "Cell Number"
         .form__line
 
-      .form__field
+      .form__field.wow.wowFadeUp(data-animation-delay="0.95s")
         input(type="text" name="" id="input-4" class="form__input" input-js)
         label(class="form__label" for="input-4")
           span(class="form__label-content")!= "Country"
         .form__line
 
-      button(type="submit" class="form__btn")!= "Become a partner"
+      button.wow.wowFadeUp(data-animation-delay="1s", type="submit" class="form__btn")!= "Become a partner"
 
 // GET STARTED :: END

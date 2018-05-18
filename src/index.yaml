@@ -4,20 +4,20 @@ PageList:
 - file: homepage.html
   ready: 80
 - file: about.html
-  ready: 65
+  ready: 75
 - file: onlineTrading.html
-  ready: 65
+  ready: 75
 - file: gettingDownBusiness.html
-  ready: 65
+  ready: 75
 - file: depositsWithdrawals.html
-  ready: 65
+  ready: 75
 - file: tradingHours.html
-  ready: 65
+  ready: 75
 - file: equinixCybersonicExecution.html
-  ready: 65
+  ready: 75
 - file: learn.html
-  ready: 65
+  ready: 75
 - file: partnership.html
-  ready: 65
+  ready: 75
 - file: infoCentre.html
   ready: 5

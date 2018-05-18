@@ -5,15 +5,16 @@
   .container
     .what__row
       .what__col
-        h2.what__title.title!= "DO WHAT YOU DO BEST AND MAKE MONEY. <span>IT’S A NO BRAINER</span>"
+        h2.what__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "DO WHAT YOU DO BEST AND MAKE MONEY. <span>IT’S A NO BRAINER</span>"
 
-        a(
+        a.wow.wowFadeUp(
+          data-animation-delay="0.4s"
           href="#"
           title=""
           class="what__btn"
         )!= "Start Trading Now"
 
-      .what__col
+      .what__col.wow.wowFadeUp(data-animation-delay="0.4s")
         img(
           src="./img/img-whatYouDo.png"
           srcset="./img/img-whatYouDo@2x.png 2x"

@@ -1,8 +1,8 @@
 // OUR SERVERS :: START
 
 
-mixin serversBlock(num, title, text)
-  .servers__block
+mixin serversBlock(num, title, text, delayT)
+  .servers__block.wow.wowFadeUp(data-animation-delay!= delayT + "s")
     p.servers__block-num!= num
     p.servers__block-title!= title
     p.servers__block-text!= text
@@ -11,17 +11,17 @@ mixin serversBlock(num, title, text)
 .servers#ourservers
   .container
 
-    h2.servers__title.title!= "Our Servers"
-    p.servers__subtitle.subtitle!= "Our servers. Your advantage."
-    p.servers__text.text!= "Our live trading servers, hosted by Equinix, are based in the major financial hubs of London and link to Wall Street in New York, Sydney, Tokyo – in fact, anywhere in the world."
+    h2.servers__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Our Servers"
+    p.servers__subtitle.subtitle.wow.wowFadeUp(data-animation-delay="0.4s")!= "Our servers. Your advantage."
+    p.servers__text.text.wow.wowFadeUp(data-animation-delay="0.5s")!= "Our live trading servers, hosted by Equinix, are based in the major financial hubs of London and link to Wall Street in New York, Sydney, Tokyo – in fact, anywhere in the world."
 
     .servers__row
       .servers__row-wrap
-        +serversBlock("99%", "Stability", "99.9% MT4 Uptime")
+        +serversBlock("99%", "Stability", "99.9% MT4 Uptime", "0.4")
       .servers__row-wrap
-        +serversBlock("500,000", "Executed Traders", "Up to 500 000 trades executed per m.sec")
-        +serversBlock("2.5", "Execution Speed", "2.5 milliseconds")
-        +serversBlock("150", "Process Ability", "99.9% MT4 Uptime")
+        +serversBlock("500,000", "Executed Traders", "Up to 500 000 trades executed per m.sec", "0.5")
+        +serversBlock("2.5", "Execution Speed", "2.5 milliseconds", "0.6")
+        +serversBlock("150", "Process Ability", "99.9% MT4 Uptime", "0.7")
 
 
 // OUR SERVERS :: END

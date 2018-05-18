@@ -17,7 +17,9 @@
     .payment__row
       ul.payment__list
         -for(var i = 0, len = paymentNameArr.length; i < len; i++)
-          li.payment__item
+          li.payment__item.wow.wowFadeUp(
+            data-animation-delay!= (0.3 + parseFloat(0.1 * i)).toFixed(1) + "s"
+          )
             i.icon(class!= paymentNameArr[i])
 
 // PAYMENT :: END

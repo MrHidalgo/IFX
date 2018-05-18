@@ -31,8 +31,8 @@
   ];
 
 
-mixin platformsBlock(iconName, title, text, boolBtn)
-  .platforms__block
+mixin platformsBlock(iconName, title, text, boolBtn, delayT)
+  .platforms__block.wow.wowFadeUp(data-animation-delay!= delayT + "s")
 
     .platforms__block-left
       .platforms__block-icon
@@ -53,16 +53,16 @@ mixin platformsBlock(iconName, title, text, boolBtn)
 .platforms#ourplatforms
   .container
 
-    h2.platforms__title.title!= "Our Platforms"
-    p.platforms__subtitle.subtitle!= "We support excellence, the power is in your hands"
+    h2.platforms__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Our Platforms"
+    p.platforms__subtitle.subtitle.wow.wowFadeUp(data-animation-delay="0.4s")!= "We support excellence, the power is in your hands"
 
     .platforms__row
       .platforms__col
-        +platformsBlock(platformsIconNameArr[0], platformsTitleArr[0], platformsTextArr[0], platformsBtnBoolArr[0])
-        +platformsBlock(platformsIconNameArr[2], platformsTitleArr[2], platformsTextArr[2], platformsBtnBoolArr[2])
-        +platformsBlock(platformsIconNameArr[4], platformsTitleArr[4], platformsTextArr[4], platformsBtnBoolArr[4])
+        +platformsBlock(platformsIconNameArr[0], platformsTitleArr[0], platformsTextArr[0], platformsBtnBoolArr[0], "0.5")
+        +platformsBlock(platformsIconNameArr[2], platformsTitleArr[2], platformsTextArr[2], platformsBtnBoolArr[2], "0.7")
+        +platformsBlock(platformsIconNameArr[4], platformsTitleArr[4], platformsTextArr[4], platformsBtnBoolArr[4], "0.9")
       .platforms__col
-        +platformsBlock(platformsIconNameArr[1], platformsTitleArr[1], platformsTextArr[1], platformsBtnBoolArr[1])
-        +platformsBlock(platformsIconNameArr[3], platformsTitleArr[3], platformsTextArr[3], platformsBtnBoolArr[3])
+        +platformsBlock(platformsIconNameArr[1], platformsTitleArr[1], platformsTextArr[1], platformsBtnBoolArr[1], "0.6")
+        +platformsBlock(platformsIconNameArr[3], platformsTitleArr[3], platformsTextArr[3], platformsBtnBoolArr[3], "0.8")
 
 // OUR PLATFORMS :: END

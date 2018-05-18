@@ -27,7 +27,9 @@
 mixin portalBlock(dataArr)
   ul.portal__list
     -for(var i = 0, len = dataArr.length; i < len; i++)
-      li.portal__item
+      li.portal__item.wow.wowFadeUp(
+        data-animation-delay!= (0.5 + parseFloat(0.1 * i)).toFixed(1) + "s"
+      )
         i.icon.icon-approve
         span!= dataArr[i]
 
@@ -35,8 +37,8 @@ mixin portalBlock(dataArr)
 
   .container
 
-    h2.portal__title.title!= "The IFX Marketing Portal"
-    p.portal__text.text!= "Our Partners have easy access to a wealth of business information from the IFX Marketing Portal. It gives practical support through a diverse range of tried-and-tested marketing tools designed to attract new clients. In addition, it includes all the resources to set up attention-grabbing marketing material. More value for your clients - a higher conversion rate and higher commission for you."
+    h2.portal__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "The IFX Marketing Portal"
+    p.portal__text.text.wow.wowFadeUp(data-animation-delay="0.4s")!= "Our Partners have easy access to a wealth of business information from the IFX Marketing Portal. It gives practical support through a diverse range of tried-and-tested marketing tools designed to attract new clients. In addition, it includes all the resources to set up attention-grabbing marketing material. More value for your clients - a higher conversion rate and higher commission for you."
 
   .container
 

@@ -27,8 +27,8 @@
   ];
 
 
-mixin tradingPlatformsBlock(iconName, title, text, boolBtn)
-  .tradingPlatforms__block
+mixin tradingPlatformsBlock(iconName, title, text, boolBtn, delayT)
+  .tradingPlatforms__block.wow.wowFadeUp(data-animation-delay!= delayT + "s")
 
     .tradingPlatforms__block-left
       .tradingPlatforms__block-icon
@@ -48,12 +48,12 @@ mixin tradingPlatformsBlock(iconName, title, text, boolBtn)
 
 .tradingPlatforms#tradingplatforms
   .container
-    h2.tradingPlatforms__title.title!= "Trading Platforms"
+    h2.tradingPlatforms__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Trading Platforms"
 
 
   .container-fluid
     .container
-      .tradingPlatforms__wrap
+      .tradingPlatforms__wrap.wow.wowFadeUp(data-animation-delay="0.4s")
         img(
           src="./img/img-tradingPlatforms_bg.png"
           srcset="./img/img-tradingPlatforms_bg@2x.png 2x"
@@ -63,18 +63,18 @@ mixin tradingPlatformsBlock(iconName, title, text, boolBtn)
         .tradingPlatforms__col
         .tradingPlatforms__col
           .tradingPlatforms__box
-            p.tradingPlatforms__box-title!= "IFX Meta Trader 4"
-            p.tradingPlatforms__box-subtitle!= "#1 Multi Asset trading </br>platform across the glob"
-            p.tradingPlatforms__box-text!= "Reliable and completely secure, you can access 85 pre-installed indicators at the click of a button."
-            p.tradingPlatforms__box-text!= "IFX Meta Trader 4 provides enhanced charting functionality and highly sophisticated order management tools. It also has a multilingual interface, provides a comprehensive analysis and allows for multiple chart set ups."
+            p.tradingPlatforms__box-title.wow.wowFadeUp(data-animation-delay="0.4s")!= "IFX Meta Trader 4"
+            p.tradingPlatforms__box-subtitle.wow.wowFadeUp(data-animation-delay="0.5s")!= "#1 Multi Asset trading </br>platform across the glob"
+            p.tradingPlatforms__box-text.wow.wowFadeUp(data-animation-delay="0.6s")!= "Reliable and completely secure, you can access 85 pre-installed indicators at the click of a button."
+            p.tradingPlatforms__box-text.wow.wowFadeUp(data-animation-delay="0.7s")!= "IFX Meta Trader 4 provides enhanced charting functionality and highly sophisticated order management tools. It also has a multilingual interface, provides a comprehensive analysis and allows for multiple chart set ups."
 
 
   .container
     .tradingPlatforms__row
-        +tradingPlatformsBlock(tradingPlatformsIconNameArr[1], tradingPlatformsTitleArr[1], tradingPlatformsTextArr[1], tradingPlatformsBtnBoolArr[1])
-        +tradingPlatformsBlock(tradingPlatformsIconNameArr[3], tradingPlatformsTitleArr[3], tradingPlatformsTextArr[3], tradingPlatformsBtnBoolArr[3])
-        +tradingPlatformsBlock(tradingPlatformsIconNameArr[0], tradingPlatformsTitleArr[0], tradingPlatformsTextArr[0], tradingPlatformsBtnBoolArr[0])
-        +tradingPlatformsBlock(tradingPlatformsIconNameArr[2], tradingPlatformsTitleArr[2], tradingPlatformsTextArr[2], tradingPlatformsBtnBoolArr[2])
+        +tradingPlatformsBlock(tradingPlatformsIconNameArr[1], tradingPlatformsTitleArr[1], tradingPlatformsTextArr[1], tradingPlatformsBtnBoolArr[1], "0.3")
+        +tradingPlatformsBlock(tradingPlatformsIconNameArr[3], tradingPlatformsTitleArr[3], tradingPlatformsTextArr[3], tradingPlatformsBtnBoolArr[3], "0.4")
+        +tradingPlatformsBlock(tradingPlatformsIconNameArr[0], tradingPlatformsTitleArr[0], tradingPlatformsTextArr[0], tradingPlatformsBtnBoolArr[0], "0.5")
+        +tradingPlatformsBlock(tradingPlatformsIconNameArr[2], tradingPlatformsTitleArr[2], tradingPlatformsTextArr[2], tradingPlatformsBtnBoolArr[2], "0.6")
 
 
 // TRADING PLATFORM :: END

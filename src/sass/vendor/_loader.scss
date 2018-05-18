@@ -8,10 +8,10 @@
   width: 100%;
   height: 100%;
   background-color: #fff;
-  animation-duration: 0.5s;
   animation-name: slideInHeight;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.75, 0.2, 0.1, 0.5);
+  animation-duration: 0.5s;
   animation-delay: 1.75s;
 
   .is-loader & {
@@ -29,8 +29,8 @@
     width: 100%;
     height: 100%;
     background-color: rgba(#000, 0.02);
-    animation-duration: 1s;
     animation-fill-mode: backwards;
+    animation-duration: 1s;
     animation-delay: 0.3s;
 
     p {
@@ -66,9 +66,9 @@
     height: 75%;
     background-color: rgba(#000, 0.01);
     animation-name: slideInTop;
+    animation-timing-function: cubic-bezier(0.25, 0.45, 0.45, 0.25);
     animation-duration: 2.5s;
     animation-delay: 0.75s;
-    animation-timing-function: cubic-bezier(0.25, 0.45, 0.45, 0.25);
   }
 }
 

@@ -1,8 +1,8 @@
 // OUR PARTNERSHIP :: START
 
 
-mixin partnershipBlock(className, num, title, text)
-  .success__block(class!= "success__block-" + className)
+mixin partnershipBlock(className, num, delayT, title, text)
+  .success__block.wow.wowFadeUp(data-animation-delay!= delayT + "s", class!= "success__block-" + className)
     .success__block-left
       p.success__block-num!= num
     .success__block-right
@@ -13,14 +13,14 @@ mixin partnershipBlock(className, num, title, text)
 .success#ourpartnership
   .container
 
-    h2.success__title.title!= "Our Partnership. </br>Your Success."
+    h2.success__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Our Partnership. </br>Your Success."
 
     .success__row
-      +partnershipBlock("0", 1, "No Upfront Investment", "The IFX Partnership Program quite simply allows you to generate income without any capital outlay. Not too many businesses offer this kind of opportunity!")
-      +partnershipBlock("1", 2, "We deliver on our promises", "You select a commission structure that suits you best from a comprehensive range. Obviously, the more your business grows, the higher your commission.")
-      +partnershipBlock("2", 3, "Transparent and Flexible Payment", "IFX Brokers supports a variety of payment systems, facilitating the secure withdrawal of your commission.")
-      +partnershipBlock("3", 4, "24/7 Access To Your IB Platform", "You’re able to check your personal data, client trading outcomes, commission and profit anytime that suits you.")
-      +partnershipBlock("4", 5, "24/7 Access To Your IB Platform", "IFX Brokers supplies you with everything you need: multi-lingual materials, banners, widgets, brochures, email templates, Facebook cover pages – pretty much everything you could possibly need to promote your business is available")
-      +partnershipBlock("5", 6, "Enhanced Stats and Reports", "Your Partnership portal even helps you to track and assess how effective your marketing strategies are.")
+      +partnershipBlock("0", 1, "0.4", "No Upfront Investment", "The IFX Partnership Program quite simply allows you to generate income without any capital outlay. Not too many businesses offer this kind of opportunity!")
+      +partnershipBlock("1", 2, "0.5", "We deliver on our promises", "You select a commission structure that suits you best from a comprehensive range. Obviously, the more your business grows, the higher your commission.")
+      +partnershipBlock("2", 3, "0.6", "Transparent and Flexible Payment", "IFX Brokers supports a variety of payment systems, facilitating the secure withdrawal of your commission.")
+      +partnershipBlock("3", 4, "0.5", "24/7 Access To Your IB Platform", "You’re able to check your personal data, client trading outcomes, commission and profit anytime that suits you.")
+      +partnershipBlock("4", 5, "0.6", "24/7 Access To Your IB Platform", "IFX Brokers supplies you with everything you need: multi-lingual materials, banners, widgets, brochures, email templates, Facebook cover pages – pretty much everything you could possibly need to promote your business is available")
+      +partnershipBlock("5", 6, "0.5", "Enhanced Stats and Reports", "Your Partnership portal even helps you to track and assess how effective your marketing strategies are.")
 
 // OUR PARTNERSHIP :: END

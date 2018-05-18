@@ -28,59 +28,65 @@
 .info
 
   .container.container--small
-    p.info__subtitle.subtitle!= "As a value-added service IFX Brokers offer complimentary education powered by IFX Academy to Live funded account holders."
+    p.info__subtitle.subtitle.wow.wowFadeUp(data-animation-delay="0.3s")!= "As a value-added service IFX Brokers offer complimentary education powered by IFX Academy to Live funded account holders."
 
-    p.info__text.info__text--p.text!= "The Forex market is flooded with unscrupulous people who promise to teach you to trade in a quick crash course, over an hour or a day or two. This is not only unethical, it is impossible. Once you’ve parted with your hard-earned cash, you’re on your own. We know that Forex trading is something that cannot be taught in a day or two. Fact. If that’s what you expect, read no further."
-    p.info__text.info__text--p.text!= "Courses and modules have been designed by international Forex traders with decades of experience. Students, whether novices or professionals, are guided through each module, receiving detailed feedback on assignments, and online technical support 24/5."
-    p.info__text.info__text--p.text!= "Anyone with passion, determination and an iron will to succeed can become a trader – with the appropriate training, of course. Courses are designed to educate beginners and upscale the skills of professional traders to expert level."
-    p.info__text.info__text--p.text!= "The novice course teaches beginners what Forex is and how to avoid the common pitfalls and Forex trading challenges. Beginners are taught to develop a solid foundation with guidance every step of the way."
-    p.info__text.info__text--p.text!= "IFX Academy assist intermediate level traders to identify and overcome behavioral patterns that negatively impact on their trading habits, improving their performance and profit margins. Advanced traders benefit from the complex analytics and advanced trading strategies designed by international experts in Forex trading. "
+    p.info__text.info__text--p.text.wow.wowFadeUp(data-animation-delay="0.35s")!= "The Forex market is flooded with unscrupulous people who promise to teach you to trade in a quick crash course, over an hour or a day or two. This is not only unethical, it is impossible. Once you’ve parted with your hard-earned cash, you’re on your own. We know that Forex trading is something that cannot be taught in a day or two. Fact. If that’s what you expect, read no further."
+    p.info__text.info__text--p.text.wow.wowFadeUp(data-animation-delay="0.4s")!= "Courses and modules have been designed by international Forex traders with decades of experience. Students, whether novices or professionals, are guided through each module, receiving detailed feedback on assignments, and online technical support 24/5."
+    p.info__text.info__text--p.text.wow.wowFadeUp(data-animation-delay="0.45s")!= "Anyone with passion, determination and an iron will to succeed can become a trader – with the appropriate training, of course. Courses are designed to educate beginners and upscale the skills of professional traders to expert level."
+    p.info__text.info__text--p.text.wow.wowFadeUp(data-animation-delay="0.5s")!= "The novice course teaches beginners what Forex is and how to avoid the common pitfalls and Forex trading challenges. Beginners are taught to develop a solid foundation with guidance every step of the way."
+    p.info__text.info__text--p.text.wow.wowFadeUp(data-animation-delay="0.55s")!= "IFX Academy assist intermediate level traders to identify and overcome behavioral patterns that negatively impact on their trading habits, improving their performance and profit margins. Advanced traders benefit from the complex analytics and advanced trading strategies designed by international experts in Forex trading. "
 
     p.info__text.info__text--p.text
     p.info__text.info__text--p.text
 
   .container.container--small#studymethods
-    p.info__title.title!= "Study methods"
-    p.info__text.text!= "Since the course material and assignments are electronically delivered to you, you decide the pace at which you want to complete your modules. Obviously, every student has a unique life situation with its own commitments and challenges. It’s a good strategy to work out how much free time you have and how much you can reasonably spend on your course."
-    img(src="./img/img-info_learn.png" srcset="./img/img-info_learn@2x.png 2x" title="" class="info__img")
+    p.info__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Study methods"
+    p.info__text.text.wow.wowFadeUp(data-animation-delay="0.35s")!= "Since the course material and assignments are electronically delivered to you, you decide the pace at which you want to complete your modules. Obviously, every student has a unique life situation with its own commitments and challenges. It’s a good strategy to work out how much free time you have and how much you can reasonably spend on your course."
+    img.wow.wowFadeUp(data-animation-delay="0.4s" src="./img/img-info_learn.png" srcset="./img/img-info_learn@2x.png 2x" title="" class="info__img")
 
   .container.container--small#studymaterial
-    p.info__title.info__title--center.title!= "Study Material"
-    p.info__text.text!= "Since you’ll be referring to it time and time again you will have full access to study material in a customized portal.  Your course material is packed with examples, explanations, a glossary and interactive assignments. Should you need extra support, this is readily available by email."
+    p.info__title.info__title--center.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Study Material"
+    p.info__text.text.wow.wowFadeUp(data-animation-delay="0.35s")!= "Since you’ll be referring to it time and time again you will have full access to study material in a customized portal.  Your course material is packed with examples, explanations, a glossary and interactive assignments. Should you need extra support, this is readily available by email."
 
     .info__row
       .info__block
-        .info__block-left
+        .info__block-left.wow.wowFadeUp(data-animation-delay="0.3s")
           img(src="./img/img-study-0_info.jpg" srcset="./img/img-study-0_info@2x.jpg 2x" title="" alt="" class="info__block-img")
         .info__block-right
           ul.info__block-list
             -for(var i = 0, len = infoBlockData1.length; i < len; i++)
-              li.info__block-item
+              li.info__block-item.wow.wowFadeUp(
+              data-animation-delay!= (0.4 + parseFloat(0.1 * i)).toFixed(1) + "s"
+              )
                 p.info__block-text!= infoBlockData1[i]
 
       .info__block
-        .info__block-left
+        .info__block-left.wow.wowFadeUp(data-animation-delay="0.3s")
           img(src="./img/img-study-1_info.jpg" srcset="./img/img-study-1_info@2x.jpg 2x" title="" alt="" class="info__block-img")
         .info__block-right
           ul.info__block-list
             -for(var i = 0, len = infoBlockData2.length; i < len; i++)
-              li.info__block-item
+              li.info__block-item.wow.wowFadeUp(
+              data-animation-delay!= (0.4 + parseFloat(0.1 * i)).toFixed(1) + "s"
+              )
                 p.info__block-text!= infoBlockData2[i]
 
       .info__block
-        .info__block-left
+        .info__block-left.wow.wowFadeUp(data-animation-delay="0.3s")
           img(src="./img/img-study-2_info.jpg" srcset="./img/img-study-2_info@2x.jpg 2x" title="" alt="" class="info__block-img")
         .info__block-right
           ul.info__block-list
             -for(var i = 0, len = infoBlockData3.length; i < len; i++)
-              li.info__block-item
+              li.info__block-item.wow.wowFadeUp(
+              data-animation-delay!= (0.4 + parseFloat(0.1 * i)).toFixed(1) + "s"
+              )
                 p.info__block-text!= infoBlockData3[i]
 
   .container.container--small#yourcommitment
-    p.info__title.info__title--center.info__title--center.title!= "YOUR COMMITMENT"
-    p.info__subtitle.info__subtitle--center.subtitle!= "IFX Academy will give you everything that you need to become a knowledgeable Forex trader."
-    p.info__text.info__text--center.text!= "In turn, we expect you to be fully committed to your course: completing the interactive assignments and following our recommendations. Visualise your future as a successful trader. You must be passionate, determined and disciplined. That’s the only part we can’t do for you!"
-    p.info__subtitle.info__subtitle--center.info__subtitle--color.subtitle!= "It’s really that simple – what </br>are you waiting for?"
+    p.info__title.info__title--center.info__title--center.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "YOUR COMMITMENT"
+    p.info__subtitle.info__subtitle--center.subtitle.wow.wowFadeUp(data-animation-delay="0.35s")!= "IFX Academy will give you everything that you need to become a knowledgeable Forex trader."
+    p.info__text.info__text--center.text.wow.wowFadeUp(data-animation-delay="0.4s")!= "In turn, we expect you to be fully committed to your course: completing the interactive assignments and following our recommendations. Visualise your future as a successful trader. You must be passionate, determined and disciplined. That’s the only part we can’t do for you!"
+    p.info__subtitle.info__subtitle--center.info__subtitle--color.subtitle.wow.wowFadeUp(data-animation-delay="0.45s")!= "It’s really that simple – what </br>are you waiting for?"
 
-    a(href="#" class="info__btn" title="")!= "START LEARNING"
+    a.wow.wowFadeUp(data-animation-delay="0.5s" href="#" class="info__btn" title="")!= "START LEARNING"
 // LEARN :: END

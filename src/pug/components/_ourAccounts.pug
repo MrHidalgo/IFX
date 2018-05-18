@@ -34,8 +34,8 @@
   ];
 
 
-mixin accountsBlock(className, title, subtitle, text, price, priceInfo)
-  .accounts__block(class!="accounts__block-" + className)
+mixin accountsBlock(className, title, subtitle, text, price, priceInfo, delayT)
+  .accounts__block.wow.wowFadeUp(data-animation-delay!= delayT + "s", class!="accounts__block-" + className)
     .accounts__block-cover
       p.accounts__block-title!= title
       p.accounts__block-subtitle!= subtitle
@@ -52,15 +52,15 @@ mixin accountsBlock(className, title, subtitle, text, price, priceInfo)
   .container
 
     .accounts__title-wrap
-      h2.accounts__title.title!= "Our Accounts"
-      p.accounts__text.text!= "Whether you’re a newbie or a seasoned professional, there’s an account especially designed for you."
+      h2.accounts__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Our Accounts"
+      p.accounts__text.text.wow.wowFadeUp(data-animation-delay="0.4s")!= "Whether you’re a newbie or a seasoned professional, there’s an account especially designed for you."
 
     .accounts__row
       .accounts__col
-        +accountsBlock("0", accountsTitle[0], accountsSubTitle[0], accountsText[0], accountsPrice[0], accountsPriceInfo[0])
-        +accountsBlock("2", accountsTitle[2], accountsSubTitle[2], accountsText[2], accountsPrice[2], accountsPriceInfo[2])
+        +accountsBlock("0", accountsTitle[0], accountsSubTitle[0], accountsText[0], accountsPrice[0], accountsPriceInfo[0], "0.5")
+        +accountsBlock("2", accountsTitle[2], accountsSubTitle[2], accountsText[2], accountsPrice[2], accountsPriceInfo[2], "0.7")
       .accounts__col
-        +accountsBlock("1", accountsTitle[1], accountsSubTitle[1], accountsText[1], accountsPrice[1], accountsPriceInfo[1])
-        +accountsBlock("3", accountsTitle[3], accountsSubTitle[3], accountsText[3], accountsPrice[3], accountsPriceInfo[3])
+        +accountsBlock("1", accountsTitle[1], accountsSubTitle[1], accountsText[1], accountsPrice[1], accountsPriceInfo[1], "0.6")
+        +accountsBlock("3", accountsTitle[3], accountsSubTitle[3], accountsText[3], accountsPrice[3], accountsPriceInfo[3], "0.8")
 
 // OUR ACCOUNTS :: END
