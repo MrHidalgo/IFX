@@ -1,9 +1,9 @@
 // SIGN :: START
 .sign
-  +rmin(1200)
+  +rmin(1366)
     display: flex
     align-items: center
-  +r(1199)
+  +r(1365)
     display: flex
     flex-direction: column
     align-items: center
@@ -14,10 +14,11 @@
     position: relative
     margin-left: 30px
     +link()
+    +transition(opacity)
     &:first-child
       margin-left: 0
       animation-delay: 0.5s
-      +r(1199)
+      +r(1365)
         height: 70px
         line-height: 70px
         animation-name: fadeInUp !important
@@ -32,7 +33,7 @@
 
     &:nth-child(2)
       animation-delay: 0.4s
-      +r(1199)
+      +r(1365)
         height: 70px
         margin-left: 0
         line-height: 70px
@@ -55,7 +56,7 @@
       .is-loader &
         animation-delay: 2.15s
 
-    +rmin(1200)
+    +rmin(1366)
       &:hover
         opacity: 0.5
         +transition(opacity)
@@ -70,7 +71,7 @@
     animation-delay: 0.3s
     +link()
     +transition(border-color, box-shadow, background-color, color)
-    +r(1199)
+    +r(1365)
       margin-left: 0
       animation-name: fadeInUp !important
       animation-delay: 1s !important

@@ -4,7 +4,7 @@
 
   &__list
     display: flex
-    +r(1199)
+    +r(1365)
       flex-direction: column
       align-items: center
       width: 100%
@@ -15,7 +15,7 @@
     &.is-active
       .menu__link
         color: $colorAlizarin
-    +r(1199)
+    +r(1365)
       width: 100%
       text-align: center
       animation-name: fadeInUp !important
@@ -23,45 +23,51 @@
 
     &:nth-child(1)
       animation-delay: 0.3s
-      .home.is-loader &
-        animation-delay: 2.8s
-      .is-loader &
-        animation-delay: 2.05s
+      +rmin(1366)
+        .home.is-loader &
+          animation-delay: 2.8s
+        .is-loader &
+          animation-delay: 2.05s
     &:nth-child(2)
       animation-delay: 0.4s
-      .home.is-loader &
-        animation-delay: 2.9s
-      .is-loader &
-        animation-delay: 2.15s
+      +rmin(1366)
+        .home.is-loader &
+          animation-delay: 2.9s
+        .is-loader &
+          animation-delay: 2.15s
     &:nth-child(3)
       animation-delay: 0.5s
-      .home.is-loader &
-        animation-delay: 3s
-      .is-loader &
-        animation-delay: 2.25s
+      +rmin(1366)
+        .home.is-loader &
+          animation-delay: 3s
+        .is-loader &
+          animation-delay: 2.25s
     &:nth-child(4)
       animation-delay: 0.6s
-      .home.is-loader &
-        animation-delay: 3.1s
-      .is-loader &
-        animation-delay: 2.35s
+      +rmin(1366)
+        .home.is-loader &
+          animation-delay: 3.1s
+        .is-loader &
+          animation-delay: 2.35s
     &:nth-child(5)
       animation-delay: 0.7s
-      .home.is-loader &
-        animation-delay: 3.2s
-      .is-loader &
-        animation-delay: 2.45s
+      +rmin(1366)
+        .home.is-loader &
+          animation-delay: 3.2s
+        .is-loader &
+          animation-delay: 2.45s
     &:nth-child(6)
       animation-delay: 0.8s
-      .home.is-loader &
-        animation-delay: 3.3s
-      .is-loader &
-        animation-delay: 2.55s
+      +rmin(1366)
+        .home.is-loader &
+          animation-delay: 3.3s
+        .is-loader &
+          animation-delay: 2.55s
 
   &__link
     position: relative
     +link()
-    +r(1199)
+    +r(1365)
       display: block
       height: 70px
       width: 100%
@@ -69,16 +75,13 @@
       margin-left: auto
       margin-right: auto
       line-height: 70px
-    +rmin(1200)
+    +rmin(1366)
       margin-right: 30px
       padding-top: 11px
       padding-bottom: 11px
       &:hover
         opacity: 0.5
         +transition(opacity)
-
-    +rmin(1366)
-      margin-right: 40px
 
   &__dropdown
     position: absolute
@@ -87,9 +90,9 @@
     transform: translateX(-50%)
     min-width: 310px
     padding-top: 20px
-    +r(1199)
+    +r(1365)
       display: none !important
-    +rmin(1200)
+    +rmin(1366)
       display: none
 
     &-arrow

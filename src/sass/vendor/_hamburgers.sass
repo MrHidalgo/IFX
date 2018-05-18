@@ -1,16 +1,13 @@
 .hamburger
   cursor: pointer
-
   display: none
   z-index: 1000
   position: relative
-
   width: 28px
   height: 10.5px
-
   transform: rotate(0deg)
   transition: .2s ease-in-out
-  +r(1199)
+  +r(1365)
     display: block
 
   span
@@ -59,3 +56,5 @@
 
   .home.is-loader &
     animation-delay: 2.8s
+  .is-loader &
+    animation-delay: 2.05s
