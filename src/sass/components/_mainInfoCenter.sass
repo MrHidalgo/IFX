@@ -53,32 +53,105 @@
       justify-content: space-between
 
       &:nth-child(1)
-        margin-bottom: 61px
+        +rmin(320)
+          flex-wrap: wrap
+          margin-bottom: 30px
+        +rmin(768)
+          flex-wrap: nowrap
+          margin-bottom: 61px
+
       &:nth-child(2)
-        margin-bottom: 100px
+        +rmin(320)
+          flex-wrap: wrap
+          margin-bottom: 50px
+        +rmin(768)
+          margin-bottom: 100px
+        +rmin(1200)
+          flex-wrap: nowrap
     // \ ROW
 
 
     // BLOCK
     &__block
-      width: 395px
+      width: 100%
       min-height: 100px
-      padding: 50px
       background-color: $colorWhite
+      +rmin(320)
+        padding: 15px
+        max-width: 100%
+      +rmin(768)
+        padding: 30px
+        max-width: 48%
+      +rmin(992)
+        max-width: 395px
+      +rmin(1366)
+        padding: 50px
 
       &-0
         display: flex
-        width: 857px
+        width: 100%
         padding: 0
+        +rmin(320)
+          flex-direction: column
+          max-width: 100%
+        +rmin(768)
+          max-width: 48%
+        +rmin(992)
+          max-width: 395px
+        +rmin(1200)
+          flex-direction: row
+          max-width: 857px
 
         .main__block-circle,
         .main__block-title
           margin-bottom: 20px
 
+      &-0
+        +rmin(1200)
+          margin-right: 30px
+
+      &-1
+        +rmin(320)
+          margin-top: 30px
+        +rmin(768)
+          margin-top: 0
+        +rmin(1200)
+          margin-left: 30px
+
+      &-3
+        +rmin(320)
+          margin-top: 30px
+        +rmin(768)
+          margin-top: 0
+        +rmin(1200)
+          margin-left: 60px
+          margin-right: 60px
+
+      &-4
+        +rmin(320)
+          margin-top: 30px
+        +rmin(768)
+          margin-top: 61px
+        +rmin(1200)
+          margin-top: 0
+
       &-left,
       &-right
-       width: 50%
-       padding: 50px
+        +rmin(320)
+          width: 100%
+          padding: 15px
+        +rmin(768)
+          padding: 30px
+        +rmin(1200)
+          width: 50%
+        +rmin(1366)
+          padding: 50px
+
+      &-right
+        +rmin(768)
+          padding-top: 30px
+        +rmin(992)
+          padding-top: 101px
 
       &-header
         display: flex

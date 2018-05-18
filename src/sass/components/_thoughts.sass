@@ -33,10 +33,17 @@
     align-items: center
     justify-content: center
     width: 100%
-    max-width: 356px
+
     min-height: 100px
     background-color: $colorWhiteSmoke
     +transition(box-shadow)
+    +rmin(320)
+      max-width: 100%
+    +rmin(768)
+      max-width: 326px
+    +rmin(992)
+      max-width: 356px
+
 
     &:hover
       box-shadow: 0 0 5px 0 rgba($colorBlack, 0.15)
