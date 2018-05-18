@@ -110,7 +110,12 @@
     outline: none
     background-color: transparent
     -webkit-appearance: none
-    color: $colorWhite
+
+    .getStarted &
+      color: $colorWhite
+
+    #modalthoughts &
+      color: $colorBlack
 
   &__label
     cursor: default
@@ -123,7 +128,6 @@
     left: 0
     width: 100%
     height: 100%
-    color: rgba($colorWhite, 0.5)
     transform: translateY(0)
     +transition(color, font-size, transform)
     +rmin(320)
@@ -134,13 +138,26 @@
       font-size: 18px
 
     .is-focus &
-      color: $colorWhite
       font-size: 12px
       transform: translateY(-20px)
       +transition(color, font-size, transform)
 
+      .getStarted &
+        color: $colorWhite
+
+      #modalthoughts &
+        color: $colorBlack
+
     .has-error &
       color: $colorAlizarin !important
+
+    .getStarted &
+      color: rgba($colorWhite, 0.5)
+
+    #modalthoughts &
+      color: rgba($colorBlack, 0.5)
+
+
 
 
   &__line
@@ -149,7 +166,11 @@
     bottom: 0
     width: 100%
     height: 1px
-    background-color: rgba($colorWhite, 0.5)
+
+    .getStarted &
+      background-color: rgba($colorWhite, 0.5)
+    #modalthoughts &
+      background-color: rgba($colorBlack, 0.5)
 
     &:before,
     &:after
@@ -157,8 +178,13 @@
       position: absolute
       width: 0
       height: 2px
-      background-color: $colorWhite
       +transition(width)
+
+      .getStarted &
+        background-color: $colorWhite
+
+      #modalthoughts &
+        background-color: $colorBlack
 
       .is-focus &
         width: 50%
@@ -196,6 +222,11 @@
       font-size: 22px
 
     &:hover
-      color: $colorBlack
-      background-color: $colorWhite
       +transition(color, background-color)
+
+      .getStarted &
+        color: $colorBlack
+        background-color: $colorWhite
+
+      #modalthoughts &
+        background-color: $colorBlack

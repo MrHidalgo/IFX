@@ -1,0 +1,52 @@
+// THOUGHTS
+// ===============
+.thoughts
+  +rmin(320)
+    padding-top: 99px
+    padding-bottom: 100px
+  +rmin(768)
+    padding-top: 198px
+    padding-bottom: 200px
+
+
+  // TITLE
+  &__title
+    padding-bottom: 40px
+  // \ TITLE
+
+
+  // ROW
+  &__row
+    display: flex
+    justify-content: space-between
+    width: 100%
+    max-width: 751px
+    margin-left: auto
+    margin-right: auto
+  // \ ROW
+
+
+  // BLOCK
+  &__block
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    max-width: 356px
+    min-height: 100px
+    background-color: $colorWhiteSmoke
+    +transition(box-shadow)
+
+    &:hover
+      box-shadow: 0 0 5px 0 rgba($colorBlack, 0.15)
+      +transition(box-shadow)
+
+    .icon
+      margin-right: 10px
+
+    span
+      font-size: 22px
+      font-weight: bold
+  // \ BLOCK
+// ===============

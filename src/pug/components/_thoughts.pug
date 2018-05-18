@@ -1,0 +1,17 @@
+// THOUGHTS :: START
+
+.thoughts
+  .container
+
+    h2.thoughts__title.title!= "Share your thoughts"
+
+    .thoughts__row
+      .thoughts__block(thoughts-modal-js data-effect="mfp-zoom-in", data-mfp-src="#modalthoughts")
+        i.icon.icon-compliment
+        span!= "Compliment"
+
+      .thoughts__block(thoughts-modal-js data-effect="mfp-zoom-in", data-mfp-src="#modalthoughts")
+        i.icon.icon-complaint
+        span!= "Complaint"
+
+// THOUGHTS :: END

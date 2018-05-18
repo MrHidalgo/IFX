@@ -59,6 +59,7 @@ $(document).ready(function () {
   function pageReady() {
     svg4everybody();
     initScrollMonitor();
+    initModals();
   }
   pageReady();
   // ====================
@@ -289,38 +290,90 @@ $(document).ready(function () {
     let startWindowScroll = 0;
 
     $('[popup-js]').magnificPopup({
-        type: 'inline',
-        fixedContentPos: true,
-        fixedBgPos: true,
-        overflowY: 'auto',
-        closeBtnInside: true,
-        preloader: false,
-        midClick: true,
-        removalDelay: 400,
-        mainClass: 'show',
-        callbacks: {
-          beforeOpen: function(e) {
-            startWindowScroll = _window.scrollTop();
+      type: 'inline',
+      fixedContentPos: true,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 400,
+      mainClass: 'show',
+      callbacks: {
+        beforeOpen: function(e) {
+          startWindowScroll = _window.scrollTop();
 
-            const modal = $("#modal"),
-              idx = this.index,
-              elem = $(".section__col-" + idx);
+          const modal = $("#modal"),
+            idx = this.index,
+            elem = $(".section__col-" + idx);
 
-            let elemSvg = elem.find(".svg__wrap").html(),
-              elemTitle = elem.find("h3").html(),
-              elemText = elem.find("p").html();
+          let elemSvg = elem.find(".svg__wrap").html(),
+            elemTitle = elem.find("h3").html(),
+            elemText = elem.find("p").html();
 
-            modal.find(".modal__svg").html(elemSvg);
-            modal.find("h3").text(elemTitle);
-            modal.find("p").text(elemText);
+          modal.find(".modal__svg").html(elemSvg);
+          modal.find("h3").text(elemTitle);
+          modal.find("p").text(elemText);
 
-            this.st.mainClass = this.st.el.attr('data-effect');
-          },
-          close: function() {
-            _window.scrollTop(startWindowScroll);
-          }
+          this.st.mainClass = this.st.el.attr('data-effect');
+        },
+        close: function() {
+          _window.scrollTop(startWindowScroll);
         }
-      });
+      }
+    });
+
+    $('[thoughts-modal-js]').magnificPopup({
+      type: 'inline',
+      fixedContentPos: true,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 400,
+      mainClass: 'show',
+      callbacks: {
+        beforeOpen: function(e) {
+          startWindowScroll = _window.scrollTop();
+
+          console.log("beforeOpen");
+
+          this.st.mainClass = this.st.el.attr('data-effect');
+        },
+        close: function() {
+          _window.scrollTop(startWindowScroll);
+        }
+      }
+    });
+  }
+  function initModals(){
+
+    let startWindowScroll = 0;
+
+    $('[thoughts-modal-js]').magnificPopup({
+      type: 'inline',
+      fixedContentPos: true,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 400,
+      mainClass: 'show',
+      callbacks: {
+        beforeOpen: function(e) {
+          startWindowScroll = _window.scrollTop();
+
+          console.log("beforeOpen");
+
+          this.st.mainClass = this.st.el.attr('data-effect');
+        },
+        close: function() {
+          _window.scrollTop(startWindowScroll);
+        }
+      }
+    });
   }
   // ====================
 
