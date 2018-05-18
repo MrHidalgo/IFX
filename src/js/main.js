@@ -49,7 +49,7 @@ $(document).ready(function () {
       setTimeout((e) => {
         $("body, html").removeClass("is-hideScroll");
         _body.removeClass("is-hidden").addClass("is-visible");
-      }, 2250);
+      }, 1500);
     });
   // ====================
 

@@ -11,8 +11,13 @@
   animation-name: slideInHeight;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.75, 0.2, 0.1, 0.5);
-  animation-duration: 0.5s;
-  animation-delay: 1.75s;
+  animation-duration: 0.75s;
+  animation-delay: 0.75s;
+
+  .home & {
+    animation-duration: 0.5s;
+    animation-delay: 1.75s;
+  }
 
   .is-loader & {
     display: block;
@@ -30,8 +35,14 @@
     height: 100%;
     background-color: rgba(#000, 0.02);
     animation-fill-mode: backwards;
-    animation-duration: 1s;
-    animation-delay: 0.3s;
+    animation-duration: 0.75s;
+    animation-delay: 0.2s;
+
+    .home & {
+      animation-duration: 0.75s;
+      animation-delay: 0;
+    }
+
 
     p {
       z-index: 0;
@@ -67,8 +78,13 @@
     background-color: rgba(#000, 0.01);
     animation-name: slideInTop;
     animation-timing-function: cubic-bezier(0.25, 0.45, 0.45, 0.25);
-    animation-duration: 2.5s;
-    animation-delay: 0.75s;
+    animation-duration: 1.5s;
+    animation-delay: 0.35s;
+
+    .home & {
+      animation-duration: 2.5s;
+      animation-delay: 0.75s;
+    }
   }
 }
 
