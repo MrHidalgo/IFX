@@ -7,14 +7,16 @@
     "Online Trading",
     "Learn",
     "Partnership",
-    "Info Centre"
+    "Info Centre",
+    "Contact Us"
   ];
   var menuHref = [
     "about.html",
     "onlineTrading.html",
     "learn.html",
     "partnership.html",
-    "infoCentre.html"
+    "infoCentre.html",
+    "contacts.html"
   ];
   // ABOUT
   var aboutSectionAnchorArr = [
@@ -92,22 +94,6 @@
     "Affiliates",
     "Refer A Friend",
     "Get Started"
-  ];
-
-  // INFO CENTRE
-  var infoCentreSectionAnchorArr = [
-    "",
-    "",
-    "",
-    "",
-    ""
-  ];
-  var infoCentreSectionNameArr = [
-    "",
-    "",
-    "",
-    "",
-    ""
   ];
 //- variable end
 
@@ -208,17 +194,12 @@
         )
           a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
 
-          .menu__dropdown
-            .menu__dropdown-wrap
-              .menu__dropdown-arrow
-              .menu__dropdown-cover
-                -for(var j = 0; j < infoCentreSectionAnchorArr.length; j++)
-                  a(
-                    href!= infoCentreSectionAnchorArr[j]
-                    class="menu__dropdown-link"
-                    title=""
-                    dropdown-btn-js
-                  )!= infoCentreSectionNameArr[j]
+      else if (bodyClass === "contacts" && i === 5)
+        li.menu__item.wow.wowFadeDown(
+          menu-js,
+          class!= (i === 5) ? "is-active" : ""
+        )
+          a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
 
       else
         li.menu__item.wow.wowFadeDown(

@@ -20,6 +20,6 @@ PageList:
 - file: partnership.html
   ready: 75
 - file: infoCentre.html
-  ready: 5
+  ready: 50
 - file: contacts.html
-  ready: 0
+  ready: 5
