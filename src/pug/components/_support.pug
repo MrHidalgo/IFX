@@ -1,0 +1,65 @@
+// SUPPORT :: START
+
+.support
+  .container
+
+    .support__row
+      .support__col.support__col-0
+
+        p.support__subtitle.subtitle!= "Get assistance with your investment decisions or answers to a specific account query"
+        h2.support__title.title!= "Welcome to IFX Brokers Customer Support Services"
+        p.support__text.text!= "IFX looks forward to assisting you and is confident that you </br>will have a pleasant and successful experience."
+
+      .support__col.support__col-1
+
+        img(
+          src="./img/img-support_dog.png"
+          srcset="./img/img-support_dog@2x.png 2x"
+          title=""
+          class="support__img"
+        )
+
+        p.support__col-title.subtitle!= "Submit your question"
+        p.support__col-text.text!= "Our professional team will assist you."
+
+        // .has-error - class change color placeholder and background-color line - add to .form__field
+        form.form(action="" method="")
+          .form__field
+            input(type="text" name="" id="input-0" class="form__input" input-js)
+            label(class="form__label" for="input-0")
+              span(class="form__label-content")!= "Name"
+            .form__line
+
+          .form__field
+            input(type="text" name="" id="input-1" class="form__input" input-js)
+            label(class="form__label" for="input-1")
+              span(class="form__label-content")!= "Surname"
+            .form__line
+
+          .form__field
+            input(type="text" name="" id="input-2" class="form__input" input-js)
+            label(class="form__label" for="input-2")
+              span(class="form__label-content")!= "Email Address"
+            .form__line
+
+          .form__field
+            input(type="text" name="" id="input-3" class="form__input" input-js)
+            label(class="form__label" for="input-3")
+              span(class="form__label-content")!= "Cell Number"
+            .form__line
+
+          .form__field
+            input(type="text" name="" id="input-4" class="form__input" input-js)
+            label(class="form__label" for="input-4")
+              span(class="form__label-content")!= "Country"
+            .form__line
+
+          .form__field
+            input(type="text" name="" id="input-5" class="form__input" input-js)
+            label(class="form__label" for="input-5")
+              span(class="form__label-content")!= "Message"
+            .form__line
+
+          button(type="submit" class="form__btn")!= "Become a partner"
+
+// SUPPORT :: END

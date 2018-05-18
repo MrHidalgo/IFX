@@ -114,7 +114,8 @@
     .getStarted &
       color: $colorWhite
 
-    #modalthoughts &
+    #modalthoughts &,
+    .support &
       color: $colorBlack
 
   &__label
@@ -145,7 +146,8 @@
       .getStarted &
         color: $colorWhite
 
-      #modalthoughts &
+      #modalthoughts &,
+      .support &
         color: $colorBlack
 
     .has-error &
@@ -154,7 +156,8 @@
     .getStarted &
       color: rgba($colorWhite, 0.5)
 
-    #modalthoughts &
+    #modalthoughts &,
+    .support &
       color: rgba($colorBlack, 0.5)
 
 
@@ -169,7 +172,8 @@
 
     .getStarted &
       background-color: rgba($colorWhite, 0.5)
-    #modalthoughts &
+    #modalthoughts &,
+    .support &
       background-color: rgba($colorBlack, 0.5)
 
     &:before,
@@ -183,7 +187,8 @@
       .getStarted &
         background-color: $colorWhite
 
-      #modalthoughts &
+      #modalthoughts &,
+      .support &
         background-color: $colorBlack
 
       .is-focus &
@@ -221,6 +226,9 @@
     +rmin(576)
       font-size: 22px
 
+    .support &
+      max-width: 100%
+
     &:hover
       +transition(color, background-color)
 
@@ -228,5 +236,6 @@
         color: $colorBlack
         background-color: $colorWhite
 
-      #modalthoughts &
+      #modalthoughts &,
+      .support &
         background-color: $colorBlack

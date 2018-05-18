@@ -322,31 +322,8 @@ $(document).ready(function () {
         }
       }
     });
-
-    $('[thoughts-modal-js]').magnificPopup({
-      type: 'inline',
-      fixedContentPos: true,
-      fixedBgPos: true,
-      overflowY: 'auto',
-      closeBtnInside: true,
-      preloader: false,
-      midClick: true,
-      removalDelay: 400,
-      mainClass: 'show',
-      callbacks: {
-        beforeOpen: function(e) {
-          startWindowScroll = _window.scrollTop();
-
-          console.log("beforeOpen");
-
-          this.st.mainClass = this.st.el.attr('data-effect');
-        },
-        close: function() {
-          _window.scrollTop(startWindowScroll);
-        }
-      }
-    });
   }
+
   function initModals(){
 
     let startWindowScroll = 0;
