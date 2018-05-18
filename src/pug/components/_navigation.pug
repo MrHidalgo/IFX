@@ -1,0 +1,50 @@
+// INFO CENTER MENU :: START
+
+-
+  var bodyClassArr = [
+    "getTrading",
+    "smallPrint",
+    "accountOpening",
+    "collaborate",
+    "pipsqueaks"
+  ];
+  var navigationMenuArr = [
+    "Let’s Get Trading",
+    "The Small Print",
+    "Account Opening, Funding & Withdrawals",
+    "Don’t Hesitate - Collaborate",
+    "The Difference Between Pips & Pipsqueaks"
+  ];
+  var navigationMenuIconNameArr = [
+    "ico-getTrading",
+    "ico-smallPrint",
+    "ico-accountOpening",
+    "ico-collaborate",
+    "ico-pipsqueaks"
+  ];
+
+.navigation
+  .container
+    ul.navigation__list
+      -for(var i = 0, len = navigationMenuArr.length; i < len; i++)
+        li.navigation__item
+          a.navigation__btn(
+            href= bodyClassArr[i] + ".html"
+            class!=
+            (bodyClass === "getTrading" && i === 0) ? "is-active":
+              (bodyClass === "smallPrint" && i === 1) ? "is-active":
+                (bodyClass === "accountOpening" && i === 2) ? "is-active":
+                  (bodyClass === "collaborate" && i === 3) ? "is-active":
+                    (bodyClass === "pipsqueaks" && i === 4) ? "is-active":""
+            title=""
+          )
+            .navigation__btn-top
+              .navigation__btn-circle(class!= "navigation__btn-circle--" + i)
+                +icon(navigationMenuIconNameArr[i])
+                //i.ico(class!= navigationMenuIconNameArr)
+            .navigation__btn-bottom
+              p.navigation__btn-text!= navigationMenuArr[i]
+
+      
+      
+// INFO CENTER MENU :: END

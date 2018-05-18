@@ -21,5 +21,15 @@ PageList:
   ready: 75
 - file: infoCentre.html
   ready: 65
+- file: getTrading.html
+  ready: 5
+- file: smallPrint.html
+  ready: 5
+- file: accountOpening.html
+  ready: 5
+- file: collaborate.html
+  ready: 5
+- file: pipsqueaks.html
+  ready: 5
 - file: contacts.html
   ready: 65
