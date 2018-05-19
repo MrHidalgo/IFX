@@ -142,6 +142,11 @@ $(document).ready(function () {
       navHeight = $(".header").outerHeight() || 0,
       topHeightOffset = $(linkHref).offset().top - navHeight;
 
+    const currentBtn = $(e.target);
+
+    // $("[dropdown-btn-js]").removeClass("is-active");
+    // currentBtn.addClass("is-active");
+
     if(currentParent === mainParent) {
       $('body, html').animate({
         scrollTop: topHeightOffset
