@@ -26,10 +26,24 @@
         height: 100%
 
       &-left
-        width: 40%
+        +rmin(768)
+          width: 10%
+        +rmin(992)
+          width: 25%
+        +rmin(1200)
+          width: 30%
+        +rmin(1366)
+          width: 40%
 
       &-right
-        width: 60%
+        +rmin(768)
+          width: 90%
+        +rmin(992)
+          width: 75%
+        +rmin(1200)
+          width: 70%
+        +rmin(1366)
+          width: 60%
 
       &-right
         background-image: url("../img/img-main-bg_tradingTools@2x.png")
@@ -45,6 +59,22 @@
       position: relative
       height: 100%
     // \ CONTAINER
+
+
+    // ROW
+    &__row
+      display: flex
+      +r(767)
+        flex-direction: column
+    // \ ROW
+
+
+    // COL
+    &__col
+      width: 50%
+      +r(767)
+        width: 100%
+    // \ COL
 
 
     // TITLE
@@ -92,31 +122,22 @@
       width: 100%
       max-width: 396px
       height: 60px
-      margin-bottom: 233px
       background-color: $colorAlizarin
       color: $colorWhite
       font-weight: bold
       text-transform: uppercase
       +transition(background-color)
       +rmin(320)
+        margin-bottom: 53px
         font-size: 18px
       +rmin(576)
+        margin-bottom: 133px
         font-size: 22px
+      +rmin(768)
+        margin-bottom: 233px
 
       &:hover
         background-color: $colorBlack
         +transition(background-color)
     // \ BTN
-
-
-    // ROW
-    &__row
-      display: flex
-    // \ ROW
-
-
-    // COL
-    &__col
-      width: 50%
-    // \ COL
 // ===============

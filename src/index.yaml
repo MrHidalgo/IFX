@@ -16,7 +16,7 @@ PageList:
 - file: equinixCybersonicExecution.html
   ready: 75
 - file: tradingTools.html
-  ready: 5
+  ready: 65
 - file: learn.html
   ready: 75
 - file: partnership.html

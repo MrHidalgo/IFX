@@ -11,7 +11,10 @@
 
   // TITLE
   &__title
-    padding-bottom: 90px
+    +rmin(320)
+      padding-bottom: 45px
+    +rmin(768)
+      padding-bottom: 90px
   // \ TITLE
 
 
@@ -25,20 +28,40 @@
   // BLOCK
   &__block
     display: flex
-    width: 50%
-    padding-right: 100px
-    margin-bottom: 60px
+    +rmin(320)
+      width: 100%
+      margin-bottom: 50px
+    +rmin(768)
+      width: 50%
+      padding-right: 40px
+    +rmin(992)
+      margin-bottom: 60px
+      padding-right: 70px
+    +rmin(1200)
+      padding-right: 100px
 
     &-left
-      width: 100px
+      +rmin(320)
+        width: 80px
+      +rmin(768)
+        width: 100px
 
     &-right
-      width: calc(100% - 100px)
       font-family: "SFUIText", "Arial", sans-serif
+      +rmin(320)
+        width: calc(100% - 80px)
+      +rmin(768)
+        width: calc(100% - 100px)
 
     &-title,
     &-text
       font-size: 18px
+      +rmin(320)
+        font-size: 14px
+      +rmin(576)
+        font-size: 16px
+      +rmin(728)
+        font-size: 18px
 
     &-title
       padding-bottom: 10px

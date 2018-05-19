@@ -17,8 +17,11 @@
 
   // SUBTITLE
   &__subtitle
-    padding-bottom: 55px
     color: $colorAlizarin
+    +rmin(320)
+      padding-bottom: 30px
+    +rmin(768)
+      padding-bottom: 55px
   // \ SUBTITLE
 
 
@@ -27,14 +30,22 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    +rmin(1200)
+      justify-content: space-around
+    +rmin(1366)
+      justify-content: space-between
   // \ ROW
 
 
   // BLOCK
   &__block
     width: 100%
-    max-width: 397px
-    margin-bottom: 60px
+    +rmin(768)
+      max-width: 310px
+      margin-bottom: 40px
+    +rmin(992)
+      max-width: 397px
+      margin-bottom: 60px
 
     &-title
       font-size: 22px

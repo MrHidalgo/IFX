@@ -10,19 +10,30 @@
 
   // TITLE
   &__title
-    padding-bottom: 90px
+    +rmin(320)
+      padding-bottom: 45px
+    +rmin(768)
+      padding-bottom: 90px
   // \ TITLE
 
 
   // ROW
   &__row
     display: flex
+    +rmin(320)
+      flex-direction: column
+    +rmin(992)
+      flex-direction: row
   // \ ROW
 
   // COL
   &__col
-    width: 50%
-    padding-bottom: 130px
+    +rmin(320)
+      width: 100%
+      padding-bottom: 65px
+    +rmin(992)
+      width: 50%
+      padding-bottom: 130px
   // \ COL
 
 
@@ -30,22 +41,50 @@
   &__container
     display: flex
     justify-content: space-between
+    +rmin(320)
+      flex-direction: column
+    +rmin(992)
+      flex-direction: row
   // \ CONTAINER
 
 
   // BOX
   &__box
     width: 100%
-    max-width: 630px
-    padding: 69px 116px
     background-color: $colorWhiteSmoke
+    +rmin(320)
+      max-width: 100%
+      padding: 15px 30px
+      margin-bottom: 30px
+    +rmin(576)
+      padding: 25px 45px
+    +rmin(768)
+      padding: 30px 50px
+    +rmin(992)
+      max-width: 410px
+      padding: 39px 66px
+      margin-bottom: 0
+    +rmin(1200)
+      max-width: 530px
+      padding: 49px 96px
+    +rmin(1366)
+      max-width: 580px
+      padding: 59px 106px
+    +rmin(1440)
+      max-width: 630px
+      padding: 69px 116px
 
     &-link
       position: relative
       display: block
+      padding-right: 30px
       margin-bottom: 20px
       color: rgba($colorBlack, 0.7)
       font-family: "SFUIText", "Arial", sans-serif
+      +rmin(320)
+        font-size: 14px
+      +rmin(576)
+        font-size: 16px
 
       .icon
         position: absolute
@@ -55,12 +94,21 @@
 
     &-title
       padding-bottom: 10px
-      font-size: 22px
       font-weight: bold
+      +rmin(320)
+        font-size: 18px
+      +rmin(576)
+        font-size: 20px
+      +rmin(768)
+        font-size: 22px
 
     &-text
       line-height: 1.5
       font-family: "SFUIText", "Arial", sans-serif
+      +rmin(320)
+        font-size: 14px
+      +rmin(576)
+        font-size: 16px
 
       span
         color: $colorAlizarin
@@ -81,6 +129,12 @@
       +rmin(320)
         padding-right: 0
       +rmin(768)
+        padding-right: 50px
+      +rmin(992)
+        padding-right: 70px
+      +rmin(1200)
+        padding-right: 90px
+      +rmin(1366)
         padding-right: 100px
 
     &-icon
@@ -155,12 +209,15 @@
       margin-bottom: 20px
       background-color: $colorAlizarin
       color: $colorWhite
+      text-align: center
       font-weight: bold
       text-transform: uppercase
       +transition(color, background-color)
       +rmin(320)
-        font-size: 18px
+        font-size: 16px
       +rmin(576)
+        font-size: 18px
+      +rmin(768)
         font-size: 22px
 
       &:hover
