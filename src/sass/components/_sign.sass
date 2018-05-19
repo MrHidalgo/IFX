@@ -22,7 +22,7 @@
         height: 70px
         line-height: 70px
         animation-name: fadeInUp !important
-        animation-delay: 0.8s !important
+        animation-delay: 0.9s !important
         visibility: visible !important
 
       .home.is-loader &
@@ -38,7 +38,7 @@
         margin-left: 0
         line-height: 70px
         animation-name: fadeInUp !important
-        animation-delay: 0.9s !important
+        animation-delay: 1s !important
         visibility: visible !important
       +r(767)
         display: block
@@ -56,10 +56,12 @@
       .is-loader &
         animation-delay: 2.15s
 
-    +rmin(1366)
-      &:hover
-        opacity: 0.5
-        +transition(opacity)
+    &-btn
+      display: block
+      +rmin(1366)
+        &:hover
+          opacity: 0.5
+          +transition(opacity)
 
 
   &__btn
@@ -74,7 +76,7 @@
     +r(1365)
       margin-left: 0
       animation-name: fadeInUp !important
-      animation-delay: 1s !important
+      animation-delay: 1.1s !important
       visibility: visible !important
     +r(767)
       display: block
