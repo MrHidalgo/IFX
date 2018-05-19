@@ -7,6 +7,12 @@ gulp.task('copy:fonts', function() {
     .pipe(gulp.dest(config.dest.fonts));
 });
 
+gulp.task('copy:pdf', function() {
+  return gulp
+    .src(config.src.pdf + '/*.pdf')
+    .pipe(gulp.dest(config.dest.pdf));
+});
+
 gulp.task('copy:vendor', function() {
   return gulp
     .src(config.src.vendor + '/**/*.*')
@@ -22,7 +28,8 @@ gulp.task('copy:rootfiles', function() {
 gulp.task('copy', [
   // 'copy:rootfiles',
   'copy:vendor',
-  'copy:fonts'
+  'copy:fonts',
+  'copy:pdf'
 ]);
 
 gulp.task('copy:watch', function() {

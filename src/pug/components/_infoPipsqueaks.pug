@@ -1,0 +1,22 @@
+// THE DIFFERENCE BETWEEN PIPS & PIPSQUEAKS :: START
+
+mixin infoCollapse(title, text)
+  .info__collapse
+    .info__collapse-header(collapse-js)
+      p.info__collapse-title!= title
+      i.icon.icon-accordion-arrow
+
+    .info__collapse-body
+      p.info__collapse-text!= text
+
+
+.info
+  .container
+
+    h2.info__title.title!= "THE DIFFERENCE BETWEEN PIPS AND PIPSQUEAKS"
+
+    .info__row
+
+      +infoCollapse("How much does IFX Brokers charge for training?", "As a value-added services IFX Brokers offer complimentary access to the Forex Training for Professionals Course to all LIVE funded accounts held with IFX Brokers.")
+
+// THE DIFFERENCE BETWEEN PIPS & PIPSQUEAKS :: END

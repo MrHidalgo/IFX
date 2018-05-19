@@ -264,6 +264,23 @@ $(document).ready(function () {
   // ====================
 
 
+  // COLLAPSE
+  // ====================
+  $("[collapse-js]").on("click", (e) => {
+    let curElem = $(e.target);
+
+    curElem.closest(".info__collapse").toggleClass("is-active");
+    curElem.closest(".info__collapse-header").siblings(".info__collapse-body").slideToggle();
+  });
+  // ====================
+
+
+  //
+  // ====================
+
+  // ====================
+
+
   // INPUT FORM - label animation
   // ====================
   const inputElem = $("[input-js]");

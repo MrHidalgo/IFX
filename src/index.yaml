@@ -22,14 +22,14 @@ PageList:
 - file: infoCentre.html
   ready: 65
 - file: getTrading.html
-  ready: 5
+  ready: 50
 - file: smallPrint.html
-  ready: 5
+  ready: 50
 - file: accountOpening.html
-  ready: 5
+  ready: 50
 - file: collaborate.html
-  ready: 5
+  ready: 50
 - file: pipsqueaks.html
-  ready: 5
+  ready: 50
 - file: contacts.html
   ready: 65

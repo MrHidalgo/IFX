@@ -1,0 +1,40 @@
+// THE SMALL PRINT :: START
+
+mixin infoPdf(title, text)
+  .info__pdf
+    .info__pdf-col.info__pdf-col--0
+      i.icon.icon-pdf
+    .info__pdf-col.info__pdf-col--1
+      p.info__pdf-title!= title
+      p.info__pdf-text!= text
+    .info__pdf-col.info__pdf-col--2
+      a(
+        href="./pdf/InfoCenterSmallPrint.pdf"
+        class="info__pdf-btn info__pdf-btn--view"
+        title=""
+        target="_blank"
+      )!= "View"
+    .info__pdf-col.info__pdf-col--3
+      a(
+        href="./pdf/InfoCenterSmallPrint.pdf"
+        class="info__pdf-btn info__pdf-btn--download"
+        title=""
+        download="InfoCenterSmallPrint.pdf"
+      )!= "Download"
+
+.info
+  .container
+
+    h2.info__title.title!= "THE SMALL PRINT"
+
+    .info__row
+      +infoPdf("Website Terms of Use", "Learn more about our terms and conditions when using our website")
+      +infoPdf("Account Opening Agreement", "Terms and conditions for new account holders")
+      +infoPdf("Complaint Handling Procedure", "To establish how complaints are handled")
+      +infoPdf("Conflict of Interest Policy", "Are you concerned about a conflict of interest?")
+      +infoPdf("Risk Disclosure Notice", "A comprehensive discussion on the risk of trading CFDs")
+      +infoPdf("Order Execution Policy", "Establish how we place orders")
+      +infoPdf("Anti-Money Laundering Policy", "Establish our commitment to anti-money laundering")
+      +infoPdf("Privacy Policy", "Are you concerned about the privacy of your personal data?")
+
+// THE SMALL PRINT :: END
