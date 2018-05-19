@@ -20,16 +20,16 @@ PageList:
 - file: partnership.html
   ready: 75
 - file: infoCentre.html
-  ready: 65
+  ready: 75
 - file: getTrading.html
-  ready: 50
+  ready: 75
 - file: smallPrint.html
-  ready: 50
+  ready: 75
 - file: accountOpening.html
-  ready: 50
+  ready: 75
 - file: collaborate.html
-  ready: 50
+  ready: 75
 - file: pipsqueaks.html
-  ready: 50
+  ready: 75
 - file: contacts.html
-  ready: 65
+  ready: 75
