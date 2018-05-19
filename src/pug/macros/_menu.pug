@@ -98,6 +98,22 @@
     "Get Started"
   ];
 
+  // INFO CENTER
+  var infoCentreSectionAnchorArr = [
+    "getTrading.html",
+    "smallPrint.html",
+    "accountOpening.html",
+    "collaborate.html",
+    "pipsqueaks.html"
+  ];
+  var infoCentreSectionNameArr = [
+    "Let’s get trading",
+    "The small print",
+    "Account opening, funding and withdrawals",
+    "Don’t hesitate - collaborate",
+    "The difference between pips & pipsqueaks"
+  ];
+
   // CONTACTS
   var contactsSectionAnchorArr = [
     "#main",
@@ -219,6 +235,18 @@
       menu-js
     )
       a(href!= "infoCentre.html", title!="", class!="menu__link")!= "Info Centre"
+      .menu__dropdown
+        .menu__dropdown-wrap
+          .menu__dropdown-arrow
+          .menu__dropdown-cover
+            -for(var j = 0; j < infoCentreSectionAnchorArr.length; j++)
+              a(
+                href!= infoCentreSectionAnchorArr[j]
+                class="menu__dropdown-link"
+                title=""
+                data-parent="infoCentre"
+                dropdown-btn-js
+              )!= infoCentreSectionNameArr[j]
 
     //- CONTACTS
     li.menu__item.wow.wowFadeDown(
