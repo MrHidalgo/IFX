@@ -6,8 +6,9 @@
   +r(1365)
     display: flex
     flex-direction: column
-    align-items: center
+    align-items: flex-start
     width: 100%
+    padding-left: 15px
 
   &__link
     display: block
@@ -31,6 +32,11 @@
       .is-loader &
         animation-delay: 2.25s
 
+      .sign__link-btn
+        +r(767)
+          font-size: 18px
+          font-weight: 600
+
     &:nth-child(2)
       animation-delay: 0.4s
       +r(1365)
@@ -46,6 +52,8 @@
         height: 50px
         line-height: 50px
         max-width: 290px
+        margin-left: auto
+        margin-right: auto
         margin-bottom: 10px
         background-color: rgba($colorBlack, 0.1)
         text-align: center
@@ -84,6 +92,8 @@
       height: 50px
       line-height: 50px
       max-width: 290px
+      margin-left: auto
+      margin-right: auto
       padding: 0
       border-radius: 0
       background-color: $colorAlizarin

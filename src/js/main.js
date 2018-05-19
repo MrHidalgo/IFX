@@ -30,9 +30,11 @@ $(document).ready(function () {
     _window.on('load', function () {
       const _body = $("body");
 
+      let offsetTopValue = _window.scrollTop();
+
       popUpLogic();
 
-      if($(window).scrollTop() <= 10) {
+      if(offsetTopValue <= 10) {
         _body.removeClass("is-hidden").addClass("is-loader");
       } else {
         _body.removeClass("is-loader is-hidden");
@@ -154,6 +156,13 @@ $(document).ready(function () {
     } else {
       window.location.href = currentParent + ".html" + currentHrefVal;
     }
+
+    $("[js-hamburger]").click();
+
+    if(_window.width() <= 1365){
+      $("[menu-js]").removeClass("is-show-drop");
+      $(".menu__dropdown").slideUp().removeClass("is-active-drop");
+    }
   });
   _window.on("load", (e) => {
     const winHref = window.location.href,
@@ -161,6 +170,7 @@ $(document).ready(function () {
       hrefAnchor = winHref.substring(hrefPosition);
 
     if (hrefPosition !== -1) {
+      console.log("hrefPosition: ", hrefPosition);
       let linkHref = $(hrefAnchor),
         navHeight = $(".header").outerHeight() || 0,
         topHeightOffset = $(linkHref).offset().top - navHeight;
@@ -200,6 +210,15 @@ $(document).ready(function () {
 
     $("[menu-js]").removeClass('is-active');
     $(e.target).closest("li").addClass('is-active');
+  });
+  _document.on("click", "[menu-js] > a.menu__link", (e) => {
+    const elem = $(e.target);
+
+    if(_window.width() <= 1365){
+      elem.closest("[menu-js]").toggleClass("is-show-drop");
+      elem.siblings(".menu__dropdown").slideToggle().toggleClass("is-active-drop");
+      return false;
+    }
   });
   function closeMobileMenu(){
     $('[js-hamburger]').removeClass('is-active');
@@ -266,9 +285,13 @@ $(document).ready(function () {
   // DROPDOWN MENU
   // ====================
   $('.menu [menu-js]').hover(function() {
-    $(this).find('.menu__dropdown').stop(true, false).delay(0).fadeIn(250);
+    if(_window.width() >= 1366) {
+      $(this).find('.menu__dropdown').stop(true, false).delay(0).fadeIn(250);
+    }
   }, function() {
-    $(this).find('.menu__dropdown').stop(true, false).delay(0).fadeOut(250);
+    if(_window.width() >= 1366) {
+      $(this).find('.menu__dropdown').stop(true, false).delay(0).fadeOut(250);
+    }
   });
   // ====================
 

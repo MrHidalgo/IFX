@@ -35,6 +35,15 @@ $sprite: (
 		total-height: 417px,
 		image: '../img/sprite.png'
 	),
+	arrow-menu: (
+		offset-x: -70px,
+		offset-y: -294px,
+		width: 12px,
+		height: 8px,
+		total-width: 450px,
+		total-height: 417px,
+		image: '../img/sprite.png'
+	),
 	arrow: (
 		offset-x: -312px,
 		offset-y: -246px,
@@ -46,7 +55,7 @@ $sprite: (
 	),
 	autochartist-0: (
 		offset-x: -268px,
-		offset-y: -73px,
+		offset-y: -143px,
 		width: 60px,
 		height: 60px,
 		total-width: 450px,
@@ -55,7 +64,7 @@ $sprite: (
 	),
 	autochartist-1: (
 		offset-x: -268px,
-		offset-y: -143px,
+		offset-y: -73px,
 		width: 60px,
 		height: 60px,
 		total-width: 450px,
@@ -525,6 +534,9 @@ $sprite: (
 	}
 	.icon-approve {
 		@include sprite(approve)
+	}
+	.icon-arrow-menu {
+		@include sprite(arrow-menu)
 	}
 	.icon-arrow {
 		@include sprite(arrow)

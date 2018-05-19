@@ -1,6 +1,10 @@
 // MENU :: START
 .menu
   width: 100%
+  +r(1365)
+    width: 50%
+  +r(767)
+    width: 100%
 
   &__list
     display: flex
@@ -20,6 +24,12 @@
       text-align: center
       animation-name: fadeInUp !important
       visibility: visible !important
+
+    +r(767)
+      +transition(background-color)
+      &.is-show-drop
+        background-color: $colorWhiteSmoke
+        +transition(background-color)
 
     &:nth-child(1)
       animation-delay: 0.3s
@@ -78,10 +88,31 @@
       display: block
       height: 70px
       width: 100%
-      max-width: 290px
-      margin-left: auto
-      margin-right: auto
+      max-width: 100%
+      margin-left: 0
+      margin-right: 0
+      padding-left: 15px
+      padding-right: 30px
       line-height: 70px
+      text-align: left
+    +r(767)
+      font-size: 18px
+      font-weight: 600
+
+      &:after
+        content: ""
+        position: absolute
+        top: 50%
+        right: 10px
+        margin-top: -4px
+        transform: rotate(180deg)
+        @include sprite(arrow-menu)
+        +transition(transform)
+
+        .is-show-drop &
+          transform: rotate(0)
+          +transition(transform)
+
     +rmin(1366)
       margin-right: 30px
       padding-top: 11px
@@ -98,9 +129,20 @@
     min-width: 310px
     padding-top: 20px
     +r(1365)
-      display: none !important
+      display: none
+      position: static
+      transform: translateX(0 )
+      padding-top: 0
     +rmin(1366)
       display: none
+    +rmin(767)
+      +transition(background-color)
+      .is-active-drop &
+        background-color: $colorWhiteSmoke
+        +transition(background-color)
+
+        .menu__dropdown-cover
+          background-color: transparent
 
     &-arrow
       z-index: 0
@@ -112,10 +154,14 @@
       transform: rotate(45deg) translateX(-50%)
       box-shadow: 0 4px 20px 0 rgba($colorBlack, 0.15)
       background-color: $colorWhite
+      +r(1365)
+        display: none
 
     &-wrap
       border-radius: 15px
       box-shadow: 0 4px 20px 0 rgba($colorBlack, 0.15)
+      +r(1365)
+        box-shadow: none
 
     &-cover
       z-index: 1
@@ -125,6 +171,10 @@
       padding: 30px 75px 30px 30px
       border-radius: 15px
       background-color: $colorWhite
+      +r(1365)
+        padding: 0 30px
+        border-radius: 0
+        text-align: left
 
     &-link
       cursor: pointer
