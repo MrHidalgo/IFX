@@ -4,6 +4,9 @@
   margin-top: (30px + 79px)
   height: 190px
   background-color: $colorWhiteSmoke
+  +r(575)
+    height: 130px
+    margin-top: (20px + 50px)
 
 
   //
@@ -17,12 +20,22 @@
   &__list
     display: flex
     height: 100%
+    +r(575)
+      overflow-x: auto
+      white-space: nowrap
+      position: relative
+      display: block
   // \
 
 
   //
   &__item
     width: calc(100% / 5)
+    +r(575)
+      vertical-align: top
+      display: inline-block
+      width: 170px
+      height: 100%
   // \
 
 
@@ -55,10 +68,10 @@
       +rmin(320)
         width: 40px
         height: 40px
+        margin: 20px auto 15px
       +rmin(576)
         width: 60px
         height: 60px
-        margin: 20px auto 15px
       +rmin(768)
         margin: 30px auto 20px
       +rmin(992)
@@ -66,7 +79,7 @@
 
       &--0
         svg
-          +rmin(576)
+          +rmin(320)
             width: 25px
             height: 25px
           +rmin(768)
@@ -74,7 +87,7 @@
             height: 30px
       &--1
         svg
-          +rmin(576)
+          +rmin(320)
             width: 27px
             height: 14px
           +rmin(768)
@@ -82,7 +95,7 @@
             height: 19px
       &--2
         svg
-          +rmin(576)
+          +rmin(320)
             width: 21px
             height: 25px
           +rmin(768)
@@ -90,7 +103,7 @@
             height: 30px
       &--3
         svg
-          +rmin(576)
+          +rmin(320)
             width: 25px
             height: 25px
           +rmin(768)
@@ -98,7 +111,7 @@
             height: 30px
       &--4
         svg
-          +rmin(576)
+          +rmin(320)
             width: 24px
             height: 24px
           +rmin(768)
@@ -109,7 +122,7 @@
         fill: $colorAlizarin
 
     &-text
-
+      white-space: normal
       font-weight: bold
       text-align: center
       text-transform: uppercase
