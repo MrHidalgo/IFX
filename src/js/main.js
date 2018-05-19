@@ -150,6 +150,36 @@ $(document).ready(function () {
       }, 1000);
     }
   });
+  $("[dropdown-btn-js]").on("click", (e) => {
+    const currentParent = $(e.target).attr("data-parent"),
+      currentHrefVal = $(e.target).attr("href"),
+      mainParent = $(e.target).closest("body").attr("data-body");
+
+    let linkHref = $(e.currentTarget).attr('href'),
+      navHeight = $(".header").outerHeight() || 0,
+      topHeightOffset = $(linkHref).offset().top - navHeight;
+
+    if(currentParent === mainParent) {
+      $('body, html').animate({
+        scrollTop: topHeightOffset
+      }, 1000);
+    } else {
+      window.location = currentParent + ".html" + currentHrefVal;
+    }
+  });
+  _window.on("load", (e) => {
+    const winHref = window.location.href,
+      hrefPosition = winHref.indexOf("#"),
+      hrefAnchor = winHref.substring(hrefPosition);
+
+    let linkHref = $(hrefAnchor),
+      navHeight = $(".header").outerHeight() || 0,
+      topHeightOffset = $(linkHref).offset().top - navHeight;
+
+    $('body, html').animate({
+      scrollTop: topHeightOffset
+    }, 1000);
+  });
   // ====================
 
 

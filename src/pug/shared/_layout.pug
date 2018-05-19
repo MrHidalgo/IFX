@@ -5,7 +5,10 @@ html.is-hideScroll(lang="en")
   head
     include _head
 
-  body.animated.is-hideScroll.is-hidden(class=bodyClass)
+  body.animated.is-hideScroll.is-hidden(
+    class=bodyClass
+    data-body= dataBody
+  )
 
     block loader
       include ../macros/_loader

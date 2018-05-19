@@ -2,22 +2,6 @@
 
 //- variable start
 -
-  var menuArr = [
-    "About Us",
-    "Online Trading",
-    "Learn",
-    "Partnership",
-    "Info Centre",
-    "Contact Us"
-  ];
-  var menuHref = [
-    "about.html",
-    "onlineTrading.html",
-    "learn.html",
-    "partnership.html",
-    "infoCentre.html",
-    "contacts.html"
-  ];
   // ABOUT
   var aboutSectionAnchorArr = [
     "#whoweare",
@@ -60,6 +44,14 @@
     "Equinix - Cybersonic Execution"
   ];
 
+  // TRADING TOOLS
+  var tradingToolsSectionAnchorArr = [
+    ""
+  ];
+  var tradingToolsSectionNameArr = [
+    ""
+  ];
+
   // LEARN
   var learnSectionAnchorArr = [
     "#theifxacademy",
@@ -95,117 +87,269 @@
     "Refer A Friend",
     "Get Started"
   ];
+
+  // INFO CENTRE
+  var infoCentreSectionAnchorArr = [
+    ""
+  ];
+  var infoCentreSectionNameArr = [
+    ""
+  ];
+
+  // CONTACTS
+  var contactsSectionAnchorArr = [
+    ""
+  ];
+  var contactsSectionNameArr = [
+    ""
+  ];
 //- variable end
 
 .menu
   ul.menu__list
-    -for(var i = 0, len = menuArr.length; i < len; i++)
 
-      if(bodyClass === "about" && i === 0)
-        li.menu__item.wow.wowFadeDown(
-          menu-js,
-          class!= (i === 0) ? "is-active" : ""
-        )
-          a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+    //- ABOUT
+    li.menu__item.wow.wowFadeDown(
+      class!= (bodyClass === "about") ? "is-active":""
+      menu-js
+    )
+      a(href!= "about.html", title!="", class!="menu__link")!= "About Us"
+      .menu__dropdown
+        .menu__dropdown-wrap
+          .menu__dropdown-arrow
+          .menu__dropdown-cover
+            -for(var j = 0; j < aboutSectionAnchorArr.length; j++)
+              a(
+                href!= aboutSectionAnchorArr[j]
+                class="menu__dropdown-link"
+                title=""
+                data-parent="about"
+                dropdown-btn-js
+              )!= aboutSectionNameArr[j]
 
-          .menu__dropdown
-            .menu__dropdown-wrap
-              .menu__dropdown-arrow
-              .menu__dropdown-cover
-                -for(var j = 0; j < aboutSectionAnchorArr.length; j++)
-                  a(
-                    href!= aboutSectionAnchorArr[j]
-                    class="menu__dropdown-link"
-                    title=""
-                    dropdown-btn-js
-                  )!= aboutSectionNameArr[j]
+    //- ONLINE TRADING
+    li.menu__item.wow.wowFadeDown(
+      class!= (bodyClass === "onlineTrading") ? "is-active":""
+      menu-js
+    )
+      a(href!= "onlineTrading.html", title!="", class!="menu__link")!= "Online Trading"
+      .menu__dropdown
+        .menu__dropdown-wrap
+          .menu__dropdown-arrow
+          .menu__dropdown-cover
+            -for(var j = 0; j < onlineTradingSectionAnchorArr.length; j++)
+              a(
+                href!= onlineTradingSectionAnchorArr[j]
+                class="menu__dropdown-link"
+                title=""
+                data-parent="onlineTrading"
+                dropdown-btn-js
+              )!= onlineTradingSectionNameArr[j]
 
-      else if ((bodyClass === "onlineTrading" || bodyClass === "gettingDownBusiness" || bodyClass === "depositsWithdrawals" || bodyClass === "tradingHours" || bodyClass === "equinixCybersonicExecution") && i === 1)
-        li.menu__item.wow.wowFadeDown(
-          menu-js,
-          class!= (i === 1) ? "is-active" : ""
-        )
-          a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+    //- TRADING TOOLS
+    li.menu__item.wow.wowFadeDown(
+      class!= (bodyClass === "tradingTools") ? "is-active":""
+      menu-js
+    )
+      a(href!= "tradingTools.html", title!="", class!="menu__link")!= "Trading Tools"
+      .menu__dropdown
+        .menu__dropdown-wrap
+          .menu__dropdown-arrow
+          .menu__dropdown-cover
+            -for(var j = 0; j < tradingToolsSectionAnchorArr.length; j++)
+              a(
+                href!= tradingToolsSectionAnchorArr[j]
+                class="menu__dropdown-link"
+                title=""
+                data-parent="tradingTools"
+                dropdown-btn-js
+              )!= tradingToolsSectionNameArr[j]
 
-          .menu__dropdown
-            .menu__dropdown-wrap
-              .menu__dropdown-arrow
-              .menu__dropdown-cover
-                -for(var j = 0; j < onlineTradingSectionAnchorArr.length; j++)
-                  if((bodyClass === "gettingDownBusiness" || bodyClass === "depositsWithdrawals" || bodyClass === "tradingHours" || bodyClass === "equinixCybersonicExecution"))
-                    -if(onlineTradingSectionAnchorArr[j].indexOf("#") === -1)
-                      a(
-                        href!= onlineTradingSectionAnchorArr[j]
-                        class="menu__dropdown-link"
-                        title=""
-                        dropdown-btn-js
-                      )!= onlineTradingSectionNameArr[j]
-                  else
-                    a(
-                      href!= onlineTradingSectionAnchorArr[j]
-                      class="menu__dropdown-link"
-                      title=""
-                      dropdown-btn-js
-                    )!= onlineTradingSectionNameArr[j]
+    //- LEARN
+    li.menu__item.wow.wowFadeDown(
+      class!= (bodyClass === "learn") ? "is-active":""
+      menu-js
+    )
+      a(href!= "learn.html", title!="", class!="menu__link")!= "Learn"
+      .menu__dropdown
+        .menu__dropdown-wrap
+          .menu__dropdown-arrow
+          .menu__dropdown-cover
+            -for(var j = 0; j < learnSectionAnchorArr.length; j++)
+              a(
+                href!= learnSectionAnchorArr[j]
+                class="menu__dropdown-link"
+                title=""
+                data-parent="learn"
+                dropdown-btn-js
+              )!= learnSectionNameArr[j]
+
+    //- PARTNERSHIP
+    li.menu__item.wow.wowFadeDown(
+      class!= (bodyClass === "partnership") ? "is-active":""
+      menu-js
+    )
+      a(href!= "partnership.html", title!="", class!="menu__link")!= "Partnership"
+      .menu__dropdown
+        .menu__dropdown-wrap
+          .menu__dropdown-arrow
+          .menu__dropdown-cover
+            -for(var j = 0; j < partnershipSectionAnchorArr.length; j++)
+              a(
+                href!= partnershipSectionAnchorArr[j]
+                class="menu__dropdown-link"
+                title=""
+                data-parent="partnership"
+                dropdown-btn-js
+              )!= partnershipSectionNameArr[j]
+
+    //- INFO CENTRE
+    li.menu__item.wow.wowFadeDown(
+      class!= (bodyClass === "infoCentre") ? "is-active":""
+      menu-js
+    )
+      a(href!= "infoCentre.html", title!="", class!="menu__link")!= "Info Centre"
+      .menu__dropdown
+        .menu__dropdown-wrap
+          .menu__dropdown-arrow
+          .menu__dropdown-cover
+            -for(var j = 0; j < infoCentreSectionAnchorArr.length; j++)
+              a(
+                href!= infoCentreSectionAnchorArr[j]
+                class="menu__dropdown-link"
+                title=""
+                data-parent="infoCentre"
+                dropdown-btn-js
+              )!= infoCentreSectionNameArr[j]
+
+    //- CONTACTS
+    li.menu__item.wow.wowFadeDown(
+      class!= (bodyClass === "contacts") ? "is-active":""
+      menu-js
+    )
+      a(href!= "contacts.html", title!="", class!="menu__link")!= "Contact Us"
+      .menu__dropdown
+        .menu__dropdown-wrap
+          .menu__dropdown-arrow
+          .menu__dropdown-cover
+            -for(var j = 0; j < contactsSectionAnchorArr.length; j++)
+              a(
+                href!= contactsSectionAnchorArr[j]
+                class="menu__dropdown-link"
+                title=""
+                data-parent="contacts"
+                dropdown-btn-js
+              )!= contactsSectionNameArr[j]
 
 
-      else if (bodyClass === "learn" && i === 2)
-        li.menu__item.wow.wowFadeDown(
-          menu-js,
-          class!= (i === 2) ? "is-active" : ""
-        )
-          a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
-
-          .menu__dropdown
-            .menu__dropdown-wrap
-              .menu__dropdown-arrow
-              .menu__dropdown-cover
-                -for(var j = 0; j < learnSectionAnchorArr.length; j++)
-                  a(
-                    href!= learnSectionAnchorArr[j]
-                    class="menu__dropdown-link"
-                    title=""
-                    dropdown-btn-js
-                  )!= learnSectionNameArr[j]
-
-      else if (bodyClass === "partnership" && i === 3)
-        li.menu__item.wow.wowFadeDown(
-          menu-js,
-          class!= (i === 3) ? "is-active" : ""
-        )
-          a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
-
-          .menu__dropdown
-            .menu__dropdown-wrap
-              .menu__dropdown-arrow
-              .menu__dropdown-cover
-                -for(var j = 0; j < partnershipSectionAnchorArr.length; j++)
-                  a(
-                    href!= partnershipSectionAnchorArr[j]
-                    class="menu__dropdown-link"
-                    title=""
-                    dropdown-btn-js
-                  )!= partnershipSectionNameArr[j]
-
-      else if (bodyClass === "infoCentre" && i === 4)
-        li.menu__item.wow.wowFadeDown(
-          menu-js,
-          class!= (i === 4) ? "is-active" : ""
-        )
-          a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
-
-      else if (bodyClass === "contacts" && i === 5)
-        li.menu__item.wow.wowFadeDown(
-          menu-js,
-          class!= (i === 5) ? "is-active" : ""
-        )
-          a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
-
-      else
-        li.menu__item.wow.wowFadeDown(
-          menu-js,
-          class!= ""
-        )
-          a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+    //
+    //-for(var i = 0, len = menuArr.length; i < len; i++)
+    //
+    //  if(bodyClass === "about" && i === 0)
+    //    li.menu__item.wow.wowFadeDown(
+    //      menu-js,
+    //      class!= (i === 0) ? "is-active" : ""
+    //    )
+    //      a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+    //
+    //      .menu__dropdown
+    //        .menu__dropdown-wrap
+    //          .menu__dropdown-arrow
+    //          .menu__dropdown-cover
+    //            -for(var j = 0; j < aboutSectionAnchorArr.length; j++)
+    //              a(
+    //                href!= aboutSectionAnchorArr[j]
+    //                class="menu__dropdown-link"
+    //                title=""
+    //                dropdown-btn-js
+    //              )!= aboutSectionNameArr[j]
+    //
+    //  else if ((bodyClass === "onlineTrading" || bodyClass === "gettingDownBusiness" || bodyClass === "depositsWithdrawals" || bodyClass === "tradingHours" || bodyClass === "equinixCybersonicExecution") && i === 1)
+    //    li.menu__item.wow.wowFadeDown(
+    //      menu-js,
+    //      class!= (i === 1) ? "is-active" : ""
+    //    )
+    //      a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+    //
+    //      .menu__dropdown
+    //        .menu__dropdown-wrap
+    //          .menu__dropdown-arrow
+    //          .menu__dropdown-cover
+    //            -for(var j = 0; j < onlineTradingSectionAnchorArr.length; j++)
+    //              if((bodyClass === "gettingDownBusiness" || bodyClass === "depositsWithdrawals" || bodyClass === "tradingHours" || bodyClass === "equinixCybersonicExecution"))
+    //                -if(onlineTradingSectionAnchorArr[j].indexOf("#") === -1)
+    //                  a(
+    //                    href!= onlineTradingSectionAnchorArr[j]
+    //                    class="menu__dropdown-link"
+    //                    title=""
+    //                    dropdown-btn-js
+    //                  )!= onlineTradingSectionNameArr[j]
+    //              else
+    //                a(
+    //                  href!= onlineTradingSectionAnchorArr[j]
+    //                  class="menu__dropdown-link"
+    //                  title=""
+    //                  dropdown-btn-js
+    //                )!= onlineTradingSectionNameArr[j]
+    //
+    //
+    //  else if (bodyClass === "learn" && i === 2)
+    //    li.menu__item.wow.wowFadeDown(
+    //      menu-js,
+    //      class!= (i === 2) ? "is-active" : ""
+    //    )
+    //      a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+    //
+    //      .menu__dropdown
+    //        .menu__dropdown-wrap
+    //          .menu__dropdown-arrow
+    //          .menu__dropdown-cover
+    //            -for(var j = 0; j < learnSectionAnchorArr.length; j++)
+    //              a(
+    //                href!= learnSectionAnchorArr[j]
+    //                class="menu__dropdown-link"
+    //                title=""
+    //                dropdown-btn-js
+    //              )!= learnSectionNameArr[j]
+    //
+    //  else if (bodyClass === "partnership" && i === 3)
+    //    li.menu__item.wow.wowFadeDown(
+    //      menu-js,
+    //      class!= (i === 3) ? "is-active" : ""
+    //    )
+    //      a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+    //
+    //      .menu__dropdown
+    //        .menu__dropdown-wrap
+    //          .menu__dropdown-arrow
+    //          .menu__dropdown-cover
+    //            -for(var j = 0; j < partnershipSectionAnchorArr.length; j++)
+    //              a(
+    //                href!= partnershipSectionAnchorArr[j]
+    //                class="menu__dropdown-link"
+    //                title=""
+    //                dropdown-btn-js
+    //              )!= partnershipSectionNameArr[j]
+    //
+    //  else if (bodyClass === "infoCentre" && i === 4)
+    //    li.menu__item.wow.wowFadeDown(
+    //      menu-js,
+    //      class!= (i === 4) ? "is-active" : ""
+    //    )
+    //      a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+    //
+    //  else if (bodyClass === "contacts" && i === 5)
+    //    li.menu__item.wow.wowFadeDown(
+    //      menu-js,
+    //      class!= (i === 5) ? "is-active" : ""
+    //    )
+    //      a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
+    //
+    //  else
+    //    li.menu__item.wow.wowFadeDown(
+    //      menu-js,
+    //      class!= ""
+    //    )
+    //      a(href!= menuHref[i], title!="", class!="menu__link")!= menuArr[i]
 
 // MENU :: END
