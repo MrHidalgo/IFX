@@ -20,30 +20,18 @@
       left: 0
       width: 100%
       height: 100%
+      +r(767)
+        display: none
 
       &-left,
       &-right
         height: 100%
 
       &-left
-        +rmin(768)
-          width: 10%
-        +rmin(992)
-          width: 25%
-        +rmin(1200)
-          width: 30%
-        +rmin(1366)
-          width: 40%
+        width: 55%
 
       &-right
-        +rmin(768)
-          width: 90%
-        +rmin(992)
-          width: 75%
-        +rmin(1200)
-          width: 70%
-        +rmin(1366)
-          width: 60%
+        width: 45%
 
       &-right
         background-image: url("../img/img-main-bg_tradingTools@2x.png")
