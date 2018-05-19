@@ -88,8 +88,10 @@
       background-color: $colorWhite
       font-family: "SFUIText", "Arial", sans-serif
       +rmin(320)
-        padding: 30px 15px
+        padding: 15px 0
         overflow-x: auto
+      +rmin(576)
+        padding: 30px 15px
       +rmin(768)
         padding: 50px 30px
         overflow: hidden
@@ -102,6 +104,8 @@
 
       &-wrap
         margin-bottom: 10px
+        +r(575)
+          margin-bottom: 0
 
         &.is-active
           .main__accordion-subtitle
