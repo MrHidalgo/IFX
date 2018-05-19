@@ -1,7 +1,7 @@
 // DRIVERS :: START
 
-mixin driversBlock(className, title, imgName, text)
-  .drivers__block(class!= "drivers__block-" + className)
+mixin driversBlock(delayT, className, title, imgName, text)
+  .drivers__block.wow.wowFadeUp(data-animation-delay= delayT + "s" class!= "drivers__block-" + className)
     p.drivers__block-title!= title
 
     .drivers__block-img--wrap
@@ -18,15 +18,15 @@ mixin driversBlock(className, title, imgName, text)
 .drivers#drivers
   .container
 
-    h2.drivers__title.title!= "Putting you in the driver’s seat"
-    p.drivers__subtitle.subtitle!= "Take control of your trading day with these features:"
+    h2.drivers__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Putting you in the driver’s seat"
+    p.drivers__subtitle.subtitle.wow.wowFadeUp(data-animation-delay="0.4s")!= "Take control of your trading day with these features:"
 
     .drivers__row
-      +driversBlock("0", "Technical Chart Patterns", "img-bg-0_drivers", "Receive audio and visual alerts when emerging and completed patterns are identified. Benefit from the automatic Forecast Zone plotted on completed Chart Patterns. Use  Performance Statistics to view success rates of patterns reaching the forecast zone.")
-      +driversBlock("1", "Technical Chart Patterns", "img-bg-1_drivers", "Focus your attention to the levels where support and resistance are expected to be, through the identification of simple and complex Fibonacci patterns.")
-      +driversBlock("2", "Volatility Analysis", "img-bg-2_drivers", "Assess risk and optimise your stop loss and take profit levels, with insight into relevant movement of instruments, like: </br>- Average PIP movement in specific timeframes; </br>- Maximum expected price movements across various timeframes; </br>- Expected price movements over weekly and daily timeframes")
-      +driversBlock("3", "Key Levels", "img-bg-3_drivers", "Simplify the trading process and improve market entry by identifying horizontal support or resistance lines and get notified when an approach or breakout occurs.")
-      +driversBlock("4", "Market Reports", "img-bg-4_drivers", "Receive 3 reports outlining the technical outlook of the markets before the opening of Tokyo, London and New York sessions every day and capitalise on macroeconomic news events.")
-      +driversBlock("5", "Performance Statistics", "img-bg-5_drivers", "Get access to statistics that analyse a system’s historical performance over a 6-months timeframe and view which patterns have reached their target forecast.")
+      +driversBlock("0.55", "0", "Technical Chart Patterns", "img-bg-0_drivers", "Receive audio and visual alerts when emerging and completed patterns are identified. Benefit from the automatic Forecast Zone plotted on completed Chart Patterns. Use  Performance Statistics to view success rates of patterns reaching the forecast zone.")
+      +driversBlock("0.55", "1", "Technical Chart Patterns", "img-bg-1_drivers", "Focus your attention to the levels where support and resistance are expected to be, through the identification of simple and complex Fibonacci patterns.")
+      +driversBlock("0.55", "2", "Volatility Analysis", "img-bg-2_drivers", "Assess risk and optimise your stop loss and take profit levels, with insight into relevant movement of instruments, like: </br>- Average PIP movement in specific timeframes; </br>- Maximum expected price movements across various timeframes; </br>- Expected price movements over weekly and daily timeframes")
+      +driversBlock("0.7", "3", "Key Levels", "img-bg-3_drivers", "Simplify the trading process and improve market entry by identifying horizontal support or resistance lines and get notified when an approach or breakout occurs.")
+      +driversBlock("0.7", "4", "Market Reports", "img-bg-4_drivers", "Receive 3 reports outlining the technical outlook of the markets before the opening of Tokyo, London and New York sessions every day and capitalise on macroeconomic news events.")
+      +driversBlock("0.7", "5", "Performance Statistics", "img-bg-5_drivers", "Get access to statistics that analyse a system’s historical performance over a 6-months timeframe and view which patterns have reached their target forecast.")
 
 // DRIVERS :: END
