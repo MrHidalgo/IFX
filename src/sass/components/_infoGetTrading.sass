@@ -39,6 +39,7 @@
       &-header
         cursor: pointer
         position: relative
+        padding-right: 30px
 
         .icon
           position: absolute
@@ -49,15 +50,26 @@
       &-body
         display: none
         padding-top: 20px
-        padding-right: 20px
-        padding-bottom: 60px
+        padding-right: 30px
         line-height: 1.5
-        font-size: 18px
         font-family: "SFUIText", "Arial", sans-serif
+        +rmin(320)
+          font-size: 14px
+          padding-bottom: 30px
+        +rmin(576)
+          font-size: 16px
+        +rmin(728)
+          font-size: 18px
+          padding-bottom: 60px
 
       &-title
-        font-size: 22px
         font-weight: bold
+        +rmin(320)
+          font-size: 16px
+        +rmin(576)
+          font-size: 20px
+        +rmin(728)
+          font-size: 22px
 
       &-text
         a

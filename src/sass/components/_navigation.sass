@@ -33,6 +33,8 @@
     align-items: center
     width: 100%
     height: 100%
+    padding-left: 15px
+    padding-right: 15px
     font-family: "SFUIText", "Arial", sans-serif
 
     &.is-active
@@ -48,40 +50,72 @@
       display: flex
       align-items: center
       justify-content: center
-      width: 60px
-      height: 60px
-      margin: 40px auto 27px
       border-radius: 100%
       background-color: rgba($colorAlizarin, 0.1)
+      +rmin(320)
+        width: 40px
+        height: 40px
+      +rmin(576)
+        width: 60px
+        height: 60px
+        margin: 20px auto 15px
+      +rmin(768)
+        margin: 30px auto 20px
+      +rmin(992)
+        margin: 40px auto 27px
 
       &--0
         svg
-          width: 30px
-          height: 30px
+          +rmin(576)
+            width: 25px
+            height: 25px
+          +rmin(768)
+            width: 30px
+            height: 30px
       &--1
         svg
-          width: 32px
-          height: 19px
+          +rmin(576)
+            width: 27px
+            height: 14px
+          +rmin(768)
+            width: 32px
+            height: 19px
       &--2
         svg
-          width: 26px
-          height: 30px
+          +rmin(576)
+            width: 21px
+            height: 25px
+          +rmin(768)
+            width: 26px
+            height: 30px
       &--3
         svg
-          width: 30px
-          height: 30px
+          +rmin(576)
+            width: 25px
+            height: 25px
+          +rmin(768)
+            width: 30px
+            height: 30px
       &--4
         svg
-          width: 29px
-          height: 29px
+          +rmin(576)
+            width: 24px
+            height: 24px
+          +rmin(768)
+            width: 29px
+            height: 29px
 
       svg
         fill: $colorAlizarin
 
     &-text
-      font-size: 14px
+
       font-weight: bold
       text-align: center
       text-transform: uppercase
+      +rmin(320)
+        font-size: 12px
+      +rmin(992)
+        font-size: 14px
 // \
 // ===============

@@ -275,12 +275,6 @@ $(document).ready(function () {
   // ====================
 
 
-  //
-  // ====================
-
-  // ====================
-
-
   // INPUT FORM - label animation
   // ====================
   const inputElem = $("[input-js]");
