@@ -1,0 +1,26 @@
+// AUTOCHARTIST :: START
+
+mixin autochartistBlock(className, iconName, title, text)
+  .autochartist__block(class!= "autochartist__block-" + className)
+    .autochartist__block-left
+      i.icon(class!= "icon-" + iconName)
+    .autochartist__block-right
+      p.autochartist__block-title!= title
+      p.autochartist__block-text!= text
+
+.autochartist
+  .container
+
+    h2.autochartist__title.title!= "Autochartist Benefits"
+
+    .autochartist__row
+      +autochartistBlock("0", "autochartist-0", "INTRADAY SCANNING", "Be notified of potential opportunities as they arise throughout the day.")
+      +autochartistBlock("1", "autochartist-1", "TRADE OPPORTUNITY FORECAST ZONES", "View illustrated forecast zones on completed patterns, indicating expected price levels.")
+      +autochartistBlock("2", "autochartist-2", "QUALITY INDICATORS", "Each pattern comes with an automated visual analysis that uses a combination of four unique characteristics in assigning a pattern’s quality score.")
+      +autochartistBlock("3", "autochartist-3", "SAVES TIME", "Focus on your trading and let Autochartist analyse the markets and detect key patterns for you.")
+      +autochartistBlock("4", "autochartist-4", "ALERTS", "Receive automated audio and visual alerts for emerging trade opportunities.")
+      +autochartistBlock("5", "autochartist-5", "TRADE STYLE", "Autochartist automatically plots support and resistance lines, catering to both breakout and swing traders.")
+      +autochartistBlock("6", "autochartist-6", "HIGHLY CUSTOMISABLE SEARCHES", "Define custom search criteria to get only the data most relevant to you.")
+      +autochartistBlock("7", "autochartist-7", "EDUCATION", "The Autochartist service is accompanied by training guides and videos from within the application to empower traders to best utilize chart patterns and technical analysis in their day-to-day trading.")
+
+// AUTOCHARTIST :: END
