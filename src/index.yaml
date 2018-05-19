@@ -17,6 +17,8 @@ PageList:
   ready: 75
 - file: tradingTools.html
   ready: 75
+- file: economicCalendar.html
+  ready: 75
 - file: learn.html
   ready: 75
 - file: partnership.html

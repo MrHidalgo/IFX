@@ -48,12 +48,14 @@
 
   // TRADING TOOLS
   var tradingToolsSectionAnchorArr = [
+    "economicCalendar.html",
     "#main",
     "#drivers",
     "#autochartist",
     "#use"
   ];
   var tradingToolsSectionNameArr = [
+    "Economic Calendar",
     "Technical Analysis software",
     "Putting you in the driver’s seat",
     "Autochartist Benefits",
@@ -174,7 +176,7 @@
 
     //- TRADING TOOLS
     li.menu__item.wow.wowFadeDown(
-      class!= (bodyClass === "tradingTools") ? "is-active":""
+      class!= (bodyClass === "tradingTools" || bodyClass === "economicCalendar") ? "is-active":""
       menu-js
     )
       a(href!= "tradingTools.html", title!="", class!="menu__link")!= "Trading Tools"

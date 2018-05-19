@@ -16,6 +16,12 @@ $(document).ready(function () {
     }
   };
 
+  // Popup control view
+  // ====================
+  if($("#economicCalendarWidget").length > 0) {
+    new economicCalendar({ width: "100%", height: "100%", mode: 2 });
+  }
+  // ====================
 
   // Popup control view
   // ====================
