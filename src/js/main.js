@@ -133,23 +133,6 @@ $(document).ready(function () {
 
   // SMOOTH SCROLL
   // ====================
-  _document.on("click", "[anchor-js], [dropdown-btn-js]", function(e) {
-    let linkHref = $(e.currentTarget).attr('href'),
-      navHeight = $(".header").outerHeight() || 0,
-      topHeightOffset = $(linkHref).offset().top - navHeight;
-
-    if($("[dropdown-btn-js]").length) {
-      $('.menu__dropdown').fadeOut(250);
-    }
-
-    if($(e.currentTarget).attr("href").indexOf(".html") === -1) {
-      e.preventDefault();
-
-      $('body, html').animate({
-        scrollTop: topHeightOffset
-      }, 1000);
-    }
-  });
   $("[dropdown-btn-js]").on("click", (e) => {
     const currentParent = $(e.target).attr("data-parent"),
       currentHrefVal = $(e.target).attr("href"),
@@ -164,7 +147,7 @@ $(document).ready(function () {
         scrollTop: topHeightOffset
       }, 1000);
     } else {
-      window.location = currentParent + ".html" + currentHrefVal;
+      window.location.href = currentParent + ".html" + currentHrefVal;
     }
   });
   _window.on("load", (e) => {
@@ -172,13 +155,15 @@ $(document).ready(function () {
       hrefPosition = winHref.indexOf("#"),
       hrefAnchor = winHref.substring(hrefPosition);
 
-    let linkHref = $(hrefAnchor),
-      navHeight = $(".header").outerHeight() || 0,
-      topHeightOffset = $(linkHref).offset().top - navHeight;
+    if (hrefPosition !== -1) {
+      let linkHref = $(hrefAnchor),
+        navHeight = $(".header").outerHeight() || 0,
+        topHeightOffset = $(linkHref).offset().top - navHeight;
 
-    $('body, html').animate({
-      scrollTop: topHeightOffset
-    }, 1000);
+      $('body, html').animate({
+        scrollTop: topHeightOffset
+      }, 1000);
+    }
   });
   // ====================
 

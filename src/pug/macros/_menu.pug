@@ -12,10 +12,11 @@
     "#ouraccounts",
     "#ourplatforms",
     "#ourservers",
-    "#ourpartners"
+    "#ourpartners",
+    "#what"
   ];
   var aboutSectionNameArr = [
-    "Who we are",
+    "What we do",
     "Our Vision",
     "Our Values",
     "Our Transparency",
@@ -23,7 +24,8 @@
     "Our Accounts",
     "Our Platforms",
     "Our Servers",
-    "Our Partners"
+    "Our Partners",
+    "Do what you do best and make money"
   ];
 
   // ONLINE TRADING
@@ -68,6 +70,7 @@
 
   // PARTNERSHIP
   var partnershipSectionAnchorArr = [
+    "#main",
     "#ourpartnership",
     "#yourclientsbenefittoo",
     "#theifxdifference",
@@ -78,7 +81,8 @@
     "#getstarted"
   ];
   var partnershipSectionNameArr = [
-    "Our Partnership",
+    "Why wouldn’t you partner with a </br>global leader in forex and cfd?",
+    "Your Success",
     "Your Clients Benefit Too",
     "The IFX Difference",
     "The IFX Marketing Portal",
@@ -88,20 +92,20 @@
     "Get Started"
   ];
 
-  // INFO CENTRE
-  var infoCentreSectionAnchorArr = [
-    ""
-  ];
-  var infoCentreSectionNameArr = [
-    ""
-  ];
-
   // CONTACTS
   var contactsSectionAnchorArr = [
-    ""
+    "#main",
+    "#service",
+    "#enquiries",
+    "#support",
+    "#thoughts"
   ];
   var contactsSectionNameArr = [
-    ""
+    "Want To Talk To A Real Person?",
+    "Client Service Suite",
+    "For your specific enquiries, email us at",
+    "IFX Brokers Support Services",
+    "Share your thoughts"
   ];
 //- variable end
 
@@ -129,7 +133,7 @@
 
     //- ONLINE TRADING
     li.menu__item.wow.wowFadeDown(
-      class!= (bodyClass === "onlineTrading") ? "is-active":""
+      class!= (bodyClass === "onlineTrading" || bodyClass === "gettingDownBusiness" || bodyClass === "depositsWithdrawals" || bodyClass === "tradingHours" || bodyClass === "equinixCybersonicExecution") ? "is-active":""
       menu-js
     )
       a(href!= "onlineTrading.html", title!="", class!="menu__link")!= "Online Trading"
@@ -209,18 +213,6 @@
       menu-js
     )
       a(href!= "infoCentre.html", title!="", class!="menu__link")!= "Info Centre"
-      .menu__dropdown
-        .menu__dropdown-wrap
-          .menu__dropdown-arrow
-          .menu__dropdown-cover
-            -for(var j = 0; j < infoCentreSectionAnchorArr.length; j++)
-              a(
-                href!= infoCentreSectionAnchorArr[j]
-                class="menu__dropdown-link"
-                title=""
-                data-parent="infoCentre"
-                dropdown-btn-js
-              )!= infoCentreSectionNameArr[j]
 
     //- CONTACTS
     li.menu__item.wow.wowFadeDown(
