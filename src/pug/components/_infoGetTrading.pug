@@ -1,7 +1,7 @@
 // LET’S GET TRADING :: START
 
-mixin infoCollapse(title, text)
-  .info__collapse
+mixin infoCollapse(delayT, title, text)
+  .info__collapse.wow.wowFadeUp(data-animation-delay!= delayT + "s")
     .info__collapse-header(collapse-js)
       p.info__collapse-title!= title
       i.icon.icon-accordion-arrow
@@ -13,30 +13,30 @@ mixin infoCollapse(title, text)
 .info
   .container
 
-    h2.info__title.title!= "LET’S GET TRADING"
+    h2.info__title.title.wow.wowFadeUp(data-animation-delay="0.5s")!= "LET’S GET TRADING"
 
     .info__row
 
-      +infoCollapse("I am new to Forex, where do I start?", "The first step is to open an account.  All you need to do is complete the application here, submit your verification documents, fund your account.")
-      +infoCollapse("Do I need to download any specialized software in order to trade?", "You will require the IFX Brokers MT4 platform which can be downloaded here.")
-      +infoCollapse("What are you trading conditions?", "Our trading conditions are justly considered among the best in the world. Services offered to clients and partners by any member of IFX Brokers meets the highest international standards. We make forex trading comfortable and profitable.")
-      +infoCollapse("What are your spreads?", "We offer premier market spreads with True ECN connectivity. More than 50 banks and dark pool liquidity sources price into our ECN at any given time, ensuring our spreads remain tight and liquidity deep 24/5.")
-      +infoCollapse("Is IFX Brokers and ECN/STP Broker?", "Electronic Communications Networks (ECN) connect you directly to our liquidity providers. All orders are sent to them via Straight Through Processing (STP).")
-      +infoCollapse("Do you offer Demo accounts ?", "Yes, we offer free demo accounts to anyone who registers with us.")
-      +infoCollapse("How do I open a demo account?", "It’s really easy. All you do is click on the Open Demo icon on the IFX Brokers homepage, or click here. Enter your details in the online form and click ‘Submit’. Your demo account will be created immediately, directing you to your account page. A verification email containing your platform credentials will be sent to the email address you have provided.")
-      +infoCollapse("What is the minimum deposit?", "The recommended minimum deposit is USD 1000. You may, however, deposit as little as USD 100.")
-      +infoCollapse("What kind of accounts do you offer?", "We offer a range of trading accounts designed to meet the requirements of various traders.   (Insert account table found under online trading).")
-      +infoCollapse("How do I open a Live Trading account?", "To register for a live trading account, click on the ‘Open Account’ icon on the IFX Brokers homepage, or click here. Complete the form and click ‘submit’. An email containing your platform credentials will be sent to the email address you have provided. Use this email and your selected password to login to our homepage.")
-      +infoCollapse("What currencies can I use to open my IFX Brokers account?", "Trading accounts are offered in USD, GBP, CHF, EUR, PLN, AUD, ZAR and JPY. Funds received in any other currency are subject to conversion prior to being deposited in your account.")
-      +infoCollapse("Can I open a Corporate account?", "Yes. The company’s representative applying for a corporate account will firstly register with IFX Brokers. The personal details must be those of the company’s representative.")
-      +infoCollapse("Can I open a Joint account ?", "No, IFX Brokers do not accept joint accounts.")
-      +infoCollapse("Can I open more than 1 account with IFX Brokers?", "Yes, you can open a maximum of 2 different trading accounts.")
-      +infoCollapse("How much is a swap?", "Our forex swap rate, or rollover, concerns overnight interest that is added or deducted when a position is held open overnight.  It may be earned or paid.  Swap/Rollover rates are determined by the existing overnight interest rate differential between the two paired currencies, and whether the selected position is buy \"long\" or sell \"short.")
-      +infoCollapse("How do I change the leverage on my account?", "To change the leverage of your trading account, login to the IFX Broker Account and click on your account number under ‘Account(s)/Actions, found under ‘My Accounts’. Select ‘Change Leverage’ from the dropdown menu. Please note: To change the leverage of your trading account, all open positions must be closed. Leverage changes may only be performed once every 24 hours.")
-      +infoCollapse("Does IFX Brokers give signals to clients?", "No, IFX Brokers do not give signals to clients. We do however, offer LIVE funded account holders world class information and education around specific pairs and symbols and market news.")
-      +infoCollapse("How do I change the password of my trading platform?", "To be supplied")
-      +infoCollapse("Re your platforms MAC compatible?", "No, however MAC users have direct access to Webtrader.")
-      +infoCollapse("Do you offer micro(0.01) lots?", "Yes, you can trade micro lots on all our platforms with our standard account type.")
+      +infoCollapse("0.525", "I am new to Forex, where do I start?", "The first step is to open an account.  All you need to do is complete the application here, submit your verification documents, fund your account.")
+      +infoCollapse("0.55", "Do I need to download any specialized software in order to trade?", "You will require the IFX Brokers MT4 platform which can be downloaded here.")
+      +infoCollapse("0.575", "What are you trading conditions?", "Our trading conditions are justly considered among the best in the world. Services offered to clients and partners by any member of IFX Brokers meets the highest international standards. We make forex trading comfortable and profitable.")
+      +infoCollapse("0.6", "What are your spreads?", "We offer premier market spreads with True ECN connectivity. More than 50 banks and dark pool liquidity sources price into our ECN at any given time, ensuring our spreads remain tight and liquidity deep 24/5.")
+      +infoCollapse("0.625", "Is IFX Brokers and ECN/STP Broker?", "Electronic Communications Networks (ECN) connect you directly to our liquidity providers. All orders are sent to them via Straight Through Processing (STP).")
+      +infoCollapse("0.65", "Do you offer Demo accounts ?", "Yes, we offer free demo accounts to anyone who registers with us.")
+      +infoCollapse("0.675", "How do I open a demo account?", "It’s really easy. All you do is click on the Open Demo icon on the IFX Brokers homepage, or click here. Enter your details in the online form and click ‘Submit’. Your demo account will be created immediately, directing you to your account page. A verification email containing your platform credentials will be sent to the email address you have provided.")
+      +infoCollapse("0.7", "What is the minimum deposit?", "The recommended minimum deposit is USD 1000. You may, however, deposit as little as USD 100.")
+      +infoCollapse("0.725", "What kind of accounts do you offer?", "We offer a range of trading accounts designed to meet the requirements of various traders.   (Insert account table found under online trading).")
+      +infoCollapse("0.75", "How do I open a Live Trading account?", "To register for a live trading account, click on the ‘Open Account’ icon on the IFX Brokers homepage, or click here. Complete the form and click ‘submit’. An email containing your platform credentials will be sent to the email address you have provided. Use this email and your selected password to login to our homepage.")
+      +infoCollapse("0.775", "What currencies can I use to open my IFX Brokers account?", "Trading accounts are offered in USD, GBP, CHF, EUR, PLN, AUD, ZAR and JPY. Funds received in any other currency are subject to conversion prior to being deposited in your account.")
+      +infoCollapse("0.8", "Can I open a Corporate account?", "Yes. The company’s representative applying for a corporate account will firstly register with IFX Brokers. The personal details must be those of the company’s representative.")
+      +infoCollapse("0.825", "Can I open a Joint account ?", "No, IFX Brokers do not accept joint accounts.")
+      +infoCollapse("0.85", "Can I open more than 1 account with IFX Brokers?", "Yes, you can open a maximum of 2 different trading accounts.")
+      +infoCollapse("0.875", "How much is a swap?", "Our forex swap rate, or rollover, concerns overnight interest that is added or deducted when a position is held open overnight.  It may be earned or paid.  Swap/Rollover rates are determined by the existing overnight interest rate differential between the two paired currencies, and whether the selected position is buy \"long\" or sell \"short.")
+      +infoCollapse("0.9", "How do I change the leverage on my account?", "To change the leverage of your trading account, login to the IFX Broker Account and click on your account number under ‘Account(s)/Actions, found under ‘My Accounts’. Select ‘Change Leverage’ from the dropdown menu. Please note: To change the leverage of your trading account, all open positions must be closed. Leverage changes may only be performed once every 24 hours.")
+      +infoCollapse("0.925", "Does IFX Brokers give signals to clients?", "No, IFX Brokers do not give signals to clients. We do however, offer LIVE funded account holders world class information and education around specific pairs and symbols and market news.")
+      +infoCollapse("0.95", "How do I change the password of my trading platform?", "To be supplied")
+      +infoCollapse("0.975", "Re your platforms MAC compatible?", "No, however MAC users have direct access to Webtrader.")
+      +infoCollapse("1", "Do you offer micro(0.01) lots?", "Yes, you can trade micro lots on all our platforms with our standard account type.")
 
 
 // LET’S GET TRADING :: END

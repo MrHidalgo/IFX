@@ -3,14 +3,14 @@
 .thoughts
   .container
 
-    h2.thoughts__title.title!= "Share your thoughts"
+    h2.thoughts__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Share your thoughts"
 
     .thoughts__row
-      .thoughts__block.thoughts__block-0(thoughts-modal-js data-effect="mfp-zoom-in", data-mfp-src="#modalthoughts")
+      .thoughts__block.thoughts__block-0.wow.wowFadeUp(data-animation-delay="0.45s" thoughts-modal-js data-effect="mfp-zoom-in", data-mfp-src="#modalthoughts")
         i.icon.icon-compliment
         span!= "Compliment"
 
-      .thoughts__block.thoughts__block-1(thoughts-modal-js data-effect="mfp-zoom-in", data-mfp-src="#modalthoughts")
+      .thoughts__block.thoughts__block-1.wow.wowFadeUp(data-animation-delay="0.45s" thoughts-modal-js data-effect="mfp-zoom-in", data-mfp-src="#modalthoughts")
         i.icon.icon-complaint
         span!= "Complaint"
 

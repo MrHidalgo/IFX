@@ -1,7 +1,7 @@
 // THE SMALL PRINT :: START
 
-mixin infoPdf(title, text)
-  .info__pdf
+mixin infoPdf(delayT, title, text)
+  .info__pdf.wow.wowFadeUp(data-animation-delay!= delayT + "s")
     .info__pdf-col.info__pdf-col--0
       i.icon.icon-pdf
     .info__pdf-col.info__pdf-col--1
@@ -25,16 +25,16 @@ mixin infoPdf(title, text)
 .info
   .container
 
-    h2.info__title.title!= "THE SMALL PRINT"
+    h2.info__title.title.wow.wowFadeUp(data-animation-delay="0.5s")!= "THE SMALL PRINT"
 
     .info__row
-      +infoPdf("Website Terms of Use", "Learn more about our terms and conditions when using our website")
-      +infoPdf("Account Opening Agreement", "Terms and conditions for new account holders")
-      +infoPdf("Complaint Handling Procedure", "To establish how complaints are handled")
-      +infoPdf("Conflict of Interest Policy", "Are you concerned about a conflict of interest?")
-      +infoPdf("Risk Disclosure Notice", "A comprehensive discussion on the risk of trading CFDs")
-      +infoPdf("Order Execution Policy", "Establish how we place orders")
-      +infoPdf("Anti-Money Laundering Policy", "Establish our commitment to anti-money laundering")
-      +infoPdf("Privacy Policy", "Are you concerned about the privacy of your personal data?")
+      +infoPdf("0.525", "Website Terms of Use", "Learn more about our terms and conditions when using our website")
+      +infoPdf("0.55", "Account Opening Agreement", "Terms and conditions for new account holders")
+      +infoPdf("0.575", "Complaint Handling Procedure", "To establish how complaints are handled")
+      +infoPdf("0.6", "Conflict of Interest Policy", "Are you concerned about a conflict of interest?")
+      +infoPdf("0.625", "Risk Disclosure Notice", "A comprehensive discussion on the risk of trading CFDs")
+      +infoPdf("0.65", "Order Execution Policy", "Establish how we place orders")
+      +infoPdf("0.675", "Anti-Money Laundering Policy", "Establish our commitment to anti-money laundering")
+      +infoPdf("0.7", "Privacy Policy", "Are you concerned about the privacy of your personal data?")
 
 // THE SMALL PRINT :: END

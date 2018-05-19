@@ -27,7 +27,9 @@
   .container
     ul.navigation__list
       -for(var i = 0, len = navigationMenuArr.length; i < len; i++)
-        li.navigation__item
+        li.navigation__item.wow.wowFadeUp(
+          data-animation-delay!= (0.3 + parseFloat(0.1 * i)).toFixed(1) + "s"
+        )
           a.navigation__btn(
             href= bodyClassArr[i] + ".html"
             class!=

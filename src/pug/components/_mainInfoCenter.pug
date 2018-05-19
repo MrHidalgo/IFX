@@ -1,7 +1,7 @@
 // INFO CENTRE :: START
 
-mixin mainBlock(hrefLink, className, iconName, title, text)
-  a.main__block(href= hrefLink title="" class!= "main__block-" + className)
+mixin mainBlock(delayT, hrefLink, className, iconName, title, text)
+  a.main__block.wow.wowFadeUp(data-animation-delay= delayT + "s" href= hrefLink title="" class!= "main__block-" + className)
 
     .main__block-header
       .main__block-header--left
@@ -17,14 +17,14 @@ mixin mainBlock(hrefLink, className, iconName, title, text)
 .main
 
   .container
-    h1.main__title!= "Info Centre"
-    p.main__subtitle.title!= "All your questions answered"
+    h1.main__title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Info Centre"
+    p.main__subtitle.title.wow.wowFadeUp(data-animation-delay="0.4s")!= "All your questions answered"
 
   .container
 
     .main__row.main__row--2
 
-      a.main__block.main__block-0(href="getTrading.html" class="" title="")
+      a.main__block.main__block-0.wow.wowFadeUp(data-animation-delay="0.5s", href="getTrading.html" class="" title="")
         .main__block-left
           .main__block-circle
             i.icon.icon-info-center-0
@@ -35,14 +35,14 @@ mixin mainBlock(hrefLink, className, iconName, title, text)
         .main__block-right
           p.main__block-text!= "As always, our trading conditions were designed with you in mind and it’s no coincidence that they conform to the highest global standards.  IFX Brokers are single-mindedly focused on ensuring that your trading experience is streamlined and profitable."
 
-      +mainBlock("smallPrint.html", "1", "info-center-1", "THE SMALL PRINT", "We operate in an environment of transparency and trust, so our small print is available to you at the click of a button.  For your peace of mind, please download any applicable documents.")
+      +mainBlock("0.5", "smallPrint.html", "1", "info-center-1", "THE SMALL PRINT", "We operate in an environment of transparency and trust, so our small print is available to you at the click of a button.  For your peace of mind, please download any applicable documents.")
 
     .main__row.main__row--3
-      +mainBlock("accountOpening.html", "2", "info-center-2", "ACCOUNT OPENING, FUNDING AND WITHDRAWALS", "The easiest way to start trading. IFX Brokers make it safe and easy to open an account and/or withdraw from your account.")
+      +mainBlock("0.6", "accountOpening.html", "2", "info-center-2", "ACCOUNT OPENING, FUNDING AND WITHDRAWALS", "The easiest way to start trading. IFX Brokers make it safe and easy to open an account and/or withdraw from your account.")
 
-      +mainBlock("collaborate.html", "3", "info-center-3", "DON’T HESITATE - COLLABORATE", "All your Partnership questions answered. We support excellence, the power is in your hands.")
+      +mainBlock("0.6", "collaborate.html", "3", "info-center-3", "DON’T HESITATE - COLLABORATE", "All your Partnership questions answered. We support excellence, the power is in your hands.")
 
-      +mainBlock("pipsqueaks.html", "4", "info-center-4", "THE DIFFERENCE BETWEEN PIPS AND PIPSQUEAKS", "Whether you’re new to Forex Trading, or just want to learn more about the IFX Academy, we answer some frequently asked questions here.")
+      +mainBlock("0.6", "pipsqueaks.html", "4", "info-center-4", "THE DIFFERENCE BETWEEN PIPS AND PIPSQUEAKS", "Whether you’re new to Forex Trading, or just want to learn more about the IFX Academy, we answer some frequently asked questions here.")
 
 
 // INFO CENTRE :: END

@@ -6,52 +6,52 @@
     .support__row
       .support__col.support__col-0
 
-        h2.support__title.title!= "Welcome to IFX Brokers Customer Support Services"
-        p.support__subtitle.subtitle!= "IFX looks forward to assisting you and is confident that you will have a pleasant and successful experience."
+        h2.support__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Welcome to IFX Brokers Customer Support Services"
+        p.support__subtitle.subtitle.wow.wowFadeUp(data-animation-delay="0.4s")!= "IFX looks forward to assisting you and is confident that you will have a pleasant and successful experience."
 
       .support__col.support__col-1
 
-        p.support__col-title.subtitle!= "Submit your question"
-        p.support__col-text.text!= "Our professional team will assist you."
+        p.support__col-title.subtitle.wow.wowFadeUp(data-animation-delay="0.3s")!= "Submit your question"
+        p.support__col-text.text.wow.wowFadeUp(data-animation-delay="0.4s")!= "Our professional team will assist you."
 
         // .has-error - class change color placeholder and background-color line - add to .form__field
         form.form(action="" method="")
-          .form__field
+          .form__field.wow.wowFadeUp(data-animation-delay="0.5s")
             input(type="text" name="" id="input-0" class="form__input" input-js)
             label(class="form__label" for="input-0")
               span(class="form__label-content")!= "Name"
             .form__line
 
-          .form__field
+          .form__field.wow.wowFadeUp(data-animation-delay="0.55s")
             input(type="text" name="" id="input-1" class="form__input" input-js)
             label(class="form__label" for="input-1")
               span(class="form__label-content")!= "Surname"
             .form__line
 
-          .form__field
+          .form__field.wow.wowFadeUp(data-animation-delay="0.6s")
             input(type="text" name="" id="input-2" class="form__input" input-js)
             label(class="form__label" for="input-2")
               span(class="form__label-content")!= "Email Address"
             .form__line
 
-          .form__field
+          .form__field.wow.wowFadeUp(data-animation-delay="0.65s")
             input(type="text" name="" id="input-3" class="form__input" input-js)
             label(class="form__label" for="input-3")
               span(class="form__label-content")!= "Cell Number"
             .form__line
 
-          .form__field
+          .form__field.wow.wowFadeUp(data-animation-delay="0.7s")
             input(type="text" name="" id="input-4" class="form__input" input-js)
             label(class="form__label" for="input-4")
               span(class="form__label-content")!= "Country"
             .form__line
 
-          .form__field
+          .form__field.wow.wowFadeUp(data-animation-delay="0.75s")
             input(type="text" name="" id="input-5" class="form__input" input-js)
             label(class="form__label" for="input-5")
               span(class="form__label-content")!= "Message"
             .form__line
 
-          button(type="submit" class="form__btn")!= "Become a partner"
+          button.wow.wowFadeUp(data-animation-delay="0.8s" type="submit" class="form__btn")!= "Become a partner"
 
 // SUPPORT :: END
