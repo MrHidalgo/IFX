@@ -1,0 +1,122 @@
+// MAIN
+// ===============
+.tradingTools
+  .main
+    position: relative
+    background-color: #F0F4F7
+    +rmin(320)
+      padding-top: 101px
+    +rmin(768)
+      padding-top: 201px
+
+
+    // BG
+    &__bg
+      z-index: 0
+      position: absolute
+      display: flex
+      align-items: center
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+      &-left,
+      &-right
+        height: 100%
+
+      &-left
+        width: 40%
+
+      &-right
+        width: 60%
+
+      &-right
+        background-image: url("../img/img-main-bg_tradingTools@2x.png")
+        background-position: left bottom
+        background-size: cover
+        background-repeat: no-repeat
+    // \ BG
+
+
+    // CONTAINER
+    .container
+      z-index: 1
+      position: relative
+      height: 100%
+    // \ CONTAINER
+
+
+    // TITLE
+    &__title
+      padding-bottom: 30px
+      line-height: normal
+      +rmin(320)
+        font-size: 32px
+      +rmin(576)
+        font-size: 36px
+      +rmin(768)
+        font-size: 48px
+      +rmin(992)
+        font-size: 62px
+      +rmin(1200)
+        font-size: 75px
+      +rmin(1440)
+        font-size: 90px
+      +rmin(1920)
+        font-size: 120px
+    // end TITLE
+
+
+    // SUBTITLE
+    &__subtitle
+      padding-bottom: 30px
+      text-align: left
+    // end SUBTITLE
+
+
+    // TEXT
+    &__text
+      text-align: left
+
+      &--p
+        padding-top: 30px
+        padding-bottom: 60px
+    // end TEXT
+
+    // BTN
+    &__btn
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      max-width: 396px
+      height: 60px
+      margin-bottom: 233px
+      background-color: $colorAlizarin
+      color: $colorWhite
+      font-weight: bold
+      text-transform: uppercase
+      +transition(background-color)
+      +rmin(320)
+        font-size: 18px
+      +rmin(576)
+        font-size: 22px
+
+      &:hover
+        background-color: $colorBlack
+        +transition(background-color)
+    // \ BTN
+
+
+    // ROW
+    &__row
+      display: flex
+    // \ ROW
+
+
+    // COL
+    &__col
+      width: 50%
+    // \ COL
+// ===============
