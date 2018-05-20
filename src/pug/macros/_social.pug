@@ -1,0 +1,21 @@
+// SOCIAL :: START
+
+-
+  var socialItemNameArr = [
+    "fb",
+    "ln",
+    "in",
+    "g+",
+    "tw",
+    "pi"
+  ];
+
+.social
+  ul.social__list
+    -for(var i = 0, len = socialItemNameArr.length; i < len; i++)
+      li.social__item
+        a(href="" title="" class="social__link")
+          +icon("ico-" + socialItemNameArr[i])
+
+
+// SOCIAL :: END

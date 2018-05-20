@@ -1,2 +1,37 @@
 // FOOTER
 // ===============
+.footer
+  padding-top: 60px
+
+
+  // ROW
+  &__row
+    display: flex
+
+    &-0
+      align-items: center
+      padding-bottom: 50px
+  // \ ROW
+
+
+  // COL
+  &__col
+    width: 50%
+    +r(575)
+      width: 100%
+
+    .footer__row-0 &
+      display: flex
+
+      &:nth-child(1)
+        justify-content: flex-start
+        +r(575)
+          display: none
+      &:nth-child(2)
+        justify-content: flex-end
+        +r(575)
+          justify-content: center
+
+    .footer__row-1
+  // \ COL
+// ===============
