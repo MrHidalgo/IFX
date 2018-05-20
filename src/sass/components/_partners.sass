@@ -19,8 +19,29 @@
   &__list
     display: flex
     align-items: center
-    justify-content: space-between
+    +rmin(320)
+      flex-wrap: wrap
+      justify-content: flex-start
+    +rmin(992)
+      flex-wrap: nowrap
+      justify-content: space-between
   // \ LIST
+
+
+  // ITEM
+  &__item
+    +rmin(320)
+      padding-left: 5px
+      padding-right: 5px
+      margin-top: 5px
+      margin-bottom: 5px
+    +rmin(992)
+      margin-top: 0
+      margin-bottom: 0
+    +rmin(1366)
+      padding-left: 0
+      padding-right: 0
+  // \ ITEM
 
 
   // IMG

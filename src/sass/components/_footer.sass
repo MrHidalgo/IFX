@@ -11,10 +11,17 @@
   // ROW
   &__row
     display: flex
+    +rmin(320)
+      flex-direction: column
+      align-items: flex-start
+    +rmin(768)
+      flex-direction: row
 
     &-0
       align-items: center
       padding-bottom: 50px
+      +r(767)
+        padding-bottom: 0
   // \ ROW
 
 
@@ -22,12 +29,26 @@
   &__col
     width: 50%
     &:nth-child(1)
-      padding-right: 35px
+      +rmin(768)
+        padding-right: 15px
+      +rmin(992)
+        padding-right: 35px
     &:nth-child(2)
-      padding-left: 35px
+      +rmin(320)
+        padding-bottom: 50px
+      +rmin(768)
+        padding-left: 15px
+        padding-bottom: 0
+      +rmin(992)
+        padding-left: 35px
 
     +r(575)
       width: 100%
+
+    .footer__row-0 &
+      &:nth-child(1)
+        +r(575)
+          display: none
 
     .footer__row-0 &,
     .footer__row-3 &
@@ -35,8 +56,6 @@
 
       &:nth-child(1)
         justify-content: flex-start
-        +r(575)
-          display: none
       &:nth-child(2)
         justify-content: flex-end
         +r(575)
