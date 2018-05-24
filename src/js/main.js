@@ -130,8 +130,8 @@ $(document).ready(function () {
 
   // HAMBURGER TOGGLER
   // ====================
-  _document.on('click', '[js-hamburger]', function(e) {
-    $(this).toggleClass('is-open');
+  $("[js-hamburger]").on('click', function(e) {
+    $(e.currentTarget).toggleClass('is-open');
 
     $('.header__mobile').toggleClass('is-active fadeIn');
     $("body, html").toggleClass("is-hideScroll");
@@ -152,9 +152,6 @@ $(document).ready(function () {
 
     const currentBtn = $(e.target);
 
-    // $("[dropdown-btn-js]").removeClass("is-active");
-    // currentBtn.addClass("is-active");
-
     if(currentParent === mainParent) {
       $('body, html').animate({
         scrollTop: topHeightOffset
@@ -163,7 +160,10 @@ $(document).ready(function () {
       window.location.href = currentParent + ".html" + currentHrefVal;
     }
 
-    $("[js-hamburger]").click();
+
+    $("[js-hamburger]").removeClass('is-open');
+    $('.header__mobile').removeClass('is-active fadeIn');
+
 
     if(_window.width() <= 1365){
       $("[menu-js]").removeClass("is-show-drop");
