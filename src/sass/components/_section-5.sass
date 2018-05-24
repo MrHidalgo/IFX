@@ -15,6 +15,69 @@
       padding: 15px
 
 
+  .section__hover
+    &-0,
+    &-1,
+    &-2
+      cursor: pointer
+      overflow: hidden
+      position: relative
+
+      &:before
+        content: ""
+        z-index: 0
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 100%
+        +transition(transform)
+        transition-duration: 0.5s
+
+      &:hover
+        &:before
+          transform: scale(1.05)
+          +transition(transform)
+          transition-duration: 0.5s
+
+      > *
+        z-index: 1
+        position: relative
+
+    &-0
+      &:before
+        left: 0
+        right: 0
+        margin-left: auto
+        margin-right: auto
+        background-image: url("../img/img_wallStreet_bg-desktop@2x.png")
+        background-repeat: no-repeat
+        background-position: center bottom
+        background-size: contain
+        +r(767)
+          background-image: url("../img/img_wallStreet_bg@2x.png")
+          background-position-y: 90px
+        +r(575)
+          background-position-y: 155px
+          background-position-x: 20px
+
+    &-1
+      &:before
+        +rmin(1200)
+          left: 0
+          bottom: 0
+          background-image: url("../img/img-secretWeapon_bg.png")
+          background-repeat: no-repeat
+          background-position: 12px bottom
+
+    &-2
+      &:before
+        +rmin(992)
+          right: 0
+          background-image: url("../img/img-fast_bg@2x.png")
+          background-repeat: no-repeat
+          background-position: right bottom
+          background-size: contain
+
   .section__row
     height: 100%
     font-size: 0
@@ -33,18 +96,11 @@
     &:nth-child(1)
       margin-right: 10px
       background-color: $colorWhiteSmoke
-      background-image: url("../img/img_wallStreet_bg-desktop@2x.png")
-      background-repeat: no-repeat
-      background-position: center bottom
-      background-size: contain
+
       +r(767)
         padding: 30px
         margin-right: 0
         margin-bottom: 20px
-        background-image: url("../img/img_wallStreet_bg@2x.png")
-        background-position-y: 120px
-      +r(576)
-        background-position-y: 140px
 
       .section__title
         font-weight: 700
@@ -141,14 +197,11 @@
       justify-content: center
       margin-bottom: 20px
       padding-right: 30px
-      background-repeat: no-repeat
-      background-position: 12px bottom
       +rmin(992)
         padding-left: 30px
         padding-right: 30px
       +rmin(1200)
         padding-left: 290px
-        background-image: url("../img/img-secretWeapon_bg.png")
       +rmin(1366)
       +rmin(1440)
       +r(991)
@@ -185,14 +238,8 @@
         margin-bottom: 20px
 
     &:nth-child(2)
-      //margin-top: 10px
       padding-left: 50px
       padding-top: 60px
-      background-repeat: no-repeat
-      background-position: right bottom
-      background-size: contain
-      +rmin(992)
-        background-image: url("../img/img-fast_bg@2x.png")
       +r(991)
         padding: 30px
         background-image: none

@@ -4,6 +4,13 @@
   animation-delay: 0.3s
   +transition(transform)
 
+  &--footer
+    .icon-logo
+      display: none
+  &--header
+    .icon-logo--footer
+      display: none
+
   &:hover
     transform: scale(0.97)
     +transition(transform)
@@ -13,5 +20,8 @@
 
   .is-loader &
     animation-delay: 2.05s
+
+  &__btn
+    display: block
 
 // LOGOTYPE :: END
