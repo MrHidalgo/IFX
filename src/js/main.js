@@ -101,8 +101,6 @@ $(document).ready(function () {
   function initFixedBlock(elemParent, elemChild) {
     _window.on('scroll load', () => {
 
-      console.log("initFixedBlock");
-
       let vScroll = _window.scrollTop();
       let yTopElem = $(elemParent).offset().top;
       let xLeftElem = $(elemParent).find(elemChild).offset().left;
@@ -250,10 +248,10 @@ $(document).ready(function () {
   // PARALLAX
   // ====================
   if($("[parallax-js]").length) {
-    $(window).stellar({
-      positionProperty: 'transform',
-      hideDistantElements: false
-    });
+    // $(window).stellar({
+    //   positionProperty: 'transform',
+    //   hideDistantElements: false
+    // });
   }
   // ====================
 
