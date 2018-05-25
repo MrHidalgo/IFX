@@ -248,10 +248,10 @@ $(document).ready(function () {
   // PARALLAX
   // ====================
   if($("[parallax-js]").length) {
-    // $(window).stellar({
-    //   positionProperty: 'transform',
-    //   hideDistantElements: false
-    // });
+    $(window).stellar({
+      positionProperty: 'transform',
+      hideDistantElements: false
+    });
   }
   // ====================
 

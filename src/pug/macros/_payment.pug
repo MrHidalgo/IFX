@@ -12,11 +12,13 @@
   ];
 
 .payment
-  p.payment__title!= "We Accept"
+  p.payment__title.wow.wowFadeUp(data-animation-delay="0.4s")!= "We Accept"
 
-  ul.payment__list
+  ul.payment__list.wow.wowFadeUp(data-animation-delay="0.45s")
     -for(var i = 0, len = paymentNameArr.length; i < len; i++)
-      li.payment__item
+      li.payment__item.wow.wowFadeUp(
+        data-animation-delay!= (0.5 + parseFloat(0.1 * i)).toFixed(1) + "s"
+      )
         img(
           src="./img/" + paymentNameArr[i] + ".png"
           srcset="./img/" + paymentNameArr[i] + "@2x.png 2x"

@@ -10,11 +10,13 @@
   ];
 
 .techPartner
-  p.techPartner__title!= "Our Technology Partners"
+  p.techPartner__title.wow.wowFadeUp(data-animation-delay="0.4s")!= "Our Technology Partners"
 
-  ul.techPartner__list
+  ul.techPartner__list.wow.wowFadeUp(data-animation-delay="0.45s")
     -for(var i = 0, len = techPartnerImgNameArr.length; i < len; i++)
-      li.techPartner__item
+      li.techPartner__item.wow.wowFadeUp(
+        data-animation-delay!= (0.5 + parseFloat(0.1 * i)).toFixed(1) + "s"
+      )
         img(
           src="./img/" + techPartnerImgNameArr[i] + ".png"
           srcset="./img/" + techPartnerImgNameArr[i] + "@2x.png 2x"
