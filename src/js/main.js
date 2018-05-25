@@ -101,6 +101,8 @@ $(document).ready(function () {
   function initFixedBlock(elemParent, elemChild) {
     _window.on('scroll load', () => {
 
+      console.log("initFixedBlock");
+
       let vScroll = _window.scrollTop();
       let yTopElem = $(elemParent).offset().top;
       let xLeftElem = $(elemParent).find(elemChild).offset().left;
@@ -135,12 +137,24 @@ $(document).ready(function () {
 
     $('.header__mobile').toggleClass('is-active fadeIn');
     $("body, html").toggleClass("is-hideScroll");
+
+    $("[menu-js]").removeClass("is-show-drop");
+    $(".menu__dropdown").slideUp().removeClass("is-active-drop");
   });
   // ====================
 
 
   // SMOOTH SCROLL
   // ====================
+  $("[anchor-js]").on("click", function(e) {
+    let linkHref = $(e.currentTarget).attr('href'),
+      navHeight = $(".header").outerHeight() || 0,
+      topHeightOffset = $(linkHref).offset().top - navHeight;
+
+    $('body, html').animate({
+      scrollTop: topHeightOffset
+    }, 1000);
+  });
   $("[dropdown-btn-js]").on("click", (e) => {
     const currentParent = $(e.target).attr("data-parent"),
       currentHrefVal = $(e.target).attr("href"),
@@ -271,8 +285,6 @@ $(document).ready(function () {
 
         if (y >= yElem) {
           elemID = $(this).attr('id');
-
-          console.log(elemID);
 
           if (elemID !== lastID) {
             lastID = elemID;

@@ -33,9 +33,7 @@
     .main__subMenu(gettingDown-submenu-js)
       ul.main__subMenu-list
         -for(var i = 0, len = mainSubMenu.length; i < len; i++)
-          li.main__subMenu-item.wow.wowFadeUp(
-            data-animation-delay!= (0.4 + parseFloat(0.1 * i)).toFixed(1) + "s"
-          )
+          li.main__subMenu-item
             a.main__subMenu-link(
               href="#" + mainSubMenuHref[i]
               class= (i === 0) ? "is-active" : ""
