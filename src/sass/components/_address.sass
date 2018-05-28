@@ -1,0 +1,56 @@
+// ADDRESS
+// ===============
+.address
+  +rmin(320)
+    padding-top: 50px
+    padding-bottom: 50px
+  +rmin(768)
+    padding-top: 130px
+    padding-bottom: 150px
+
+  // ROW
+  &__row
+    display: flex
+    +rmin(320)
+      flex-direction: column
+    +rmin(768)
+      flex-direction: row
+  // \ ROW
+
+
+  // COL
+  &__col
+    +rmin(320)
+      width: 100%
+    +rmin(768)
+      width: 50%
+
+    &:last-child
+      +r(767)
+        margin-top: 30px
+
+    &-title
+      padding-bottom: 18px
+      text-transform: uppercase
+      font-weight: bold
+      +rmin(320)
+        font-size: 16px
+      +rmin(576)
+        font-size: 20px
+      +rmin(728)
+        font-size: 24px
+
+    &-text
+      padding-bottom: 20px
+      font-family: "SFUIText", "Arial", sans-serif
+      +rmin(320)
+        font-size: 14px
+      +rmin(576)
+        font-size: 16px
+      +rmin(728)
+        font-size: 18px
+
+      &:last-child
+        padding-bottom: 0
+  // \ COL
+// ===============
