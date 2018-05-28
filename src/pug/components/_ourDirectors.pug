@@ -9,6 +9,14 @@
     "Kevin Millien",
     "Ian Lane"
   ];
+  var directorsDescription = [
+    "Holding a Marketing Diploma from the University of Stellenbosch, Pieter de Necker relocated to the UK, working as a private investor fund manager specializing in technical analysis. Identifying an urgent need for intensive education in the forex industry, he launched International FX Trading in 2012. The introduction of International FX Brokers in 2017 is the logical progression of this step. Armed with a wealth of trading experience over a variety of trading platforms, Pieter de Necker’s analytical mind, integrity and business acumen are his greatest strengths.",
+    "A Chartered Account with a passion for financial management, corporate governance and its legislation, Thula Ntumba has extensive experience in the construction, retail and mining industries. A founding partner of Ntumba Chartered Accountants in 2008, he is an expert in financial services, including risk assessment and management, corporatisation and internal audit design. Thula Ntumba undoubtedly represents the knowledge and experience that drives IFX to be the best in its field.",
+    "Hannelé Viljoen holds qualifications in Business Management, Project Management and Law with over 20 years’ practical experience in commercial and business management. Involved with the development of the IFX Academy since 2012, she joined the board of directors during July 2017 in the capacity of Commercial Director. Responsible for all commercial and management activities, Hannelé Viljoen is a perfectionist with a keen eye for detail.",
+    "Jamie Vertue holds a BCompt Accounting degree from the University of South Africa (Unisa) and is a registered Associate General Accountant with the pre-eminent South African Institute of Chartered Accountants (SAICA). After a four-year stint in the fast-moving consumer goods and manufacturing sector, he opened his own business. In 2014, he discovered the world of forex, and, in his words, “has never looked back”. Aged only 27 years, Jamie Vertue represents the passion and drive for excellence that underlies the IFX ethos.",
+    "A pioneer in the electronic trading space of capital markets, Kevin Millien has used technology and management expertise to turn companies into global enterprises. Commencing his forex career in sales with FXCM, he became Vice President of Institutional Sales and Trading. Kevin Millien launched Boston Technologies, a company that achieved a revenue growth of 1,944% during his tenure. A co-founder of Boston Prime and BT Time, he is President of the Millien Consulting Group, which provides advisory services and training to brokerages, technology firms and fund managers.",
+    "Ian Lane’s expertise ranges from mathematical statistics to physics, computer science and astronomy. An investment specialist, Ian Lane designs and develops investment models by matching risk tolerance, risk aptitude and returns to systematic investment processes. A member of the prestigious CFA Institute, he is also a qualified Eurex trader with extensive experience in unit trust funds, pension funds, private and corporate investment portfolios. He has appeared on numerous radio and television shows including SABC News, and has written for Moneyweek financial magazine."
+  ];
   var directorsPosition = [
     "CEO",
     "Chairman",
@@ -17,9 +25,26 @@
     "BUSINESS DEVELOPMENT",
     "REGULATORY AFFAIRS"
   ];
+  var directorsImage = [
+    "img-ava-0_directors",
+    "img-ava-1_directors",
+    "img-ava-2_directors",
+    "img-ava-3_directors",
+    "img-ava-4_directors",
+    "img-ava-5_directors"
+  ];
 
-mixin directorsBlock(imgName, name, position, icon, delayT)
-  .directors__block.wow.wowFadeUp(data-animation-delay!= delayT + "s")
+mixin directorsBlock(imgName, name, position, icon, delayT, arrDesc, arrImg)
+  .directors__block.wow.wowFadeUp(
+    data-animation-delay!= delayT + "s"
+    data-name!= name
+    data-description!= arrDesc
+    data-position!= position
+    data-img!= arrImg
+    director-js
+    data-effect="mfp-slide-in"
+    data-mfp-src="#modalDirectors"
+  )
     .directors__block-image
       img(
         src="./img/" + imgName + ".png"
@@ -43,15 +68,15 @@ mixin directorsBlock(imgName, name, position, icon, delayT)
         p.directors__text.text.wow.wowFadeUp(data-animation-delay="0.5s")!= "With numerous degrees and diplomas, the IFX directors have decades of practical experience and knowledge garnered from senior positions in international concerns. They constantly evaluate the evolution and expansion of IFX Brokers."
 
       .directors__col
-        +directorsBlock("img-ava-0_directors", directorsName[0], directorsPosition[0], "icon-plus", "0.5")
-        +directorsBlock("img-ava-1_directors", directorsName[1], directorsPosition[1], "icon-plus", "0.6")
+        +directorsBlock("img-ava-0_directors", directorsName[0], directorsPosition[0], "icon-plus", "0.5", directorsDescription[0], directorsImage[0])
+        +directorsBlock("img-ava-1_directors", directorsName[1], directorsPosition[1], "icon-plus", "0.6", directorsDescription[1], directorsImage[1])
 
     .directors__row.directors__row-1
       .directors__col
-        +directorsBlock("img-ava-2_directors", directorsName[2], directorsPosition[2], "icon-plus", "0.4")
-        +directorsBlock("img-ava-3_directors", directorsName[3], directorsPosition[3], "icon-plus", "0.5")
-        +directorsBlock("img-ava-4_directors", directorsName[4], directorsPosition[4], "icon-plus", "0.6")
-        +directorsBlock("img-ava-5_directors", directorsName[5], directorsPosition[5], "icon-plus", "0.7")
+        +directorsBlock("img-ava-2_directors", directorsName[2], directorsPosition[2], "icon-plus", "0.4", directorsDescription[2], directorsImage[2])
+        +directorsBlock("img-ava-3_directors", directorsName[3], directorsPosition[3], "icon-plus", "0.5", directorsDescription[3], directorsImage[3])
+        +directorsBlock("img-ava-4_directors", directorsName[4], directorsPosition[4], "icon-plus", "0.6", directorsDescription[4], directorsImage[4])
+        +directorsBlock("img-ava-5_directors", directorsName[5], directorsPosition[5], "icon-plus", "0.7", directorsDescription[5], directorsImage[5])
 
       .directors__col.wow.wowFadeUp(data-animation-delay="0.7s")
         p.directors__subtitle.title!= "Our people. </br>Our blue-chip asset."

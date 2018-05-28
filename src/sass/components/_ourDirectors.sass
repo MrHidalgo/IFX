@@ -126,11 +126,19 @@
     width: 50%
     height: 192px
 
+    &:hover
+      .directors__block-img
+        transform: scale(1.05)
+        +transition(transform)
+
+    &-img
+      +transition(transform)
+
     &-info
       position: absolute
       top: 103px
       left: 53px
-      height: 60px
+      //height: 60px
       background-color: $colorWhite
       font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
       +rmin(320)

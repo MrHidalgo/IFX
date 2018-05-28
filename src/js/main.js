@@ -436,6 +436,42 @@ $(document).ready(function () {
         }
       }
     });
+    $('[director-js]').magnificPopup({
+      type: 'inline',
+      fixedContentPos: true,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 400,
+      mainClass: 'show',
+      callbacks: {
+        beforeOpen: function(e) {
+          startWindowScroll = _window.scrollTop();
+
+            const userName = $(this.st.el).data('name'),
+              userPosition = $(this.st.el).data('position'),
+              userDesc = $(this.st.el).data('description'),
+              userImg = $(this.st.el).data('img');
+
+            const nameElem = $("#modalDirectors [name]"),
+              posElem = $("#modalDirectors [position]"),
+              descElem = $("#modalDirectors [desc]"),
+              imgElem = $("#modalDirectors [img]");
+
+          nameElem.html(userName);
+          posElem.html(userPosition);
+          descElem.html(userDesc);
+          imgElem.attr("src", "./img/" + userImg + ".png");
+
+          this.st.mainClass = this.st.el.attr('data-effect');
+        },
+        close: function() {
+          _window.scrollTop(startWindowScroll);
+        }
+      }
+    });
   }
   // ====================
 
