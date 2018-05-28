@@ -218,6 +218,17 @@ $(document).ready(function () {
     $("[trade-data-js]").removeClass('is-active');
     $(e.target).closest("li").addClass('is-active');
   });
+  _document.on("click", "[trade-menu-js]", (e) => {
+    e.preventDefault();
+
+    const linkCount = $(e.target).closest("li").data("count");
+
+    $("[trade-menu-js]").removeClass('is-active');
+    $(".section__data-cover").removeClass('is-active');
+
+    $(e.target).closest("li").addClass('is-active');
+    $(".section__data-cover--" + linkCount).addClass('is-active');
+  });
   // ====================
 
 

@@ -37,6 +37,7 @@ section.section.section-3#section-3
             -for(var i = 0, len = sectionMenuArr.length; i < len; i++)
               li.section__menu-item.wow.wowFadeUp(
                 trade-menu-js
+                data-count!= i
                 class!= (i === 0) ? "is-active" : ""
                 data-animation-delay!= (0.5 + parseFloat(0.1 * i)).toFixed(1) + "s"
               )
@@ -50,16 +51,18 @@ section.section.section-3#section-3
                   a(href="#" class="section__submenu-link" title="")!= sectionDataMenu[i]
 
           .section__data-right
-            .section__data-right--top.wow.wowFadeUp(data-animation-delay="0.65s")
-              span!= "0.2"
-              span!= "pips"
-            .section__data-right--bottom.wow.wowFadeUp(data-animation-delay="0.65s")
-              p
-                span!= "BID"
-                span!= "1.23957"
-              p
-                span!= "ASK"
-                span!= "1.23959"
+            -for(var i = 0, len = sectionMenuArr.length; i < len; i++)
+              div.section__data-cover(class!=(i === 0) ? "is-active section__data-cover--" + i: "section__data-cover--" + i)
+                .section__data-right--top.wow.wowFadeUp(data-animation-delay="0.65s")
+                  span!= "0.2" + i
+                  span!= "pips"
+                .section__data-right--bottom.wow.wowFadeUp(data-animation-delay="0.65s")
+                  p
+                    span!= "BID"
+                    span!= "1.23957"
+                  p
+                    span!= "ASK"
+                    span!= "1.23959"
 
 
 // SECTION 3 :: START
