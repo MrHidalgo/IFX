@@ -16,12 +16,10 @@ mixin serversBlock(num, title, text, delayT)
     p.servers__text.text.wow.wowFadeUp(data-animation-delay="0.5s")!= "Our live trading servers, hosted by Equinix, are based in the major financial hubs of London and link to Wall Street in New York, Sydney, Tokyo – in fact, anywhere in the world."
 
     .servers__row
-      .servers__row-wrap
-        +serversBlock("99%", "Stability", "99.9% MT4 Uptime", "0.4")
-      .servers__row-wrap
-        +serversBlock("500,000", "Executed Traders", "Up to 500 000 trades executed per m.sec", "0.5")
-        +serversBlock("2.5", "Execution Speed", "2.5 milliseconds", "0.6")
-        +serversBlock("150", "Process Ability", "99.9% MT4 Uptime", "0.7")
+      +serversBlock("99%", "Stability", "99.9% MT4 Uptime", "0.4")
+      +serversBlock("500,000", "Executed Traders", "Up to 500 000 trades executed per m.sec", "0.5")
+      +serversBlock("2.5", "Execution Speed", "2.5 milliseconds", "0.6")
+      +serversBlock("150", "Process Ability", "99.9% MT4 Uptime", "0.7")
 
 
 // OUR SERVERS :: END

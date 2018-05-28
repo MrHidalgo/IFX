@@ -13,6 +13,19 @@ gulp.task('copy:pdf', function() {
     .pipe(gulp.dest(config.dest.pdf));
 });
 
+gulp.task('copy:quote', function() {
+  return gulp
+    .src(config.src.quote + '/**')
+    .pipe(gulp.dest(config.dest.quote));
+});
+
+
+gulp.task('copy:addJS', function() {
+  return gulp
+    .src(config.src.addJs + '/**')
+    .pipe(gulp.dest(config.dest.addJs));
+});
+
 gulp.task('copy:vendor', function() {
   return gulp
     .src(config.src.vendor + '/**/*.*')
@@ -29,7 +42,9 @@ gulp.task('copy', [
   // 'copy:rootfiles',
   'copy:vendor',
   'copy:fonts',
-  'copy:pdf'
+  'copy:pdf',
+  'copy:addJS',
+  'copy:quote'
 ]);
 
 gulp.task('copy:watch', function() {

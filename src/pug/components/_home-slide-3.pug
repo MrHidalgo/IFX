@@ -47,7 +47,12 @@ section.section.section-3#section-3
           .section__data-left
             ul.section__submenu-list
               -for(var i = 0, len = sectionDataMenu.length; i < len; i++)
-                li.section__submenu-item.wow.wowFadeUp(trade-data-js, data-animation-delay!= (0.65 + parseFloat(0.1 * i)).toFixed(1) + "s", class!= (i === 0) ? "is-active" : "")
+                li.section__submenu-item.wow.wowFadeUp(
+                  trade-data-js,
+                  data-animation-delay!= (0.65 + parseFloat(0.1 * i)).toFixed(1) + "s"
+                  class!= (i === 0) ? "is-active" : ""
+                  data-quote!= i
+                )
                   a(href="#" class="section__submenu-link" title="")!= sectionDataMenu[i]
 
           .section__data-right

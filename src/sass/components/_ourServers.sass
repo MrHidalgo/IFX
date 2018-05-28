@@ -36,58 +36,51 @@
 
   // ROW
   &__row
-
-    margin-left: auto
-    margin-right: auto
-    +rmin(768)
-      width: (648px / 3) * 3
-      height: (648px / 3) * 2
-    +rmin(992)
-      width: (264px * 3)
-      height: (264px * 2)
-
-    &-wrap
-      +rmin(320)
-        display: block
-      +rmin(768)
-        display: flex
-      &:nth-child(1)
-        justify-content: center
-        .servers__block
-          border-bottom: none
-      &:nth-child(2)
-        .servers__block
-          &:nth-child(1)
-            border-right: none
-          &:nth-child(3)
-            border-left: none
+    display: flex
+    justify-content: center
+    +rmin(320)
+      flex-wrap: wrap
+    +rmin(1200)
+      flex-wrap: nowrap
   // end ROW
 
 
   // BLOCK
   &__block
+    cursor: pointer
+    width: 100%
+    min-height: 265px
     display: flex
     flex-direction: column
     align-items: center
-    border: 1px solid rgba($colorGrey, 0.1)
+    margin: 9px
+    +transition(box-shadow)
     +rmin(320)
-      width: 100%
-      min-height: 216px
+      max-width: 310px
     +rmin(768)
-      width: (648px / 3)
-      height: (648px / 3)
+      flex-wrap: wrap
+      max-width: 295px
     +rmin(992)
-      width: 264px
-      height: 264px
+      max-width: 310px
+    +rmin(1200)
+      flex-wrap: nowrap
+
+    &:nth-child(1),
+    &:nth-child(4)
+      background-color: $colorBlackRussian
+
+    &:nth-child(2),
+    &:nth-child(3)
+      background-color: $colorAlizarin
 
     &-num
       padding-top: 67px
       padding-bottom: 19px
-      color: $colorAlizarin
+      color: $colorWhite
       line-height: 1
       font-weight: 600
       +rmin(320)
-        font-size: 32px
+        font-size: 40px
       +rmin(992)
         font-size: 42px
       +rmin(1440)
@@ -95,6 +88,7 @@
 
     &-title
       padding-bottom: 10px
+      color: $colorWhite
       font-family: "SFUIText", "Arial", sans-serif
       font-weight: 600
       +rmin(320)
@@ -103,11 +97,12 @@
         font-size: 16px
       +rmin(728)
         font-size: 18px
+
     &-text
       padding-left: 15px
       padding-right: 15px
       text-align: center
       font-family: "SFUIText", "Arial", sans-serif
-      color: rgba($colorBlack, 0.5)
+      color: rgba($colorWhite, 0.5)
   // end BLOCK
 // ===============

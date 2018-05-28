@@ -23,6 +23,8 @@ var config = {
     iconsFont    : 'src/icons',
     fonts        : 'src/fonts',
     pdf          : 'src/pdf',
+    quote        : 'src/quotes',
+    addJs        : 'src/addJS',
     vendor       : 'src/vendor'
   },
   dest: {
@@ -33,6 +35,8 @@ var config = {
     img   : destPath + '/img',
     fonts : destPath + '/fonts',
     pdf   : destPath + '/pdf',
+    quote : destPath + '/quotes',
+    addJs : destPath + '/js',
     vendor: destPath + '/vendor'
   },
 
