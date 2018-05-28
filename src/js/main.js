@@ -412,9 +412,13 @@ $(document).ready(function () {
         beforeOpen: function(e) {
           startWindowScroll = _window.scrollTop();
 
-          console.log("beforeOpen");
-
           this.st.mainClass = this.st.el.attr('data-effect');
+
+          let title = "Submit your ";
+          let linkValue = $(this.st.el).find('span').text();
+          let modalTitle = $('#modalthoughts').find(".modal__title");
+
+          modalTitle.html(title + linkValue.toLowerCase());
         },
         close: function() {
           _window.scrollTop(startWindowScroll);

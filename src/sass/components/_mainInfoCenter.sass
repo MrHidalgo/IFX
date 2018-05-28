@@ -76,6 +76,7 @@
       width: 100%
       min-height: 100px
       background-color: $colorWhite
+      +transition(box-shadow)
       +rmin(320)
         padding: 15px
         max-width: 100%
@@ -86,6 +87,10 @@
         max-width: 395px
       +rmin(1366)
         padding: 50px
+
+      &:hover
+        box-shadow: 0 0 25px 3px rgba($colorBlack, 0.025)
+        +transition(box-shadow)
 
       &-0
         display: flex
