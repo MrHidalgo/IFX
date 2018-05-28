@@ -16,16 +16,28 @@
 
   // SUBTITLE
   &__subtitle
+    padding-bottom: 20px
+  // end SUBTITLE
+
+
+
+  // TEXT
+  &__text
+    width: 100%
+    max-width: 790px
+    margin-left: auto
+    margin-right: auto
     +rmin(320)
       padding-bottom: 30px
     +rmin(768)
       padding-bottom: 68px
-  // end SUBTITLE
+  // end TEXT
 
 
   // ROW
   &__row
     display: flex
+    flex-wrap: wrap
     +rmin(320)
       flex-direction: column
     +rmin(992)
@@ -35,8 +47,8 @@
 
   // COL
   &__col
-    &:nth-child(2)
-      padding-left: 110px
+    +rmin(992)
+      width: 50%
   // end ROW
 
 
@@ -45,8 +57,12 @@
     display: flex
     +rmin(320)
       padding-bottom: 30px
+      padding-right: 30px
+    +rmin(576)
+      padding-right: 50px
     +rmin(992)
       padding-bottom: 61px
+      padding-right: 101px
 
     &-left
       width: 104px

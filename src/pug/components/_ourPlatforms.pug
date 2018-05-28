@@ -10,22 +10,22 @@
   ];
   var platformsTitleArr = [
     "Streamlining successful trading",
-    "IFX META TRADER 4 for Android",
-    "IFX WEB TRADER",
-    "IFX META TRADER 4 for iPhone & iPad",
-    "IFX META TRADER 4"
+    "IFX METATRADER 4 for Android",
+    "IFX MT4 WEBTRADER",
+    "IFX METATRADER 4 for iPhone & iPad",
+    "IFX METATRADER 4 DESKTOP"
   ];
   var platformsTextArr = [
     "Our live trading servers, hosted by Equinix, are based in the major financial hubs of London and link to Wall Street in New York, Sydney, Tokyo – in fact, anywhere in the world.",
     "The IFX Meta Trader 4 Android OS app provides a comprehensive trading platform for Android devices. You have access to everything you need for successful forex trading, including a complete set of orders, trading history, interactive charts and technical analyses.",
     "This web platform allows you to trade easily and efficiently from any browser or operating system including Windows, Mac and Linux without any additional software. All you need is an internet connection to start trading.",
-    "Our live trading servers, hosted by Equinix, are based in the major financial hubs of London and link to Wall Street in New Your, Sydney, Tokyo – in fact, anywhere in the world.",
-    "Our revolutionary technology allows you trade with absolute accuracy, free from slippage and re-quotes."
+    "Undoubtedly the most functional platform available for iOS devices, it enables you to trade anytime, anywhere in the world.",
+    "Our revolutionary technology allows you trade with absolute accuracy, free from slippage and re-quotes and re-quotes."
   ];
   var platformsBtnBoolArr = [
-    false,
     true,
-    false,
+    true,
+    true,
     true,
     true
   ];
@@ -54,15 +54,26 @@ mixin platformsBlock(iconName, title, text, boolBtn, delayT)
   .container
 
     h2.platforms__title.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Our Platforms"
-    p.platforms__subtitle.subtitle.wow.wowFadeUp(data-animation-delay="0.4s")!= "We support excellence, the power is in your hands"
+    p.platforms__subtitle.subtitle.wow.wowFadeUp(data-animation-delay="0.4s")!= "IFX multi asset trading platforms"
+    p.platforms__text.text.wow.wowFadeUp(data-animation-delay="0.45s")!= "Reliable and completely secure, you can access 85 pre-installed indicators at the click of a button. IFX Meta Trader 4 provides enhanced charting functionality and highly sophisticated order management tools. It also has a multilingual interface, provides a comprehensive analysis and allows for multiple chart set ups."
 
     .platforms__row
       .platforms__col
-        +platformsBlock(platformsIconNameArr[0], platformsTitleArr[0], platformsTextArr[0], platformsBtnBoolArr[0], "0.5")
-        +platformsBlock(platformsIconNameArr[2], platformsTitleArr[2], platformsTextArr[2], platformsBtnBoolArr[2], "0.7")
-        +platformsBlock(platformsIconNameArr[4], platformsTitleArr[4], platformsTextArr[4], platformsBtnBoolArr[4], "0.9")
+        +platformsBlock(platformsIconNameArr[4], platformsTitleArr[4], platformsTextArr[4], platformsBtnBoolArr[4], "0.5")
       .platforms__col
-        +platformsBlock(platformsIconNameArr[1], platformsTitleArr[1], platformsTextArr[1], platformsBtnBoolArr[1], "0.6")
-        +platformsBlock(platformsIconNameArr[3], platformsTitleArr[3], platformsTextArr[3], platformsBtnBoolArr[3], "0.8")
+        +platformsBlock(platformsIconNameArr[3], platformsTitleArr[3], platformsTextArr[3], platformsBtnBoolArr[3], "0.6")
+      .platforms__col
+        +platformsBlock(platformsIconNameArr[2], platformsTitleArr[2], platformsTextArr[2], platformsBtnBoolArr[2], "0.7")
+      .platforms__col
+        +platformsBlock(platformsIconNameArr[1], platformsTitleArr[1], platformsTextArr[1], platformsBtnBoolArr[1], "0.8")
+
+
+      .platforms__col
+        //+platformsBlock(platformsIconNameArr[0], platformsTitleArr[0], platformsTextArr[0], platformsBtnBoolArr[0], "0.5")
+
+
+      .platforms__col
+
+
 
 // OUR PLATFORMS :: END

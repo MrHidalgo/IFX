@@ -2,19 +2,35 @@
 // ===============
 .about
   .main
-    background-image: url("../img/img-mainAbout_bg.png")
-    background-repeat: no-repeat
-    background-position: left bottom
-    background-size: contain
+    position: relative
+    background: rgb(19,19,26)
+    background: -moz-linear-gradient(top, rgba(19,19,26,1) 0%, rgba(43,43,49,1) 100%)
+    background: -webkit-linear-gradient(top, rgba(19,19,26,1) 0%,rgba(43,43,49,1) 100%)
+    background: linear-gradient(to bottom, rgba(19,19,26,1) 0%,rgba(43,43,49,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13131a', endColorstr='#2b2b31',GradientType=0 )
     +rmin(320)
-      margin-top: (71px + 50px)
+      padding-top: (71px + 50px)
     +rmin(768)
-      margin-top: (141px + 79px)
+      padding-top: (141px + 79px)
+
+    &:before
+      content: ""
+      z-index: 0
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 90%
+      height: 100%
+      background-image: url("../img/img-mainAbout_bg@2x.png")
+      background-repeat: no-repeat
+      background-position: left bottom
+      background-size: contain
 
 
     // TITLE
     &__title
       padding-bottom: 40px
+      color: $colorWhite
       +rmin(320)
         font-size: 32px
       +rmin(576)
@@ -32,67 +48,11 @@
     // end TITLE
 
 
-    // MAIN MENU
-    &__menu
-      width: 100%
-      height: 40px
-      margin-bottom: 50px
-      border-bottom: 1px solid rgba($colorGrey, 0.1)
-      background-color: transparent
-
-      &-list
-        display: flex
-
-      &-item
-        +rmin(320)
-          margin-right: 10px
-        +rmin(576)
-          margin-right: 20px
-        +rmin(768)
-          margin-right: 40px
-        &:last-child
-          margin-right: 0
-
-      &-link
-        position: relative
-        display: flex
-        align-items: center
-        height: 40px
-        font-family: "SFUIText", "Arial", sans-serif
-        font-weight: normal
-        +transition(color)
-        +rmin(320)
-          font-size: 12px
-        +rmin(576)
-          font-size: 14px
-        +rmin(768)
-          font-size: 16px
-
-        &.is-active
-          color: $colorAlizarin
-          +transition(color)
-
-          &:after
-            height: 2px
-            background-color: $colorAlizarin
-            +transition(background-color)
-
-        &:after
-          content: ""
-          position: absolute
-          left: 0
-          bottom: 0
-          width: 100%
-          height: 1px
-          background-color: transparent
-          +transition(background-color)
-    // end MAIN MENU
-
-
     // TEXT ABOUT
     &__about
       width: 100%
       line-height: 1.5
+      color: $colorWhite
       font-weight: 500
       +rmin(320)
         max-width: 100%
@@ -111,7 +71,7 @@
     &__motivate
       width: 100%
       padding-bottom: 25px
-      color: rgba($colorBlack, 0.5)
+      color: $colorWhite
       text-align: left
       +rmin(320)
         max-width: 100%
@@ -144,6 +104,7 @@
           padding-bottom: 128px
 
         p
+          color: $colorWhite
           &:nth-child(1)
             text-align: left
             padding-bottom: 38px
