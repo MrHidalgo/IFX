@@ -20,6 +20,20 @@
     .icon-logo--footer
       display: none
 
+    .onlineTrading &
+      +rmin(768)
+        .icon-logo
+          display: none
+        .icon-logo--footer
+          display: block
+
+    .onlineTrading .is-fixed &
+      +rmin(768)
+        .icon-logo
+          display: block
+        .icon-logo--footer
+          display: none
+
   &:hover
     transform: scale(0.97)
     +transition(transform)

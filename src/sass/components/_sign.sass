@@ -71,6 +71,16 @@
           color: $colorAlizarin
           +transition(color)
 
+        .onlineTrading &
+          color: $colorWhite
+          &:hover
+            color: $colorAlizarin
+
+        .onlineTrading .is-fixed &
+          color: $colorBlack
+          &:hover
+            color: $colorAlizarin
+
 
   &__btn
     display: block
@@ -112,5 +122,18 @@
 
     .is-loader &
       animation-delay: 2.05s
+
+    .onlineTrading &
+      color: $colorWhite
+      border-color: $colorWhite
+      &:hover
+        border-color: $colorAlizarin
+
+    .onlineTrading .is-fixed &
+      color: $colorBlack
+      border-color: $colorBlack
+      &:hover
+        color: $colorWhite
+        border-color: $colorAlizarin
 
 // SIGN :: END

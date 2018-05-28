@@ -117,10 +117,20 @@
       margin-right: 30px
       padding-top: 11px
       padding-bottom: 11px
+      +transition(color)
       &:hover
-        //opacity: 0.5
         color: $colorAlizarin
         +transition(color)
+
+      .onlineTrading &
+        color: $colorWhite
+        &:hover
+          color: $colorAlizarin
+
+      .onlineTrading .is-fixed &
+        color: $colorBlack
+        &:hover
+          color: $colorAlizarin
 
   &__dropdown
     position: absolute
