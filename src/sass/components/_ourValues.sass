@@ -1,15 +1,28 @@
 // VALUES
 // ===============
 .values
+  overflow: hidden
+  position: relative
   +rmin(320)
     padding-top: 20px
-    padding-bottom: 30px
   +rmin(576)
     padding-top: 60px
-    padding-bottom: 50px
   +rmin(768)
     padding-top: 116px
-    padding-bottom: 95px
+
+  &:before
+    z-index: 0
+    position: absolute
+    top: 0
+    right: 0
+    width: 756px
+    height: 100%
+    background-image: url("../img/img-values__bg@2x.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    +rmin(1366)
+      content: ""
 
   
   // CONTAINER
@@ -26,102 +39,54 @@
 
   // SUBTITLE
   &__subtitle
-    color: $colorAlizarin
     text-align: left
     text-transform: uppercase
+    padding-top: 30px
     +rmin(320)
-      padding-top: 30px
-    +rmin(992)
-      padding-top: 450px
-    +rmin(1200)
-      padding-top: 402px
+      padding-bottom: 30px
+    +rmin(768)
+      padding-bottom: 65px
   // end SUBTITLE
 
 
   // BLOCK
   &__block
-    display: flex
     width: 100%
     +rmin(320)
-      position: static
-      padding-top: 15px
-      padding-bottom: 15px
-    +rmin(768)
-      padding-top: 30px
+      padding-right: 0
       padding-bottom: 30px
-    +rmin(992)
-      position: absolute
-      padding-top: 0
-      padding-bottom: 0
-    +r(991)
-      max-width: 100% !important
+    +rmin(768)
+      width: 50%
+      padding-right: 30px
+      padding-bottom: 70px
 
-    &-0
-      top: 178px
-      left: 93px
-      max-width: 408px
-
-      .values__block-text
-        width: 100%
-        +rmin(320)
-          max-width: 100%
-        +rmin(992)
-          max-width: 260px
-
-    &-1
-      top: 42px
-      left: 620px
-      max-width: 370px
-
-    &-2
-      top: 214px
-      right: 79px
-      max-width: 344px
-
-    &-3
-      top: 405px
-      right: 325px
-      max-width: 495px
-
-    &-4
-      bottom: 8px
-      right: 70px
-      max-width: 484px
-
-    &-left
-      padding-left: 20px
-      +rmin(320)
-        width: 65px
-      +rmin(576)
-        width: 100px
-
-    &-right
-      +rmin(320)
-        width: calc(100% - 65px)
-      +rmin(576)
-        width: calc(100% - 100px)
-
-    &-num
-      font-weight: bold
-      +rmin(320)
-        font-size: 32px
-      +rmin(768)
-        font-size: 40px
-      +rmin(992)
-        font-size: 60px
-      +rmin(1440)
-        font-size: 80px
+    &-wrap
+      display: flex
+      flex-wrap: wrap
+      width: 100%
+      max-width: 850px
 
 
     &-title
       padding-top: 10px
       padding-bottom: 10px
-      font-size: 22px
       font-weight: bold
+      +rmin(320)
+        font-size: 16px
+      +rmin(576)
+        font-size: 18px
+      +rmin(728)
+        font-size: 22px
 
     &-text
       line-height: 1.5
       color: rgba($colorBlack, 0.7)
       font-family: "SFUIText", "Arial", sans-serif
-// end BLOCK
+      +rmin(320)
+        font-size: 14px
+      +rmin(576)
+        font-size: 16px
+      +rmin(728)
+        font-size: 18px
+  // end BLOCK
 // ===============
