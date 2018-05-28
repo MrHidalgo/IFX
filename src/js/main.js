@@ -450,6 +450,8 @@ $(document).ready(function () {
         beforeOpen: function(e) {
           startWindowScroll = _window.scrollTop();
 
+          this.st.mainClass = this.st.el.attr('data-effect');
+
             const userName = $(this.st.el).data('name'),
               userPosition = $(this.st.el).data('position'),
               userDesc = $(this.st.el).data('description'),
@@ -464,8 +466,6 @@ $(document).ready(function () {
           posElem.html(userPosition);
           descElem.html(userDesc);
           imgElem.attr("src", "./img/" + userImg + ".png");
-
-          this.st.mainClass = this.st.el.attr('data-effect');
         },
         close: function() {
           _window.scrollTop(startWindowScroll);
