@@ -22,7 +22,7 @@
   var tradingPlatformsBtnBoolArr = [
     true,
     true,
-    true,
+    false,
     true
   ];
 
@@ -39,9 +39,7 @@ mixin tradingPlatformsBlock(iconName, title, text, boolBtn, delayT)
       p.tradingPlatforms__block-text!= text
 
       if(!boolBtn)
-        a(href="#" class="tradingPlatforms__block-link link__more" title="")
-          != "Read more"
-          span
+        a.tradingPlatforms__block-btn(href="#" title="")!= "Open Now"
       else
         a.tradingPlatforms__block-btn(href="#" title="")!= "Download"
 
@@ -64,7 +62,7 @@ mixin tradingPlatformsBlock(iconName, title, text, boolBtn, delayT)
         .tradingPlatforms__col
           .tradingPlatforms__box
             p.tradingPlatforms__box-title.wow.wowFadeUp(data-animation-delay="0.4s")!= "IFX Meta Trader 4"
-            p.tradingPlatforms__box-subtitle.wow.wowFadeUp(data-animation-delay="0.5s")!= "#1 Multi Asset trading </br>platform across the glob"
+            p.tradingPlatforms__box-subtitle.wow.wowFadeUp(data-animation-delay="0.5s")!= "#1 Multi Asset trading </br>platform across the globe"
             p.tradingPlatforms__box-text.wow.wowFadeUp(data-animation-delay="0.6s")!= "Reliable and completely secure, you can access 85 pre-installed indicators at the click of a button."
             p.tradingPlatforms__box-text.wow.wowFadeUp(data-animation-delay="0.7s")!= "IFX Meta Trader 4 provides enhanced charting functionality and highly sophisticated order management tools. It also has a multilingual interface, provides a comprehensive analysis and allows for multiple chart set ups."
 
