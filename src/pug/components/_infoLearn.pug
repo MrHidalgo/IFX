@@ -49,7 +49,7 @@
     p.info__text.text.wow.wowFadeUp(data-animation-delay="0.35s")!= "Since you’ll be referring to it time and time again you will have full access to study material in a customized portal.  Your course material is packed with examples, explanations, a glossary and interactive assignments. Should you need extra support, this is readily available by email."
 
     .info__row
-      .info__block
+      .info__block.is-active(infoBlock-js)
         .info__block-left.wow.wowFadeUp(data-animation-delay="0.3s")
           img(src="./img/img-study-0_info.jpg" srcset="./img/img-study-0_info@2x.jpg 2x" title="" alt="" class="info__block-img")
         .info__block-right
@@ -60,7 +60,7 @@
               )
                 p.info__block-text!= infoBlockData1[i]
 
-      .info__block
+      .info__block(infoBlock-js)
         .info__block-left.wow.wowFadeUp(data-animation-delay="0.3s")
           img(src="./img/img-study-1_info.jpg" srcset="./img/img-study-1_info@2x.jpg 2x" title="" alt="" class="info__block-img")
         .info__block-right
@@ -71,7 +71,7 @@
               )
                 p.info__block-text!= infoBlockData2[i]
 
-      .info__block
+      .info__block(infoBlock-js)
         .info__block-left.wow.wowFadeUp(data-animation-delay="0.3s")
           img(src="./img/img-study-2_info.jpg" srcset="./img/img-study-2_info@2x.jpg 2x" title="" alt="" class="info__block-img")
         .info__block-right
@@ -82,11 +82,4 @@
               )
                 p.info__block-text!= infoBlockData3[i]
 
-  .container.container--small#yourcommitment
-    p.info__title.info__title--center.info__title--center.title.wow.wowFadeUp(data-animation-delay="0.3s")!= "YOUR COMMITMENT"
-    p.info__subtitle.info__subtitle--center.subtitle.wow.wowFadeUp(data-animation-delay="0.35s")!= "IFX Academy will give you everything that you need to become a knowledgeable Forex trader."
-    p.info__text.info__text--center.text.wow.wowFadeUp(data-animation-delay="0.4s")!= "In turn, we expect you to be fully committed to your course: completing the interactive assignments and following our recommendations. Visualise your future as a successful trader. You must be passionate, determined and disciplined. That’s the only part we can’t do for you!"
-    p.info__subtitle.info__subtitle--center.info__subtitle--color.subtitle.wow.wowFadeUp(data-animation-delay="0.45s")!= "It’s really that simple – what </br>are you waiting for?"
-
-    a.wow.wowFadeUp(data-animation-delay="0.5s" href="#" class="info__btn" title="")!= "START LEARNING"
 // LEARN :: END

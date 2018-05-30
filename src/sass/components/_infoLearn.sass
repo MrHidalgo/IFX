@@ -9,6 +9,9 @@
       padding-top: 80px
       padding-bottom: 184px
 
+    &#yourcommitment
+      background-color: $colorWhiteSmoke
+
     // CONTAINER
     .container
       &--small
@@ -90,48 +93,69 @@
 
     // ROW
     &__row
+      display: flex
       padding-top: 50px
       padding-bottom: 50px
+      +rmin(320)
+        flex-direction: column
+      +rmin(768)
+        flex-direction: row
+        justify-content: space-between
     // \ ROW
 
 
     // BLOCK
     &__block
+      cursor: pointer
+      position: relative
       display: flex
       margin-bottom: 50px
+      +transition(opacity)
       +rmin(320)
         flex-direction: column
       +rmin(576)
         flex-direction: row
+      +rmin(768)
+        opacity: 0.4
+        flex-direction: column
+        width: calc(100% / 3)
+
+      &.is-active
+        opacity: 1
+        +transition(opacity)
+        .info__block-text
+          opacity: 1
+          +transition(opacity)
 
       &:last-child
         margin-bottom: 0
 
       &-left
-        +rmin(320)
-          width: 100%
-          padding-bottom: 30px
-          text-align: center
-        +rmin(576)
-          width: 250px
-          padding-bottom: 0
-        +rmin(768)
-          width: 304px
+        padding-bottom: 30px
+        text-align: center
+        padding-left: 10px
+        padding-right: 10px
 
       &-right
-        +rmin(320)
-          width: 100%
-        +rmin(576)
-          width: calc(100% - 250px)
-        +rmin(768)
-          width: calc(100% - 304px)
+        width: 100%
+
+      &-img
+        max-width: 100%
 
       &-text
         font-family: "SFUIText", "Rajdhani", "Arial", sans-serif
         padding-bottom: 30px
+        +transition(opacity)
         +rmin(320)
           font-size: 16px
         +rmin(576)
+          padding-left: 15px
+        +rmin(768)
+          opacity: 0
+          white-space: normal
+          padding-left: 0
+        +rmin(1200)
+          white-space: nowrap
           font-size: 18px
 
         span

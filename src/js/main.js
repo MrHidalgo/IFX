@@ -263,6 +263,22 @@ $(document).ready(function () {
   // ====================
 
 
+  //
+  // ====================
+  $('[infoBlock-js]').hover(
+    function() {
+      if(_window.width() >= 768) {
+        $('[infoBlock-js]').removeClass("is-active");
+        $(this).stop(true, false).addClass("is-active");
+      }
+    },
+    function() {
+      // $(this).stop(true, false).removeClass("is-active");
+    }
+  );
+  // ====================
+
+
   // ACCORDION
   // ====================
   $("[accordion-js]").on("click", (e) => {
