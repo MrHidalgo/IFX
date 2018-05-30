@@ -1,0 +1,130 @@
+// INFO
+// ===============
+.gettingDownBusiness
+
+  .info
+    +rmin(320)
+      padding-top: 45px
+      padding-bottom: 50px
+    +rmin(768)
+      padding-top: 90px
+      padding-bottom: 100px
+
+
+    &__title,
+    &__text
+      width: 100%
+      max-width: 790px
+      margin-left: auto
+      margin-right: auto
+
+    &__title
+      padding-bottom: 30px
+      text-align: center
+      font-weight: bold
+      +rmin(320)
+        font-size: 32px
+      +rmin(576)
+        font-size: 36px
+      +rmin(768)
+        font-size: 40px
+      +rmin(992)
+        font-size: 44px
+
+    &__text
+      +rmin(320)
+        padding-bottom: 35px
+      +rmin(768)
+        padding-bottom: 70px
+
+    &__row
+      display: flex
+      +r(767)
+        flex-direction: column
+
+    &__col
+      display: flex
+      flex-direction: column
+      width: 50%
+      +r(767)
+        width: 100%
+      &:nth-child(1)
+        align-items: flex-start
+      &:nth-child(2)
+        align-items: flex-end
+
+    &__block
+      width: 100%
+      margin-bottom: 60px
+      border: 1px solid rgba($colorBlack, 0.05)
+      box-shadow: 0 2px 14px 0 rgba($colorBlack, 0.1)
+      +r(767)
+        margin-bottom: 30px
+      +rmin(768)
+        max-width: 300px
+      +rmin(992)
+        max-width: 400px
+      +rmin(1200)
+        max-width: 500px
+      +rmin(1366)
+        max-width: 580px
+      +rmin(1440)
+        max-width: 620px
+
+      &:last-child
+        margin-bottom: 0
+        +r(767)
+          margin-bottom: 30px
+
+      &-header
+        display: flex
+        align-items: center
+        height: 160px
+        background-color: $colorWhiteSmoke
+        +r(767)
+          height: 100px
+          padding: 20px
+        +rmin(768)
+          padding: 25px
+        +rmin(992)
+          padding: 35px
+        +rmin(1200)
+          padding: 45px
+
+      &-body
+        +r(767)
+          padding: 30px
+        +rmin(768)
+          padding: 30px 40px
+        +rmin(992)
+          padding: 40px 50px
+        +rmin(1200)
+          padding: 60px 70px
+
+      &-circle
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 70px
+        height: 70px
+        margin-right: 40px
+        border-radius: 100%
+        background-color: $colorAlizarin
+
+      &-title
+        color: $colorAlizarin
+        text-align: left
+        +r(575)
+          font-size: 20px
+
+      &-text
+        line-height: 1.6
+        font-family: "SFUIText", "Arial", sans-serif
+        +rmin(320)
+          font-size: 14px
+        +rmin(576)
+          font-size: 16px
+        +rmin(728)
+          font-size: 18px
+
+// ===============

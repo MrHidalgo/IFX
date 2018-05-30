@@ -1,0 +1,32 @@
+// GETTING DOWN TO BUSINESS :: START
+
+mixin infoBlock(delayT, iconName, title, text)
+  .info__block.wow.wowFadeUp(data-animation-delay= delayT + "s")
+    .info__block-header
+      .info__block-circle
+        i.icon(class="icon-" + iconName)
+      p.info__block-title.subtitle!= title
+
+    .info__block-body
+      p.info__block-text!= text
+
+.info
+
+  .container
+
+    p.info__title!= "IFX Brokers give you access to the best potential trade opportunities."
+    p.info__text.text!= "We combine a drive for the lowest possible trading cost with superior execution. IFX’s comprehensive trading suite will more than meet your every trading requirement. For example, we offer over 70 currency pairs, gold and silver, oil and natural gas. We offer an extensive range of major indices, trading across the full range of IFX Brokers’ multiple platforms."
+
+    .info__row
+      .info__col
+        +infoBlock("0.3", "gettingDownBusiness-0", "Forex", "Exceptionally low spread pricing is combined with rapid inter-bank implementation. To be sure, we have expanded our product offering - however our focus remains on providing Forex traders around the globe with the lowest costs possible. IFX concentrates on a low latency/high quality execution accompanied by flexible leverage and a reliable trading infrastructure. With spreads executed as low as 0.2 pips on EUR/USD, AUD/USD, GBP/USD and various other pairs, your overall trading costs are far lower when you partner with IFX Brokers.")
+        +infoBlock("0.4", "gettingDownBusiness-1", "CFDs", "A CFD(contract for difference) is an offshoot of a financial asset through which it derives its value. In most instances, the underlying asset is stock, although there are also CFDs related to indices and other commodities. A CFD enables you to trade on the rise and fall of prices without owning the underlying asset. </br></br>The traditional definition of a CFD states that it is a contract between two parties, comprising a buyer and a seller. If there is a positive balance between the asset’s opening price and its price at the contract’s conclusion, the seller pays the buyer. In the reverse situation, the buyer pays the seller. CFD trading is like stock trading, however you do not own the stock. You use the price fluctuations of the stock to speculate.  If you wish to upscale your skills in financial markets so you can try new spheres of interest, it is essential to study CFD trading.")
+        +infoBlock("0.5", "gettingDownBusiness-2", "Commodities", "In addition to energy and metal contracts, we offer a range of soft commodity products to trade, including corn, soybeans, sugar, coffee, and wheat as CFD’s. </br></br>Sounds exciting, doesn’t it? And it is, provided you’re familiar with the fundamentals of soft commodity trading. World growth is the long-term driver of commodity prices since inevitably people will always require food, clothing, transport and electronic devices, amongst many other desires.")
+
+      .info__col
+        +infoBlock("0.3", "gettingDownBusiness-3", "Indices", "Indices are the most popular form of CFD’s. With a large range of Indices to choose from, trading on indices enables traders to speculate on whether an index will rise or fall, without buying shares in the underlying assets. In this sense, one can trade an index just as one would trade a stock, currency or commodity.")
+        +infoBlock("0.4", "gettingDownBusiness-4", "Spot Metals", "Indices are the most popular form of CFD’s. With a large range of Indices to choose from, trading on indices enables traders to speculate on whether an index will rise or fall, without buying shares in the underlying assets. In this sense, one can trade an index just as one would trade a stock, currency or commodity.")
+        +infoBlock("0.5", "gettingDownBusiness-5", "Energies", "When you trade with IFX Brokers, you gain access to precious metal pairings. These include gold, silver, platinum and palladium that can be traded against either the US Dollar or the Euro. Precious metals are a great way to diversify your trading strategy, since supply and demand is not governed by a single country but the world as a whole.")
+        +infoBlock("0.6", "gettingDownBusiness-6", "Cryptocurrency", "Unlike other asset classes, the Cryptocurrency market is dominated by retail speculators. With Cryptocurrencies, you’ll trade in a market where there is no central bank intervention, interbank dealers controlling order flow or giant pension funds moving prices. </br></br>With IFX Brokers, traders can get exposure to the price of the Cryptocurrency without worrying about the security risks associated with storing it and the counterparty risk from the exchange. This is like trading Energy Futures such as oil rather than owning physical oil to speculate on its price.")
+
+// GETTING DOWN TO BUSINESS :: END

@@ -1,46 +1,73 @@
 // MAIN
 // ===============
 .gettingDownBusiness
-
-  .footer
-    .container
-      max-width: 1440px
-
   .main
+    position: relative
     +rmin(320)
-      padding-top: 101px
       padding-bottom: 30px
     +rmin(768)
-      padding-top: 201px
-      padding-bottom: 60px
+      padding-bottom: 50px
+
+
+    // BG
+    &__bg
+      z-index: 0
+      position: absolute
+      height: 100%
+      background-color: $colorBlack
+      background-image: url("../img/img-main-bg_gettingDownBusiness@2x.png")
+      background-repeat: no-repeat
+      +rmin(320)
+        top: (20px + 50px)
+        left: 15px
+        right: 15px
+        width: calc(100% - 30px)
+        max-height: calc(100% - (20px + 50px))
+        background-position: 200px
+        background-size: cover
+      +rmin(768)
+        top: (40px + 79px)
+        left: 60px
+        right: 60px
+        width: calc(100% - 120px)
+        max-height: calc(100% - (40px + 79px))
+      +rmin(1200)
+        background-position: right
+        background-size: contain
+    // end BG
 
 
     // CONTAINER
     .container
-      &:nth-child(2)
-        position: relative
+      z-index: 1
+      position: relative
+      height: 100%
+      max-width: 100%
+      &--small
+        max-width: 1440px
+        +rmin(768)
+          padding-left: 30px
+          padding-right: 30px
+        +rmin(992)
+          padding-left: 60px
+          padding-right: 60px
 
-      &.is-fixed
-        .main__subMenu
-          position: fixed
     // end CONTAINER
 
 
     // MAIN TITLE
     .main__title
+      color: $colorWhite
       line-height: normal
-    // end MAIN TITLE
-
-
-    // TITLE
-    &__title
       +rmin(320)
+        padding-top: 120px
         padding-bottom: 30px
         font-size: 32px
       +rmin(576)
         font-size: 36px
       +rmin(768)
-        padding-bottom: 60px
+        padding-top: (136px + 40px + 79px)
+        padding-bottom: 98px
         font-size: 48px
       +rmin(992)
         font-size: 62px
@@ -50,73 +77,22 @@
         font-size: 90px
       +rmin(1920)
         font-size: 120px
-    // end TITLE
+    // end MAIN TITLE
 
 
     // SUBTITLE
     &__subtitle
-      color: $colorAlizarin
+      color: $colorWhite
       text-align: left
-      +rmin(320)
-        padding-bottom: 30px
-      +rmin(768)
-        padding-bottom: 60px
-    // end SUBTITLE
-
-
-    // TEXT
-    &__text
-      text-align: left
-      +rmin(320)
-        padding-bottom: 30px
-      +rmin(768)
-        padding-bottom: 60px
-    // end TEXT
-
-
-    // SUBMENU
-    &__subMenu
-      position: absolute
-      top: 0
       width: 100%
-      max-width: 160px
+      max-width: 626px
       +rmin(320)
-        display: none
-      +rmin(1024)
-        display: block
-        left: -(100px)
-      +rmin(1366)
-        left: -(160px + 105px)
-
-      &-list
-        display: flex
-        flex-direction: column
-
-      &-link
-        display: block
-        padding-top: 10px
-        padding-bottom: 10px
-        color: $colorGrey
-        font-size: 18px
-        font-weight: bold
-
-        &.is-active
-          color: $colorBlack
-    // end SUBMENU
-
-
-    // BLOCK
-    &__block
-      padding-bottom: 50px
-
-      .main__subtitle
-        padding-bottom: 20px
-        color: $colorBlack
-        font-weight: bold
-
-      .main__text
-        padding-bottom: 0
-        &--p
-          padding-top: 30px
-    // end BLOCK
+        padding-bottom: 50px
+      +rmin(576)
+        padding-bottom: 150px
+      +rmin(768)
+        padding-bottom: 200px
+      +rmin(992)
+        padding-bottom: 266px
+    // \ SUBTITLE
 // ===============
