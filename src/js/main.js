@@ -98,35 +98,6 @@ $(document).ready(function () {
   }
   initHeaderScroll();
 
-  // function initFixedBlock(elemParent, elemChild) {
-  //   _window.on('scroll load', () => {
-  //
-  //     let vScroll = _window.scrollTop();
-  //     let yTopElem = $(elemParent).offset().top;
-  //     let xLeftElem = $(elemParent).find(elemChild).offset().left;
-  //     let headerHeight = $('.header')[0].offsetHeight;
-  //
-  //     if (vScroll >= (yTopElem - headerHeight)) {
-  //       $(elemParent)
-  //         .addClass("is-fixed")
-  //         .find(elemChild)
-  //         .css(
-  //           {
-  //             "top": headerHeight,
-  //             "left": xLeftElem
-  //           }
-  //         );
-  //     } else {
-  //       $(elemParent)
-  //         .removeClass("is-fixed")
-  //         .find(elemChild)
-  //         .removeAttr("style");
-  //     }
-  //   })
-  // }
-  // initFixedBlock("[scroll-container-js]", "[gettingDown-submenu-js]");
-  // ====================
-
 
   // HAMBURGER TOGGLER
   // ====================
@@ -275,37 +246,6 @@ $(document).ready(function () {
     $("[mainAbout-js]").removeClass('is-active');
     $(e.currentTarget).addClass('is-active');
   });
-  // ====================
-
-
-  // SCROLL SPY
-  // ====================
-  // {
-  //
-  //   let lastID;
-  //   let elemID;
-  //
-  //   _window.on("load scroll", function () {
-  //     let y = $(this).scrollTop() + 59;
-  //
-  //     $('.scrollSpy').each(function () {
-  //
-  //       let yElem = $(this).offset().top;
-  //
-  //       if (y >= yElem) {
-  //         elemID = $(this).attr('id');
-  //
-  //         if (elemID !== lastID) {
-  //           lastID = elemID;
-  //
-  //           $(".main__subMenu-link").removeClass("is-active");
-  //           $('[gettingDown-submenu-js] a[href="#' + elemID + '"]').addClass("is-active");
-  //         }
-  //       }
-  //     });
-  //   });
-  //
-  // }
   // ====================
 
 
