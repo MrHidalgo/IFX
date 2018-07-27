@@ -1,0 +1,94 @@
+// SIGN UP
+
+.signup
+  padding: 0 !important
+
+  &__wrapper
+    display: flex
+    width: 100%
+    min-height: 100vh
+    +r(767)
+      flex-wrap: wrap
+
+  &__left
+    width: 576px
+    +r(767)
+      width: 100%
+      padding-left: 20px
+      padding-right: 20px
+    +rmin(768)
+      padding: 15px
+      width: 50%
+    +rmin(992)
+      padding: 0
+      width: 576px
+
+  &__right
+    display: flex
+    align-items: center
+    width: calc(100% - 576px)
+    background-color: $colorBlack
+    background-image: url("../img/img-bg__sign.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    +r(767)
+      width: 100%
+    +rmin(768)
+      width: 50%
+    +rmin(992)
+      width: calc(100% - 576px)
+
+  &__logo
+    padding-top: 40px
+    padding-left: 48px
+    padding-bottom: 50px
+    +r(575)
+      padding-left: 0
+    +rmin(768)
+      padding-left: 0
+    +rmin(992)
+      padding-left: 48px
+
+  &__title
+    text-align: left
+    padding-bottom: 10px
+
+  &__text
+    padding-bottom: 50px
+    text-align: left
+
+    a
+      color: $colorAlizarin
+
+  &__form
+    width: 100%
+    max-width: 397px
+    margin-left: auto
+    margin-right: auto
+
+  .form
+    &__field-group
+      display: flex
+      justify-content: space-between
+      +r(575)
+        flex-wrap: wrap
+
+      .form__field
+        width: calc((100% / 2) - 18px)
+        +r(575)
+          width: 100%
+
+    .form__field--checkbox
+      min-height: 10px
+      margin-top: 22px
+
+      span
+        font-size: 14px
+        color: rgba($colorBlack, 0.5)
+
+    &__btn
+      max-width: 100%
+      margin-top: 22px
+      margin-bottom: 30px
+

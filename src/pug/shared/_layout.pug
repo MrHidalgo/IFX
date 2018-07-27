@@ -17,13 +17,19 @@ html.is-hideScroll(lang="en")
     //  include ../macros/_grid
 
     #barba-wrapper
-      block header
-        include ../components/_header
+      if(bodyClass !== "login")
+      else if(bodyClass !== "register")
+      else
+        block header
+          include ../components/_header
     
       .page(class=outClass)
         .page__content
           block content
 
+      if(bodyClass !== "login")
+      else if(bodyClass !== "register")
+      else
         block footer
           include ../components/_footer
           

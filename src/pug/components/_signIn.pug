@@ -1,0 +1,113 @@
+// SIGN IN :: START
+
+.signin.sign
+  .signin__wrapper
+    .signin__left
+
+      .signin__logo
+        a(
+          href="index.html"
+          title=""
+          class=""
+        )
+          i.icon.icon-logo
+
+      form.form.signin__form(action="" method="" autocomplete="off")
+        p.signin__title.title!= "Sign In"
+        p.signin__subtitle!= "to Your IFX Brokers Client Portal"
+
+        .form__field
+          input(type="text" name="email" id="signin__email" class="form__input" input-js)
+          label(class="form__label" for="signin__email")
+            span(class="form__label-content")!= "Email"
+          .form__line
+
+        .form__field
+          input(type="password" name="password" id="signin__password" class="form__input" input-js)
+          label(class="form__label" for="signin__password")
+            span(class="form__label-content")!= "Password"
+          .form__line
+
+        a.signin__link(href="#")!= "Forgot password?"
+
+        button(type="submit" class="form__btn")!= "Login"
+
+        p.signin__text.text!= "Don't have an account? <a href='register.html'>Sign up</a>"
+
+
+    .signin__right
+
+      .sign__wrapper
+        .sign__col
+          .sign__col-header
+            .sign__col-img
+              img(
+                src="./img/img-sign-0.png"
+                srcset="./img/img-sign-0@2x.png 2x"
+                alt=""
+                title=""
+               )
+            p.sign__col-title!= "ACCOUNT MANAGEMENT"
+          .sign__col-body
+            ul.sign__col-list
+              li.sign__col-item!= "Fast withdrawal process"
+              li.sign__col-item!= "Multi deposit funds options"
+              li.sign__col-item!= "Upload account documents"
+              li.sign__col-item!= "Manage personal information"
+              li.sign__col-item!= "Password change"
+              li.sign__col-item!= "Transferring funds between accounts"
+              li.sign__col-item!= "Change leverage"
+
+        .sign__col
+          .sign__col-header
+            .sign__col-img
+              img(
+                src="./img/img-sign-1.png"
+                srcset="./img/img-sign-1@2x.png 2x"
+                alt=""
+                title=""
+               )
+            p.sign__col-title!= "TRADING ACCOUNTS"
+          .sign__col-body
+            ul.sign__col-list
+              li.sign__col-item!= "Account history"
+              li.sign__col-item!= "Current positions free & used margin"
+              li.sign__col-item!= "Balance & equity"
+              li.sign__col-item!= "View your withdrawal and deposit history"
+
+        .sign__col
+          .sign__col-header
+            .sign__col-img
+              img(
+                src="./img/img-sign-2.png"
+                srcset="./img/img-sign-2@2x.png 2x"
+                alt=""
+                title=""
+               )
+            p.sign__col-title!= "IFX WALLET"
+          .sign__col-body
+            ul.sign__col-list
+              li.sign__col-item!= "Central account from which you can transfer money to your trading accounts with a few simple clicks"
+              li.sign__col-item!= "IFX Wallet funds protected from any open positions in your trading account"
+              li.sign__col-item!= "Multi-currency wallet options"
+              li.sign__col-item!= "Real time transfer to and from  trading accounts"
+
+        .sign__col
+          .sign__col-header
+            .sign__col-img
+              img(
+                src="./img/img-sign-3.png"
+                srcset="./img/img-sign-3@2x.png 2x"
+                alt=""
+                title=""
+               )
+            p.sign__col-title!= "TRADING TOOLS & MARKET NEWS"
+          .sign__col-body
+            ul.sign__col-list
+              li.sign__col-item!= "IFX Academy"
+              li.sign__col-item!= "Autochartist"
+              li.sign__col-item!= "MT4 Market scanner"
+              li.sign__col-item!= "MT4 Risk calculator"
+              li.sign__col-item!= "News and commentaries covering the FX"
+
+// SIGN IN :: END

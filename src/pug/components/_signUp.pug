@@ -1,0 +1,150 @@
+// SIGN UP :: START
+
+.signup.sign
+  .signup__wrapper
+    .signup__left
+
+      .signup__logo
+        a(
+          href="index.html"
+          title=""
+          class=""
+        )
+          i.icon.icon-logo
+
+      form.form.signup__form(action="" method="" autocomplete="off")
+        p.signup__title.title!= "Sign Up"
+
+        .form__field-group
+          .form__field
+            input(type="text" name="email" id="signup__fname" class="form__input" input-js)
+            label(class="form__label" for="signup__fname")
+              span(class="form__label-content")!= "First Name"
+            .form__line
+
+          .form__field
+            input(type="text" name="email" id="signup__lname" class="form__input" input-js)
+            label(class="form__label" for="signup__lname")
+              span(class="form__label-content")!= "Last Name"
+            .form__line
+
+        .form__field
+          input(type="text" name="email" id="signup__email" class="form__input" input-js)
+          label(class="form__label" for="signup__email")
+            span(class="form__label-content")!= "Email"
+          .form__line
+
+        .form__field
+          input(type="password" name="password" id="signup__password" class="form__input" input-js)
+          label(class="form__label" for="signup__password")
+            span(class="form__label-content")!= "Password"
+          .form__line
+
+        .form__field
+          select.form__select(name="" select-js)
+            option!= "Ukraine"
+            option!= "USA"
+            option!= "Canada"
+            option!= "Poland"
+          .form__line
+
+        .form__field
+          input(type="text" name="phone" id="signup__phone" class="form__input" input-js)
+          label(class="form__label" for="signup__phone")
+            span(class="form__label-content")!= "Phone number"
+          .form__line
+
+        .form__field.form__field--checkbox
+          .ui-checkbox
+            input(type="checkbox" name="signup__from" id="signup__from")
+            label(for="signup__from")
+              span!= "I’m not a USA citizen"
+
+        .form__field.form__field--checkbox
+          .ui-checkbox
+            input(type="checkbox" name="signup__tc" id="signup__tc")
+            label(for="signup__tc")
+              span!= "I have read and accept the Terms and Conditions of the Client Agreement, Privacy Policy, Risk Disclosure Notice and Company Policies.  I also acknowledge and consent to the processing of my personal data in accordance to International FX Brokers’ policy."
+
+        button(type="submit" class="form__btn")!= "Sign up"
+
+        p.signup__text.text!= "Already registered? <a href='login.html'>Sign In Here</a>"
+
+
+    .signup__right
+
+      .sign__wrapper
+        .sign__col
+          .sign__col-header
+            .sign__col-img
+              img(
+              src="./img/img-sign-0.png"
+              srcset="./img/img-sign-0@2x.png 2x"
+              alt=""
+              title=""
+              )
+            p.sign__col-title!= "ACCOUNT MANAGEMENT"
+          .sign__col-body
+            ul.sign__col-list
+              li.sign__col-item!= "Fast withdrawal process"
+              li.sign__col-item!= "Multi deposit funds options"
+              li.sign__col-item!= "Upload account documents"
+              li.sign__col-item!= "Manage personal information"
+              li.sign__col-item!= "Password change"
+              li.sign__col-item!= "Transferring funds between accounts"
+              li.sign__col-item!= "Change leverage"
+
+        .sign__col
+          .sign__col-header
+            .sign__col-img
+              img(
+              src="./img/img-sign-1.png"
+              srcset="./img/img-sign-1@2x.png 2x"
+              alt=""
+              title=""
+              )
+            p.sign__col-title!= "TRADING ACCOUNTS"
+          .sign__col-body
+            ul.sign__col-list
+              li.sign__col-item!= "Account history"
+              li.sign__col-item!= "Current positions free & used margin"
+              li.sign__col-item!= "Balance & equity"
+              li.sign__col-item!= "View your withdrawal and deposit history"
+
+        .sign__col
+          .sign__col-header
+            .sign__col-img
+              img(
+              src="./img/img-sign-2.png"
+              srcset="./img/img-sign-2@2x.png 2x"
+              alt=""
+              title=""
+              )
+            p.sign__col-title!= "IFX WALLET"
+          .sign__col-body
+            ul.sign__col-list
+              li.sign__col-item!= "Central account from which you can transfer money to your trading accounts with a few simple clicks"
+              li.sign__col-item!= "IFX Wallet funds protected from any open positions in your trading account"
+              li.sign__col-item!= "Multi-currency wallet options"
+              li.sign__col-item!= "Real time transfer to and from  trading accounts"
+
+        .sign__col
+          .sign__col-header
+            .sign__col-img
+              img(
+              src="./img/img-sign-3.png"
+              srcset="./img/img-sign-3@2x.png 2x"
+              alt=""
+              title=""
+              )
+            p.sign__col-title!= "TRADING TOOLS & MARKET NEWS"
+          .sign__col-body
+            ul.sign__col-list
+              li.sign__col-item!= "IFX Academy"
+              li.sign__col-item!= "Autochartist"
+              li.sign__col-item!= "MT4 Market scanner"
+              li.sign__col-item!= "MT4 Risk calculator"
+              li.sign__col-item!= "News and commentaries covering the FX"
+
+
+// SIGN UP :: END

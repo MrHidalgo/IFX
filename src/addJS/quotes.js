@@ -6,7 +6,7 @@ $(document).ready(function () {
     
     $.ajax({
         url: './quotes/json.php',
-        // dataType: 'json',
+        dataType: 'json',
         success: function(response){
             categories = JSON.parse(response);
             console.log(categories);

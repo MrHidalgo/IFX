@@ -1,0 +1,83 @@
+@import utilities/variables
+@import utilities/mixins
+
+@import "elements/ui"
+
+@import "vendor/selectric"
+
+@import "components/signIn"
+@import "components/signUp"
+
+.sign
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    padding: 81px 76px
+    +r(767)
+      padding: 20px
+    +rmin(768)
+      padding: 20px
+    +rmin(992)
+      padding: 30px
+    +rmin(1200)
+      padding: 51px 46px
+    +rmin(1366)
+      padding: 81px 76px
+
+  &__col
+    width: 50%
+    padding-right: 30px
+    margin-bottom: 60px
+    font-family: "SF Pro Text", sans-serif
+    +r(575)
+      width: 100%
+      padding-right: 0
+    +rmin(768)
+      width: 100%
+      padding-right: 0
+    +rmin(1200)
+      width: 50%
+      padding-right: 30px
+
+    &-header
+      display: flex
+      align-items: center
+      padding-bottom: 24px
+
+    &-img
+      width: 100px
+
+      img
+        display: block
+        max-width: 100%
+        height: auto
+
+    &-title
+      width: calc(100% - 100px)
+      color: $colorWhite
+      font-size: 18px
+      font-weight: 600
+      +r(767)
+        font-size: 16px
+
+    &-list
+      list-style: none
+      width: 100%
+      max-width: 330px
+      padding-left: 1em
+      +r(575)
+        max-width: 100%
+
+    &-item
+      padding-bottom: 10px
+      color: rgba($colorWhite, 0.7)
+      font-size: 16px
+      +r(767)
+        font-size: 14px
+
+      &::before
+        content: "•"
+        display: inline-block
+        width: 1em
+        margin-left: -1em
+        color: $colorWhite
